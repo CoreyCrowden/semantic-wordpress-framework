@@ -17,6 +17,9 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Doc Site Cache
+_site/
+
 # =========================
 # Operating System Files
 # =========================
