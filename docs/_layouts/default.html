@@ -9,46 +9,12 @@
   <body>
 
     <!--Site Container-->
-    <div id="site-container" class="container fluid viewport height">
-      <div class="grid full height">
+    <div id="site-container" class="container fluid full height">
+      <div class="grid full height stretched">
 
         <!--Sidebar-->
-        <div class="container one sixth primary inverted full height">
-          <nav>
-            <ul class="menu vertical justified">
-
-              <!--Title-->
-              <li class="item"><a href="{{ site.github.url }}/">{{ site.name }}</a></li>
-
-              <!--Introduction-->
-              <li class="item"><a href="{{ site.github.url }}/introduction/getting-started/">Getting Started</a></li>
-
-              <!--Mixins-->
-              <li class="item"><a href="#">Mixins</a>
-                <ul class="sub-menu">
-                  <li class="item"><a href="{{ site.github.url }}/mixins/general/">General Mixins</a></li>
-                  <li class="item"><a href="{{ site.github.url }}/mixins/flex/">Flex Box & Grid System</a></li>
-                  <li class="item"><a href="{{ site.github.url }}/mixins/spacing/">Spacing</a></li>
-                </ul>
-              </li>
-
-              <!--Globals-->
-              <li class="item"><a href="#">Globals</a>
-                <ul class="sub-menu">
-                  <li class="item"><a href="{{ site.github.url }}/globals/reset/">CSS Reset</a></li>
-                  <li class="item"><a href="{{ site.github.url }}/globals/variables/">Variables</a></li>
-                </ul>
-              </li>
-
-              <!--Elements-->
-              <li class="item"><a href="#">Elements</a>
-                <ul class="sub-menu">
-                  <li class="item"><a href="{{ site.github.url }}/elements/typography/">Typography</a></li>
-                </ul>
-              </li>
-
-            </ul>
-          </nav>
+        <div class="container one sixth primary inverted">
+          {% include menu.html %}
         </div>
 
         <!--Main-->
@@ -56,8 +22,10 @@
 
           <!--Page Header-->
           <div class="container padded relaxed">
+            <h4><a href="{{ site.github.url }}/{{ page.category }}">{{ page.category }}</a>/</h4>
             <h1>{{ page.title }}</h1>
-            <h3>{{ page.subtitle }}</h3>
+            <p>{{ page.description }}</p>
+            <p><a href="{{ page.reference }}">{{ page.reference-title }}</a></p>
           </div>
           <hr>
           <!--Page Content-->
