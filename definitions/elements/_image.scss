@@ -1,0 +1,110 @@
+// Image
+
+// Image Place Holder
+$color-image-placeholder                : rgba($color-grey-extra-light, .05);
+
+
+// Default Image Settings
+img {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  background-color: $color-image-placeholder;
+  @include margin(0.15,0,0.5);
+}
+
+img.disabled {
+  @include opacity($opacity-disabled);
+}
+
+
+
+//* Captions
+img {
+  max-width:100% !important;
+  height:auto !important;
+}
+
+.wp-caption {
+  margin: 0px;
+  @include border-radius($border-radius);
+  overflow: hidden;
+  border: $border;
+  img {
+    margin: 0px;
+  }
+  .wp-caption-text {
+    font-size: font-size - 0.1;
+    @include margin(0.5);
+  }
+}
+
+
+
+//* Alignment
+.alignleft {
+  float: left;
+  @include margin-right(0.5);
+}
+
+.aligncenter {
+  @include margin-auto();
+}
+
+.alignright {
+  float: right;
+  @include margin-left(0.5);
+}
+
+
+
+
+//* Full Width Image
+figure.alignnone,
+figure.aligncenter,
+p[style="text-align: center;"] {
+  border: 0px;
+  border-radius: 0px;
+  width: auto !important;
+  img {
+    margin: 0px auto;
+  }
+  @include media('>tablet-lrg'){
+    figcaption {
+      text-align: center;
+      color: $color-text-weak;
+     // padding: 0px $one-quarter;
+    }
+  }
+}
+
+
+
+
+//* Special Classes
+.rounded,
+img.circular {
+  @include border-radius($border-radius);
+}
+
+.circular,
+img.circular {
+  @include border-radius(50%);
+}
+
+//* Gallery
+.gallery {
+
+  img {
+    margin: 0px;
+  }
+
+  .gallery-item {
+    display: inline-block;
+    margin: 0px;
+  }
+
+  &.gallery-columns-4 .gallery-item {
+    width: 25%;
+  }
+}

@@ -1,0 +1,46 @@
+
+// Special styling for times
+//
+// :before  - Add clock icon inline with text
+time,
+.time {
+  &:before {
+    content: '\f017';
+    font-family: $font-family;
+    @include padding-right(0.2);
+    @include font-size(1.9);
+  }
+}
+
+// Tag / label style text
+//
+//
+*[rel~="tag"] {
+  border-radius: $border-radius;
+
+  display: inline-block;
+  @include padding(0.3, 1);
+  @include margin(0.25);
+
+  text-transform: uppercase;
+  font-size: font-size - 0.3;
+  @include letter-spacing(0.15);
+  font-weight: $font-weight;
+
+  @include style(normal){
+    color: $color-text-strong-inverted;
+    background-color: $color-tag;
+  }
+  @include style(hover){
+    color: $color-text-strong-inverted;
+    background-color: lighten($color-tag-hover, 10%);
+  }
+  @include style(inverted){
+    color: $color-text-strong;
+    background-color: $color-tag-inverted;
+  }
+  @include style(inverted-hover){
+    color: $color-text-strong;
+    background-color: lighten($color-tag-hover-inverted, 10%);
+  }
+}

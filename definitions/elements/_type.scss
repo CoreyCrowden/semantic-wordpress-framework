@@ -36,7 +36,7 @@ $font-size-extra-large                      : 1.4rem !default;
 
 // Basics
 $font-family                                : "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
-$font-size                                  : 1em !default;
+$font-size                                  : 1.6em !default;
 $font-weight                                : 400 !default;
 $letter-spacing                             : .0em !default;
 $line-height                                : 1.35 !default;
@@ -106,13 +106,16 @@ $color-text-selection-background            : $color-primary;
 
 // ------------------------------------------------------------------------------------------------------------------
 
+body {
+  font-size: $font-size;
+}
+
 body,
 p,
 h1, h2, h3, h4, h5, h6 {
 
   // Basics
   font-family: $font-family;
-  font-size: $font-size;
   font-weight: $font-weight;
   letter-spacing: $letter-spacing;
   line-height: $line-height;

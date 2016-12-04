@@ -8,6 +8,31 @@ html {
   box-sizing: border-box;
 }
 
+// Set the base sizing for the page
+html {
+  // Set a base of 9px for mobile users
+  @include media('<=desktop-lrg'){
+    font-size: 56.25%;
+  }
+  // Set a base of 10px for desktop users
+  @include media('>desktop-lrg'){
+    font-size: 62.5%;
+  }
+
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#wpadminbar {
+  z-index: 999999999;
+}
+
 // Hide Screen Reader Text
 .screen-reader-text,
 .screen-reader-text span,

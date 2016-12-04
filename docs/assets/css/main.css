@@ -459,6 +459,33 @@ html {
   box-sizing: border-box;
 }
 
+html {
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1920px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (min-width: 1921px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#wpadminbar {
+  z-index: 999999999;
+}
+
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
@@ -490,7 +517,10 @@ html {
 .animate, .animate-slow, .dropdown.item > .menu,
 .dropdown.item > .sub-menu,
 .menu.dropdown .item > .menu,
-.menu.dropdown .item > .sub-menu, .container.fixed, .container.absolute, .menu .item a, article table th, article table td, input:not([type]),
+.menu.dropdown .item > .sub-menu, .container.fixed, .container.absolute, .menu .item a, article table th, article table td, .button a,
+a.button,
+input[type="submit"],
+input[type="button"], input:not([type]),
 input[type="date"],
 input[type="datetime-local"],
 input[type="email"],
@@ -507,6 +537,50 @@ select, .nf-field-element:after, .nf-field-element:before, .list-select-wrap sel
 input[type="radio"] ~ label:before,
 input[type="radio"] ~ label:after {
   transition: all, 0.3s, ease;
+}
+
+.visible {
+  display: none;
+}
+
+.hidden:not(.mobile):not(.tablet):not(.desktop) {
+  display: none;
+}
+
+@media (max-width: 424px) {
+  .mobile.visible {
+    display: inherit;
+  }
+  .mobile.hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 767px) {
+  .tablet.visible {
+    display: inherit;
+  }
+  .tablet.hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .desktop.visible {
+    display: inherit;
+  }
+  .desktop.hidden {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .desktop.large.visible {
+    display: inherit;
+  }
+  .desktop.large.hidden {
+    display: none;
+  }
 }
 
 .container {
@@ -1457,11 +1531,14 @@ input[type="radio"] ~ label:after {
   font-size: 1.4rem;
 }
 
+body {
+  font-size: 1.6em;
+}
+
 body,
 p,
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-  font-size: 1em;
   font-weight: 400;
   letter-spacing: 0em;
   line-height: 1.35;
@@ -1642,6 +1719,58 @@ hr {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+time:before,
+.time:before {
+  content: '\f017';
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  padding-right: 0.5em;
+  font-size: 19px;
+  font-size: 1.9rem;
+}
+
+*[rel~="tag"] {
+  border-radius: 2px;
+  display: inline-block;
+  padding: 0.75em 2.5em;
+  margin: 0.625em;
+  text-transform: uppercase;
+  font-size: font-size-0.3;
+  letter-spacing: 1.5px;
+  letter-spacing: 0.15rem;
+  font-weight: 400;
+  color: white;
+  background-color: #87bc22;
+}
+
+.normal *[rel~="tag"],
+.inverted .normal *[rel~="tag"] {
+  color: white;
+  background-color: #87bc22;
+}
+
+*[rel~="tag"]:hover {
+  color: white;
+  background-color: #a2db36;
+}
+
+.normal *[rel~="tag"]:hover,
+.inverted .normal *[rel~="tag"]:hover {
+  color: white;
+  background-color: #a2db36;
+}
+
+.inverted *[rel~="tag"],
+.normal .inverted *[rel~="tag"] {
+  color: black;
+  background-color: #f6f6f6;
+}
+
+.inverted *[rel~="tag"]:hover,
+.normal .inverted *[rel~="tag"]:hover {
+  color: black;
+  background-color: #a2db36;
+}
+
 .unstyled-list ul, .unstyled-list li, aside ul, aside li, nav ul, nav li, footer ul, footer li {
   padding: 0px;
   margin: 0px;
@@ -1709,6 +1838,187 @@ article table th .inverted {
   background: rgba(255, 255, 255, 0.2);
 }
 
+.button a,
+a.button,
+input[type="submit"],
+input[type="button"] {
+  /* Positioning */
+  vertical-align: baseline;
+  margin: 0.75em 0em;
+  /* Box-model */
+  min-height: 4.2rem;
+  max-width: 100%;
+  padding: 0em 1.875em;
+  white-space: normal;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+  /* Typography */
+  /* Visual */
+  border-radius: 2px;
+  outline: none;
+  text-shadow: none;
+  text-decoration: none;
+  box-shadow: none;
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  /* Misc */
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+}
+
+.normal .button a,
+.inverted .normal .button a, .normal
+a.button,
+.inverted .normal
+a.button, .normal
+input[type="submit"],
+.inverted .normal
+input[type="submit"], .normal
+input[type="button"],
+.inverted .normal
+input[type="button"] {
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.button a:hover,
+a.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background: #87bc22;
+  color: white;
+  border: none;
+}
+
+.normal .button a:hover,
+.inverted .normal .button a:hover, .normal
+a.button:hover,
+.inverted .normal
+a.button:hover, .normal
+input[type="submit"]:hover,
+.inverted .normal
+input[type="submit"]:hover, .normal
+input[type="button"]:hover,
+.inverted .normal
+input[type="button"]:hover {
+  background: #87bc22;
+  color: white;
+  border: none;
+}
+
+.inverted .button a,
+.normal .inverted .button a, .inverted
+a.button,
+.normal .inverted
+a.button, .inverted
+input[type="submit"],
+.normal .inverted
+input[type="submit"], .inverted
+input[type="button"],
+.normal .inverted
+input[type="button"] {
+  color: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+}
+
+.inverted .button a:hover,
+.normal .inverted .button a:hover, .inverted
+a.button:hover,
+.normal .inverted
+a.button:hover, .inverted
+input[type="submit"]:hover,
+.normal .inverted
+input[type="submit"]:hover, .inverted
+input[type="button"]:hover,
+.normal .inverted
+input[type="button"]:hover {
+  color: white;
+  background: #87bc22;
+  border: none;
+}
+
+.button.emphasis a,
+a.button.emphasis,
+input.button.emphasis {
+  /* Visual */
+  border-radius: 2px;
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(135, 188, 34, 0);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.normal .button.emphasis a,
+.inverted .normal .button.emphasis a, .normal
+a.button.emphasis,
+.inverted .normal
+a.button.emphasis, .normal
+input.button.emphasis,
+.inverted .normal
+input.button.emphasis {
+  color: rgba(0, 0, 0, 0.8);
+  background: rgba(135, 188, 34, 0);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.button.emphasis a:hover,
+a.button.emphasis:hover,
+input.button.emphasis:hover {
+  background: #87bc22;
+  color: black;
+  border: 1px solid #87bc22;
+}
+
+.normal .button.emphasis a:hover,
+.inverted .normal .button.emphasis a:hover, .normal
+a.button.emphasis:hover,
+.inverted .normal
+a.button.emphasis:hover, .normal
+input.button.emphasis:hover,
+.inverted .normal
+input.button.emphasis:hover {
+  background: #87bc22;
+  color: black;
+  border: 1px solid #87bc22;
+}
+
+.inverted .button.emphasis a,
+.normal .inverted .button.emphasis a, .inverted
+a.button.emphasis,
+.normal .inverted
+a.button.emphasis, .inverted
+input.button.emphasis,
+.normal .inverted
+input.button.emphasis {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(135, 188, 34, 0);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.inverted .button.emphasis a:hover,
+.normal .inverted .button.emphasis a:hover, .inverted
+a.button.emphasis:hover,
+.normal .inverted
+a.button.emphasis:hover, .inverted
+input.button.emphasis:hover,
+.normal .inverted
+input.button.emphasis:hover {
+  color: white;
+  background: #87bc22;
+  border: 1px solid #87bc22;
+}
+
 input:not([type]),
 input[type="date"],
 input[type="datetime-local"],
@@ -1733,7 +2043,7 @@ select {
   /* Typography */
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.35;
-  font-size: 1em;
+  font-size: 1.6em;
   /* Visual */
   outline: none;
   -webkit-appearance: none;
@@ -1885,7 +2195,7 @@ select[disabled] {
  * --------------------------------------------------------------------------------------------- */
 label {
   text-transform: uppercase;
-  font-size: -2em;
+  font-size: -1.4em;
   letter-spacing: 1.5px;
   letter-spacing: 0.15rem;
   font-weight: 400;
@@ -2006,7 +2316,7 @@ input[type="radio"]:checked ~ label:after {
  * --------------------------------------------------------------------------------------------- */
 .nf-error-msg {
   color: #FF0000;
-  font-size: 0.8em;
+  font-size: 1.4em;
 }
 
 .nf-help.fa {
@@ -2186,6 +2496,101 @@ input[type="radio"]:checked ~ label:after {
 /* ---------------------------------------------------------------------------------------------
  * Search Form
  * --------------------------------------------------------------------------------------------- */
+img {
+  position: relative;
+  display: block;
+  vertical-align: middle;
+  background-color: rgba(246, 246, 246, 0.05);
+  margin: 0.375em 0em 1.25em;
+}
+
+img.disabled {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.wp-caption {
+  margin: 0px;
+  border-radius: 2px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wp-caption img {
+  margin: 0px;
+}
+
+.wp-caption .wp-caption-text {
+  font-size: font-size-0.1;
+  margin: 1.25em;
+}
+
+.alignleft {
+  float: left;
+  margin-right: 1.25em;
+}
+
+.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignright {
+  float: right;
+  margin-left: 1.25em;
+}
+
+figure.alignnone,
+figure.aligncenter,
+p[style="text-align: center;"] {
+  border: 0px;
+  border-radius: 0px;
+  width: auto !important;
+}
+
+figure.alignnone img,
+figure.aligncenter img,
+p[style="text-align: center;"] img {
+  margin: 0px auto;
+}
+
+@media (min-width: 769px) {
+  figure.alignnone figcaption,
+  figure.aligncenter figcaption,
+  p[style="text-align: center;"] figcaption {
+    text-align: center;
+    color: #a1a1a1;
+  }
+}
+
+.rounded,
+img.circular {
+  border-radius: 2px;
+}
+
+.circular,
+img.circular {
+  border-radius: 50%;
+}
+
+.gallery img {
+  margin: 0px;
+}
+
+.gallery .gallery-item {
+  display: inline-block;
+  margin: 0px;
+}
+
+.gallery.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
 .loading {
   position: fixed;
   top: 0%;

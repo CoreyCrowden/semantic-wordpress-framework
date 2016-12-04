@@ -1,0 +1,61 @@
+
+// Display content based on display classes
+//
+//
+
+
+
+
+// By default hide element that have the class .visible applied
+.visible {
+  display: none;
+}
+
+// Hide element outright when not breakpoint class is not set
+.hidden:not(.mobile):not(.tablet):not(.desktop) {
+    display: none;
+}
+
+.mobile {
+  @include media($mobile-breakpoint...){
+    &.visible {
+      display: inherit;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.tablet {
+  @include media($tablet-breakpoint...) {
+    &.visible {
+      display: inherit;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.desktop {
+  @include media($desktop-breakpoint...) {
+    &.visible {
+      display: inherit;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.desktop.large {
+  @include media($large-desktop-breakpoint...) {
+    &.visible {
+      display: inherit;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}

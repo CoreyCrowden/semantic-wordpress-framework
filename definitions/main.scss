@@ -22,13 +22,17 @@
 @import "globals/animate";
 
 // Components
+@import "components/display";
 @import "components/container";
 @import "components/grid";
 @import "components/menu";
 
 // Elements
 @import "elements/type";
+@import "elements/label";
 @import "elements/list";
 @import "elements/table";
+@import "elements/buttons";
 @import "elements/forms";
+@import "elements/image";
 @import "elements/loader";
