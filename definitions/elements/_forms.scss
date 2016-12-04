@@ -1,0 +1,416 @@
+// Form Defaults
+
+// Fields
+$color-field-background                           : rgba($color-white, 1);
+
+$form-input-width                                 : 100% !default;
+$form-input-height                                : $standard-field-height !default;
+
+// Form Borders
+$form-input-border-radius                         : 2px !default;
+$form-input-border-color                          : rgba($color-grey-light, 1);
+$form-input-border-color-hover                    : rgba($color-grey, 1);
+$form-input-border-color-focus                    : rgba($color-emphasis, 1);
+$form-input-border                                : 1px solid rgba($form-input-border-color, 1);
+
+// Form Inputs
+$color-form-input-checkbox-icon-checked           : $color-grey-extra-dark;
+
+$color-form-input-checkbox-background             : $color-white;
+$color-form-input-checkbox-background-hover       : $color-white;
+$color-form-input-checkbox-background-focus       : $color-grey-extra-light;
+$color-form-input-checkbox-background-checked     : $color-grey-extra-light;
+
+$border-form-checkbox                             : 1px solid rgba($color-black, .2);
+$border-form-checkbox-hover                       : 1px solid rgba($color-black, .4);
+$border-form-checkbox-focus                       : 1px solid rgba($color-black, .3);
+$border-form-checkbox-checked                     : 1px solid rgba($color-black, .3);
+
+// Field Padding
+$form-input-padding-top                           : 0.2 !default;
+$form-input-padding-right                         : 0.4 !default;
+$form-input-padding-bottom                        : $form-input-padding-top !default;
+$form-input-padding-left                          : $form-input-padding-right !default;
+
+//* All default input styles
+input:not([type]),
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="text"],
+input[type="file"],
+input[type="url"],
+textarea,
+select {
+
+  /* Positioning */
+  margin: 0px;
+
+  /* Box-model */
+  @include padding( $form-input-padding-top, $form-input-padding-right, $form-input-padding-bottom, $form-input-padding-left);
+  width: $form-input-width;
+  max-width: 100%;
+  min-height: $form-input-height;
+
+  /* Typography */
+  font-family: $font-family;
+  line-height: $line-height;
+  font-size: $font-size;
+
+  /* Visual */
+  outline: none;
+  -webkit-appearance: none;
+  tap-highlight-color:  rgba(255, 255, 255, 0);
+  border-radius: $border-radius;
+  box-shadow: none;
+
+  color: $color-text;
+
+  background: $color-field-background;
+  border: $form-input-border;
+
+  &:hover {
+    color: $color-text-strong;
+    border-color: $form-input-border-color-hover;
+  }
+
+  &:focus {
+    color: $color-text-strong;
+    border-color: $form-input-border-color-focus;
+  }
+
+  //* Error Input Styles
+  .nf-error & {
+    border-color: $color-danger;
+    color: $color-danger;
+  }
+
+  //* Pass / Success Input Styles
+  .nf-pass {
+    border-color: $color-success;
+    color: $color-text;
+  }
+
+  //* Disabled Input Styles
+  &[disabled] {
+    border-color: $color-border-disabled;
+    background: $color-background-disabled;
+    cursor: not-allowed;
+  }
+
+  /* Misc */
+  @extend .animate;
+
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------
+ * Text Input Icons
+ * --------------------------------------------------------------------------------------------- */
+
+//* Field Icons
+.nf-field-element {
+
+  //* Set Icon Defaults
+  &:after, &:before {
+
+    // Icon Positioning
+    position: absolute;
+    line-height: $form-input-height;
+    @include margin-right($form-input-padding-right);
+    top: 0;
+    right: 0;
+    height: 0;
+    overflow: visible;
+    pointer-events: none;
+
+    //font-family: $font-icon-family;
+    opacity: 0;
+    @extend .animate;
+
+    //* Don't display ticks for required checkboxes due to ninja forms error
+    .checkbox-wrap &,
+    .list-checkbox-wrap & {
+      display: none;
+    }
+  }
+
+  //* Set Error
+  &:after {
+    content: '\f00d';
+    color: $color-danger;
+  }
+  .nf-error & {
+    &:after {
+      opacity: 1;
+    }
+  }
+
+  //* Set Success
+  &:before {
+    content: '\f00c';
+    color: $color-success;
+  }
+  .nf-pass & {
+    &:before {
+      opacity: 1;
+    }
+  }
+}
+
+//* Shift up down buttons for fail icon in number field
+.number-wrap.nf-error {
+  .nf-element {
+    @include padding-right(1.2);
+  }
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------
+ * Labels
+ * --------------------------------------------------------------------------------------------- */
+
+label {
+  text-transform: uppercase;
+  font-size: $font-size - 3;
+  @include letter-spacing(0.15);
+  font-weight: $font-weight;
+  @include margin(0.75,0,0.5);
+
+  //color: $color-text-label;
+  //.inverted & {
+  //  color: $color-text-label-inverted;
+  //}
+}
+
+
+// Select drop down list icon
+
+.list-select-wrap select {
+  ~ div {
+    display: block;
+
+    // Icon Positioning
+    position: absolute;
+    line-height: $form-input-height;
+    @include margin-right($form-input-padding-right);
+    top: 0;
+    right: 0;
+    height: 0;
+    overflow: visible;
+    pointer-events: none;
+
+    // Icon Defaults
+    &:after {
+    //  font-family: $icon-font-family;
+      content: '\f107';
+      color: $form-input-border-color;
+      @extend .animate;
+      height: 0;
+      width: 0;
+    }
+  }
+
+  // Icon Hover
+  &:hover ~ div:after {
+    color: $form-input-border-color-hover;
+  }
+
+  // Icon Focus
+  &:focus ~ div:after {
+    color: $form-input-border-color-focus;
+  }
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------------
+ * Custom Radio & Check Box Icons
+ * --------------------------------------------------------------------------------------------- */
+
+//* Hide Standard Browser Icon | Checkbox & Radio
+input[type="radio"],
+input[type="checkbox"] {
+
+  //* Hide default toggle / box
+  z-index: -1;
+  opacity: 0!important;
+
+}
+
+//* Icon Default | Checkbox & Radio
+input[type="checkbox"] ~ label,
+input[type="radio"] ~ label {
+
+  cursor: pointer;
+
+  &:before,
+  &:after {
+    content: '';
+    transform: none;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+    @extend .animate;
+  }
+
+  // Background
+  &:before {
+    border: $border-form-checkbox;
+    background-color: $color-form-input-checkbox-background;
+  }
+
+  // Bullet / Check
+  &:after {
+
+  }
+
+}
+
+//* Icon Hover | Checkbox & Radio
+label:hover,
+input[type="checkbox"]:hover ~ label,
+input[type="radio"]:hover ~ label {
+
+  // Icon Background
+  &:before {
+    border: $border-form-checkbox-hover;
+    background-color: $color-form-input-checkbox-background-hover;
+  }
+
+  // Icon Bullet / Check
+  &:after {
+
+  }
+
+}
+
+//* Icon Focus | Checkbox & Radio
+label:focus,
+input[type="checkbox"]:focus ~ label,
+input[type="radio"]:focus ~ label {
+
+  &:before {
+    border: $border-form-checkbox-focus;
+    background-color: $color-form-input-checkbox-background-focus;
+  }
+
+}
+
+//* Icon Checked | Checkbox & Radio
+input[type="checkbox"]:checked ~ label,
+input[type="radio"]:checked ~ label {
+
+  &:before {
+    border: $border-form-checkbox-checked;
+    background-color: $color-form-input-checkbox-background-checked;
+  }
+
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+//* Checkbox Icon Default
+input[type="checkbox"] ~ label {
+
+  &:before,
+   &:after {
+     border-radius: 3px;
+   }
+
+  &:after {
+    content: '\f00c';
+    color: $color-form-input-checkbox-background;
+  //  font-family: $font-icon-family;
+    left: 2px;
+  }
+
+}
+
+//* Checkbox Icon Checked
+input[type="checkbox"]:checked ~ label {
+
+  &:after {
+    color: $color-form-input-checkbox-icon-checked;
+  }
+
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+//* Radio Icon Default
+input[type="radio"] {
+  & ~ label {
+
+    &:before,
+    &:after {
+      border-radius: 50%;
+    }
+
+    &:after {
+      transform: scale(0.43);
+      background-color: $border-form-checkbox;
+    }
+  }
+}
+
+//* Radio Icon Checked
+input[type="radio"]:checked ~ label {
+
+  &:after {
+    background-color: $color-form-input-checkbox-icon-checked;
+  }
+
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------
+ * Messages
+ * --------------------------------------------------------------------------------------------- */
+
+//* Messages
+.nf-error-msg {
+  color: $color-danger;
+  font-size: $font-size - 0.2;
+}
+
+//* Info / Help Icon
+.nf-help.fa {
+  @include font-size(1.6);
+
+  //* Remove second icon --issue
+  background: none;
+}
+
+
+/* ---------------------------------------------------------------------------------------------
+ * Placeholder Text
+ * --------------------------------------------------------------------------------------------- */
+
+//* Default Placeholder
+@include placeholder-color($standard-color: $color-text-weak, $hover-color: $color-text-strong, $focus-color: $color-text-strong);
+
+
+//* Error Placeholder
+.nf-error {
+  @include placeholder-color($standard-color: $color-danger-weak, $hover-color: $color-danger, $focus-color: $color-danger-strong);
+}
+
+//* Disabled Placeholder
+[disabled] {
+  @include placeholder-color($standard-color: $color-text-disabled, $hover-color: $color-text-disabled, $focus-color: $color-text-disabled);
+}
+
+/* ---------------------------------------------------------------------------------------------
+ * Search Form
+ * --------------------------------------------------------------------------------------------- */

@@ -16,7 +16,8 @@ var base_path = './',
     paths = {
         js: src + '/**/*.js',
         scss: [ src +'/main.scss',
-                src +'/**/*.scss' ],
+                src +'/**/*.scss',
+                src +'/**/**/*.scss' ],
         jekyll: ['docs/*', 'docs/**/*', 'docs/**/**/*', 'docs/!_site/**/*']
     };
 

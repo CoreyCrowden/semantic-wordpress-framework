@@ -67,6 +67,20 @@ $color-border-disabled                      : lighten($color-grey-light, 5%);
 // Spacial Unit Size
 $unit                                       : 2.5em !default;
 
+// Standard Sizing
+$standard-field-height                      : 4.2rem !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Border
+$standard-border                    : 1px rgba($color-black, 0.1) solid;
+$standard-border-inverted           : 1px rgba($color-black, 0.1) solid;
+
+// Border Radius
+$border-radius                    : 2px !default;
+$border                           : 1px solid rgba($color-black, .2);
+$border-inverted                  : 1px solid rgba($color-white, .2);
+
 // ------------------------------------------------------------------------------------------------------------------
 
 // Media Breakpoints

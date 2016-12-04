@@ -1,0 +1,200 @@
+
+//----------------------------------------------------------------------
+
+// Menu
+//
+// Based off the semantic ui menu, this is a collection of menu classes
+// designed to work with the default WordPress menu.
+//
+// The menu uses the Flexbox Grid System. The .menu class has been
+// assigned the required flexbox properties and all additional grid
+// classes should work just with the menu.
+//
+// http://semantic-ui.com/collections/menu.html
+
+//----------------------------------------------------------------------
+
+// Variables
+
+// Box Sizing
+$menu-item-height                               : $standard-field-height !default;
+
+$menu-item-top-level-padding-top                : .25 !default;
+$menu-item-top-level-padding-right              : .5 !default;
+$menu-item-top-level-padding-bottom             : .25 !default;
+$menu-item-top-level-padding-left               : .5 !default;
+
+// Colour
+
+$menu-item-top-level-background                 : rgba($color-black, 0) !default;
+$menu-item-top-level-background-hover           : rgba($color-black, .03) !default;
+$menu-item-top-level-background-inverted        : rgba($color-white, 0) !default;
+$menu-item-top-level-background-inverted-hover  : rgba($color-white, .03) !default;
+
+$menu-sub-level-background                      : $color-grey-extra-dark !default;
+
+$menu-item-sub-level-background                 : rgba($color-white, 1) !default;
+$menu-item-sub-level-background-hover           : rgba($color-black, .03) !default;
+$menu-item-sub-level-background-inverted        : rgba($color-white, 1) !default;
+$menu-item-sub-level-background-inverted-hover  : rgba($color-white, 1) !default;
+
+// Typography
+
+
+//----------------------------------------------------------------------
+
+// Full height menu
+//
+// For use in areas such as the Header Bar
+.menu.full.height > .item,
+.menu.full.height > .item a {
+  height: 100%;
+}
+
+// Menu Type Styles
+.menu {
+  .sub-menu {
+  }
+}
+
+
+// The default menu is a vertically stacked list using default body text styles
+
+.menu {
+
+  // Defaults
+  margin: 0px;
+  list-style: none;
+
+  // Top Level Menu Items
+  .item {
+    a {
+      // Flex display is used for vertically centering menu item text
+      @include flexbox;
+      @include align-items(center);
+      min-height: $menu-item-height;
+      @include padding( $menu-item-top-level-padding-top, $menu-item-top-level-padding-right, $menu-item-top-level-padding-bottom, $menu-item-top-level-padding-left);
+      @include margin(0);
+
+      // Styling
+      @extend .animate;
+      background: $menu-item-top-level-background;
+
+      &:hover {
+        background: $menu-item-top-level-background-hover;
+      }
+
+    }
+  }
+}
+
+.sub-menu {
+  margin: 0px;
+}
+
+
+
+// Dropdown sub menu
+.dropdown.item,
+.menu.dropdown .item {
+
+  > .menu,
+  > .sub-menu {
+    // Display sub menus as a column / vertical
+    @include flex-direction(column);
+
+    // Default hidden position
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 55555;
+
+    // Styling
+    background: $menu-sub-level-background;
+    @extend .animate-slow;
+
+    .item a {
+
+      background: $menu-item-sub-level-background;
+
+    }
+  }
+
+  // Hover Styles
+  &:hover > .menu,
+  &:hover > .sub-menu,
+  .menu:hover,
+  .sub-menu:hover {
+    visibility: visible;
+    opacity: 1;
+    .item a {
+      background: $menu-item-sub-level-background-hover;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+//.menu {
+//  @include flexbox;
+//
+//  .menu-item {
+//    @include flexbox;
+//    @include align-self(center);
+//
+//    position: relative;
+//
+//
+//    a {
+//      @include padding(0.5);
+//
+//      &:hover {
+//        background: rgba($color-white, 0.1);
+//      }
+//    }
+//
+//    //* Call to action button
+//    &.button {
+//      a {
+//
+//      }
+//    }
+//
+//    .sub-menu {
+//      display: none;
+//      position: absolute;
+//      margin: 0px;
+//      top: 100%; // Corrects position
+//      background: rgba($color-primary, 1);
+//      z-index: 9999999;
+//
+//      .menu-item {
+//        a {
+//          width: 100%;
+//          min-width: 240px;
+//        }
+//      }
+//    }
+//
+//    &:hover .sub-menu {
+//      display: block;
+//    }
+//  }
+//
+//  //* Menu Item With Children
+//  > .menu-item-has-children {
+//
+//    > a {
+//      &:after {
+//        content: '\f107';
+//        font-family: $font-icon-family;
+//        @include padding-left(0.2);
+//      }
+//    }
+//  }
+//}

@@ -88,7 +88,10 @@ $color-text-weak-inverted                   : $color-grey;
 $color-text-inverted                        : $color-grey-light;
 $color-text-strong-inverted                 : $color-white;
 
-// Links
+// Anchor Link
+$font-link-decoration                       : none !default;
+$font-link-decoration-hover                 : none !default;
+
 $color-text-link                            : $color-emphasis;
 $color-text-link-visited                    : darken( $color-emphasis, 0% );
 $color-text-link-hover                      : darken( $color-emphasis, 10% );
@@ -118,6 +121,15 @@ h1, h2, h3, h4, h5, h6 {
   text-indent: $text-indent;
   text-overflow: $text-overflow;
   text-transform: $text-transform;
+
+  // Normal
+  @include style(normal){
+    color: $color-text;
+  }
+  // Inverted
+  @include style(inverted){
+    color: $color-text-inverted;
+  }
 
   // Emphasis
   em {
@@ -164,10 +176,79 @@ h6 {
   font-size: $font-size-h6;
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+
+// Links
+
 a {
 
-  &:hover {
-
+  // Normal
+  @include style(normal) {
+    color: $color-text-strong;
+    text-decoration: $font-link-decoration;
+  }
+  // Normal Hover
+  @include style(hover) {
+    color: $color-text-link-hover;
+    text-decoration: $font-link-decoration-hover;
+  }
+  // Inverted
+  @include style(inverted) {
+    color: $color-text-strong-inverted;
+  }
+  // Inverted Hover
+  @include style(inverted-hover) {
+    color: $color-text-link-hover-inverted;
   }
 
+  //* Link Style inside content area
+  // Normal
+  article p & {
+    @include style(normal) {
+      color: $color-text-link;
+    }
+    // Normal Hover
+    @include style(hover) {
+      color: $color-text-link-hover;
+    }
+    // Inverted
+    @include style(inverted) {
+      color: $color-text-link-inverted;
+    }
+    // Inverted Hover
+    @include style(inverted-hover) {
+      color: $color-text-link-hover-inverted;
+    }
+  }
 }
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Selection Highlighting
+
+::-moz-selection,
+input::-moz-selection,
+textarea::-moz-selection {
+  background-color: $color-text-selection-background;
+  color: $color-text-selection;
+}
+::selection,
+input::selection,
+textarea::selection {
+  background-color: $color-text-selection-background;
+  color: $color-text-selection;
+}
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Horizontal Rule
+
+hr {
+  border: none;
+  border-bottom: $border;
+  @extend .fluid;
+  .inverted & {
+    border-top: $border-inverted;
+  }
+}
+

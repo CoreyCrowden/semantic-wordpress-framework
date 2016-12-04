@@ -1,0 +1,71 @@
+// Table
+
+$color-table-background-head            : rgba($color-black, .05 );
+$color-table-background-odd             : rgba($color-black, 0 );
+$color-table-background-even            : rgba($color-black, .01 );
+$color-table-background-head-inverted   : rgba($color-white, .2 );
+$color-table-background-odd-inverted    : rgba($color-white, 0 );
+$color-table-background-even-inverted   : rgba($color-white, .1 );
+
+
+// Styled Tables In Article Content Area
+article {
+  table {
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    text-align: left;
+    border-collapse: collapse;
+
+    th, td {
+      @extend .animate;
+      cursor: auto;
+      text-align: left;
+      @include padding(0.35);
+      vertical-align: middle;
+    }
+
+    tr {
+      border-top: $border;
+
+      &:first-child {
+        border: none;
+      }
+
+      //* Odd Rows
+      &:nth-child(odd){
+        background: $color-table-background-odd;
+        .inverted &,
+        .inverted {
+          background: $color-table-background-odd-inverted;
+        }
+      }
+
+      //* Even Rows
+      &:nth-child(even) {
+        background: $color-table-background-even;
+        .inverted &,
+        .inverted {
+          background: $color-table-background-even-inverted;
+        }
+      }
+    }
+
+    //* Header Row
+    th {
+      background: $color-table-background-head;
+      font-weight: $font-weight-bold;
+      .inverted &,
+      .inverted {
+        background: $color-table-background-head-inverted;
+      }
+    }
+
+    td {
+
+    }
+
+
+  }
+}
