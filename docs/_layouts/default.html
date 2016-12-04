@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/assets/css/main.css">
   </head>
   <body>
 
@@ -18,7 +18,7 @@
             <ul class="menu">
 
               <!--Title-->
-              <li class="item"><a href="{{ site.github.url }}/">Semantic WordPress Framework</a></li>
+              <li class="item"><a href="{{ site.github.url }}/">{{ site.name }}</a></li>
 
               <!--Introduction-->
               <li class="item"><a href="{{ site.github.url }}/introduction/getting-started/">Getting Started</a></li>
@@ -40,6 +40,13 @@
                 </ul>
               </li>
 
+              <!--Elements-->
+              <li class="item"><a href="#">Elements</a>
+                <ul class="sub-menu">
+                  <li class="item"><a href="{{ site.github.url }}/elements/typography/">Typography</a></li>
+                </ul>
+              </li>
+
             </ul>
           </nav>
         </div>
@@ -50,6 +57,7 @@
           <!--Page Header-->
           <div class="container padded relaxed">
             <h1>{{ page.title }}</h1>
+            <h3>{{ page.subtitle }}</h3>
           </div>
 
           <!--Page Content-->

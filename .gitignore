@@ -18,7 +18,9 @@ $RECYCLE.BIN/
 *.lnk
 
 # Doc Site Cache
-_site/
+docs/_site/
+node_modules/
+.idea/
 
 # =========================
 # Operating System Files
@@ -48,3 +50,6 @@ _site/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.jekyll-metadata
+.idea/workspace.xml
+.idea/workspace.xml

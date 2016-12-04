@@ -1,0 +1,73 @@
+//
+// Typography
+//
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Headings
+
+// Basics
+$headings: (
+    font-family: Roboto,
+    font-weight: 400
+) !default;
+
+
+$heading-font-family                        : Roboto, "Helvetica Neue", Arial, sans-serif !default;
+$heading-font-weight                        : 400 !default;
+$font-heading-line-height                   : 1.35 !default;
+$font-heading-margin                        : .83 !default;
+$font-heading-letter-spacing                : .0 !default;
+$font-heading-text-transform                : uppercase !default;
+
+$heading-font-weight-bold                   : 700 !default;
+
+$font-heading-color                         : $color-black;
+$font-heading-color-inverted                : $color-grey-extra-light;
+
+$font-heading-1-size                        : 4.8 !default;
+$font-heading-2-size                        : 4.0 !default;
+$font-heading-3-size                        : 3.2 !default;
+$font-heading-4-size                        : 2.8 !default;
+$font-heading-5-size                        : 2.4 !default;
+$font-heading-6-size                        : 2.0 !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Paragraph
+$paragraph-family                 : Roboto, Georgia, "Times New Roman", Times, serif !default;
+$paragraph-size                   : 1.6 !default;
+$paragraph-weight                 : 400 !default;
+$paragraph-line-height            : 1.5 !default;
+$paragraph-letter-spacing         : .0 !default;
+$paragraph-text-transform         : none !default;
+
+$paragraph-weight-bold            : 700 !default;
+
+$paragraph-margin-top             : .5 !default;
+$paragraph-margin-right           : 0 !default;
+$paragraph-margin-bottom          : .5 !default;
+$paragraph-margin-left            : 0 !default;
+
+$color-text-weak                            : $color-grey;
+$color-text                                 : $color-grey-extra-dark;
+$color-text-strong                          : $color-black;
+
+$color-text-weak-inverted                   : $color-grey;
+$color-text-inverted                        : $color-grey-light;
+$color-text-strong-inverted                 : $color-white;
+
+// Links
+$color-text-link                            : $color-emphasis;
+$color-text-link-visited                    : darken( $color-emphasis, 0% );
+$color-text-link-hover                      : darken( $color-emphasis, 10% );
+
+$color-text-link-inverted                   : $color-emphasis-secondary;
+$color-text-link-visited-inverted           : darken( $color-emphasis-secondary, 0% );
+$color-text-link-hover-inverted             : darken( $color-emphasis-secondary, 10% );
+
+// Selection Highlight
+$color-text-selection                       : $color-text-inverted;
+$color-text-selection-background            : $color-primary;
+
+// ------------------------------------------------------------------------------------------------------------------

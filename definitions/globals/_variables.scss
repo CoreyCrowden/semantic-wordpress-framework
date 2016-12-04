@@ -1,0 +1,57 @@
+//
+// Base Variables
+//
+
+// ------------------------------------------------------------------------------------------------------------------
+// Base Colors
+
+// Greyscale Colors
+$color-white                                : rgb(255, 255, 255) !default;
+$color-grey-extra-light                     : rgb(246, 246, 246) !default;
+$color-grey-light                           : rgb(221, 221, 221) !default;
+$color-grey                                 : rgb(161, 161, 161) !default;
+$color-grey-dark                            : rgb(99, 99, 99) !default;
+$color-grey-extra-dark                      : rgb(29, 29, 29) !default;
+$color-black                                : rgb(0, 0, 0) !default;
+
+// Basic Colors
+$color-red                                  : #b03060 !default;
+$color-orange                               : #FE9A76 !default;
+$color-yellow                               : #FFD700 !default;
+$color-olive                                : #32CD32 !default;
+$color-green                                : #016936 !default;
+$color-teal                                 : #008080 !default;
+$color-blue                                 : #0E6EB8 !default;
+$color-violet                               : #EE82EE !default;
+$color-purple                               : #B413EC !default;
+$color-pink                                 : #FF1493 !default;
+$color-brown                                : #583e00 !default;
+
+// Brand Colors
+$color-brand-1                              : rgb(153, 188, 73) !default;
+$color-brand-2                              : rgb(33, 46, 54) !default;
+$color-brand-3                              : rgb(227, 120, 105) !default;
+$color-brand-4                              : rgb(78, 195, 116) !default;
+
+// Primary Colors
+$color-primary                              : $color-brand-2 !default;
+$color-secondary                            : lighten($color-brand-2, 20%) !default;
+$color-emphasis                             : $color-brand-1 !default;
+$color-emphasis-secondary                   : $color-brand-3 !default;
+
+// Notification Colors
+$color-success                              : $color-emphasis;
+$color-success-weak                         : lighten($color-emphasis, 10%);
+$color-success-strong                       : darken($color-emphasis, 10%);
+
+$color-info                                 : #007DE8;
+$color-info-weak                            : lighten($color-info, 10%);
+$color-info-strong                          : darken($color-info, 10%);
+
+$color-warning                              : #FF7300;
+$color-warning-weak                         : lighten($color-warning, 10%);
+$color-warning-strong                       : darken($color-warning, 10%);
+
+$color-danger                               : #FF0000;
+$color-danger-weak                          : lighten($color-danger, 10%);
+$color-danger-strong                        : darken($color-danger, 10%);
