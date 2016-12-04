@@ -21,6 +21,7 @@ $RECYCLE.BIN/
 docs/_site/
 node_modules/
 .idea/*
+bower_components/
 
 # =========================
 # Operating System Files

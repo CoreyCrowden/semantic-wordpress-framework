@@ -2,10 +2,28 @@
 // Semantic WordPress Framework
 //
 
+// Load Include Media
+// http://include-media.com/
+@import "../bower_components/include-media/dist/include-media";
+
+// Load Normalize.CSS
+// https://necolas.github.io/normalize.css/
+@import "../bower_components/normalize.css/_normalize.scss";
+
 // Mixins
+@import "mixins/flex";
+@import "mixins/spacing";
+@import "mixins/typeset";
+@import "mixins/mixins";
 
 // Globals
-@import "definitions/globals/variables";
+@import "globals/variables";
+@import "globals/basics";
+@import "globals/animate";
+
+// Components
+@import "components/container";
+@import "components/grid";
 
 // Elements
-@import "definitions/elements/typography";
+@import "elements/typography";

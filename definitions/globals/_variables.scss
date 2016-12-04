@@ -3,6 +3,7 @@
 //
 
 // ------------------------------------------------------------------------------------------------------------------
+
 // Base Colors
 
 // Greyscale Colors
@@ -28,14 +29,14 @@ $color-pink                                 : #FF1493 !default;
 $color-brown                                : #583e00 !default;
 
 // Brand Colors
-$color-brand-1                              : rgb(153, 188, 73) !default;
-$color-brand-2                              : rgb(33, 46, 54) !default;
+$color-brand-1                              : rgb(135, 188, 34) !default;
+$color-brand-2                              : rgba(0, 13, 18, 0.85) !default;
 $color-brand-3                              : rgb(227, 120, 105) !default;
 $color-brand-4                              : rgb(78, 195, 116) !default;
 
 // Primary Colors
-$color-primary                              : $color-brand-2 !default;
-$color-secondary                            : lighten($color-brand-2, 20%) !default;
+$color-primary                              : $color-brand-1 !default;
+$color-secondary                            : lighten($color-brand-2, 5%) !default;
 $color-emphasis                             : $color-brand-1 !default;
 $color-emphasis-secondary                   : $color-brand-3 !default;
 
@@ -55,3 +56,65 @@ $color-warning-strong                       : darken($color-warning, 10%);
 $color-danger                               : #FF0000;
 $color-danger-weak                          : lighten($color-danger, 10%);
 $color-danger-strong                        : darken($color-danger, 10%);
+
+// Disabled
+$color-text-disabled                        : lighten($color-grey-light, 2%);
+$color-background-disabled                  : lighten($color-grey-extra-light, 5%);
+$color-border-disabled                      : lighten($color-grey-light, 5%);
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Spacial Unit Size
+$unit                                       : 2.5em !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Media Breakpoints
+
+// Default Breakpoints
+$mobile-sml                   : 320px !default;
+$mobile-med                   : 375px !default;
+$mobile-lrg                   : 425px !default;
+$tablet-sml                   : 620px !default;
+$tablet-med                   : 720px !default;
+$tablet-lrg                   : 768px !default;
+$desktop-sml                  : 1024px !default;
+$desktop-med                  : 1440px !default;
+$desktop-lrg                  : 1920px !default;
+$desktop-xlrg                 : 2560px !default;
+$desktop-xlrg                 : 2560px !default;
+
+// Setup breakpoints at the end of the variables page to include values from variables
+//
+// Refer to http://include-media.com/ for information
+
+// Sidebar Box Sizing
+$sidebar-side                             : left !default;
+$sidebar-width                            : 600px !default;
+$sidebar-max-width                        : 80% !default;
+
+// Sidebar Display
+$sidebar-breakpoint                       : $desktop-lrg !default;
+
+$breakpoints: (
+  // Browser Breakpoints
+    'mobile-sml'              : $mobile-sml,
+    'mobile-med'              : $mobile-med,
+    'mobile-lrg'              : $mobile-lrg,
+    'tablet-sml'              : $tablet-sml,
+    'tablet-med'              : $tablet-med,
+    'tablet-lrg'              : $tablet-lrg,
+    'desktop-sml'             : $desktop-sml,
+    'desktop-med'             : $desktop-med,
+    'desktop-lrg'             : $desktop-lrg,
+    'desktop-xlrg'            : $desktop-xlrg,
+
+  // Sidebar Breakpoints
+    'sidebar-breakpoint'      : $sidebar-breakpoint,
+    'sidebar-width'           : $sidebar-width
+);
+
+$mobile-breakpoint            : '<mobile-lrg';
+$tablet-breakpoint            : '>=mobile-lrg', '<tablet-lrg';
+$desktop-breakpoint           : '>=tablet-lrg', '<desktop-med';
+$large-desktop-breakpoint     : '>=desktop-med';

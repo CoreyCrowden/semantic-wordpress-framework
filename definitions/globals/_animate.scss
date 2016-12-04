@@ -1,0 +1,18 @@
+// Simple Fade Animation
+//
+// Used on various element through the @extend function to soften changing conditions.
+
+.animate {
+  $property: all;
+  $duration: 0.3s;
+  $easing: ease;
+  -webkit-transition: $property, $duration, $easing;
+  -moz-transition: $property, $duration, $easing;
+  -o-transition: $property, $duration, $easing;
+  transition: $property, $duration, $easing;
+}
+
+.animate-slow {
+  $duration: 0.6s;
+  @extend .animate;
+}

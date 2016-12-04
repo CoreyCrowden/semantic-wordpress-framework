@@ -1,0 +1,299 @@
+
+/*--------------------------------------------------------------
+    Mixins
+--------------------------------------------------------------*/
+// Clearfix
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Rem Font Sizing Mixin, this is used to create ie 8 fallback px reference. Rems are being used to control font sizing on mobile globally
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// Rem Letter Spacing Mixin, this is used to create ie 8 fallback px reference. Rems are being used to control letter spacing on mobile globally
+@mixin letter-spacing($sizeValue) {
+  letter-spacing: ($sizeValue * 10) + px;
+  letter-spacing: $sizeValue + rem;
+}
+
+// Box Shadows
+@mixin box-shadow( $x: none, $y: null, $blur: null, $color: null ) {
+
+  @if $x == none {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  } @else {
+    -webkit-box-shadow: $x $y $blur $color;
+    -moz-box-shadow: $x $y $blur $color;
+    box-shadow: $x $y $blur $color;
+  }
+}
+
+// Default Transition Animation, primarily for use with hover effects on buttons etc.
+@mixin animate( $property: all, $duration: 0.3s, $easing: ease-in-out ) {
+  -webkit-transition: $property $duration $easing;
+  -moz-transition: $property $duration $easing;
+  -o-transition: $property $duration $easing;
+  transition: $property $duration $easing;
+}
+
+// Definable Transition Animation, For more elaborate transitions such as sliders
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// Transition Delay
+@mixin transition-delay($args) {
+    -webkit-transition-delay: $args;
+    -moz-transition-delay: $args;
+    -o-transition-delay: $args;
+    transition-delay: $args;
+}
+
+// Rotate
+@mixin rotate($args) {
+    /* Safari */
+    -webkit-transform: rotate($args);
+    /* Firefox */
+    -moz-transform: rotate($args);
+    /* IE */
+    -ms-transform: rotate($args);
+    /* Opera */
+    -o-transform: rotate($args);
+}
+
+// Horizontal Transform
+@mixin horizontal-transform($args) {
+    -webkit-transform: translate3d($args, 0, 0);
+    -moz-transform: translate3d($args, 0, 0);
+    -ms-transform: translate3d($args, 0, 0);
+    -o-transform: translate3d($args, 0, 0);
+    transform: translate3d($args, 0, 0);
+}
+
+// Custom Link
+@mixin links( $normal, $visited, $hover ) {
+  &:visited {
+    color: $visited;
+  }
+  &:hover, &:active, &:focus {
+    color: $hover;
+  }
+}
+
+// Alignments
+@mixin align-left(){
+    display: inline;
+    float: left;
+}
+
+@mixin align-center(){
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin align-right(){
+    display: inline;
+    float: right;
+}
+
+// Cross Browser Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Screen Reader Text Hide
+@mixin screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+        
+    &:hover,
+    &:active,
+    &:focus {
+        background-color: #f1f1f1;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: #21759b;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}
+
+// Blur
+@mixin filter-blur($arg){
+    -webkit-filter: blur($arg);
+    -moz-filter: blur($arg);
+    -o-filter: blur($arg);
+    -ms-filter: blur($arg);
+    filter: blur($arg); 
+}
+
+// Text Input Placeholder Text
+// !important keep each placeholder seperate, combining causes browser reading issues
+@mixin placeholder-color($standard-color, $hover-color, $focus-color){
+    // Standard Color
+    &::-webkit-input-placeholder {
+      color: ($standard-color);
+      @include animate();
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: ($standard-color);
+      @include animate();
+    }
+    &::-moz-placeholder {  /* Firefox 19+ */
+      color: ($standard-color);
+      opacity: 1;
+      @include animate();
+    }
+    &:-ms-input-placeholder {
+      color: ($standard-color);
+      @include animate();
+    }
+    
+    // On Hover Color
+    &:hover::-webkit-input-placeholder {
+        color: ($hover-color);
+    }
+    &:hover:-moz-placeholder {
+        color: ($hover-color);
+    }
+    &:hover::-moz-placeholder {
+        color: ($hover-color);
+    }
+    &:hover:-ms-input-placeholder {
+        color: ($hover-color);
+    }
+    
+    // On Focus Color
+    &:focus::-webkit-input-placeholder {
+        color: ($focus-color);
+    }
+    &:focus:-moz-placeholder {
+        color: ($focus-color);
+    }
+    &:focus::-moz-placeholder {
+        color: ($focus-color);
+    }
+    &:focus:-ms-input-placeholder {
+        color: ($focus-color);
+    }
+}
+
+//* Border Radius
+@mixin border-radius($border-radius){
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+//* Admin Bar Adjustment
+// Correct for admin bar
+@mixin admin-bar-adjustment($style : padding-top){
+
+  // Admin Bar Height
+  $admin-bar-height-desktop     : 32px !default;
+  $admin-bar-height-mobile      : 46px !default;
+
+  // Admin Bar Breakpoint
+  $admin-bar-height-breakpoint  : '<=782px' !default;
+
+  .admin-bar & {
+    #{$style}: $admin-bar-height-desktop;
+
+    @include media($admin-bar-height-breakpoint){
+      #{$style}: $admin-bar-height-mobile;
+    }
+  }
+
+}
+
+
+//* Inverted & Normal Style Mixins
+
+@mixin style($style){
+  // Style Normal
+  @if $style == normal {
+    @content;
+    .normal &,
+    .inverted .normal & {
+      @content;
+    }
+  }
+  // Style Normal Hover
+  @if $style == hover {
+    &:hover {
+      @content;
+      .normal &,
+      .inverted .normal &  {
+        @content;
+      }
+    }
+  }
+  // Style Focus
+  @if $style == focus {
+    &:focus {
+      @content;
+      .normal &,
+      .inverted .normal & {
+        @content;
+      }
+    }
+  }
+  // Style Inverted
+  @if $style == inverted {
+    .inverted &,
+    .normal .inverted &  {
+      @content;
+    }
+  }
+  // Style Inverted Hover
+  @if $style == inverted-hover {
+    &:hover {
+      .inverted &,
+      .normal .inverted &  {
+        @content;
+      }
+    }
+  }
+  // Style Inverted Focus
+  @if $style == inverted-focus {
+    &:focus {
+      .inverted &,
+      .normal .inverted &  {
+        @content;
+      }
+    }
+  }
+}
+
+
+

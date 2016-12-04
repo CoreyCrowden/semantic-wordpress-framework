@@ -1,0 +1,442 @@
+//
+// Container
+//
+// Containers are used as wrappers and give control to the formatting of the site.
+
+// Container Box Sizing
+$container-max-width                : 1100px !default;
+
+// Navbar Height
+$height-nav-bar                     : 85px !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Container Padding
+$container-padding-top              : .5 !default;
+$container-padding-right            : .5 !default;
+$container-padding-bottom           : .5 !default;
+$container-padding-left             : .5 !default;
+
+// Container Relaxed Padding
+$container-relaxed-padding-top      : 2 !default;
+$container-relaxed-padding-right    : 2 !default;
+$container-relaxed-padding-bottom   : 2 !default;
+$container-relaxed-padding-left     : 2 !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Content Padding
+$content-padding-top                : $container-padding-top !default;
+$content-padding-right              : $container-padding-right !default;
+$content-padding-bottom             : $container-padding-bottom !default;
+$content-padding-left               : $container-padding-left !default;
+
+// Content Relaxed Padding
+$content-relaxed-padding-top        : $container-relaxed-padding-top !default;
+$content-relaxed-padding-right      : $container-relaxed-padding-right !default;
+$content-relaxed-padding-bottom     : $container-relaxed-padding-bottom !default;
+$content-relaxed-padding-left       : $container-relaxed-padding-left !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Card Content Padding
+$card-content-padding-top              : $content-padding-top * 2 !default;
+$card-content-padding-right            : $content-padding-right * 2 !default;
+$card-content-padding-bottom           : $content-padding-bottom * 2 !default;
+$card-content-padding-left             : $content-padding-left * 2 !default;
+
+// Card Content Relaxed Padding
+$card-content-relaxed-padding-top      : $card-content-padding-top * 2 !default;
+$card-content-relaxed-padding-right    : $card-content-padding-right * 2 !default;
+$card-content-relaxed-padding-bottom   : $card-content-padding-bottom * 2 !default;
+$card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Card Content Padding
+$card-content-padding-top              : $content-padding-top * 2 !default;
+$card-content-padding-right            : $content-padding-right * 2 !default;
+$card-content-padding-bottom           : $content-padding-bottom * 2 !default;
+$card-content-padding-left             : $content-padding-left * 2 !default;
+
+// Card Content Relaxed Padding
+$card-content-relaxed-padding-top      : $card-content-padding-top * 2 !default;
+$card-content-relaxed-padding-right    : $card-content-padding-right * 2 !default;
+$card-content-relaxed-padding-bottom   : $card-content-padding-bottom * 2 !default;
+$card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+//* Card Border
+$card-border-radius                   : 4px !default;
+$card-container-border-inverted       : none;
+
+$card-container-border                : none;
+$card-container-border-inverted       : none;
+
+//* Card Visual Styling
+$card-background                      : $color-white !default;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+.container {
+
+  // Container defaults
+  width: 100%;
+  max-width: $container-max-width;
+  @include padding(0);
+
+  // Left align container in parent container
+  &.left {
+    float: left;
+  }
+
+  // Center align container in parent container
+  &.centered {
+    /* Positioning */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Right align container in parent container
+  &.right {
+    float: right;
+  }
+
+  // Fixed & absolute container
+  &.fixed {
+    position: fixed;
+  }
+  &.absolute {
+    position: absolute;
+  }
+  &.fixed,
+  &.absolute {
+    z-index: 99999999;
+    @extend .animate;
+
+    // Align fixed container to top edge of browser
+    &.top {
+      top: 0;
+      @include admin-bar-adjustment(top);
+    }
+
+    // Align fixed container to right edge of browser
+    &.right {
+      right: 0;
+    }
+
+    // Align fixed container to bottom edge of browser
+    &.bottom {
+      bottom: 0;
+    }
+
+    // Align fixed container to left edge of browser
+    &.left {
+      left: 0;
+    }
+  }
+}
+
+//----------------------------------------------------------------------
+
+// Gives the element padding to create formatting.
+//
+// .padded                      - Add padding to all edges of the element
+// .padded.relaxed              - Adds additional padding on larger displays
+// .padded.horizontally         - Only add padding to left and right sides
+// .padded.horizontally.relaxed - Adds additional padding to left and right sides on larger displays
+// .padded.vertically           - Only add padding to top and bottom sides
+// .padded.vertically.relaxed   - Adds additional padding to top and bottom sides on larger displays
+
+.padded {
+
+  // Default padding
+  @include padding($container-padding-top, $container-padding-right, $container-padding-bottom, $container-padding-left);
+
+  // Offset for default padding
+  .fluid {
+    @include fluid($container-padding-top, $container-padding-right, $container-padding-bottom, $container-padding-left);
+  }
+
+  // Apply additional padding for .relaxed class
+  &.relaxed {
+    // Only add relaxed padding on large displays
+    @include media('>tablet-sml') {
+      @include padding($container-relaxed-padding-top, $container-relaxed-padding-right, $container-relaxed-padding-bottom, $container-relaxed-padding-left);
+
+      // Offset for relaxed padding
+      .fluid {
+        // Only add relaxed padding on large displays
+        @include fluid($container-relaxed-padding-top, $container-relaxed-padding-right, $container-relaxed-padding-bottom, $container-relaxed-padding-left);
+      }
+    }
+  }
+}
+
+.padded.horizontally {
+
+  // Default padding
+  @include padding(0, $container-padding-right, 0, $container-padding-left);
+
+  // Offset for default padding
+  .fluid {
+    @include fluid(0, $container-padding-right, 0, $container-padding-left);
+  }
+
+  // Apply additional padding for .relaxed class
+  &.relaxed {
+    // Only add relaxed padding on large displays
+    @include media('>tablet-sml') {
+      @include padding(0, $container-relaxed-padding-right, 0, $container-relaxed-padding-left);
+
+      // Offset for relaxed padding
+      .fluid {
+        // Only add relaxed padding on large displays
+        @include fluid(0, $container-relaxed-padding-right, 0, $container-relaxed-padding-left);
+      }
+    }
+  }
+}
+
+.padded.vertically {
+
+  // Default padding
+  @include padding($container-padding-top, 0, $container-padding-bottom, 0);
+
+  // Offset for default padding
+  .fluid {
+    @include fluid($container-padding-top, 0, $container-padding-bottom, 0);
+  }
+
+  // Apply additional padding for .relaxed class
+  &.relaxed {
+    // Only add relaxed padding on large displays
+    @include media('>tablet-sml') {
+      @include padding($container-relaxed-padding-top, 0, $container-relaxed-padding-bottom, 0);
+
+      // Offset for relaxed padding
+      .fluid {
+        // Only add relaxed padding on large displays
+        @include fluid($container-relaxed-padding-top, 0, $container-relaxed-padding-bottom, 0);
+      }
+    }
+  }
+}
+
+
+// Fluid container
+//
+// Spans the full width of the parent container. This is setup to offset
+// parent container padding. Using an additional class of top or bottom
+// will also offset top and bottom margins accordingly.
+//
+// The offset margins can be found with the corresponding container type.
+// e.g. the offset for content padding is with the .content class styles.
+
+.fluid {
+  min-width: 100%;
+  width: auto;
+  max-width: none;
+}
+
+//----------------------------------------------------------------------
+
+// Content
+//
+// Apply the class .content directly around text to apply a padding
+// around the text.
+
+.content {
+  // Standard Content
+  width: auto;
+  min-width: 0px; //! Important, This forces container width in flex grid
+
+  @include padding($content-padding-top, $content-padding-right, $content-padding-bottom, $content-padding-left);
+
+  // Adjust for .fluid content
+  .fluid {
+    @include fluid($content-padding-top, $content-padding-right, $content-padding-bottom, $content-padding-left);
+  }
+
+  // Relaxed Content
+  &.relaxed {
+
+    // Only relax content padding on large displays
+    @include media('>tablet-sml') {
+      @include padding($content-relaxed-padding-top, $content-relaxed-padding-right, $content-relaxed-padding-bottom, $content-relaxed-padding-left);
+
+      // Adjust for .fluid content
+      .fluid {
+        @include fluid($content-relaxed-padding-top, $content-relaxed-padding-right, $content-relaxed-padding-bottom, $content-relaxed-padding-left);
+      }
+    }
+  }
+
+  // Content In a Card
+  &.card,
+  .card & {
+    @include padding($card-content-padding-top, $card-content-padding-right, $card-content-padding-bottom, $card-content-padding-left);
+
+    // Adjust for .fluid content
+    .fluid {
+      @include fluid($card-content-padding-top, $card-content-padding-right, $card-content-padding-bottom, $card-content-padding-left);
+    }
+
+    &.relaxed {
+      // Only relax content padding on large displays
+      @include media('>tablet-sml') {
+        @include padding($card-content-relaxed-padding-top, $card-content-relaxed-padding-right, $card-content-relaxed-padding-bottom, $card-content-relaxed-padding-left);
+
+        // Adjust for .fluid content
+        .fluid {
+          @include fluid($card-content-relaxed-padding-top, $card-content-relaxed-padding-right, $card-content-relaxed-padding-bottom, $card-content-relaxed-padding-left);
+        }
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------
+
+// Card
+//
+// Special styles create a card like content area. Depending on defined
+// variables styles can include background, border, border radius, shadow
+// etc.
+
+.card {
+  display: block;
+  width: 100%;
+
+  // Default Colors
+  background: $card-background;
+  border-radius: $card-border-radius;
+  border: $card-container-border;
+
+  &.inverted {
+    border: $card-container-border-inverted;
+  }
+
+  // Round corners on fluid elements when at top or bottom of card
+  .top {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+  .bottom {
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+  }
+
+}
+
+//----------------------------------------------------------------------
+
+// Removes all padding on element
+//
+// .horizontally  - Only removes the horizontal padding
+// .vertically    - Only removes the vertical padding
+
+.fitted:not(.horizontally):not(.vertically) {
+  padding: 0px;
+}
+
+.fitted.horizontally {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.fitted.vertically {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+//----------------------------------------------------------------------
+
+// Nav Bar
+
+// Nav Bar Overrides
+.header-bar {
+  min-height: $height-nav-bar;
+  height: $height-nav-bar; // Important
+}
+
+//----------------------------------------------------------------------
+
+// Container & Card Colors
+
+.container,
+.card {
+
+  // Basic Colors
+  &.black {
+    background: $color-black;
+  }
+  &.white {
+    background: $color-white;
+  }
+  &.red {
+    background: $color-red;
+  }
+  &.orange {
+    background: $color-orange;
+  }
+  &.yellow {
+    background: $color-yellow;
+  }
+  &.olive {
+    background: $color-olive;
+  }
+  &.green {
+    background: $color-green;
+  }
+  &.teal {
+    background: $color-teal;
+  }
+  &.blue {
+    background: $color-blue;
+  }
+  &.violet {
+    background: $color-violet;
+  }
+  &.purple {
+    background: $color-purple;
+  }
+  &.pink {
+    background: $color-pink;
+  }
+  &.brown {
+    background: $color-brown;
+  }
+
+  // Conditional Colors
+  &.primary {
+    background: $color-primary;
+  }
+  &.secondary {
+    background: $color-secondary;
+  }
+  &.emphasis {
+    background: $color-emphasis;
+  }
+  &.emphasis-secondary {
+    background: $color-secondary;
+  }
+  &.disabled {
+    background: $color-background-disabled;
+  }
+
+  // Notification Colors
+  &.success {
+    background: $color-success-weak;
+  }
+  &.info {
+    background: $color-info-weak;
+  }
+  &.warning {
+    background: $color-warning-weak;
+  }
+  &.danger {
+    background: $color-danger-weak;
+  }
+}

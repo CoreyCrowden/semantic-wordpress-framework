@@ -1,3 +1,1343 @@
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+    Mixins
+--------------------------------------------------------------*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.screen-reader-text,
+.screen-reader-text span,
+.screen-reader-shortcut {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus,
+.screen-reader-shortcut:focus {
+  clip: auto !important;
+  height: auto;
+  width: auto;
+  display: block;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 15px 23px 14px;
+  color: #333;
+  background: #fff;
+  z-index: 100000;
+  /* Above WP toolbar. */
+  text-decoration: none;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+.animate, .animate-slow, .container.fixed, .container.absolute {
+  transition: all, 0.3s, ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0em;
+}
+
+.container.left {
+  float: left;
+}
+
+.container.centered {
+  /* Positioning */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container.right {
+  float: right;
+}
+
+.container.fixed {
+  position: fixed;
+}
+
+.container.absolute {
+  position: absolute;
+}
+
+.container.fixed, .container.absolute {
+  z-index: 99999999;
+}
+
+.container.fixed.top, .container.absolute.top {
+  top: 0;
+}
+
+.admin-bar .container.fixed.top, .admin-bar .container.absolute.top {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  .admin-bar .container.fixed.top, .admin-bar .container.absolute.top {
+    top: 46px;
+  }
+}
+
+.container.fixed.right, .container.absolute.right {
+  right: 0;
+}
+
+.container.fixed.bottom, .container.absolute.bottom {
+  bottom: 0;
+}
+
+.container.fixed.left, .container.absolute.left {
+  left: 0;
+}
+
+.padded {
+  padding: 1.25em 1.25em 1.25em 1.25em;
+}
+
+.padded .fluid {
+  margin-right: -1.25em;
+  margin-left: -1.25em;
+}
+
+.padded .fluid.before {
+  margin-top: -1.25em;
+}
+
+.padded .fluid.after {
+  margin-bottom: -1.25em;
+}
+
+@media (min-width: 621px) {
+  .padded.relaxed {
+    padding: 5em 5em 5em 5em;
+  }
+  .padded.relaxed .fluid {
+    margin-right: -5em;
+    margin-left: -5em;
+  }
+  .padded.relaxed .fluid.before {
+    margin-top: -5em;
+  }
+  .padded.relaxed .fluid.after {
+    margin-bottom: -5em;
+  }
+}
+
+.padded.horizontally {
+  padding: 0em 1.25em 0em 1.25em;
+}
+
+.padded.horizontally .fluid {
+  margin-right: -1.25em;
+  margin-left: -1.25em;
+}
+
+.padded.horizontally .fluid.before {
+  margin-top: 0em;
+}
+
+.padded.horizontally .fluid.after {
+  margin-bottom: 0em;
+}
+
+@media (min-width: 621px) {
+  .padded.horizontally.relaxed {
+    padding: 0em 5em 0em 5em;
+  }
+  .padded.horizontally.relaxed .fluid {
+    margin-right: -5em;
+    margin-left: -5em;
+  }
+  .padded.horizontally.relaxed .fluid.before {
+    margin-top: 0em;
+  }
+  .padded.horizontally.relaxed .fluid.after {
+    margin-bottom: 0em;
+  }
+}
+
+.padded.vertically {
+  padding: 1.25em 0em 1.25em 0em;
+}
+
+.padded.vertically .fluid {
+  margin-right: 0em;
+  margin-left: 0em;
+}
+
+.padded.vertically .fluid.before {
+  margin-top: -1.25em;
+}
+
+.padded.vertically .fluid.after {
+  margin-bottom: -1.25em;
+}
+
+@media (min-width: 621px) {
+  .padded.vertically.relaxed {
+    padding: 5em 0em 5em 0em;
+  }
+  .padded.vertically.relaxed .fluid {
+    margin-right: 0em;
+    margin-left: 0em;
+  }
+  .padded.vertically.relaxed .fluid.before {
+    margin-top: -5em;
+  }
+  .padded.vertically.relaxed .fluid.after {
+    margin-bottom: -5em;
+  }
+}
+
+.fluid {
+  min-width: 100%;
+  width: auto;
+  max-width: none;
+}
+
+.content {
+  width: auto;
+  min-width: 0px;
+  padding: 1.25em 1.25em 1.25em 1.25em;
+}
+
+.content .fluid {
+  margin-right: -1.25em;
+  margin-left: -1.25em;
+}
+
+.content .fluid.before {
+  margin-top: -1.25em;
+}
+
+.content .fluid.after {
+  margin-bottom: -1.25em;
+}
+
+@media (min-width: 621px) {
+  .content.relaxed {
+    padding: 5em 5em 5em 5em;
+  }
+  .content.relaxed .fluid {
+    margin-right: -5em;
+    margin-left: -5em;
+  }
+  .content.relaxed .fluid.before {
+    margin-top: -5em;
+  }
+  .content.relaxed .fluid.after {
+    margin-bottom: -5em;
+  }
+}
+
+.content.card,
+.card .content {
+  padding: 2.5em 2.5em 2.5em 2.5em;
+}
+
+.content.card .fluid,
+.card .content .fluid {
+  margin-right: -2.5em;
+  margin-left: -2.5em;
+}
+
+.content.card .fluid.before,
+.card .content .fluid.before {
+  margin-top: -2.5em;
+}
+
+.content.card .fluid.after,
+.card .content .fluid.after {
+  margin-bottom: -2.5em;
+}
+
+@media (min-width: 621px) {
+  .content.card.relaxed,
+  .card .content.relaxed {
+    padding: 5em 5em 5em 5em;
+  }
+  .content.card.relaxed .fluid,
+  .card .content.relaxed .fluid {
+    margin-right: -5em;
+    margin-left: -5em;
+  }
+  .content.card.relaxed .fluid.before,
+  .card .content.relaxed .fluid.before {
+    margin-top: -5em;
+  }
+  .content.card.relaxed .fluid.after,
+  .card .content.relaxed .fluid.after {
+    margin-bottom: -5em;
+  }
+}
+
+.card {
+  display: block;
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  border: none;
+}
+
+.card.inverted {
+  border: none;
+}
+
+.card .top {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card .bottom {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.fitted:not(.horizontally):not(.vertically) {
+  padding: 0px;
+}
+
+.fitted.horizontally {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.fitted.vertically {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.header-bar {
+  min-height: 85px;
+  height: 85px;
+}
+
+.container.black,
+.card.black {
+  background: black;
+}
+
+.container.white,
+.card.white {
+  background: white;
+}
+
+.container.red,
+.card.red {
+  background: #b03060;
+}
+
+.container.orange,
+.card.orange {
+  background: #FE9A76;
+}
+
+.container.yellow,
+.card.yellow {
+  background: #FFD700;
+}
+
+.container.olive,
+.card.olive {
+  background: #32CD32;
+}
+
+.container.green,
+.card.green {
+  background: #016936;
+}
+
+.container.teal,
+.card.teal {
+  background: #008080;
+}
+
+.container.blue,
+.card.blue {
+  background: #0E6EB8;
+}
+
+.container.violet,
+.card.violet {
+  background: #EE82EE;
+}
+
+.container.purple,
+.card.purple {
+  background: #B413EC;
+}
+
+.container.pink,
+.card.pink {
+  background: #FF1493;
+}
+
+.container.brown,
+.card.brown {
+  background: #583e00;
+}
+
+.container.primary,
+.card.primary {
+  background: #87bc22;
+}
+
+.container.secondary,
+.card.secondary {
+  background: rgba(0, 31, 44, 0.85);
+}
+
+.container.emphasis,
+.card.emphasis {
+  background: #87bc22;
+}
+
+.container.emphasis-secondary,
+.card.emphasis-secondary {
+  background: rgba(0, 31, 44, 0.85);
+}
+
+.container.disabled,
+.card.disabled {
+  background: white;
+}
+
+.container.success,
+.card.success {
+  background: #a2db36;
+}
+
+.container.info,
+.card.info {
+  background: #1c96ff;
+}
+
+.container.warning,
+.card.warning {
+  background: #ff8f33;
+}
+
+.container.danger,
+.card.danger {
+  background: #ff3333;
+}
+
+.grid,
+.menu {
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  min-width: 100%;
+}
+
+.grid.vertical,
+.menu.vertical {
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.grid.horizontal.reversed:not(.vertical),
+.menu.horizontal.reversed:not(.vertical) {
+  -moz-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.grid.vertical.reversed,
+.menu.vertical.reversed {
+  -moz-flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.grid.left:not(.vertical),
+.menu.left:not(.vertical) {
+  -ms-flex-pack: start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.grid.vertical.left,
+.menu.vertical.left {
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.grid.centered:not(.vertical),
+.menu.centered:not(.vertical) {
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+
+.grid.vertical.centered,
+.menu.vertical.centered {
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.grid.right:not(.vertical),
+.menu.right:not(.vertical) {
+  -ms-flex-pack: end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.grid.vertical.right,
+.menu.vertical.right {
+  -ms-flex-align: end;
+  -moz-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.grid.justified:not(.vertical) > .item,
+.menu.justified:not(.vertical) > .item {
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.grid.vertical.justified,
+.menu.vertical.justified {
+  -ms-flex-align: stretch;
+  -moz-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.grid.top:not(.vertical),
+.menu.top:not(.vertical) {
+  -ms-flex-align: start;
+  -moz-align-items: flex-start;
+  align-items: flex-start;
+}
+
+.grid.vertical.top,
+.menu.vertical.top {
+  -ms-flex-pack: start;
+  -moz-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+.grid.middle:not(.vertical),
+.menu.middle:not(.vertical) {
+  -ms-flex-align: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+
+.grid.vertical.middle,
+.menu.vertical.middle {
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+
+.grid.bottom:not(.vertical),
+.menu.bottom:not(.vertical) {
+  -ms-flex-align: end;
+  -moz-align-items: flex-end;
+  align-items: flex-end;
+}
+
+.grid.vertical.bottom,
+.menu.vertical.bottom {
+  -ms-flex-pack: end;
+  -moz-justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.grid.stretched:not(.vertical),
+.menu.stretched:not(.vertical) {
+  -ms-flex-align: stretch;
+  -moz-align-items: stretch;
+  align-items: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+
+.grid.vertical.stretched > .item,
+.menu.vertical.stretched > .item {
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.item {
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
+  -moz-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.item.left {
+  margin-right: auto;
+}
+
+.item.centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item.right {
+  margin-left: auto;
+}
+
+.grid:not(.vertical) > .item.justified {
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.grid.vertical > .item.justified {
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.item.top {
+  margin-bottom: auto;
+}
+
+.grid.vertical:not(.vertical) .item.middle {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.grid.vertical .item.middle {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.item.bottom {
+  margin-top: auto;
+}
+
+.grid:not(.vertical) > .item.stretched {
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+      align-self: stretch;
+}
+
+.grid.vertical > .item.stretched {
+  -moz-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.item.first {
+  -moz-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+
+.item.last {
+  -moz-order: 2;
+  -ms-flex-order: 2;
+  order: 2;
+}
+
+.one.sixth,
+.grid.six.columns > .item,
+.menu.six.columns > .item {
+  -moz-flex: 1 1 16.66667%;
+  -ms-flex: 1 1 16.66667%;
+  flex: 1 1 16.66667%;
+  max-width: 16.66667%;
+}
+
+.one.fifth,
+.grid.five.columns > .item,
+.menu.five.columns > .item {
+  -moz-flex: 1 1 20%;
+  -ms-flex: 1 1 20%;
+  flex: 1 1 20%;
+  max-width: 20%;
+}
+
+.one.quarter,
+.one.fourth,
+.grid.four.columns > .item,
+.menu.four.columns > .item {
+  -moz-flex: 1 1 25%;
+  -ms-flex: 1 1 25%;
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+
+.one.third,
+.two.sixths,
+.grid.three.columns > .item,
+.menu.three.columns > .item {
+  -moz-flex: 1 1 33.33333%;
+  -ms-flex: 1 1 33.33333%;
+  flex: 1 1 33.33333%;
+  max-width: 33.33333%;
+}
+
+.two.fifths {
+  -moz-flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.one.half,
+.two.quarters,
+.two.fourths,
+.three.sixths,
+.grid.two.columns > .item,
+.menu.two.columns > .item {
+  -moz-flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.three.fifths {
+  -moz-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+  max-width: 60%;
+}
+
+.two.thirds,
+.four.sixths {
+  -moz-flex: 1 1 66.66667%;
+  -ms-flex: 1 1 66.66667%;
+  flex: 1 1 66.66667%;
+  max-width: 66.66667%;
+}
+
+.three.quarters,
+.three.fourths {
+  -moz-flex: 1 1 75%;
+  -ms-flex: 1 1 75%;
+  flex: 1 1 75%;
+  max-width: 75%;
+}
+
+.four.fifths {
+  -moz-flex: 1 1 80%;
+  -ms-flex: 1 1 80%;
+  flex: 1 1 80%;
+  max-width: 80%;
+}
+
+.five.sixths {
+  -moz-flex: 1 1 83.33333%;
+  -ms-flex: 1 1 83.33333%;
+  flex: 1 1 83.33333%;
+  max-width: 83.33333%;
+}
+
+.full.width {
+  -moz-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.full.height {
+  min-height: 100%;
+  height: 100%;
+}
+
+.viewport.height {
+  min-height: 100vh;
+  height: 100vh;
+}
+
+@media (max-width: 619px) {
+  .grid .grid.six.columns.small .item,
+  .grid .grid.five.columns.small .item,
+  .grid .grid.four.columns.small .item,
+  .grid .grid.three.columns.small .item,
+  .grid .grid.two.columns.small .item,
+  .menu .grid.six.columns.small .item,
+  .menu .grid.five.columns.small .item,
+  .menu .grid.four.columns.small .item,
+  .menu .grid.three.columns.small .item,
+  .menu .grid.two.columns.small .item {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid .grid.six.columns.medium .item,
+  .grid .grid.five.columns.medium .item,
+  .grid .grid.four.columns.medium .item,
+  .grid .grid.three.columns.medium .item,
+  .grid .grid.two.columns.medium .item,
+  .menu .grid.six.columns.medium .item,
+  .menu .grid.five.columns.medium .item,
+  .menu .grid.four.columns.medium .item,
+  .menu .grid.three.columns.medium .item,
+  .menu .grid.two.columns.medium .item {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .grid .grid.six.columns.large .item,
+  .grid .grid.five.columns.large .item,
+  .grid .grid.four.columns.large .item,
+  .grid .grid.three.columns.large .item,
+  .grid .grid.two.columns.large .item,
+  .menu .grid.six.columns.large .item,
+  .menu .grid.five.columns.large .item,
+  .menu .grid.four.columns.large .item,
+  .menu .grid.three.columns.large .item,
+  .menu .grid.two.columns.large .item {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1439px) {
+  .grid .grid.six.columns.extra.large .item,
+  .grid .grid.five.columns.extra.large .item,
+  .grid .grid.four.columns.extra.large .item,
+  .grid .grid.three.columns.extra.large .item,
+  .grid .grid.two.columns.extra.large .item,
+  .menu .grid.six.columns.extra.large .item,
+  .menu .grid.five.columns.extra.large .item,
+  .menu .grid.four.columns.extra.large .item,
+  .menu .grid.three.columns.extra.large .item,
+  .menu .grid.two.columns.extra.large .item {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 619px) {
+  .item.small {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .item.medium {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .item.large {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1439px) {
+  .item.extra.large {
+    -moz-flex: 1 1 100%;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
 .extra.small {
   font-size: 0.6rem;
 }

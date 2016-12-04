@@ -1,0 +1,451 @@
+
+//----------------------------------------------------------------------
+
+// Grid System
+//
+// Loosely based off the semantic grid system. This grid system takes
+// advantage of a large range of classes developed to simplify and
+// extend layout control.
+//
+// The flexbox grid system is extended for use with menus. Being call to
+// with the .menu class instead of grid. All additional grid classes
+// should work as expected within the .menu class.
+//
+// Reference CSS Tricks Flexbox guide for information on flexbox
+// https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+//----------------------------------------------------------------------
+
+// Creates the parent container for the grid system.
+//
+// .vertical              - Display the grid in columns
+// .reversed              -
+// .reversed.vertical     -
+//
+//
+//
+// Styleguide 1.0.0
+
+.grid,
+.menu {
+  @include flexbox;
+  @include flex-wrap(wrap);
+
+  // Default Direction Row
+  @include flex-direction(row);
+
+  // Default Align Left
+  @include align-items(flex-start);
+
+  // Default Align Top
+  @include align-content(flex-start);
+
+  min-width: 100%;
+
+  //--------------------------------------------
+
+  // Vertical Column Grid
+  &.vertical {
+    // Default Direction Column
+    @include flex-direction(column);
+  }
+
+  //--------------------------------------------
+
+  // Reverse Directions
+
+  // Row Reversed
+  &.horizontal.reversed:not(.vertical) {
+    @include flex-direction(row-reverse);
+  }
+
+  // Item Grid Reversed
+  &.vertical.reversed {
+    @include flex-direction(column-reverse);
+  }
+
+  //--------------------------------------------
+
+  // Grid Horizontal Alignment
+
+  // Align Left
+  &.left:not(.vertical) {
+    @include justify-content(flex-start);
+  }
+  &.vertical.left {
+    @include align-items(flex-start);
+  }
+
+  // Align Center
+  &.centered:not(.vertical) {
+    @include justify-content(center);
+  }
+  &.vertical.centered {
+    @include align-items(center);
+  }
+
+  // Align Right
+  &.right:not(.vertical) {
+    @include justify-content(flex-end);
+  }
+  &.vertical.right {
+    @include align-items(flex-end);
+  }
+
+  // Justified Items - Left to Right
+  &.justified:not(.vertical) > .item {
+    @include flex-grow(1);
+    max-width: 100%;
+  }
+  &.vertical.justified {
+    @include align-items(stretch);
+    @include align-content(stretch);
+  }
+
+  //--------------------------------------------
+
+  // Grid Vertical Alignment
+
+  // Align Top
+  &.top:not(.vertical) {
+    @include align-items(flex-start);
+  }
+  &.vertical.top {
+    @include justify-content(flex-start);
+  }
+
+  // Align Middle
+  &.middle:not(.vertical) {
+    @include align-items(center);
+  }
+  &.vertical.middle {
+    @include justify-content(center);
+  }
+
+  // Align Bottom
+  &.bottom:not(.vertical) {
+    @include align-items(flex-end);
+  }
+  &.vertical.bottom {
+    @include justify-content(flex-end);
+  }
+
+  // Stretched Items - Top and Bottom
+  &.stretched:not(.vertical) {
+    @include align-items(stretch);
+    @include align-content(stretch);
+  }
+  &.vertical.stretched > .item {
+    @include flex-grow(1);
+    max-width: 100%;
+  }
+}
+
+//----------------------------------------------------------------------
+
+// Creates a child container for the grid system.
+//
+// When nesting grids it's important to use separate containers as class naming conventions will conflict.
+//
+//
+
+.item {
+  @include flex-basis(auto);
+  @include flex-grow(0);
+  @include flex-shrink(0);
+
+  max-width: 100%;
+
+  //--------------------------------------------
+
+  // Items Horizontal Alignment
+
+  // Align Left
+  &.left {
+    margin-right: auto;
+  }
+
+  // Align Center
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Align Right
+  &.right {
+    margin-left: auto;
+  }
+
+  // Justified Items - Left to Right
+  &.justified {
+    .grid:not(.vertical) > & {
+      @include flex-grow(1);
+      max-width: 100%;
+    }
+    .grid.vertical > & {
+      @include align-self(stretch);
+    }
+  }
+
+  //--------------------------------------------
+
+  // Items Vertical Alignment
+
+  // Align Top
+  &.top {
+    margin-bottom: auto;
+  }
+
+  // Align Middle
+  &.middle {
+    .grid.vertical:not(.vertical) & {
+      @include align-self(center);
+    }
+    .grid.vertical & {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  // Align Bottom
+  &.bottom {
+    margin-top: auto;
+  }
+
+  // Stretched Items - Top and Bottom
+  &.stretched {
+    .grid:not(.vertical) > & {
+      @include align-self(stretch);
+    }
+    .grid.vertical > & {
+      @include flex-grow(1);
+      max-width: 100%;
+    }
+  }
+
+  //--------------------------------------------
+
+  // Re-Order Items
+  &.first {
+    @include order(-1);
+  }
+  &.last {
+    @include order(2);
+  }
+}
+
+//----------------------------------------------------------------------
+
+// Item Width
+
+// Width Calculations
+$one-sixth: 100% / 6;
+$one-fifth: 100% / 5;
+$one-quarter: 100% / 4;
+$one-third: 100% / 3;
+$two-fifths: 100% / ( 5 / 2 );
+$one-half: 100% / 2;
+$three-fifths: 100% / ( 5 / 3 );
+$two-thirds: 100% / ( 12 / 8 );
+$three-quarters: 100% / ( 12 / 9 );
+$four-fifths: 100% / ( 5 / 4 );
+$five-sixths: 100% / ( 12 / 10 );
+$full-width: 100% / 1;
+
+// One Sixth
+.one.sixth,
+.grid.six.columns > .item,
+.menu.six.columns > .item  {
+  @include flex(1 1 $one-sixth);
+  max-width: $one-sixth;
+}
+
+// One Fifth
+.one.fifth,
+.grid.five.columns > .item,
+.menu.five.columns > .item {
+  @include flex(1 1 $one-fifth);
+  max-width: $one-fifth;
+}
+
+// One Quarter
+.one.quarter,
+.one.fourth,
+.grid.four.columns > .item,
+.menu.four.columns > .item {
+  @include flex(1 1 $one-quarter);
+  max-width: $one-quarter;
+}
+
+// One Third
+.one.third,
+.two.sixths,
+.grid.three.columns > .item,
+.menu.three.columns > .item {
+  @include flex(1 1 $one-third);
+  max-width: $one-third;
+}
+
+// Two Fifths
+.two.fifths {
+  @include flex(1 1 $two-fifths);
+  max-width: $two-fifths;
+}
+
+// One Half
+.one.half,
+.two.quarters,
+.two.fourths,
+.three.sixths,
+.grid.two.columns > .item,
+.menu.two.columns > .item {
+  @include flex(1 1 $one-half);
+  max-width: $one-half;
+}
+
+// Three Fifths
+.three.fifths {
+  @include flex(1 1 $three-fifths);
+  max-width: $three-fifths;
+}
+
+// Two Thirds
+.two.thirds,
+.four.sixths {
+  @include flex(1 1 $two-thirds);
+  max-width: $two-thirds;
+}
+
+// Three Quarters
+.three.quarters,
+.three.fourths {
+  @include flex(1 1 $three-quarters);
+  max-width: $three-quarters;
+}
+
+// Four Fifths
+.four.fifths {
+  @include flex(1 1 $four-fifths);
+  max-width: $four-fifths;
+}
+
+// Five Sixths
+.five.sixths {
+  @include flex(1 1 $five-sixths);
+  max-width: $five-sixths;
+}
+
+// Full Width
+.full.width {
+  @include flex(1 1 $full-width);
+  max-width: $full-width;
+}
+
+//----------------------------------------------------------------------
+
+// Additional Height Classes
+//
+// .full.height     - Set minimum height to 100% of parent container.
+// .viewport.height - Set minimum height to 100vh.
+
+.full.height {
+  min-height: 100%;
+  height: 100%; // Important
+}
+
+.viewport.height {
+  min-height: 100vh;
+  height: 100vh; // Important
+}
+
+//----------------------------------------------------------------------
+
+// Responsive Item Breakpoints
+
+// Breakpoint sit at the grid level
+.grid,
+.menu {
+  .grid.six.columns,
+  .grid.five.columns,
+  .grid.four.columns,
+  .grid.three.columns,
+  .grid.two.columns {
+
+    // Small breakpoint for mobile devices
+    &.small {
+      .item {
+        @include media('<tablet-sml'){
+          @include flex(1 1 100%);
+          max-width: 100%;
+        }
+      }
+    }
+
+    // Medium breakpoint for tablets
+    &.medium {
+      .item {
+        @include media('<tablet-lrg') {
+          @include flex(1 1 100%);
+          max-width: 100%;
+        }
+      }
+    }
+
+    // Large breakpoint for desktops
+    &.large {
+      .item {
+        @include media('<desktop-sml') {
+          @include flex(1 1 100%);
+          max-width: 100%;
+        }
+      }
+    }
+
+    // Extra large breakpoint for large desktops
+    &.extra.large {
+      .item {
+        @include media('<desktop-med') {
+          @include flex(1 1 100%);
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Breakpoint set at the item level
+.item {
+
+  // Small breakpoint for mobile devices
+  &.small {
+      @include media('<tablet-sml'){
+      @include flex(1 1 100%);
+      max-width: 100%;
+    }
+  }
+
+  // Medium breakpoint for tablets
+  &.medium {
+    @include media('<tablet-lrg') {
+      @include flex(1 1 100%);
+      max-width: 100%;
+    }
+  }
+
+  // Large breakpoint for desktops
+  &.large {
+    @include media('<desktop-sml') {
+      @include flex(1 1 100%);
+      max-width: 100%;
+    }
+  }
+
+  // Extra large breakpoint for large desktops
+  &.extra.large {
+    @include media('<desktop-med') {
+      @include flex(1 1 100%);
+      max-width: 100%;
+    }
+  }
+}
+
