@@ -17,7 +17,7 @@ var base_path = './',
         js: src + '/**/*.js',
         scss: [ src +'/main.scss',
                 src +'/**/*.scss' ],
-        jekyll: ['docs/*', 'docs/**/*', 'docs/**/**/*']
+        jekyll: ['docs/*', 'docs/**/*', 'docs/**/**/*', 'docs/!_site/**/*']
     };
 
 // Set the BrowserSync URL
@@ -25,15 +25,13 @@ const site_root = 'docs/_site';
 
 // Compile sass to css
 gulp.task('compile-sass', () => {
-  return gulp.src(paths.scss)
-    .pipe(plumber((error) => {
-        gutil.log(gutil.colors.red(error.message));
-gulp.task('compile-sass').emit('end');
-}))
-.pipe(sass({outputStyle: 'expanded'}))
+  gulp.src(paths.scss)
+  .pipe(plumber())
+  .pipe(sass({outputStyle: 'expanded'}))
+
   .pipe(prefixer('last 3 versions', 'ie 9'))
   .pipe(rename({dirname: dist + '/css'}))
-  .pipe(gulp.dest('./'));
+  .pipe(gulp.dest('./'))
 });
 
 // Rebuild Jekyll
@@ -48,7 +46,8 @@ gulp.task('serve', () => {
   browserSync.init({
     files: [site_root + '/*',
             site_root + '/**/*',
-            site_root + '/**/**/*'],
+            site_root + '/**/**/*',
+            site_root + '/**/**/**/*'],
     port: 4000,
     server: {
       baseDir: site_root

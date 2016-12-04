@@ -1,0 +1,43 @@
+//
+// Typset
+//
+// Typeset is a mixin that applies type styling to an element from a nested map variable.
+
+@mixin typeset($type-set: '$body-copy', $type-style: normal, $color-style: normal){
+
+
+  // Get the type
+  $type: map_get(map_get($type-set, type), $type-style);
+
+
+  // Font family
+  @if map_has_key($type, font-family){
+    font-family: map_get($type, font-family);
+  }
+
+  // Font size
+  @if map_has_key($type, font-size){
+    font-size: map_get($type, font-size);
+  }
+
+  // Font weight
+  @if map_has_key($type, font-weight){
+    font-weight: map_get($type, font-weight);
+  }
+
+  // Line height
+  @if map_has_key($type, line-height){
+    line-height: map_get($type, line-height);
+  }
+
+  // Letter Spacing
+  @if map_has_key($type, letter-spacing){
+    letter-spacing: map_get($type, letter-spacing);
+  }
+
+  // Test Transform
+  @if map_has_key($type, text-transform){
+    text-transform: map_get($type, text-transform);
+  }
+
+}

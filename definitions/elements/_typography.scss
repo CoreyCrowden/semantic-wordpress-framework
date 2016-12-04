@@ -1,53 +1,84 @@
 //
 // Typography
 //
+// For typography css references see http://cssreference.io/typography/
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Headings
+// Font Scaling
+$font-size-extra-small                      : .6rem !default;
+$font-size-small                            : .8rem !default;
+$font-size-normal                           : 1rem !default;
+$font-size-large                            : 1.2rem !default;
+$font-size-extra-large                      : 1.4rem !default;
+
+.extra.small {
+  font-size: $font-size-extra-small;
+}
+.small {
+  font-size: $font-size-small;
+}
+.normal {
+  font-size: $font-size-normal;
+}
+.large {
+  font-size: $font-size-large;
+}
+.extra.large {
+  font-size: $font-size-extra-large;
+}
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Defaults
+//
+// Website default font styles defined below. Use project specific stylesheet for special customisations
 
 // Basics
-$headings: (
-    font-family: Roboto,
-    font-weight: 400
-) !default;
+$font-family                                : "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+$font-size                                  : 1em !default;
+$font-weight                                : 400 !default;
+$letter-spacing                             : .0em !default;
+$line-height                                : 1.35 !default;
+$text-align                                 : left !default;
+$text-decoration                            : none !default;
+$text-indent                                : 0 !default;
+$text-overflow                              : clip !default;
+$text-transform                             : none !default;
+
+// Emphasis
+$font-weight-emphasis                       : bolder !default;
+
+// Strong
+$font-weight-strong                         : bolder !default;
+
+// Bold
+$font-weight-bold                           : bolder !default;
+
+// Italic
+$font-style-italic                          : italic !default;
+
+// Underline
+$text-decoration-underline                  : underline !default;
+
+// Headings
+$font-size-h1                               : 3.2em !default;
+$font-size-h2                               : 2.4em !default;
+$font-size-h3                               : 2.0em !default;
+$font-size-h4                               : 1.6em !default;
+$font-size-h5                               : 1.4em !default;
+$font-size-h6                               : 1.2em !default;
 
 
-$heading-font-family                        : Roboto, "Helvetica Neue", Arial, sans-serif !default;
-$heading-font-weight                        : 400 !default;
-$font-heading-line-height                   : 1.35 !default;
-$font-heading-margin                        : .83 !default;
-$font-heading-letter-spacing                : .0 !default;
-$font-heading-text-transform                : uppercase !default;
-
-$heading-font-weight-bold                   : 700 !default;
-
-$font-heading-color                         : $color-black;
-$font-heading-color-inverted                : $color-grey-extra-light;
-
-$font-heading-1-size                        : 4.8 !default;
-$font-heading-2-size                        : 4.0 !default;
-$font-heading-3-size                        : 3.2 !default;
-$font-heading-4-size                        : 2.8 !default;
-$font-heading-5-size                        : 2.4 !default;
-$font-heading-6-size                        : 2.0 !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Paragraph
-$paragraph-family                 : Roboto, Georgia, "Times New Roman", Times, serif !default;
-$paragraph-size                   : 1.6 !default;
-$paragraph-weight                 : 400 !default;
-$paragraph-line-height            : 1.5 !default;
-$paragraph-letter-spacing         : .0 !default;
-$paragraph-text-transform         : none !default;
 
-$paragraph-weight-bold            : 700 !default;
 
-$paragraph-margin-top             : .5 !default;
-$paragraph-margin-right           : 0 !default;
-$paragraph-margin-bottom          : .5 !default;
-$paragraph-margin-left            : 0 !default;
+$paragraph-margin-top                       : .5 !default;
+$paragraph-margin-right                     : 0 !default;
+$paragraph-margin-bottom                    : .5 !default;
+$paragraph-margin-left                      : 0 !default;
 
 $color-text-weak                            : $color-grey;
 $color-text                                 : $color-grey-extra-dark;
@@ -71,3 +102,72 @@ $color-text-selection                       : $color-text-inverted;
 $color-text-selection-background            : $color-primary;
 
 // ------------------------------------------------------------------------------------------------------------------
+
+body,
+p,
+h1, h2, h3, h4, h5, h6 {
+
+  // Basics
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
+  text-align: $text-align;
+  text-decoration: $text-decoration;
+  text-indent: $text-indent;
+  text-overflow: $text-overflow;
+  text-transform: $text-transform;
+
+  // Emphasis
+  em {
+    font-weight: $font-weight-emphasis;
+  }
+
+  // Strong
+  strong {
+    font-weight: $font-weight-strong;
+  }
+
+  // Bold
+  b {
+    font-weight: $font-weight-bold;
+  }
+
+  // Italic
+  i {
+    font-style: $font-style-italic;
+  }
+
+  // Underline
+  u {
+    text-decoration: $text-decoration-underline;
+  }
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+h2 {
+  font-size: $font-size-h2;
+}
+h3 {
+  font-size: $font-size-h3;
+}
+h4 {
+  font-size: $font-size-h4;
+}
+h5 {
+  font-size: $font-size-h5;
+}
+h6 {
+  font-size: $font-size-h6;
+}
+
+a {
+
+  &:hover {
+
+  }
+
+}

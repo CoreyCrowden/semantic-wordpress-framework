@@ -4,9 +4,9 @@
     "gulp-autoprefixer": "^3.1.0",
     "gulp-connect": "^2.3.1",
     "gulp-clean-css": "^2.0.13",
-    "gulp-plumber": "^1.0.1",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.1.1",
+    "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7",
     "browser-sync": "^2.18.2"
   }
