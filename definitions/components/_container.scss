@@ -71,7 +71,7 @@ $card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default
 $card-border-radius                   : 4px !default;
 $card-container-border-inverted       : none;
 
-$card-container-border                : none;
+$card-container-border                : 1px $color-grey-extra-light solid;
 $card-container-border-inverted       : none;
 
 //* Card Visual Styling
@@ -380,6 +380,21 @@ $card-background                      : $color-white !default;
   &.white {
     background: $color-white;
   }
+  &.extra.light.grey {
+    background: $color-grey-extra-light;
+  }
+  &.light.grey {
+    background: $color-grey-light;
+  }
+  &.grey {
+    background: $color-grey;
+  }
+  &.dark.grey {
+    background: $color-grey-dark;
+  }
+  &.extra.dark.grey {
+    background: $color-grey-extra-dark;
+  }
   &.red {
     background: $color-red;
   }
@@ -444,4 +459,10 @@ $card-background                      : $color-white !default;
   &.danger {
     background: $color-danger-weak;
   }
+
+  // Styles
+  &.outline {
+    border: solid $color-grey-light 1px;
+  }
+
 }

@@ -104,6 +104,13 @@ $color-text-link-hover-inverted             : darken( $color-emphasis-secondary,
 $color-text-selection                       : $color-text-inverted;
 $color-text-selection-background            : $color-primary;
 
+// Code & Pre
+$code-background                            : $color-grey-extra-light !default;
+$code-color                                 : $color-grey-extra-dark !default;
+$code-border                                : none !default;
+$code-border-radius                         : 2px !default;
+$code-padding                               : .2 !default;
+
 // ------------------------------------------------------------------------------------------------------------------
 
 body {
@@ -158,6 +165,17 @@ h1, h2, h3, h4, h5, h6 {
   u {
     text-decoration: $text-decoration-underline;
   }
+
+  // Center Text
+  &.centered {
+    text-align: center;
+  }
+
+  // Right Align Text
+  &.right {
+    text-align: right;
+  }
+
 }
 
 h1 {
@@ -255,3 +273,14 @@ hr {
   }
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+
+// Code & Pre
+
+code {
+  color: $code-color;
+  background: $code-background;
+  border: $code-border;
+  border-radius: $code-border-radius;
+  @include padding($code-padding);
+}

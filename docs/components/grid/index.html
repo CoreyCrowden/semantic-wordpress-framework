@@ -7,6 +7,35 @@ reference-title: CSS Tricks Guide to Flexbox
 reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 ---
 
-<h3>Defaults</h3>
-<p>
-</p>
+<h3>Grid</h3>
+<p>The grid system uses the modern CSS flex display for creating complex layouts.</p>
+<p>To initiate the grid system you simply need to apply the <code>grid</code> class to a div element.</p>
+
+
+
+<html>
+  <div class="container outline grid padded">
+
+    <div class="item one sixth">
+      <div class="container outline padded">
+        <p class="centered">
+          One Sixth
+        </p>
+      </div>
+    </div>
+    <div class="item three sixths">
+      <div class="container outline padded">
+        <p class="centered">
+          Three Sixths
+        </p>
+      </div>
+    </div>
+    <div class="item two sixths">
+      <div class="container outline padded">
+        <p class="centered">
+          Two Sixths
+        </p>
+      </div>
+    </div>
+  </div>
+</html>

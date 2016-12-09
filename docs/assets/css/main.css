@@ -834,7 +834,7 @@ input[type="radio"] ~ label:after {
   width: 100%;
   background: white;
   border-radius: 4px;
-  border: none;
+  border: 1px #f6f6f6 solid;
 }
 
 .card.inverted {
@@ -878,6 +878,31 @@ input[type="radio"] ~ label:after {
 .container.white,
 .card.white {
   background: white;
+}
+
+.container.extra.light.grey,
+.card.extra.light.grey {
+  background: #f6f6f6;
+}
+
+.container.light.grey,
+.card.light.grey {
+  background: #dddddd;
+}
+
+.container.grey,
+.card.grey {
+  background: #a1a1a1;
+}
+
+.container.dark.grey,
+.card.dark.grey {
+  background: #636363;
+}
+
+.container.extra.dark.grey,
+.card.extra.dark.grey {
+  background: #1d1d1d;
 }
 
 .container.red,
@@ -978,6 +1003,11 @@ input[type="radio"] ~ label:after {
 .container.danger,
 .card.danger {
   background: #ff3333;
+}
+
+.container.outline,
+.card.outline {
+  border: solid #dddddd 1px;
 }
 
 .grid,
@@ -1613,6 +1643,18 @@ h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
   text-decoration: underline;
 }
 
+body.centered,
+p.centered,
+h1.centered, h2.centered, h3.centered, h4.centered, h5.centered, h6.centered {
+  text-align: center;
+}
+
+body.right,
+p.right,
+h1.right, h2.right, h3.right, h4.right, h5.right, h6.right {
+  text-align: right;
+}
+
 h1 {
   font-size: 3.2em;
 }
@@ -1718,6 +1760,14 @@ hr {
 
 .inverted hr {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+code {
+  color: #1d1d1d;
+  background: #f6f6f6;
+  border: none;
+  border-radius: 2px;
+  padding: 0.5em;
 }
 
 time:before,

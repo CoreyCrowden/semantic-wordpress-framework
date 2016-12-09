@@ -18,7 +18,7 @@ var base_path = './',
         scss: [ src +'/main.scss',
                 src +'/**/*',
                 src +'/**/**/*' ],
-        jekyll: ['docs/*', 'docs/**/*', 'docs/**/**/*', 'docs/!_site/**/*']
+        jekyll: ['docs/*', 'docs/**/*', 'docs/**/**/*', 'docs/!_site/**/*', 'docs/!_site/**/**/*']
     };
 
 // Set the BrowserSync URL
