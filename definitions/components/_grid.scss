@@ -254,16 +254,16 @@ $full-width: 100% / 1;
 
 // One Sixth
 .one.sixth,
-.grid.six.columns > .item,
-.menu.six.columns > .item  {
+.grid.sixths > .item,
+.menu.sixths > .item  {
   @include flex(1 1 $one-sixth);
   max-width: $one-sixth;
 }
 
 // One Fifth
 .one.fifth,
-.grid.five.columns > .item,
-.menu.five.columns > .item {
+.grid.fifths > .item,
+.menu.fifths > .item {
   @include flex(1 1 $one-fifth);
   max-width: $one-fifth;
 }
@@ -271,8 +271,10 @@ $full-width: 100% / 1;
 // One Quarter
 .one.quarter,
 .one.fourth,
-.grid.four.columns > .item,
-.menu.four.columns > .item {
+.grid.fourths > .item,
+.menu.fourths > .item,
+.grid.quarters > .item,
+.menu.quarters > .item {
   @include flex(1 1 $one-quarter);
   max-width: $one-quarter;
 }
@@ -280,8 +282,8 @@ $full-width: 100% / 1;
 // One Third
 .one.third,
 .two.sixths,
-.grid.three.columns > .item,
-.menu.three.columns > .item {
+.grid.thirds > .item,
+.menu.thirds > .item {
   @include flex(1 1 $one-third);
   max-width: $one-third;
 }
@@ -297,8 +299,8 @@ $full-width: 100% / 1;
 .two.quarters,
 .two.fourths,
 .three.sixths,
-.grid.two.columns > .item,
-.menu.two.columns > .item {
+.grid.halves > .item,
+.menu.halves > .item {
   @include flex(1 1 $one-half);
   max-width: $one-half;
 }

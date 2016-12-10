@@ -109,7 +109,7 @@ $code-background                            : $color-grey-extra-light !default;
 $code-color                                 : $color-grey-extra-dark !default;
 $code-border                                : none !default;
 $code-border-radius                         : 2px !default;
-$code-padding                               : .2 !default;
+$code-padding                               : .1 !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
@@ -275,7 +275,7 @@ hr {
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Code & Pre
+// Code, Pre & Code Textarea
 
 code {
   color: $code-color;
@@ -284,3 +284,50 @@ code {
   border-radius: $code-border-radius;
   @include padding($code-padding);
 }
+
+pre {
+
+}
+
+textarea.code {
+  overflow: visible;
+  min-height: 300px;
+  color: $code-color;
+  background: $code-background;
+  border: $code-border;
+  border-radius: $code-border-radius;
+  @include padding($code-padding);
+  font-size: 1em;
+}
+
+span {
+
+  // Tags
+  &.tag {
+    &:before {
+     content: '<';
+    }
+    &:after {
+     content: '>';
+    }
+  }
+
+  // Attribute
+  &.attribute {
+    &:after {
+      content: '=';
+    }
+  }
+
+  // Value
+  &.value {
+    &:before {
+      content: '"';
+    }
+    &:after {
+      content: '"';
+    }
+  }
+}
+
+

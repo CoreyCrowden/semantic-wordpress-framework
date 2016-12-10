@@ -7,35 +7,128 @@ reference-title: CSS Tricks Guide to Flexbox
 reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 ---
 
-<h3>Grid</h3>
-<p>The grid system uses the modern CSS flex display for creating complex layouts.</p>
-<p>To initiate the grid system you simply need to apply the <code>grid</code> class to a div element.</p>
+<article>
+  <h2>Grid</h2>
+  <p>The grid system uses the modern CSS flex display for creating complex layouts.</p>
+  <p>To initiate the grid system you simply need to apply the <code>grid</code> class to a div element.</p>
 
-
-
-<html>
-  <div class="container outline grid padded">
-
+  <div class="container extra light grey grid padded">
     <div class="item one sixth">
-      <div class="container outline padded">
+      <div class="container outlined white padded">
         <p class="centered">
           One Sixth
         </p>
       </div>
     </div>
     <div class="item three sixths">
-      <div class="container outline padded">
+      <div class="container outlined white padded">
         <p class="centered">
           Three Sixths
         </p>
       </div>
     </div>
     <div class="item two sixths">
-      <div class="container outline padded">
+      <div class="container outlined white padded">
         <p class="centered">
           Two Sixths
         </p>
       </div>
     </div>
   </div>
-</html>
+</article>
+
+<article>
+  <h3>Layout Structure & Widths</h3>
+  <p>To create layout structure, width classes can be applied directly to the child element of a grid or along with the parent grid class.</p>
+
+  <h5>Defining the width or an item</h5>
+  <p>Child element width classes are named as fractions from halves up to sixths. For example <code>two fifths</code> or <code>three quarters</code>.</p>
+
+  <div class="container extra light grey grid padded">
+    <div class="item one sixth">
+      <div class="container outlined white padded">
+        <p class="centered">
+          One Sixth
+        </p>
+      </div>
+    </div>
+    <div class="item three sixths">
+      <div class="container outlined white padded">
+        <p class="centered">
+          Three Sixths or One Half
+        </p>
+      </div>
+    </div>
+    <div class="item two sixths">
+      <div class="container outlined white padded">
+        <p class="centered">
+          Two Sixths or One Third
+        </p>
+      </div>
+    </div>
+  </div>
+</article>
+
+<article>
+  <header>
+    <h5>Defining the width of child items</h5>
+    <p>The child items of a grid can be evenly divide by using the appropriate proportion class alongside the <code>grid</code> class. For example <code>grid halves</code> or <code>menu fifths</code>.</p>
+    <p>The grid can be divided up into a maximum of sixths.</p>
+  </header>
+  <textarea class="code">
+        <div class="container extra light grey grid fourths padded">
+      <div class="item">
+        <div class="container outlined white padded">
+          <p class="centered">
+            One Quarter
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container outlined white padded">
+          <p class="centered">
+            One Quarter
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container outlined white padded">
+          <p class="centered">
+            One Quarter
+          </p>
+        </div>
+      </div>
+    </div>
+  </textarea>
+
+  <html>
+    <div class="container extra light grey grid fourths padded">
+      <div class="item">
+        <div class="container outlined white padded">
+          <p class="centered">
+            One Quarter
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container outlined white padded">
+          <p class="centered">
+            One Quarter
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container outlined white padded">
+          <p class="centered">
+            One Quarter
+          </p>
+        </div>
+      </div>
+    </div>
+  </html>
+</article>
+
+
+<article>
+  <h5>Overflow Grid & Touch Controls</h5>
+</article>
