@@ -962,22 +962,22 @@ input[type="radio"] ~ label:after {
 
 .container.primary,
 .card.primary {
-  background: #87bc22;
+  background: #1d1d1d;
 }
 
 .container.secondary,
 .card.secondary {
-  background: rgba(0, 31, 44, 0.85);
+  background: #2a2a2a;
 }
 
 .container.emphasis,
 .card.emphasis {
-  background: #87bc22;
+  background: #bc3f43;
 }
 
 .container.emphasis-secondary,
 .card.emphasis-secondary {
-  background: rgba(0, 31, 44, 0.85);
+  background: #2a2a2a;
 }
 
 .container.disabled,
@@ -987,7 +987,7 @@ input[type="radio"] ~ label:after {
 
 .container.success,
 .card.success {
-  background: #a2db36;
+  background: #cb6367;
 }
 
 .container.info,
@@ -1570,6 +1570,8 @@ body {
 
 body,
 p,
+span,
+section,
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
@@ -1588,6 +1590,12 @@ h1, h2, h3, h4, h5, h6 {
 p,
 .inverted .normal
 p, .normal
+span,
+.inverted .normal
+span, .normal
+section,
+.inverted .normal
+section, .normal
 h1,
 .inverted .normal
 h1, .normal h2,
@@ -1604,6 +1612,12 @@ h1, .normal h2,
 p,
 .normal .inverted
 p, .inverted
+span,
+.normal .inverted
+span, .inverted
+section,
+.normal .inverted
+section, .inverted
 h1,
 .normal .inverted
 h1, .inverted h2,
@@ -1617,52 +1631,75 @@ h1, .inverted h2,
 
 body em,
 p em,
+span em,
+section em,
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-weight: bolder;
 }
 
 body strong,
 p strong,
+span strong,
+section strong,
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-weight: bolder;
 }
 
 body b,
 p b,
+span b,
+section b,
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
   font-weight: bolder;
 }
 
 body i,
 p i,
+span i,
+section i,
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   font-style: italic;
 }
 
 body u,
 p u,
+span u,
+section u,
 h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
   text-decoration: underline;
 }
 
 body.centered,
 p.centered,
+span.centered,
+section.centered,
 h1.centered, h2.centered, h3.centered, h4.centered, h5.centered, h6.centered {
   text-align: center;
 }
 
 body.right,
 p.right,
+span.right,
+section.right,
 h1.right, h2.right, h3.right, h4.right, h5.right, h6.right {
   text-align: right;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+
+h1 ~ h1, h1 ~ h2, h1 ~ h3, h1 ~ h4, h1 ~ h5, h1 ~ h6, h2 ~ h1, h2 ~ h2, h2 ~ h3, h2 ~ h4, h2 ~ h5, h2 ~ h6, h3 ~ h1, h3 ~ h2, h3 ~ h3, h3 ~ h4, h3 ~ h5, h3 ~ h6, h4 ~ h1, h4 ~ h2, h4 ~ h3, h4 ~ h4, h4 ~ h5, h4 ~ h6, h5 ~ h1, h5 ~ h2, h5 ~ h3, h5 ~ h4, h5 ~ h5, h5 ~ h6, h6 ~ h1, h6 ~ h2, h6 ~ h3, h6 ~ h4, h6 ~ h5, h6 ~ h6 {
+  margin-top: 0;
+}
+
 h1 {
-  font-size: 3.2em;
+  font-size: 3.6em;
 }
 
 h2 {
-  font-size: 2.4em;
+  font-size: 3em;
 }
 
 h3 {
@@ -1693,13 +1730,13 @@ a {
 }
 
 a:hover {
-  color: #68911a;
+  color: #963235;
   text-decoration: none;
 }
 
 .normal a:hover,
 .inverted .normal a:hover {
-  color: #68911a;
+  color: #963235;
   text-decoration: none;
 }
 
@@ -1714,21 +1751,21 @@ a:hover {
 }
 
 article p a {
-  color: #87bc22;
+  color: #bc3f43;
 }
 
 .normal article p a,
 .inverted .normal article p a {
-  color: #87bc22;
+  color: #bc3f43;
 }
 
 article p a:hover {
-  color: #68911a;
+  color: #963235;
 }
 
 .normal article p a:hover,
 .inverted .normal article p a:hover {
-  color: #68911a;
+  color: #963235;
 }
 
 .inverted article p a,
@@ -1744,15 +1781,15 @@ article p a:hover {
 ::-moz-selection,
 input::-moz-selection,
 textarea::-moz-selection {
-  background-color: #87bc22;
-  color: #dddddd;
+  background-color: #1d1d1d;
+  color: white;
 }
 
 ::selection,
 input::selection,
 textarea::selection {
-  background-color: #87bc22;
-  color: #dddddd;
+  background-color: #1d1d1d;
+  color: white;
 }
 
 hr {
@@ -1784,38 +1821,62 @@ textarea.code {
   font-family: "Courier New";
 }
 
-span.tag:before {
-  content: '<';
-}
-
-span.tag:after {
-  content: '>';
-}
-
-span.attribute:after {
-  content: '=';
-}
-
-span.value:before {
-  content: '"';
-}
-
-span.value:after {
-  content: '"';
-}
-
-.html.example:before {
-  content: 'Example';
+.label {
   position: relative;
   display: inline-block;
-  background: #e37869;
   border-radius: 3px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: .9em;
+  font-size: .8em;
   padding: 0.5em 1.25em;
-  margin: 0.5em 0em;
+  margin: 0.1875em 0em;
+  margin-right: 0.375em;
+  background: #f6f6f6;
+  color: #1d1d1d;
+}
+
+> .right .label {
+  margin-right: 0em;
+  margin-left: 0.375em;
+}
+
+.label.weak {
+  background: #dddddd;
   color: white;
+}
+
+.label.strong {
+  background: rgba(29, 29, 29, 0.85);
+  color: white;
+}
+
+.label:hover {
+  background: #bc3f43;
+  color: white;
+}
+
+.html {
+  border: solid #dddddd 1px;
+}
+
+.html .container {
+  border: solid #dddddd 1px;
+}
+
+.html > .label {
+  margin-top: 1.75em;
+}
+
+.html > .label:first-of-type {
+  margin-left: 1.5em;
+}
+
+.html .grid .item {
+  padding: .1em;
+}
+
+.no.spacing {
+  margin: 0;
 }
 
 time:before,
@@ -1838,24 +1899,24 @@ time:before,
   letter-spacing: 0.15rem;
   font-weight: 400;
   color: white;
-  background-color: #87bc22;
+  background-color: #1d1d1d;
 }
 
 .normal *[rel~="tag"],
 .inverted .normal *[rel~="tag"] {
   color: white;
-  background-color: #87bc22;
+  background-color: #1d1d1d;
 }
 
 *[rel~="tag"]:hover {
   color: white;
-  background-color: #a2db36;
+  background-color: #cb6367;
 }
 
 .normal *[rel~="tag"]:hover,
 .inverted .normal *[rel~="tag"]:hover {
   color: white;
-  background-color: #a2db36;
+  background-color: #cb6367;
 }
 
 .inverted *[rel~="tag"],
@@ -1867,7 +1928,7 @@ time:before,
 .inverted *[rel~="tag"]:hover,
 .normal .inverted *[rel~="tag"]:hover {
   color: black;
-  background-color: #a2db36;
+  background-color: #cb6367;
 }
 
 .unstyled-list ul, .unstyled-list li, aside ul, aside li, nav ul, nav li, footer ul, footer li {
@@ -1995,7 +2056,7 @@ input[type="button"] {
 a.button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  background: #87bc22;
+  background: #bc3f43;
   color: white;
   border: none;
 }
@@ -2011,7 +2072,7 @@ input[type="submit"]:hover, .normal
 input[type="button"]:hover,
 .inverted .normal
 input[type="button"]:hover {
-  background: #87bc22;
+  background: #bc3f43;
   color: white;
   border: none;
 }
@@ -2044,7 +2105,7 @@ input[type="button"]:hover,
 .normal .inverted
 input[type="button"]:hover {
   color: white;
-  background: #87bc22;
+  background: #bc3f43;
   border: none;
 }
 
@@ -2054,7 +2115,7 @@ input.button.emphasis {
   /* Visual */
   border-radius: 2px;
   color: rgba(0, 0, 0, 0.8);
-  background: rgba(135, 188, 34, 0);
+  background: rgba(188, 63, 67, 0);
   border: 1px solid rgba(0, 0, 0, 0.7);
 }
 
@@ -2067,16 +2128,16 @@ input.button.emphasis,
 .inverted .normal
 input.button.emphasis {
   color: rgba(0, 0, 0, 0.8);
-  background: rgba(135, 188, 34, 0);
+  background: rgba(188, 63, 67, 0);
   border: 1px solid rgba(0, 0, 0, 0.7);
 }
 
 .button.emphasis a:hover,
 a.button.emphasis:hover,
 input.button.emphasis:hover {
-  background: #87bc22;
+  background: #bc3f43;
   color: black;
-  border: 1px solid #87bc22;
+  border: 1px solid #bc3f43;
 }
 
 .normal .button.emphasis a:hover,
@@ -2087,9 +2148,9 @@ a.button.emphasis:hover, .normal
 input.button.emphasis:hover,
 .inverted .normal
 input.button.emphasis:hover {
-  background: #87bc22;
+  background: #bc3f43;
   color: black;
-  border: 1px solid #87bc22;
+  border: 1px solid #bc3f43;
 }
 
 .inverted .button.emphasis a,
@@ -2101,7 +2162,7 @@ input.button.emphasis,
 .normal .inverted
 input.button.emphasis {
   color: rgba(255, 255, 255, 0.8);
-  background: rgba(135, 188, 34, 0);
+  background: rgba(188, 63, 67, 0);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 
@@ -2114,8 +2175,8 @@ input.button.emphasis:hover,
 .normal .inverted
 input.button.emphasis:hover {
   color: white;
-  background: #87bc22;
-  border: 1px solid #87bc22;
+  background: #bc3f43;
+  border: 1px solid #bc3f43;
 }
 
 input:not([type]),
@@ -2188,7 +2249,7 @@ input[type="url"]:focus,
 textarea:focus,
 select:focus {
   color: black;
-  border-color: #87bc22;
+  border-color: #bc3f43;
 }
 
 .nf-error input:not([type]), .nf-error
@@ -2223,7 +2284,7 @@ input[type="file"] .nf-pass,
 input[type="url"] .nf-pass,
 textarea .nf-pass,
 select .nf-pass {
-  border-color: #87bc22;
+  border-color: #bc3f43;
   color: #1d1d1d;
 }
 
@@ -2278,7 +2339,7 @@ select[disabled] {
 
 .nf-field-element:before {
   content: '\f00c';
-  color: #87bc22;
+  color: #bc3f43;
 }
 
 .nf-pass .nf-field-element:before {
@@ -2325,7 +2386,7 @@ label {
 }
 
 .list-select-wrap select:focus ~ div:after {
-  color: #87bc22;
+  color: #bc3f43;
 }
 
 /* ---------------------------------------------------------------------------------------------

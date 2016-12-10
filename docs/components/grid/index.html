@@ -2,192 +2,295 @@
 layout: default
 category: Components
 title: Flex Grid System
-description: Loosely based off the semantic grid system. This grid system takes advantage of a large range of classes developed to simplify and extend layout control. The flexbox grid system is extended for use with menus. Being call to with the .menu class instead of grid. All additional grid classes should work as expected within the .menu class.
+description: Loosely based off the semantic grid system. This grid system takes advanlabele of a large range of classes developed to simplify and extend layout control. The flexbox grid system is extended for use with menus. Being call to with the .menu class instead of grid. All additional grid classes should work as expected within the .menu class.
 reference-title: CSS Tricks Guide to Flexbox
 reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 ---
 
 <article>
   <header>
-    <h2>Grid</h2>
+    <h2>Introducing to the grid</h2>
     <p>The grid system uses the modern CSS flex display for creating complex layouts.</p>
-    <p>To initiate the grid system you simply need to apply the <code>grid</code> class to a div element.</p>
   </header>
-  <!--HTML-->
-  <section class="html example">
-    <div class="container grid outlined padded">
-      <div class="item one sixth">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Sixth
-          </p>
+
+  <!--Initiating the grid-->
+  <section>
+    <h3>Initiating the grid system</h3>
+    <span class="label">.grid</span><span class="label">.item</span>
+    <p>To initiate the grid system you simply need to apply either the <code>grid</code> class or <code>menu</code> class to an element. All immediate child elements will receive the appropriate flex attributes.</p>
+    <p>By default all child elements of a grid will naturally span to the width of the content with a maximum width of the parent container.</p>
+    <!--HTML-->
+    <div class="html">
+      <span class="label strong">.grid</span>
+      <div class="grid padded">
+        <div class="item">
+          <div class="container padded">
+            <span class="label strong">.item</span>
+            <p>Dolor quibusdam.</p>
+          </div>
         </div>
-      </div>
-      <div class="item three sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Three Sixths
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label strong">.item</span>
+            <p>Corrupti fermentum natoque magni commodi. </p>
+          </div>
         </div>
-      </div>
-      <div class="item two sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Two Sixths
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!--Code Snippet-->
-  <textarea class="code">
-    <div class="container grid outlined padded">
-      <div class="item one sixth">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Sixth
-          </p>
-        </div>
-      </div>
-      <div class="item three sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Three Sixths
-          </p>
-        </div>
-      </div>
-      <div class="item two sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Two Sixths
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label strong">.item</span>
+            <p>Itaque venenatis veniam dolor quibusdam netus nisi? Corrupti fermentum natoque magni commodi. Torquent quisquam, lorem curabitur hymenaeos facere. Porro voluptate quas, neque nesciunt saepe, alias tenetur tempora ac cumque! Earum, laboriosam et venenatis? Vitae.</p>
+          </div>
         </div>
       </div>
     </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label strong">.grid</span>
+      <div class="grid padded">
+        <div class="item">
+          <div class="container padded">
+            <span class="label strong">.item</span>
+            <p>Dolor quibusdam.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label strong">.item</span>
+            <p>Corrupti fermentum natoque magni commodi. </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label strong">.item</span>
+            <p>Itaque venenatis veniam dolor quibusdam netus nisi? Corrupti fermentum natoque magni commodi. Torquent quisquam, lorem curabitur hymenaeos facere. Porro voluptate quas, neque nesciunt saepe, alias tenetur tempora ac cumque! Earum, laboriosam et venenatis? Vitae.</p>
+          </div>
+        </div>
+      </div>
   </textarea>
-</article>
-
-<article>
-  <header>
-    <h3>Layout Structure & Widths</h3>
-    <p>To create layout structure, width classes can be applied directly to the child element of a grid or along with the parent grid class.</p>
-
-    <h5>Defining the width or an item</h5>
-    <p>Child element width classes are named as fractions from halves up to sixths. For example <code>two fifths</code> or <code>three quarters</code>.</p>
-  </header>
-  <!--HTML-->
-  <section class="html example">
-    <div class="container outlined grid padded">
-      <div class="item one sixth">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Sixth
-          </p>
-        </div>
-      </div>
-      <div class="item three sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Three Sixths or One Half
-          </p>
-        </div>
-      </div>
-      <div class="item two sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Two Sixths or One Third
-          </p>
-        </div>
-      </div>
-    </div>
   </section>
-  <!--Code Snippet-->
-  <textarea class="code">
-    <div class="container outlined grid padded">
-      <div class="item one sixth">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Sixth
-          </p>
+
+  <!--Applying individual widths-->
+  <section>
+    <h3>Applying individual widths to grid child elements</h3>
+    <span class="label">.five.sixths</span> <span class="label">.two.thirds</span> <span class="label">.one.half</span>
+    <p>To create complex layouts, width classes can be applied directly to the child element of a grid or menu. Child element width classes are named as fractions from halves up to sixths. For example <code>two fifths</code> or <code>three quarters</code>.</p>
+    <!--HTML-->
+    <div class="html">
+      <span class="label weak">.grid</span>
+      <div class="grid padded">
+        <div class="item one sixth">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.one.sixth</span>
+            <p>Nesciunt minima, doloribus occaecati illum quo perferendis quisquam proident pede diamlorem accumsan.</p>
+          </div>
         </div>
-      </div>
-      <div class="item three sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Three Sixths or One Half
-          </p>
+        <div class="item three sixths">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.three.sixths</span>
+            <p>Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
+          </div>
         </div>
-      </div>
-      <div class="item two sixths">
-        <div class="container outlined white padded">
-          <p class="centered">
-            Two Sixths or One Third
-          </p>
+        <div class="item two sixths">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.two.sixths</span>
+            <p>Deleniti maecenas excepteur ducimus malesuada torquent proin corporis phasellus cupiditate, diam aliquet voluptatibus aliquam aperiam praesentium ridiculus rem pretium libero nec dictum, morbi cupiditate lacinia, aliqua expedita, laboriosam aspernatur reiciendis nulla iste quos laboris..</p>
+          </div>
+        </div>
+        <div class="item three fifths">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.three.fifths</span>
+            <p>Urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
+          </div>
         </div>
       </div>
     </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label weak">.grid</span>
+      <div class="grid padded">
+        <div class="item one sixth">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.one.sixth</span>
+            <p>Nesciunt minima, doloribus occaecati illum quo perferendis quisquam proident pede diamlorem accumsan.</p>
+          </div>
+        </div>
+        <div class="item three sixths">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.three.sixths</span>
+            <p>Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
+          </div>
+        </div>
+        <div class="item two sixths">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.two.sixths</span>
+            <p>Deleniti maecenas excepteur ducimus malesuada torquent proin corporis phasellus cupiditate, diam aliquet voluptatibus aliquam aperiam praesentium ridiculus rem pretium libero nec dictum, morbi cupiditate lacinia, aliqua expedita, laboriosam aspernatur reiciendis nulla iste quos laboris..</p>
+          </div>
+        </div>
+        <div class="item three fifths">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.three.fifths</span>
+            <p>Urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
+          </div>
+        </div>
+      </div>
   </textarea>
+  </section>
 
-</article>
-
-<article>
-  <header>
-    <h5>Defining the width of child items</h5>
+  <!--Setting default widths-->
+  <section>
+    <h3>Setting the default width of all grid child elements</h3>
+    <span class="label">.grid.halves</span> <span class="label">.grid.sixths</span> <span class="label">.menu.thirds</span>
     <p>The child items of a grid can be evenly divide by using the appropriate proportion class alongside the <code>grid</code> class. For example <code>grid halves</code> or <code>menu fifths</code>.</p>
     <p>The grid can be divided up into a maximum of sixths.</p>
-  </header>
-  <!--HTML-->
-  <section class="html example">
-    <div class="container outlined grid fourths padded">
-      <div class="item">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Quarter
-          </p>
+
+    <!--HTML-->
+    <div class="html">
+      <span class="label weak">.grid</span><span class="label strong">.quarters</span>
+      <div class="grid fourths padded">
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Quarter
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Quarter
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!--Code Snippet-->
-  <textarea class="code">
-    <div class="container outlined grid fourths padded">
-      <div class="item">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Quarter
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Quarter
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container outlined white padded">
-          <p class="centered">
-            One Quarter
-          </p>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
         </div>
       </div>
     </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label weak">.grid</span><span class="label strong">.quarters</span>
+      <div class="grid fourths padded">
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+      </div>
   </textarea>
+  </section>
+</article>
+
+<article>
+  <header>
+    <h2>Vertical grid</h2>
+    <p>Grids can be both horizontal or vertical. By default a grid will display horizontally, but by adding the class <code>.vertical</code> to the <code>.grid</code> or <code>.menu</code> classes you can define a vertical grid.</p>
+  </header>
+
+  <!--Creating a vertical grid-->
+  <section>
+    <h3>Creating a vertical grid</h3>
+    <span class="label">.vertical</span>
+    <p>Vertical grids use the same additional classes as a horizontal grid without having to consider the different orientation. For example setting a grid to <code>.justified</code> the child items will horizontally span the full width of both the horizontal and vertical grids.</p>
+    <p><strong>Note: </strong>Defining widths will no longer work. This may corrected in future updates.</p>
+    <!--HTML-->
+    <div class="html">
+      <span class="label weak">.grid</span><span class="label strong">.vertical</span>
+      <div class="grid vertical padded fourths">
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Vero purus, amet enim? Elementum imperdiet nostra semper! Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item right">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.right</span>
+            <p>Habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label weak">.grid</span><span class="label strong">.vertical</span>
+      <div class="grid vertical padded fourths">
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Vero purus, amet enim? Elementum imperdiet nostra semper! Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+      </div>
+  </textarea>
+  </section>
 </article>
 
 

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3471a452-447b-46f9-9940-7530ac320e93" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/definitions/components/_container.scss" afterPath="$PROJECT_DIR$/definitions/components/_container.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/definitions/elements/_type.scss" afterPath="$PROJECT_DIR$/definitions/elements/_type.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/definitions/globals/_variables.scss" afterPath="$PROJECT_DIR$/definitions/globals/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/_layouts/default.html" afterPath="$PROJECT_DIR$/docs/_layouts/default.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/assets/css/main.css" afterPath="$PROJECT_DIR$/docs/assets/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/components/grid/index.html" afterPath="$PROJECT_DIR$/docs/components/grid/index.html" />
     </list>
@@ -23,59 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="default.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/components/grid/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="846">
-              <caret line="188" column="10" lean-forward="false" selection-start-line="188" selection-start-column="10" selection-end-line="188" selection-end-column="10" />
+            <state relative-caret-position="510">
+              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
               <folding>
+                <element signature="n#section#0;n#article#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#section#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#textarea#0;n#article#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#section#0;n#article#1;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#textarea#0;n#article#1;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#section#0;n#article#2;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#textarea#0;n#article#2;n#!!top" expanded="false" />
+                <element signature="n#textarea#0;n#section#0;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#section#1;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#section#1;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#textarea#0;n#section#1;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#section#2;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#div#0;n#section#2;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#textarea#0;n#section#2;n#article#0;n#!!top" expanded="false" />
+                <element signature="n#section#0;n#article#1;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_type.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/definitions/elements/_type.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-33">
-              <caret line="300" column="28" lean-forward="false" selection-start-line="300" selection-start-column="28" selection-end-line="300" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpfile.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_container.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/definitions/components/_container.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="464" column="0" lean-forward="false" selection-start-line="464" selection-start-column="0" selection-end-line="464" selection-end-column="40" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -83,8 +49,18 @@
       <file leaf-file-name="_grid.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/definitions/components/_grid.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1887">
-              <caret line="297" column="10" lean-forward="true" selection-start-line="297" selection-start-column="10" selection-end-line="297" selection-end-column="10" />
+            <state relative-caret-position="-3723">
+              <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_type.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/definitions/elements/_type.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-92">
+              <caret line="326" column="31" lean-forward="false" selection-start-line="326" selection-start-column="31" selection-end-line="326" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -106,10 +82,16 @@
       <find>$remSize</find>
       <find>$rem</find>
       <find>grey</find>
+      <find>Content</find>
+      <find>tag</find>
+      <find>fitted</find>
+      <find>no spacing</find>
     </findStrings>
     <replaceStrings>
       <replace>!default;</replace>
       <replace>$unit</replace>
+      <replace>Item</replace>
+      <replace>label</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -135,16 +117,16 @@
         <option value="$PROJECT_DIR$/definitions/elements/_loader.scss" />
         <option value="$PROJECT_DIR$/definitions/main.scss" />
         <option value="$PROJECT_DIR$/definitions/elements/_label.scss" />
-        <option value="$PROJECT_DIR$/definitions/globals/_variables.scss" />
         <option value="$PROJECT_DIR$/definitions/globals/_basics.scss" />
         <option value="$PROJECT_DIR$/docs/_includes/menu.html" />
         <option value="$PROJECT_DIR$/docs/elements/typography/index.html" />
         <option value="$PROJECT_DIR$/docs/introduction/getting-started/index.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/definitions/components/_container.scss" />
         <option value="$PROJECT_DIR$/definitions/components/_grid.scss" />
-        <option value="$PROJECT_DIR$/docs/_layouts/default.html" />
         <option value="$PROJECT_DIR$/definitions/components/_html.scss" />
+        <option value="$PROJECT_DIR$/docs/_layouts/default.html" />
+        <option value="$PROJECT_DIR$/definitions/globals/_variables.scss" />
+        <option value="$PROJECT_DIR$/definitions/components/_container.scss" />
         <option value="$PROJECT_DIR$/definitions/elements/_type.scss" />
         <option value="$PROJECT_DIR$/docs/components/grid/index.html" />
       </list>
@@ -304,7 +286,43 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_includes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic-wordpress-framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic-wordpress-framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="definitions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic-wordpress-framework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="semantic-wordpress-framework" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="definitions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="globals" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,12 +460,12 @@
       <updated>1480801833669</updated>
       <workItem from="1480801834758" duration="3890000" />
       <workItem from="1480821541789" duration="27889000" />
-      <workItem from="1481262529628" duration="14669000" />
+      <workItem from="1481262529628" duration="24772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46448000" />
+    <option name="totallyTimeSpent" value="56551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1273" y="0" width="1294" height="1407" extended-state="0" />
@@ -515,12 +533,16 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#section#0;n#article#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#section#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#textarea#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#section#0;n#article#1;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#textarea#0;n#article#1;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#section#0;n#article#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#textarea#0;n#article#2;n#!!top" expanded="false" />
+            <element signature="n#textarea#0;n#section#0;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#section#1;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#textarea#0;n#section#1;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#section#2;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#textarea#0;n#section#2;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#article#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -722,25 +744,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/definitions/globals/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="67" column="59" lean-forward="false" selection-start-line="67" selection-start-column="59" selection-end-line="67" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/introduction/getting-started/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_includes/menu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -755,22 +762,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-339">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/definitions/components/_grid.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1887">
-          <caret line="297" column="10" lean-forward="true" selection-start-line="297" selection-start-column="10" selection-end-line="297" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -791,42 +782,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/_includes/menu.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/docs/_layouts/default.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
+        <state relative-caret-position="289">
+          <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/definitions/components/_container.scss">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="464" column="0" lean-forward="false" selection-start-line="464" selection-start-column="0" selection-end-line="464" selection-end-column="40" />
+        <state relative-caret-position="257">
+          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/definitions/elements/_type.scss">
+    <entry file="file://$PROJECT_DIR$/definitions/globals/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="300" column="28" lean-forward="false" selection-start-line="300" selection-start-column="28" selection-end-line="300" selection-end-column="28" />
+        <state relative-caret-position="495">
+          <caret line="32" column="76" lean-forward="false" selection-start-line="32" selection-start-column="76" selection-end-line="32" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/components/grid/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="188" column="10" lean-forward="false" selection-start-line="188" selection-start-column="10" selection-end-line="188" selection-end-column="10" />
+        <state relative-caret-position="510">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
           <folding>
+            <element signature="n#section#0;n#article#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#section#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#textarea#0;n#article#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#section#0;n#article#1;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#textarea#0;n#article#1;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#section#0;n#article#2;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#textarea#0;n#article#2;n#!!top" expanded="false" />
+            <element signature="n#textarea#0;n#section#0;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#section#1;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#section#1;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#textarea#0;n#section#1;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#section#2;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#section#2;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#textarea#0;n#section#2;n#article#0;n#!!top" expanded="false" />
+            <element signature="n#section#0;n#article#1;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/definitions/components/_container.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="366" column="39" lean-forward="true" selection-start-line="366" selection-start-column="39" selection-end-line="366" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/definitions/components/_grid.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3723">
+          <caret line="33" column="26" lean-forward="true" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/definitions/elements/_type.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="326" column="31" lean-forward="false" selection-start-line="326" selection-start-column="31" selection-end-line="326" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -341,6 +341,7 @@ $card-background                      : $color-white !default;
 // .horizontally  - Only removes the horizontal padding
 // .vertically    - Only removes the vertical padding
 
+
 .fitted:not(.horizontally):not(.vertically) {
   padding: 0px;
 }
