@@ -278,9 +278,22 @@ textarea::selection {
 hr {
   border: none;
   border-bottom: $border;
-  @extend .fluid;
   .inverted & {
     border-top: $border-inverted;
+  }
+
+  &.fluid {
+    @extend .fluid;
+  }
+
+  &.padded {
+    padding: 0;
+    @include margin(1, 0);
+
+    &.relaxed {
+      padding: 0;
+      @include margin(2, 0);
+    }
   }
 }
 

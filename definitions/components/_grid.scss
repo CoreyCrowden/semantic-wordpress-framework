@@ -313,7 +313,7 @@ $full-width: 100% / 1;
 
   // Align Middle
   &.middle {
-    .grid.vertical:not(.vertical) & {
+    .grid:not(.vertical) > & {
       @include align-self(center);
     }
     .grid.vertical & {

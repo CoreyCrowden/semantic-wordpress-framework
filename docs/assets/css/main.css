@@ -646,16 +646,16 @@ input[type="radio"] ~ label:after {
   padding: 1.25em 1.25em 1.25em 1.25em;
 }
 
-.padded .fluid, .padded hr {
+.padded .fluid {
   margin-right: -1.25em;
   margin-left: -1.25em;
 }
 
-.padded .fluid.before, .padded hr.before {
+.padded .fluid.before {
   margin-top: -1.25em;
 }
 
-.padded .fluid.after, .padded hr.after {
+.padded .fluid.after {
   margin-bottom: -1.25em;
 }
 
@@ -663,14 +663,14 @@ input[type="radio"] ~ label:after {
   .padded.relaxed {
     padding: 5em 5em 5em 5em;
   }
-  .padded.relaxed .fluid, .padded.relaxed hr {
+  .padded.relaxed .fluid {
     margin-right: -5em;
     margin-left: -5em;
   }
-  .padded.relaxed .fluid.before, .padded.relaxed hr.before {
+  .padded.relaxed .fluid.before {
     margin-top: -5em;
   }
-  .padded.relaxed .fluid.after, .padded.relaxed hr.after {
+  .padded.relaxed .fluid.after {
     margin-bottom: -5em;
   }
 }
@@ -679,16 +679,16 @@ input[type="radio"] ~ label:after {
   padding: 0em 1.25em 0em 1.25em;
 }
 
-.padded.horizontally .fluid, .padded.horizontally hr {
+.padded.horizontally .fluid {
   margin-right: -1.25em;
   margin-left: -1.25em;
 }
 
-.padded.horizontally .fluid.before, .padded.horizontally hr.before {
+.padded.horizontally .fluid.before {
   margin-top: 0em;
 }
 
-.padded.horizontally .fluid.after, .padded.horizontally hr.after {
+.padded.horizontally .fluid.after {
   margin-bottom: 0em;
 }
 
@@ -696,14 +696,14 @@ input[type="radio"] ~ label:after {
   .padded.horizontally.relaxed {
     padding: 0em 5em 0em 5em;
   }
-  .padded.horizontally.relaxed .fluid, .padded.horizontally.relaxed hr {
+  .padded.horizontally.relaxed .fluid {
     margin-right: -5em;
     margin-left: -5em;
   }
-  .padded.horizontally.relaxed .fluid.before, .padded.horizontally.relaxed hr.before {
+  .padded.horizontally.relaxed .fluid.before {
     margin-top: 0em;
   }
-  .padded.horizontally.relaxed .fluid.after, .padded.horizontally.relaxed hr.after {
+  .padded.horizontally.relaxed .fluid.after {
     margin-bottom: 0em;
   }
 }
@@ -712,16 +712,16 @@ input[type="radio"] ~ label:after {
   padding: 1.25em 0em 1.25em 0em;
 }
 
-.padded.vertically .fluid, .padded.vertically hr {
+.padded.vertically .fluid {
   margin-right: 0em;
   margin-left: 0em;
 }
 
-.padded.vertically .fluid.before, .padded.vertically hr.before {
+.padded.vertically .fluid.before {
   margin-top: -1.25em;
 }
 
-.padded.vertically .fluid.after, .padded.vertically hr.after {
+.padded.vertically .fluid.after {
   margin-bottom: -1.25em;
 }
 
@@ -729,19 +729,19 @@ input[type="radio"] ~ label:after {
   .padded.vertically.relaxed {
     padding: 5em 0em 5em 0em;
   }
-  .padded.vertically.relaxed .fluid, .padded.vertically.relaxed hr {
+  .padded.vertically.relaxed .fluid {
     margin-right: 0em;
     margin-left: 0em;
   }
-  .padded.vertically.relaxed .fluid.before, .padded.vertically.relaxed hr.before {
+  .padded.vertically.relaxed .fluid.before {
     margin-top: -5em;
   }
-  .padded.vertically.relaxed .fluid.after, .padded.vertically.relaxed hr.after {
+  .padded.vertically.relaxed .fluid.after {
     margin-bottom: -5em;
   }
 }
 
-.fluid, hr {
+.fluid, hr.fluid {
   min-width: 100%;
   width: auto;
   max-width: none;
@@ -753,16 +753,16 @@ input[type="radio"] ~ label:after {
   padding: 1.25em 1.25em 1.25em 1.25em;
 }
 
-.content .fluid, .content hr {
+.content .fluid {
   margin-right: -1.25em;
   margin-left: -1.25em;
 }
 
-.content .fluid.before, .content hr.before {
+.content .fluid.before {
   margin-top: -1.25em;
 }
 
-.content .fluid.after, .content hr.after {
+.content .fluid.after {
   margin-bottom: -1.25em;
 }
 
@@ -770,14 +770,14 @@ input[type="radio"] ~ label:after {
   .content.relaxed {
     padding: 5em 5em 5em 5em;
   }
-  .content.relaxed .fluid, .content.relaxed hr {
+  .content.relaxed .fluid {
     margin-right: -5em;
     margin-left: -5em;
   }
-  .content.relaxed .fluid.before, .content.relaxed hr.before {
+  .content.relaxed .fluid.before {
     margin-top: -5em;
   }
-  .content.relaxed .fluid.after, .content.relaxed hr.after {
+  .content.relaxed .fluid.after {
     margin-bottom: -5em;
   }
 }
@@ -787,22 +787,19 @@ input[type="radio"] ~ label:after {
   padding: 2.5em 2.5em 2.5em 2.5em;
 }
 
-.content.card .fluid, .content.card hr,
-.card .content .fluid,
-.card .content hr {
+.content.card .fluid,
+.card .content .fluid {
   margin-right: -2.5em;
   margin-left: -2.5em;
 }
 
-.content.card .fluid.before, .content.card hr.before,
-.card .content .fluid.before,
-.card .content hr.before {
+.content.card .fluid.before,
+.card .content .fluid.before {
   margin-top: -2.5em;
 }
 
-.content.card .fluid.after, .content.card hr.after,
-.card .content .fluid.after,
-.card .content hr.after {
+.content.card .fluid.after,
+.card .content .fluid.after {
   margin-bottom: -2.5em;
 }
 
@@ -811,20 +808,17 @@ input[type="radio"] ~ label:after {
   .card .content.relaxed {
     padding: 5em 5em 5em 5em;
   }
-  .content.card.relaxed .fluid, .content.card.relaxed hr,
-  .card .content.relaxed .fluid,
-  .card .content.relaxed hr {
+  .content.card.relaxed .fluid,
+  .card .content.relaxed .fluid {
     margin-right: -5em;
     margin-left: -5em;
   }
-  .content.card.relaxed .fluid.before, .content.card.relaxed hr.before,
-  .card .content.relaxed .fluid.before,
-  .card .content.relaxed hr.before {
+  .content.card.relaxed .fluid.before,
+  .card .content.relaxed .fluid.before {
     margin-top: -5em;
   }
-  .content.card.relaxed .fluid.after, .content.card.relaxed hr.after,
-  .card .content.relaxed .fluid.after,
-  .card .content.relaxed hr.after {
+  .content.card.relaxed .fluid.after,
+  .card .content.relaxed .fluid.after {
     margin-bottom: -5em;
   }
 }
@@ -1319,7 +1313,7 @@ input[type="radio"] ~ label:after {
   margin-bottom: auto;
 }
 
-.grid.vertical:not(.vertical) .item.middle {
+.grid:not(.vertical) > .item.middle {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
       align-self: center;
@@ -1812,6 +1806,16 @@ hr {
 
 .inverted hr {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+hr.padded {
+  padding: 0;
+  margin: 2.5em 0em;
+}
+
+hr.padded.relaxed {
+  padding: 0;
+  margin: 5em 0em;
 }
 
 code {

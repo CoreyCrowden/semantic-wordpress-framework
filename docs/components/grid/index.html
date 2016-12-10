@@ -139,7 +139,7 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   <!--Setting default widths-->
   <section>
     <h3>Setting the default width of all grid child elements</h3>
-    <span class="label">.grid.halves</span> <span class="label">.grid.sixths</span> <span class="label">.menu.thirds</span>
+    <span class="label">.halves</span> <span class="label">.sixths</span> <span class="label">.thirds</span>
     <p>The child items of a grid can be evenly divide by using the appropriate proportion class alongside the <code>grid</code> class. For example <code>grid halves</code> or <code>menu fifths</code>.</p>
     <p>The grid can be divided up into a maximum of sixths.</p>
 
@@ -228,9 +228,188 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
       </div>
   </textarea>
   </section>
+
+  <!--Alignment classes-->
+  <section>
+    <h3>Alignment of grid items</h3>
+    <span class="label">.left</span><span class="label">.centered</span><span class="label">.right</span>
+    <span class="label">.top</span><span class="label">.middle</span><span class="label">.bottom</span>
+    <p>The alignment classes allow for simple positioning of grid children, either as a whole or individually depending on where you apply the alignment classes.</p>
+    <!--HTML-->
+    <div class="html">
+      <span class="label weak">.grid</span><span class="label strong">.right</span>
+      <div class="grid right padded">
+        <div class="item two thirds bottom">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label weak">.two.thirds</span><span class="label strong">.bottom</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item one fifth">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label weak">.one.fifth</span>
+            <p>Aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item one fifth left">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label weak">.one.fifth</span><span class="label strong">.left</span>
+            <p>Pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item two fifths middle">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label weak">.two.fifth</span><span class="label strong">.middle</span>
+            <p>Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item four fifths centered">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label weak">.four.fifths</span><span class="label strong">.centered</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label weak">.grid</span><span class="label weak">.quarters</span><span class="label strong">.stretched</span>
+      <div class="grid quarters stretched padded">
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item justified">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label strong">.justified</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+      </div>
+  </textarea>
+  </section>
+
+  <!--Justification classes-->
+  <section>
+    <h3>Special classes for controlling the height and width of grid items</h3>
+    <span class="label">.justified</span><span class="label">.stretched</span>
+    <p>Applying the classes <code>justified</code> and / or <code>stretched</code> to either the grid element or individual child items will manipulate the box sizing of the child items.</p>
+    <p>The <code>justified</code> class controls the width of an element while the <code>stretched</code> class controls the height.</p>
+    <p><strong>Note: </strong>You may need to use the class <code>full height</code> on the inner container of item that are stretched to make them fill the height.</p>
+    <!--HTML-->
+    <div class="html">
+      <span class="label weak">.grid</span><span class="label weak">.quarters</span><span class="label strong">.stretched</span>
+      <div class="grid quarters stretched padded">
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item justified">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label strong">.justified</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label weak">.grid</span><span class="label weak">.quarters</span><span class="label strong">.stretched</span>
+      <div class="grid quarters stretched padded">
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+        <div class="item justified">
+          <div class="container padded full height">
+            <span class="label weak">.item</span><span class="label strong">.justified</span>
+            <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="container padded full height">
+            <span class="label weak">.item</span>
+            <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
+          </div>
+        </div>
+      </div>
+  </textarea>
+  </section>
 </article>
 
-<hr>
+<hr class="fluid padded relaxed">
 
 <article>
   <header>
