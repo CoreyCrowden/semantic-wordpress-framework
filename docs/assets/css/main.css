@@ -1781,6 +1781,7 @@ textarea.code {
   border-radius: 2px;
   padding: 0.25em;
   font-size: 1em;
+  font-family: "Courier New";
 }
 
 span.tag:before {
@@ -1801,6 +1802,20 @@ span.value:before {
 
 span.value:after {
   content: '"';
+}
+
+.html.example:before {
+  content: 'Example';
+  position: relative;
+  display: inline-block;
+  background: #e37869;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .9em;
+  padding: 0.5em 1.25em;
+  margin: 0.5em 0em;
+  color: white;
 }
 
 time:before,

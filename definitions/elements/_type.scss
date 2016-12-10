@@ -298,6 +298,7 @@ textarea.code {
   border-radius: $code-border-radius;
   @include padding($code-padding);
   font-size: 1em;
+  font-family: "Courier New";
 }
 
 span {
@@ -330,4 +331,19 @@ span {
   }
 }
 
+.html.example {
+  &:before {
+    content: 'Example';
+    position: relative;
+    display: inline-block;
+    background: $color-emphasis-secondary;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .9em;
+    @include padding(.2, .5);
+    @include margin(.2, 0);
+    color: $color-text-strong-inverted;
+  }
+}
 
