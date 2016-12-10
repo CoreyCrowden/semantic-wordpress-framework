@@ -168,14 +168,28 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: $text-decoration-underline;
   }
 
-  // Center Text
-  &.centered {
+  // Left Align Text (Default)
+  &.left,
+  .left > & {
+    text-align: left;
+  }
+
+  // Center Align Text
+  &.centered,
+  .centered > & {
     text-align: center;
   }
 
   // Right Align Text
-  &.right {
+  &.right,
+  .right > & {
     text-align: right;
+  }
+
+  // Justify Align Text
+  &.justified,
+  .justified > & {
+    text-align: justify;
   }
 
 }
@@ -184,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
   margin-bottom: 0;
 
-  ~h1, ~h2, ~h3, ~h4, ~h5, ~h6 {
+  + h1, + h2, + h3, + h4, + h5, + h6 {
     margin-top: 0;
   }
 }
@@ -367,28 +381,45 @@ textarea.code {
 }
 
 // HTML Preview Area
-.html {
 
-  // Borders
-  border: solid $color-grey-light 1px;
-  .container {
+#page-content {
+  .html {
+
+    // Borders
     border: solid $color-grey-light 1px;
-  }
+    .container {
+      border: solid $color-grey-light 1px;
+    }
 
-  > .label {
-    @include margin-top(.7);
-    &:first-of-type {
-      @include margin-left(.6);
+    > .label {
+      @include margin-top(.7);
+      &:first-of-type {
+        @include margin-left(.6);
+      }
+    }
+
+    // Grid Item Container Margins
+    .grid .item {
+      padding: .1em;
     }
   }
 
-  // Grid Item Container Margins
-  .grid .item {
-    padding: .1em;
+  // Section margins
+  section {
+    @include margin(2,0);
+
+    > h3:first-child {
+      border-bottom: solid $color-grey-light 1px;
+      @include padding-bottom(.15);
+      @include margin-bottom(.2);
+    }
+
+    > .example {
+      @include margin-top(.5);
+    }
   }
-
-
 }
+
 
 
 

@@ -1676,20 +1676,92 @@ h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
   text-decoration: underline;
 }
 
+body.left,
+.left > body,
+p.left,
+.left >
+p,
+span.left,
+.left >
+span,
+section.left,
+.left >
+section,
+h1.left,
+.left >
+h1, h2.left,
+.left > h2, h3.left,
+.left > h3, h4.left,
+.left > h4, h5.left,
+.left > h5, h6.left,
+.left > h6 {
+  text-align: left;
+}
+
 body.centered,
+.centered > body,
 p.centered,
+.centered >
+p,
 span.centered,
+.centered >
+span,
 section.centered,
-h1.centered, h2.centered, h3.centered, h4.centered, h5.centered, h6.centered {
+.centered >
+section,
+h1.centered,
+.centered >
+h1, h2.centered,
+.centered > h2, h3.centered,
+.centered > h3, h4.centered,
+.centered > h4, h5.centered,
+.centered > h5, h6.centered,
+.centered > h6 {
   text-align: center;
 }
 
 body.right,
+.right > body,
 p.right,
+.right >
+p,
 span.right,
+.right >
+span,
 section.right,
-h1.right, h2.right, h3.right, h4.right, h5.right, h6.right {
+.right >
+section,
+h1.right,
+.right >
+h1, h2.right,
+.right > h2, h3.right,
+.right > h3, h4.right,
+.right > h4, h5.right,
+.right > h5, h6.right,
+.right > h6 {
   text-align: right;
+}
+
+body.justified,
+.justified > body,
+p.justified,
+.justified >
+p,
+span.justified,
+.justified >
+span,
+section.justified,
+.justified >
+section,
+h1.justified,
+.justified >
+h1, h2.justified,
+.justified > h2, h3.justified,
+.justified > h3, h4.justified,
+.justified > h4, h5.justified,
+.justified > h5, h6.justified,
+.justified > h6 {
+  text-align: justify;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -1697,7 +1769,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
-h1 ~ h1, h1 ~ h2, h1 ~ h3, h1 ~ h4, h1 ~ h5, h1 ~ h6, h2 ~ h1, h2 ~ h2, h2 ~ h3, h2 ~ h4, h2 ~ h5, h2 ~ h6, h3 ~ h1, h3 ~ h2, h3 ~ h3, h3 ~ h4, h3 ~ h5, h3 ~ h6, h4 ~ h1, h4 ~ h2, h4 ~ h3, h4 ~ h4, h4 ~ h5, h4 ~ h6, h5 ~ h1, h5 ~ h2, h5 ~ h3, h5 ~ h4, h5 ~ h5, h5 ~ h6, h6 ~ h1, h6 ~ h2, h6 ~ h3, h6 ~ h4, h6 ~ h5, h6 ~ h6 {
+h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3, h2 + h4, h2 + h5, h2 + h6, h3 + h1, h3 + h2, h3 + h3, h3 + h4, h3 + h5, h3 + h6, h4 + h1, h4 + h2, h4 + h3, h4 + h4, h4 + h5, h4 + h6, h5 + h1, h5 + h2, h5 + h3, h5 + h4, h5 + h5, h5 + h6, h6 + h1, h6 + h2, h6 + h3, h6 + h4, h6 + h5, h6 + h6 {
   margin-top: 0;
 }
 
@@ -1872,24 +1944,38 @@ textarea.code {
   color: white;
 }
 
-.html {
+#page-content .html {
   border: solid #dddddd 1px;
 }
 
-.html .container {
+#page-content .html .container {
   border: solid #dddddd 1px;
 }
 
-.html > .label {
+#page-content .html > .label {
   margin-top: 1.75em;
 }
 
-.html > .label:first-of-type {
+#page-content .html > .label:first-of-type {
   margin-left: 1.5em;
 }
 
-.html .grid .item {
+#page-content .html .grid .item {
   padding: .1em;
+}
+
+#page-content section {
+  margin: 5em 0em;
+}
+
+#page-content section > h3:first-child {
+  border-bottom: solid #dddddd 1px;
+  padding-bottom: 0.375em;
+  margin-bottom: 0.5em;
+}
+
+#page-content section > .example {
+  margin-top: 1.25em;
 }
 
 .no.spacing {
