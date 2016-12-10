@@ -230,21 +230,59 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   </section>
 </article>
 
+<hr>
+
 <article>
   <header>
-    <h2>Vertical grid</h2>
-    <p>Grids can be both horizontal or vertical. By default a grid will display horizontally, but by adding the class <code>.vertical</code> to the <code>.grid</code> or <code>.menu</code> classes you can define a vertical grid.</p>
+    <h2>The vertical grid</h2>
+    <p>Grids can be both horizontal or vertical. A vertical grid is useful when creating layouts with vertically flowing content. The is especially effective for mobile device layouts.</p>
   </header>
 
   <!--Creating a vertical grid-->
   <section>
     <h3>Creating a vertical grid</h3>
-    <span class="label">.vertical</span>
+    <span class="label">.vertical</span><span class="label">.viewport.height</span>
+    <p>By default a grid will display horizontally, but by adding the class <code>.vertical</code> to the <code>.grid</code> or <code>.menu</code> classes you can define a vertical grid.</p>
     <p>Vertical grids use the same additional classes as a horizontal grid without having to consider the different orientation. For example setting a grid to <code>.justified</code> the child items will horizontally span the full width of both the horizontal and vertical grids.</p>
-    <p><strong>Note: </strong>Defining widths will no longer work. This may corrected in future updates.</p>
     <!--HTML-->
     <div class="html">
-      <span class="label weak">.grid</span><span class="label strong">.vertical</span>
+      <span class="label weak">.grid</span><span class="label strong">.vertical</span><span class="label weak">.quarters</span>
+      <div class="grid vertical viewport height padded fourths">
+        <div class="item">
+          <div class="container padded">
+            <span class="label weak">.item</span>
+            <p>Gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item right">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.right</span>
+            <p>Sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item justified">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.justified</span>
+            <p>Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item bottom">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.bottom</span>
+            <p>Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+        <div class="item centered">
+          <div class="container padded">
+            <span class="label weak">.item</span><span class="label strong">.centered</span>
+            <p>Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Code Snippet-->
+    <textarea class="code">
+      <span class="label weak">.grid</span><span class="label strong">.vertical</span><span class="label weak">.quarters</span>
       <div class="grid vertical padded fourths">
         <div class="item">
           <div class="container padded">
@@ -258,39 +296,28 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
             <p>Habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
           </div>
         </div>
-        <div class="item">
+        <div class="item justified">
           <div class="container padded">
-            <span class="label weak">.item</span>
+            <span class="label weak">.item</span><span class="label strong">.justified</span>
             <p>Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
           </div>
         </div>
-      </div>
-    </div>
-    <!--Code Snippet-->
-    <textarea class="code">
-      <span class="label weak">.grid</span><span class="label strong">.vertical</span>
-      <div class="grid vertical padded fourths">
         <div class="item">
           <div class="container padded">
             <span class="label weak">.item</span>
             <p>Vero purus, amet enim? Elementum imperdiet nostra semper! Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
           </div>
         </div>
-        <div class="item">
+        <div class="item centered">
           <div class="container padded">
-            <span class="label weak">.item</span>
+            <span class="label weak">.item</span><span class="label strong">.centered</span>
             <p>Habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
-          </div>
-        </div>
-        <div class="item">
-          <div class="container padded">
-            <span class="label weak">.item</span>
-            <p>Autem lobortis molestie natus, habitasse, aliquet. Per? Torquent? Illum magnam quasi laoreet gravida tempus fugit sapiente. Distinctio felis molestie cupidatat, sociis dolor facilisis, sagittis? Quo, quod! Platea tenetur.</p>
           </div>
         </div>
       </div>
   </textarea>
   </section>
+
 </article>
 
 

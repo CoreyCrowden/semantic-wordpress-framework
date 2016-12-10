@@ -62,8 +62,8 @@ $font-style-italic                          : italic !default;
 $text-decoration-underline                  : underline !default;
 
 // Headings
-$font-size-h1                               : 3.2em !default;
-$font-size-h2                               : 2.4em !default;
+$font-size-h1                               : 3.6em !default;
+$font-size-h2                               : 3.0em !default;
 $font-size-h3                               : 2.0em !default;
 $font-size-h4                               : 1.6em !default;
 $font-size-h5                               : 1.4em !default;
@@ -101,7 +101,7 @@ $color-text-link-visited-inverted           : darken( $color-emphasis-secondary,
 $color-text-link-hover-inverted             : darken( $color-emphasis-secondary, 10% );
 
 // Selection Highlight
-$color-text-selection                       : $color-text-inverted;
+$color-text-selection                       : $color-text-strong-inverted;
 $color-text-selection-background            : $color-primary;
 
 // Code & Pre
@@ -119,6 +119,8 @@ body {
 
 body,
 p,
+span,
+section,
 h1, h2, h3, h4, h5, h6 {
 
   // Basics
@@ -176,6 +178,15 @@ h1, h2, h3, h4, h5, h6 {
     text-align: right;
   }
 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 2em;
+  margin-bottom: 0;
+
+  ~h1, ~h2, ~h3, ~h4, ~h5, ~h6 {
+    margin-top: 0;
+  }
 }
 
 h1 {
@@ -301,49 +312,80 @@ textarea.code {
   font-family: "Courier New";
 }
 
-span {
 
-  // Tags
-  &.tag {
-    &:before {
-     content: '<';
-    }
-    &:after {
-     content: '>';
-    }
+// Tags
+.label {
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  @include padding( .2, .5);
+  @include margin( .075, 0);
+
+  // Add spacing between labels
+  @include margin-right(.15);
+  > .right & {
+    @include margin-right(0);
+    @include margin-left(.15);
   }
 
-  // Attribute
-  &.attribute {
-    &:after {
-      content: '=';
-    }
+  // Default label
+  background: rgba($color-grey-extra-light, 1);
+  color: $color-text;
+
+  // Make the label more subtle
+  &.weak {
+    background: $color-grey-light;
+    color: $color-text-strong-inverted;
   }
 
-  // Value
-  &.value {
-    &:before {
-      content: '"';
-    }
-    &:after {
-      content: '"';
-    }
+  // Give the label more emphasis
+  &.strong {
+    background: rgba($color-primary, .85);
+    color: $color-text-strong-inverted;
   }
-}
 
-.html.example {
-  &:before {
-    content: 'Example';
-    position: relative;
-    display: inline-block;
-    background: $color-emphasis-secondary;
-    border-radius: 3px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: .9em;
-    @include padding(.2, .5);
-    @include margin(.2, 0);
+  &:hover {
+    background: rgba($color-emphasis, 1);
     color: $color-text-strong-inverted;
   }
 }
 
+// HTML Preview Area
+.html {
+
+  // Borders
+  border: solid $color-grey-light 1px;
+  .container {
+    border: solid $color-grey-light 1px;
+  }
+
+  > .label {
+    @include margin-top(.7);
+    &:first-of-type {
+      @include margin-left(.6);
+    }
+  }
+
+  // Grid Item Container Margins
+  .grid .item {
+    padding: .1em;
+  }
+
+
+}
+
+
+
+
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Overriding Typography Classes
+
+// No Spacing, removes all margins on item for snug fit.
+.no.spacing {
+  margin: 0;
+}

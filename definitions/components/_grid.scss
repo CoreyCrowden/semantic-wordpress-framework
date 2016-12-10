@@ -26,6 +26,117 @@
 //
 // Styleguide 1.0.0
 
+//----------------------------------------------------------------------
+
+// Item Width
+
+// Width Calculations
+$one-sixth: 100% / 6;
+$one-fifth: 100% / 5;
+$one-quarter: 100% / 4;
+$one-third: 100% / 3;
+$two-fifths: 100% / ( 5 / 2 );
+$one-half: 100% / 2;
+$three-fifths: 100% / ( 5 / 3 );
+$two-thirds: 100% / ( 12 / 8 );
+$three-quarters: 100% / ( 12 / 9 );
+$four-fifths: 100% / ( 5 / 4 );
+$five-sixths: 100% / ( 12 / 10 );
+$full-width: 100% / 1;
+
+// One Sixth
+.one.sixth,
+.grid.sixths > .item,
+.menu.sixths > .item  {
+  @include flex(1 1 $one-sixth);
+  max-width: $one-sixth;
+}
+
+// One Fifth
+.one.fifth,
+.grid.fifths > .item,
+.menu.fifths > .item {
+  @include flex(1 1 $one-fifth);
+  max-width: $one-fifth;
+}
+
+// One Quarter
+.one.quarter,
+.one.fourth,
+.grid.fourths > .item,
+.menu.fourths > .item,
+.grid.quarters > .item,
+.menu.quarters > .item {
+  @include flex(1 1 $one-quarter);
+  max-width: $one-quarter;
+}
+
+// One Third
+.one.third,
+.two.sixths,
+.grid.thirds > .item,
+.menu.thirds > .item {
+  @include flex(1 1 $one-third);
+  max-width: $one-third;
+}
+
+// Two Fifths
+.two.fifths {
+  @include flex(1 1 $two-fifths);
+  max-width: $two-fifths;
+}
+
+// One Half
+.one.half,
+.two.quarters,
+.two.fourths,
+.three.sixths,
+.grid.halves > .item,
+.menu.halves > .item {
+  @include flex(1 1 $one-half);
+  max-width: $one-half;
+}
+
+// Three Fifths
+.three.fifths {
+  @include flex(1 1 $three-fifths);
+  max-width: $three-fifths;
+}
+
+// Two Thirds
+.two.thirds,
+.four.sixths {
+  @include flex(1 1 $two-thirds);
+  max-width: $two-thirds;
+}
+
+// Three Quarters
+.three.quarters,
+.three.fourths {
+  @include flex(1 1 $three-quarters);
+  max-width: $three-quarters;
+}
+
+// Four Fifths
+.four.fifths {
+  @include flex(1 1 $four-fifths);
+  max-width: $four-fifths;
+}
+
+// Five Sixths
+.five.sixths {
+  @include flex(1 1 $five-sixths);
+  max-width: $five-sixths;
+}
+
+// Full Width
+.full.width {
+  @include flex(1 1 $full-width);
+  max-width: $full-width;
+}
+
+//--------------------------------------------
+
 .grid,
 .menu {
   @include flexbox;
@@ -48,6 +159,9 @@
   &.vertical {
     // Default Direction Column
     @include flex-direction(column);
+    > .item {
+      @include flex(none);
+    }
   }
 
   //--------------------------------------------
@@ -184,6 +298,7 @@
     }
     .grid.vertical > & {
       @include align-self(stretch);
+      max-width: 100%;
     }
   }
 
@@ -236,115 +351,6 @@
 
 //----------------------------------------------------------------------
 
-// Item Width
-
-// Width Calculations
-$one-sixth: 100% / 6;
-$one-fifth: 100% / 5;
-$one-quarter: 100% / 4;
-$one-third: 100% / 3;
-$two-fifths: 100% / ( 5 / 2 );
-$one-half: 100% / 2;
-$three-fifths: 100% / ( 5 / 3 );
-$two-thirds: 100% / ( 12 / 8 );
-$three-quarters: 100% / ( 12 / 9 );
-$four-fifths: 100% / ( 5 / 4 );
-$five-sixths: 100% / ( 12 / 10 );
-$full-width: 100% / 1;
-
-// One Sixth
-.one.sixth,
-.grid.sixths > .item,
-.menu.sixths > .item  {
-  @include flex(1 1 $one-sixth);
-  max-width: $one-sixth;
-}
-
-// One Fifth
-.one.fifth,
-.grid.fifths > .item,
-.menu.fifths > .item {
-  @include flex(1 1 $one-fifth);
-  max-width: $one-fifth;
-}
-
-// One Quarter
-.one.quarter,
-.one.fourth,
-.grid.fourths > .item,
-.menu.fourths > .item,
-.grid.quarters > .item,
-.menu.quarters > .item {
-  @include flex(1 1 $one-quarter);
-  max-width: $one-quarter;
-}
-
-// One Third
-.one.third,
-.two.sixths,
-.grid.thirds > .item,
-.menu.thirds > .item {
-  @include flex(1 1 $one-third);
-  max-width: $one-third;
-}
-
-// Two Fifths
-.two.fifths {
-  @include flex(1 1 $two-fifths);
-  max-width: $two-fifths;
-}
-
-// One Half
-.one.half,
-.two.quarters,
-.two.fourths,
-.three.sixths,
-.grid.halves > .item,
-.menu.halves > .item {
-  @include flex(1 1 $one-half);
-  max-width: $one-half;
-}
-
-// Three Fifths
-.three.fifths {
-  @include flex(1 1 $three-fifths);
-  max-width: $three-fifths;
-}
-
-// Two Thirds
-.two.thirds,
-.four.sixths {
-  @include flex(1 1 $two-thirds);
-  max-width: $two-thirds;
-}
-
-// Three Quarters
-.three.quarters,
-.three.fourths {
-  @include flex(1 1 $three-quarters);
-  max-width: $three-quarters;
-}
-
-// Four Fifths
-.four.fifths {
-  @include flex(1 1 $four-fifths);
-  max-width: $four-fifths;
-}
-
-// Five Sixths
-.five.sixths {
-  @include flex(1 1 $five-sixths);
-  max-width: $five-sixths;
-}
-
-// Full Width
-.full.width {
-  @include flex(1 1 $full-width);
-  max-width: $full-width;
-}
-
-//----------------------------------------------------------------------
-
 // Additional Height Classes
 //
 // .full.height     - Set minimum height to 100% of parent container.
@@ -356,8 +362,16 @@ $full-width: 100% / 1;
 }
 
 .viewport.height {
+
+  // Default full viewport height
   min-height: 100vh;
   height: 100vh; // Important
+
+  // Half viewport height
+  &.half {
+    min-height: 50vh;
+    height: 50vh; // Important
+  }
 }
 
 //----------------------------------------------------------------------

@@ -1010,6 +1010,109 @@ input[type="radio"] ~ label:after {
   border: solid #dddddd 1px;
 }
 
+.one.sixth,
+.grid.sixths > .item,
+.menu.sixths > .item {
+  -moz-flex: 1 1 16.66667%;
+  -ms-flex: 1 1 16.66667%;
+  flex: 1 1 16.66667%;
+  max-width: 16.66667%;
+}
+
+.one.fifth,
+.grid.fifths > .item,
+.menu.fifths > .item {
+  -moz-flex: 1 1 20%;
+  -ms-flex: 1 1 20%;
+  flex: 1 1 20%;
+  max-width: 20%;
+}
+
+.one.quarter,
+.one.fourth,
+.grid.fourths > .item,
+.menu.fourths > .item,
+.grid.quarters > .item,
+.menu.quarters > .item {
+  -moz-flex: 1 1 25%;
+  -ms-flex: 1 1 25%;
+  flex: 1 1 25%;
+  max-width: 25%;
+}
+
+.one.third,
+.two.sixths,
+.grid.thirds > .item,
+.menu.thirds > .item {
+  -moz-flex: 1 1 33.33333%;
+  -ms-flex: 1 1 33.33333%;
+  flex: 1 1 33.33333%;
+  max-width: 33.33333%;
+}
+
+.two.fifths {
+  -moz-flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
+  flex: 1 1 40%;
+  max-width: 40%;
+}
+
+.one.half,
+.two.quarters,
+.two.fourths,
+.three.sixths,
+.grid.halves > .item,
+.menu.halves > .item {
+  -moz-flex: 1 1 50%;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.three.fifths {
+  -moz-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+  max-width: 60%;
+}
+
+.two.thirds,
+.four.sixths {
+  -moz-flex: 1 1 66.66667%;
+  -ms-flex: 1 1 66.66667%;
+  flex: 1 1 66.66667%;
+  max-width: 66.66667%;
+}
+
+.three.quarters,
+.three.fourths {
+  -moz-flex: 1 1 75%;
+  -ms-flex: 1 1 75%;
+  flex: 1 1 75%;
+  max-width: 75%;
+}
+
+.four.fifths {
+  -moz-flex: 1 1 80%;
+  -ms-flex: 1 1 80%;
+  flex: 1 1 80%;
+  max-width: 80%;
+}
+
+.five.sixths {
+  -moz-flex: 1 1 83.33333%;
+  -ms-flex: 1 1 83.33333%;
+  flex: 1 1 83.33333%;
+  max-width: 83.33333%;
+}
+
+.full.width {
+  -moz-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
 .grid,
 .menu {
   display: -moz-flex;
@@ -1033,6 +1136,13 @@ input[type="radio"] ~ label:after {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+}
+
+.grid.vertical > .item,
+.menu.vertical > .item {
+  -moz-flex: none;
+  -ms-flex: none;
+  flex: none;
 }
 
 .grid.horizontal.reversed:not(.vertical),
@@ -1202,6 +1312,7 @@ input[type="radio"] ~ label:after {
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
       align-self: stretch;
+  max-width: 100%;
 }
 
 .item.top {
@@ -1248,109 +1359,6 @@ input[type="radio"] ~ label:after {
   order: 2;
 }
 
-.one.sixth,
-.grid.sixths > .item,
-.menu.sixths > .item {
-  -moz-flex: 1 1 16.66667%;
-  -ms-flex: 1 1 16.66667%;
-  flex: 1 1 16.66667%;
-  max-width: 16.66667%;
-}
-
-.one.fifth,
-.grid.fifths > .item,
-.menu.fifths > .item {
-  -moz-flex: 1 1 20%;
-  -ms-flex: 1 1 20%;
-  flex: 1 1 20%;
-  max-width: 20%;
-}
-
-.one.quarter,
-.one.fourth,
-.grid.fourths > .item,
-.menu.fourths > .item,
-.grid.quarters > .item,
-.menu.quarters > .item {
-  -moz-flex: 1 1 25%;
-  -ms-flex: 1 1 25%;
-  flex: 1 1 25%;
-  max-width: 25%;
-}
-
-.one.third,
-.two.sixths,
-.grid.thirds > .item,
-.menu.thirds > .item {
-  -moz-flex: 1 1 33.33333%;
-  -ms-flex: 1 1 33.33333%;
-  flex: 1 1 33.33333%;
-  max-width: 33.33333%;
-}
-
-.two.fifths {
-  -moz-flex: 1 1 40%;
-  -ms-flex: 1 1 40%;
-  flex: 1 1 40%;
-  max-width: 40%;
-}
-
-.one.half,
-.two.quarters,
-.two.fourths,
-.three.sixths,
-.grid.halves > .item,
-.menu.halves > .item {
-  -moz-flex: 1 1 50%;
-  -ms-flex: 1 1 50%;
-  flex: 1 1 50%;
-  max-width: 50%;
-}
-
-.three.fifths {
-  -moz-flex: 1 1 60%;
-  -ms-flex: 1 1 60%;
-  flex: 1 1 60%;
-  max-width: 60%;
-}
-
-.two.thirds,
-.four.sixths {
-  -moz-flex: 1 1 66.66667%;
-  -ms-flex: 1 1 66.66667%;
-  flex: 1 1 66.66667%;
-  max-width: 66.66667%;
-}
-
-.three.quarters,
-.three.fourths {
-  -moz-flex: 1 1 75%;
-  -ms-flex: 1 1 75%;
-  flex: 1 1 75%;
-  max-width: 75%;
-}
-
-.four.fifths {
-  -moz-flex: 1 1 80%;
-  -ms-flex: 1 1 80%;
-  flex: 1 1 80%;
-  max-width: 80%;
-}
-
-.five.sixths {
-  -moz-flex: 1 1 83.33333%;
-  -ms-flex: 1 1 83.33333%;
-  flex: 1 1 83.33333%;
-  max-width: 83.33333%;
-}
-
-.full.width {
-  -moz-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
 .full.height {
   min-height: 100%;
   height: 100%;
@@ -1359,6 +1367,11 @@ input[type="radio"] ~ label:after {
 .viewport.height {
   min-height: 100vh;
   height: 100vh;
+}
+
+.viewport.height.half {
+  min-height: 50vh;
+  height: 50vh;
 }
 
 @media (max-width: 619px) {
