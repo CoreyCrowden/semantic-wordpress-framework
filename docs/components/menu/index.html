@@ -24,8 +24,8 @@ reference:
     The default menu is a simply arrangement of links in a horizontal layout.
   </p>
   <!--HTML-->
-  <div class="html padded">
-    <nav class="card">
+  <div class="html">
+    <nav class="padded">
       <ul class="menu">
         <li class="item">
           <a>Menu item</a>
@@ -69,7 +69,7 @@ reference:
   </div>
   <!--Code Snippet-->
   <textarea class="code">
-    <nav class="card">
+    <nav class="padded">
       <ul class="menu">
         <li class="item">
           <a>Menu item</a>
@@ -113,19 +113,65 @@ reference:
   </textarea>
 </article>
 
+<!--Card UI-->
+<article>
+  <h3>Applying global styles</h3>
+  <span class="label">.menu</span><span class="label">.item</span><span class="label strong">.card</span><span class="label strong">.emphasis</span><span class="label strong">.inverted</span><span class="label strong">.button</span><span class="label strong">...</span>
+  <p>
+    Many of the global styles are compatible with the menu and have different effects depending on the element they're applied to.
+  </p>
+  <!--HTML-->
+  <div class="html">
+    <nav class="padded">
+      <ul class="menu padded card emphasis inverted">
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item right button">
+          <a>Right aligned menu item button!</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--Code Snippet-->
+  <textarea class="code">
+    <nav class="padded">
+      <ul class="menu padded card emphasis inverted">
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item right button">
+          <a>Right aligned menu item button!</a>
+        </li>
+      </ul>
+    </nav>
+  </textarea>
+</article>
+
 <!--Dropdown Menu-->
 <article>
   <h3>Dropdown Menu</h3>
   <span class="label">.menu</span><span class="label">.item</span><span class="label strong">.dropdown</span>
   <p>
-    Creating a menu is simply a matter of calling the <code>.menu</code> class.
-    Of course WordPress does this by default so you won't even have to worry about that unless it's a manual menu.
+    A dropdown can be initiated by adding the <code>.dropdown</code> class to either the parent menu element or the
+    child menu items. Adding the class to the parent menu element will force the whole menu to use dropdowns.
   </p>
-  <p>The default menu is a simply arrangement of links in a horizontal layout.</p>
   <!--HTML-->
-  <div class="html padded">
-    <nav class="card">
-      <ul class="menu">
+  <div class="html">
+    <nav class="padded">
+      <ul class="menu card dropdown">
         <li class="item">
           <a>Menu item</a>
         </li>
@@ -168,8 +214,8 @@ reference:
   </div>
   <!--Code Snippet-->
   <textarea class="code">
-    <nav class="card">
-      <ul class="menu">
+    <nav class="padded">
+      <ul class="menu card dropdown">
         <li class="item">
           <a>Menu item</a>
         </li>
@@ -217,97 +263,101 @@ reference:
 <!--Vertical Menu-->
 <article>
   <h3>Vertical Menu</h3>
-  <span class="label">.menu</span><span class="label">.item</span><span class="label strong">.vertical</span>
+  <span class="label">.menu</span><span class="label">.item</span><span class="label strong">.vertical</span><span class="label">.justified</span>
   <p>
     Just like the grid system you can apply a <code>.vertical</code> class to the menu to initiate a vertical menu.
   </p>
   <!--HTML-->
-  <div class="html padded">
-    <nav class="card">
-      <ul class="menu vertical half viewport height">
-        <li class="item">
-          <a>Menu item</a>
-        </li>
-        <li class="item menu-item-has-children">
-          <a>Menu item with children</a>
-          <ul class="sub-menu">
-            <li class="item">
-              <a>Sub menu item</a>
-            </li>
-            <li class="item menu-item-has-children">
-              <a>Sub menu item</a>
-              <ul class="sub-menu">
-                <li class="item">
-                  <a>Sub-sub menu item</a>
-                </li>
-                <li class="item">
-                  <a>Sub-sub menu item</a>
-                </li>
-                <li class="item">
-                  <a>Sub-sub menu item</a>
-                </li>
-              </ul>
-            </li>
-            <li class="item">
-              <a>Sub menu item</a>
-            </li>
-            <li class="item">
-              <a>Sub menu item</a>
-            </li>
-          </ul>
-        </li>
-        <li class="item">
-          <a>Menu item</a>
-        </li>
-        <li class="item bottom">
-          <a>Bottom aligned menu item</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="html example">
+    <div class="grid">
+      <nav class="item one third padded">
+        <ul class="menu justified card vertical half viewport height">
+          <li class="item">
+            <a>Menu item</a>
+          </li>
+          <li class="item menu-item-has-children">
+            <a>Menu item with children</a>
+            <ul class="sub-menu">
+              <li class="item">
+                <a>Sub menu item</a>
+              </li>
+              <li class="item menu-item-has-children">
+                <a>Sub menu item</a>
+                <ul class="sub-menu">
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <a>Sub menu item</a>
+              </li>
+              <li class="item">
+                <a>Sub menu item</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <a>Menu item</a>
+          </li>
+          <li class="item bottom">
+            <a>Bottom aligned menu item</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
   <!--Code Snippet-->
   <textarea class="code">
-    <nav class="card">
-      <ul class="menu vertical half viewport height">
-        <li class="item">
-          <a>Menu item</a>
-        </li>
-        <li class="item menu-item-has-children">
-          <a>Menu item with children</a>
-          <ul class="sub-menu">
-            <li class="item">
-              <a>Sub menu item</a>
-            </li>
-            <li class="item menu-item-has-children">
-              <a>Sub menu item</a>
-              <ul class="sub-menu">
-                <li class="item">
-                  <a>Sub-sub menu item</a>
-                </li>
-                <li class="item">
-                  <a>Sub-sub menu item</a>
-                </li>
-                <li class="item">
-                  <a>Sub-sub menu item</a>
-                </li>
-              </ul>
-            </li>
-            <li class="item">
-              <a>Sub menu item</a>
-            </li>
-            <li class="item">
-              <a>Sub menu item</a>
-            </li>
-          </ul>
-        </li>
-        <li class="item">
-          <a>Menu item</a>
-        </li>
-        <li class="item bottom">
-          <a>Bottom aligned menu item</a>
-        </li>
-      </ul>
-    </nav>
+    <div class="grid">
+      <nav class="item one third padded">
+        <ul class="menu justified card vertical half viewport height">
+          <li class="item">
+            <a>Menu item</a>
+          </li>
+          <li class="item menu-item-has-children">
+            <a>Menu item with children</a>
+            <ul class="sub-menu">
+              <li class="item">
+                <a>Sub menu item</a>
+              </li>
+              <li class="item menu-item-has-children">
+                <a>Sub menu item</a>
+                <ul class="sub-menu">
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item">
+                <a>Sub menu item</a>
+              </li>
+              <li class="item">
+                <a>Sub menu item</a>
+              </li>
+            </ul>
+          </li>
+          <li class="item">
+            <a>Menu item</a>
+          </li>
+          <li class="item bottom">
+            <a>Bottom aligned menu item</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </textarea>
 </article>
 

@@ -1968,7 +1968,7 @@ textarea.code {
   margin-left: 1.5em;
 }
 
-#page-content .html .grid .item {
+#page-content .html:not(.example) .grid .item {
   padding: .1em;
 }
 

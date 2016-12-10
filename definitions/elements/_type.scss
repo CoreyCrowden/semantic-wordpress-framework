@@ -399,8 +399,10 @@ textarea.code {
     }
 
     // Grid Item Container Margins
-    .grid .item {
-      padding: .1em;
+    &:not(.example){
+      .grid .item {
+        padding: .1em;
+      }
     }
   }
 
