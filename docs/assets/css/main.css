@@ -518,7 +518,8 @@ body {
 .animate, .animate-slow, .dropdown.item > .menu,
 .dropdown.item > .sub-menu,
 .menu.dropdown .item > .menu,
-.menu.dropdown .item > .sub-menu, .container.fixed, .container.absolute, .menu .item a, article table th, article table td, .button a,
+.menu.dropdown .item > .sub-menu, .fixed,
+.absolute, .menu .item a, article table th, article table td, .button a,
 a.button,
 input[type="submit"],
 input[type="button"], input:not([type]),
@@ -604,41 +605,48 @@ input[type="radio"] ~ label:after {
   float: right;
 }
 
-.container.fixed {
+.fixed {
   position: fixed;
 }
 
-.container.absolute {
+.absolute {
   position: absolute;
 }
 
-.container.fixed, .container.absolute {
+.fixed,
+.absolute {
   z-index: 99999999;
 }
 
-.container.fixed.top, .container.absolute.top {
+.fixed .top,
+.absolute .top {
   top: 0;
 }
 
-.admin-bar .container.fixed.top, .admin-bar .container.absolute.top {
+.admin-bar .fixed .top, .admin-bar
+.absolute .top {
   top: 32px;
 }
 
 @media (max-width: 782px) {
-  .admin-bar .container.fixed.top, .admin-bar .container.absolute.top {
+  .admin-bar .fixed .top, .admin-bar
+  .absolute .top {
     top: 46px;
   }
 }
 
-.container.fixed.right, .container.absolute.right {
+.fixed .right,
+.absolute .right {
   right: 0;
 }
 
-.container.fixed.bottom, .container.absolute.bottom {
+.fixed .bottom,
+.absolute .bottom {
   bottom: 0;
 }
 
-.container.fixed.left, .container.absolute.left {
+.fixed .left,
+.absolute .left {
   left: 0;
 }
 

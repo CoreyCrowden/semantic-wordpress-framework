@@ -102,41 +102,44 @@ $card-background                      : $color-white !default;
   &.right {
     float: right;
   }
+}
 
-  // Fixed & absolute container
-  &.fixed {
-    position: fixed;
+// ------------------------------------------------------------------------------------------------------------------
+
+// Fixed & absolute items
+.fixed {
+  position: fixed;
+}
+.absolute {
+  position: absolute;
+}
+.fixed,
+.absolute {
+  z-index: 99999999;
+  @extend .animate;
+
+  // Align fixed container to top edge of browser
+  .top {
+    top: 0;
+    @include admin-bar-adjustment(top);
   }
-  &.absolute {
-    position: absolute;
+
+  // Align fixed container to right edge of browser
+  .right {
+    right: 0;
   }
-  &.fixed,
-  &.absolute {
-    z-index: 99999999;
-    @extend .animate;
 
-    // Align fixed container to top edge of browser
-    &.top {
-      top: 0;
-      @include admin-bar-adjustment(top);
-    }
+  // Align fixed container to bottom edge of browser
+  .bottom {
+    bottom: 0;
+  }
 
-    // Align fixed container to right edge of browser
-    &.right {
-      right: 0;
-    }
-
-    // Align fixed container to bottom edge of browser
-    &.bottom {
-      bottom: 0;
-    }
-
-    // Align fixed container to left edge of browser
-    &.left {
-      left: 0;
-    }
+  // Align fixed container to left edge of browser
+  .left {
+    left: 0;
   }
 }
+
 
 // ------------------------------------------------------------------------------------------------------------------
 
