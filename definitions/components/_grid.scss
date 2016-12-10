@@ -260,8 +260,6 @@ $full-width: 100% / 1;
 // Creates a child container for the grid system.
 //
 // When nesting grids it's important to use separate containers as class naming conventions will conflict.
-//
-//
 
 .item {
   @include flex-basis(auto);
