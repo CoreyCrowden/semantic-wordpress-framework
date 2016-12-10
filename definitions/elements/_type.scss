@@ -405,7 +405,7 @@ textarea.code {
   }
 
   // Section margins
-  section {
+  article {
     @include margin(2,0);
 
     > h3:first-child {

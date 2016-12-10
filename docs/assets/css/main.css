@@ -1972,17 +1972,17 @@ textarea.code {
   padding: .1em;
 }
 
-#page-content section {
+#page-content article {
   margin: 5em 0em;
 }
 
-#page-content section > h3:first-child {
+#page-content article > h3:first-child {
   border-bottom: solid #dddddd 1px;
   padding-bottom: 0.375em;
   margin-bottom: 0.5em;
 }
 
-#page-content section > .example {
+#page-content article > .example {
   margin-top: 1.25em;
 }
 
