@@ -20,8 +20,7 @@ $RECYCLE.BIN/
 # Doc Site Cache
 docs/_site/
 node_modules/
-.idea/*
-bower_components/
+.idea/
 
 # =========================
 # Operating System Files
