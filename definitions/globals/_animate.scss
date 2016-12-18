@@ -4,8 +4,8 @@
 
 .animate {
   $property: all;
-  $duration: 0.3s;
-  $easing: ease;
+  $duration: .3s;
+  $easing: ease-in;
   -webkit-transition: $property, $duration, $easing;
   -moz-transition: $property, $duration, $easing;
   -o-transition: $property, $duration, $easing;
@@ -13,6 +13,11 @@
 }
 
 .animate-slow {
-  $duration: 0.6s;
-  @extend .animate;
+  $property: all;
+  $duration: .6s;
+  $easing: ease-in;
+  -webkit-transition: $property, $duration, $easing;
+  -moz-transition: $property, $duration, $easing;
+  -o-transition: $property, $duration, $easing;
+  transition: $property, $duration, $easing;
 }

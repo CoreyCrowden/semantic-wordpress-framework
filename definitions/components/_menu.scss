@@ -19,10 +19,10 @@
 // Box Sizing
 $menu-item-height:                                $standard-field-height !default;
 
-$menu-item-top-level-padding-top:                 .25 !default;
-$menu-item-top-level-padding-right:               .5 !default;
-$menu-item-top-level-padding-bottom:              .25 !default;
-$menu-item-top-level-padding-left:                .5 !default;
+$menu-item-top-level-padding-top:                 .35 !default;
+$menu-item-top-level-padding-right:               .35 !default;
+$menu-item-top-level-padding-bottom:              .35 !default;
+$menu-item-top-level-padding-left:                .35 !default;
 
 // Colour
 
@@ -55,6 +55,7 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
   .item {
     position: relative;
 
+
     a {
       // Flex display is used for vertically centering menu item text, this is more graceful than alternative methods.
       @include flexbox;
@@ -64,7 +65,14 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
       @include padding( $menu-item-top-level-padding-top, $menu-item-top-level-padding-right, $menu-item-top-level-padding-bottom, $menu-item-top-level-padding-left);
       margin: 0;
 
-      @extend .animate;
+    }
+
+    .sub-menu {
+      @extend .animate-slow;
+
+      .item a {
+
+      }
     }
   }
 }
@@ -116,8 +124,6 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
     width: 100%;
 
     background: $color-white;
-    @extend .animate-slow;
-
 
   }
 
@@ -128,12 +134,44 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
   .sub-menu:hover {
     visibility: visible;
     opacity: 1;
-
   }
 }
 
-// Vertical menu dropdown
-.vertical .dropdown.item {
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Expand Sub Menu
+
+.expand.item {
+  @extend .dropdown.item;
+
+  > .menu,
+  > .sub-menu {
+    position: relative;
+    max-height: 0;
+    width: 100%;
+
+    @extend .animate-slow;
+  }
+
+  // Hover Styles
+  &:hover > .menu,
+  &:hover > .sub-menu,
+  .menu:hover,
+  .sub-menu:hover {
+    max-height: 500px;
+  }
+
+}
+
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Slide Out Sub Menu
+
+.slide.item {
+  @extend .dropdown.item;
+
   > .menu,
   > .sub-menu {
     left: 100%;
@@ -144,9 +182,12 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Dropdown Menu Icons
+// Menu Icons
 
-.dropdown.item.menu-item-has-children {
+// Icon Defaults, Dropdown Icon & Expand Icon
+.dropdown.item.menu-item-has-children,
+.expand.item.menu-item-has-children,
+.slide.item.menu-item-has-children {
   > a {
     &:after {
       content: '\f107';
@@ -156,16 +197,14 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
   }
 }
 
-// Right Icon For Vertical Menu
-.vertical .dropdown.item.menu-item-has-children {
+// Slide Icon
+.slide.item.menu-item-has-children {
   > a {
     &:after {
       content: '\f105';
     }
   }
 }
-
-
 
 
 // ------------------------------------------------------------------------------------------------------------------

@@ -747,9 +747,8 @@ body {
   color: white;
 }
 
-.animate, .animate-slow, .dropdown.item > .menu,
-.dropdown.item > .sub-menu, .fixed,
-.absolute, .menu .item a, article table th, article table td, .button a,
+.animate, .fixed,
+.absolute, article table th, article table td, .button a,
 a.button,
 input[type="submit"],
 input[type="button"], input:not([type]),
@@ -768,7 +767,12 @@ textarea,
 select, .nf-field-element:after, .nf-field-element:before, .list-select-wrap select ~ div:after, input[type="checkbox"] ~ label:before, input[type="checkbox"] ~ label:after,
 input[type="radio"] ~ label:before,
 input[type="radio"] ~ label:after {
-  transition: all, 0.3s, ease;
+  transition: all, 0.3s, ease-in;
+}
+
+.animate-slow, .menu .item .sub-menu, .expand.item > .menu,
+.expand.item > .sub-menu {
+  transition: all, 0.6s, ease-in;
 }
 
 .visible {
@@ -1569,7 +1573,7 @@ input[type="radio"] ~ label:after {
   -moz-align-items: center;
   align-items: center;
   min-height: 4.2rem;
-  padding: 0.625em 1.25em 0.625em 1.25em;
+  padding: 0.875em 0.875em 0.875em 0.875em;
   margin: 0;
 }
 
@@ -1601,8 +1605,8 @@ input[type="radio"] ~ label:after {
   background: rgba(255, 255, 255, 0.03);
 }
 
-.dropdown.item > .menu,
-.dropdown.item > .sub-menu {
+.dropdown.item > .menu, .expand.item > .menu, .slide.item > .menu,
+.dropdown.item > .sub-menu, .expand.item > .sub-menu, .slide.item > .sub-menu {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1614,27 +1618,43 @@ input[type="radio"] ~ label:after {
   background: white;
 }
 
-.dropdown.item:hover > .menu,
-.dropdown.item:hover > .sub-menu,
-.dropdown.item .menu:hover,
-.dropdown.item .sub-menu:hover {
+.dropdown.item:hover > .menu, .expand.item:hover > .menu, .slide.item:hover > .menu,
+.dropdown.item:hover > .sub-menu, .expand.item:hover > .sub-menu, .slide.item:hover > .sub-menu,
+.dropdown.item .menu:hover, .expand.item .menu:hover, .slide.item .menu:hover,
+.dropdown.item .sub-menu:hover, .expand.item .sub-menu:hover, .slide.item .sub-menu:hover {
   visibility: visible;
   opacity: 1;
 }
 
-.vertical .dropdown.item > .menu,
-.vertical .dropdown.item > .sub-menu {
+.expand.item > .menu,
+.expand.item > .sub-menu {
+  position: relative;
+  max-height: 0;
+  width: 100%;
+}
+
+.expand.item:hover > .menu,
+.expand.item:hover > .sub-menu,
+.expand.item .menu:hover,
+.expand.item .sub-menu:hover {
+  max-height: 500px;
+}
+
+.slide.item > .menu,
+.slide.item > .sub-menu {
   left: 100%;
   top: 0;
 }
 
-.dropdown.item.menu-item-has-children > a:after {
+.dropdown.item.menu-item-has-children > a:after, .menu-item-has-children.expand.item > a:after, .menu-item-has-children.slide.item > a:after,
+.expand.item.menu-item-has-children > a:after,
+.slide.item.menu-item-has-children > a:after {
   content: '\f107';
   font-family: FontAwesome;
   padding-left: 0.5em;
 }
 
-.vertical .dropdown.item.menu-item-has-children > a:after {
+.slide.item.menu-item-has-children > a:after {
   content: '\f105';
 }
 

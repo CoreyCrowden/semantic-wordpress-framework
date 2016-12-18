@@ -257,6 +257,103 @@ reference:
   </textarea>
 </article>
 
+<!--Expand Menu-->
+<article>
+  <h3>Expand Menu</h3>
+  <span class="label">.menu</span><span class="label">.item</span><span class="label strong">.expand</span>
+  <p>
+    An expand is initiated by adding the <code>.expand</code> class to the child menu items as required.
+  </p>
+  <!--HTML-->
+  <div class="html">
+    <nav class="padded">
+      <ul class="menu card">
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item menu-item-has-children expand">
+          <a>Menu item with children</a>
+          <ul class="sub-menu">
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+            <li class="item menu-item-has-children">
+              <a>Sub menu item</a>
+              <ul class="sub-menu">
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item right">
+          <a>Right aligned menu item</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--Code Snippet-->
+  <textarea class="code">
+    <nav class="padded">
+      <ul class="menu card">
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item menu-item-has-children dropdown">
+          <a>Menu item with children</a>
+          <ul class="sub-menu">
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+            <li class="item menu-item-has-children">
+              <a>Sub menu item</a>
+              <ul class="sub-menu">
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item right">
+          <a>Right aligned menu item</a>
+        </li>
+      </ul>
+    </nav>
+  </textarea>
+</article>
+
 <hr class="fluid">
 
 <!--Vertical Menu-->
@@ -280,7 +377,7 @@ reference:
               <li class="item">
                 <a>Sub menu item</a>
               </li>
-              <li class="item menu-item-has-children dropdown">
+              <li class="item menu-item-has-children slide">
                 <a>Sub menu item</a>
                 <ul class="sub-menu">
                   <li class="item">
@@ -299,6 +396,20 @@ reference:
               </li>
               <li class="item">
                 <a>Sub menu item</a>
+              </li>
+              <li class="item menu-item-has-children expand">
+                <a>Sub menu item</a>
+                <ul class="sub-menu">
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                  <li class="item">
+                    <a>Sub-sub menu item</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
