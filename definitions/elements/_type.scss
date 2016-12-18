@@ -32,54 +32,52 @@ $font-size-extra-large                      : 1.4rem !default;
 
 // Defaults
 //
-// Website default font styles defined below. Use project specific stylesheet for special customisations
+// Website default font styles defined below.
 
 // Basics
-$font-family                                : "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
-$font-size                                  : 1.6em !default;
-$font-weight                                : 400 !default;
-$letter-spacing                             : .0em !default;
-$line-height                                : 1.35 !default;
-$text-align                                 : left !default;
-$text-decoration                            : none !default;
-$text-indent                                : 0 !default;
-$text-overflow                              : clip !default;
-$text-transform                             : none !default;
+$font-family:                                 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+$font-size:                                   1.6em !default;
+$font-weight:                                 400 !default;
+$letter-spacing:                              .0em !default;
+$line-height:                                 1.35 !default;
+$text-align:                                  left !default;
+$text-decoration:                             none !default;
+$text-indent:                                 0 !default;
+$text-overflow:                               clip !default;
+$text-transform:                              none !default;
 
 // Emphasis
-$font-weight-emphasis                       : bolder !default;
+$font-weight-emphasis:                        bolder !default;
 
 // Strong
-$font-weight-strong                         : bolder !default;
+$font-weight-strong:                          bolder !default;
 
 // Bold
-$font-weight-bold                           : bolder !default;
+$font-weight-bold:                            bolder !default;
 
 // Italic
-$font-style-italic                          : italic !default;
+$font-style-italic:                           italic !default;
 
 // Underline
-$text-decoration-underline                  : underline !default;
-
-// Headings
-$font-size-h1                               : 3.6em !default;
-$font-size-h2                               : 3.0em !default;
-$font-size-h3                               : 2.0em !default;
-$font-size-h4                               : 1.6em !default;
-$font-size-h5                               : 1.4em !default;
-$font-size-h6                               : 1.2em !default;
-
-
+$text-decoration-underline:                   underline !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
+// Headings
+$font-size-h1:                                3.6em !default;
+$font-size-h2:                                3.0em !default;
+$font-size-h3:                                2.0em !default;
+$font-size-h4:                                1.6em !default;
+$font-size-h5:                                1.4em !default;
+$font-size-h6:                                1.2em !default;
 
+// Paragraph spacing
+$paragraph-margin-top:                        .5 !default;
+$paragraph-margin-right:                      0 !default;
+$paragraph-margin-bottom:                     .5 !default;
+$paragraph-margin-left:                       0 !default;
 
-$paragraph-margin-top                       : .5 !default;
-$paragraph-margin-right                     : 0 !default;
-$paragraph-margin-bottom                    : .5 !default;
-$paragraph-margin-left                      : 0 !default;
-
+// Text colors
 $color-text-weak                            : $color-grey;
 $color-text                                 : $color-grey-extra-dark;
 $color-text-strong                          : $color-black;
