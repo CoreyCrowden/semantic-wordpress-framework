@@ -26,12 +26,12 @@ img {
 }
 
 .wp-caption {
-  margin: 0px;
-  @include border-radius($border-radius);
+  margin: 0;
+  border-radius: $border-radius;
   overflow: hidden;
   border: $border;
   img {
-    margin: 0px;
+    margin: 0;
   }
   .wp-caption-text {
     font-size: font-size - 0.1;
@@ -63,11 +63,11 @@ img {
 figure.alignnone,
 figure.aligncenter,
 p[style="text-align: center;"] {
-  border: 0px;
-  border-radius: 0px;
+  border: 0;
+  border-radius: 0;
   width: auto !important;
   img {
-    margin: 0px auto;
+    margin: 0 auto;
   }
   @include media('>tablet-lrg'){
     figcaption {
@@ -81,27 +81,18 @@ p[style="text-align: center;"] {
 
 
 
-//* Special Classes
-.rounded,
-img.circular {
-  @include border-radius($border-radius);
-}
 
-.circular,
-img.circular {
-  @include border-radius(50%);
-}
 
 //* Gallery
 .gallery {
 
   img {
-    margin: 0px;
+    margin: 0;
   }
 
   .gallery-item {
     display: inline-block;
-    margin: 0px;
+    margin: 0;
   }
 
   &.gallery-columns-4 .gallery-item {

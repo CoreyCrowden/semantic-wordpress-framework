@@ -8,9 +8,12 @@
 //
 // Quickly set global options to control overall stylings
 
-$enable-ninja-forms:                          true !default;
+$enable-ninja-forms:                          true !default; // ** Function to be added
+$enable-round-edges-on-cards:                 true !default; // ** Function to be added
+$inverted-color-class-depth:                  3 !default; // ** Function to be added
 
-$enable-round-edges-on-cards:                 true !default;
+$default-card-border-radius:                  '.rounded' !default;
+$default-button-border-radius:                '.circular' !default;
 
 
 // 2. Colors
@@ -27,11 +30,11 @@ $color-grey-extra-dark:                       rgb(29, 29, 29) !default;
 $color-black:                                 rgb(0, 0, 0) !default;
 
 // Basic Colors
-$color-red: #b02928 !default;
-$color-orange: #fe9400 !default;
-$color-yellow: #ffe63b !default;
-$color-olive: #6bcd57 !default;
-$color-green: #126935 !default;
+$color-red:                                   #b02928 !default;
+$color-orange:                                #fe9400 !default;
+$color-yellow:                                #ffe63b !default;
+$color-olive:                                 #6bcd57 !default;
+$color-green:                                 #126935 !default;
 $color-teal:                                  #008080 !default;
 $color-blue:                                  #0E6EB8 !default;
 $color-violet:                                #EE82EE !default;
@@ -173,16 +176,16 @@ $zindex-tooltip:                              1070 !default;
 // ------------------------------------------------------------------------------------------------------------------
 
 // Border
-$standard-border                            : 1px rgba($color-black, 0.1) solid;
-$standard-border-inverted                   : 1px rgba($color-black, 0.1) solid;
+$standard-border:                             1px rgba($color-black, 0.1) solid;
+$standard-border-inverted:                    1px rgba($color-black, 0.1) solid;
 
 // Border Radius
-$border-radius                              : 2px !default;
-$border                                     : 1px solid rgba($color-black, .2);
-$border-inverted                            : 1px solid rgba($color-white, .2);
+$border-radius:                               2px !default;
+$border:                                      1px solid rgba($color-black, .2);
+$border-inverted:                             1px solid rgba($color-white, .2);
 
 // Disabled Opacity
-$opacity-disabled                           : .5;
+$opacity-disabled:                            .5;
 
 // Tag
 $color-tag                        : $color-primary;

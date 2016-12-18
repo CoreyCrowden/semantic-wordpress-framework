@@ -17,79 +17,86 @@
 // Variables
 
 // Box Sizing
-$menu-item-height                               : $standard-field-height !default;
+$menu-item-height:                                $standard-field-height !default;
 
-$menu-item-top-level-padding-top                : .25 !default;
-$menu-item-top-level-padding-right              : .5 !default;
-$menu-item-top-level-padding-bottom             : .25 !default;
-$menu-item-top-level-padding-left               : .5 !default;
+$menu-item-top-level-padding-top:                 .25 !default;
+$menu-item-top-level-padding-right:               .5 !default;
+$menu-item-top-level-padding-bottom:              .25 !default;
+$menu-item-top-level-padding-left:                .5 !default;
 
 // Colour
 
-$menu-item-top-level-background                 : rgba($color-black, 0) !default;
-$menu-item-top-level-background-hover           : rgba($color-black, .03) !default;
-$menu-item-top-level-background-inverted        : rgba($color-white, 0) !default;
-$menu-item-top-level-background-inverted-hover  : rgba($color-white, .03) !default;
+$menu-item-top-level-background:                  rgba($color-black, 0) !default;
+$menu-item-top-level-background-hover:            rgba($color-black, .03) !default;
+$menu-item-top-level-background-inverted:         rgba($color-white, 0) !default;
+$menu-item-top-level-background-inverted-hover:   rgba($color-white, .03) !default;
 
-$menu-sub-level-background                      : $color-grey-extra-dark !default;
+$menu-sub-level-background:                       $color-grey-extra-dark !default;
 
-$menu-item-sub-level-background                 : rgba($color-white, 1) !default;
-$menu-item-sub-level-background-hover           : rgba($color-black, .03) !default;
-$menu-item-sub-level-background-inverted        : rgba($color-white, 1) !default;
-$menu-item-sub-level-background-inverted-hover  : rgba($color-white, 1) !default;
+$menu-item-sub-level-background:                  rgba($color-white, 1) !default;
+$menu-item-sub-level-background-hover:            rgba($color-black, .03) !default;
+$menu-item-sub-level-background-inverted:         rgba($color-white, 1) !default;
+$menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default;
 
 // Typography
 
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Full height menu
+// Menu Defaults
 //
-// For use in areas such as the Header Bar
-.menu.full.height > .item,
-.menu.full.height > .item a {
-  height: 100%;
-}
-
-
-// Default menu | Vertical
-//
-// The default menu is a vertically stacked list using default body text styles
+// These are universal styles that are applied to all menus.
 
 .menu {
-
-  // Defaults
   margin: 0;
   list-style: none;
 
   // Top Level Menu Items
   .item {
     a {
-      // Flex display is used for vertically centering menu item text
+      // Flex display is used for vertically centering menu item text, this is more graceful than alternative methods.
       @include flexbox;
       @include align-items(center);
 
       min-height: $menu-item-height;
       @include padding( $menu-item-top-level-padding-top, $menu-item-top-level-padding-right, $menu-item-top-level-padding-bottom, $menu-item-top-level-padding-left);
-      @include margin(0);
+      margin: 0;
 
-      // Styling
       @extend .animate;
-      background: $menu-item-top-level-background;
-
-      &:hover {
-        background: $menu-item-top-level-background-hover;
-      }
-
     }
   }
 }
 
-.sub-menu {
-  margin: 0px;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Basic Menu
+
+.menu {
+
+  .item {
+    a {
+      @include style(normal){
+        background: $menu-item-top-level-background;
+      }
+
+      @include style(inverted){
+        background: $menu-item-top-level-background-inverted;
+      }
+
+      @include style(hover){
+        background: $menu-item-top-level-background-hover;
+      }
+
+      @include style(inverted-hover){
+        background: $menu-item-top-level-background-inverted-hover;
+      }
+    }
+  }
 }
 
 
+// ------------------------------------------------------------------------------------------------------------------
 
 // Dropdown sub menu
 .dropdown.item,
@@ -131,6 +138,16 @@ $menu-item-sub-level-background-inverted-hover  : rgba($color-white, 1) !default
 }
 
 
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Full height menu
+//
+// For use in areas such as the Header Bar
+.menu.full.height > .item,
+.menu.full.height > .item a {
+  height: 100%;
+}
 
 
 

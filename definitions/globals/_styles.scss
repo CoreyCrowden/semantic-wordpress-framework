@@ -3,14 +3,29 @@
 // The framework has various styles that can be applied to elements to give them certain visual styling.
 
 
-// Rounded
 
-.rounded {
+// Card Border
+$card-border-radius:                    .35em !default;
+$card-container-border-inverted:        none;
 
+$card-container-border:                 1px $color-grey-extra-light solid;
+$card-container-border-inverted:        none;
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Corner Radius
+
+.square {
+  border-radius: 0;
 }
 
+.rounded {
+  border-radius: $card-border-radius;
+}
 
-
+.circular {
+  border-radius: 99999px;
+}
 
 // Style Colors
 

@@ -325,9 +325,14 @@ textarea::selection {
 
 hr {
   border: none;
-  border-bottom: $border;
-  .inverted & {
-    border-top: $border-inverted;
+  width: 100%;
+
+  @include style(normal) {
+    border-bottom: $border;
+  }
+
+  @include style(inverted) {
+    border-bottom: $border-inverted;
   }
 
   &.fluid {

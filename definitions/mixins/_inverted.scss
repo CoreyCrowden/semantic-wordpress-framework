@@ -1,0 +1,60 @@
+// Inverted & Normal Style Mixins
+//
+// This mixin is used to created a deep series of classes for using inverted colors then overriding them again with
+// normal colors.
+
+@mixin style($style){
+  // Style Normal
+  @if $style == normal {
+    @content;
+    .normal &,
+    .inverted .normal & {
+      @content;
+    }
+  }
+  // Style Normal Hover
+  @if $style == hover {
+    &:hover {
+      @content;
+      .normal &,
+      .inverted .normal &  {
+        @content;
+      }
+    }
+  }
+  // Style Focus
+  @if $style == focus {
+    &:focus {
+      @content;
+      .normal &,
+      .inverted .normal & {
+        @content;
+      }
+    }
+  }
+  // Style Inverted
+  @if $style == inverted {
+    .inverted &,
+    .normal .inverted &  {
+      @content;
+    }
+  }
+  // Style Inverted Hover
+  @if $style == inverted-hover {
+    &:hover {
+      .inverted &,
+      .normal .inverted &  {
+        @content;
+      }
+    }
+  }
+  // Style Inverted Focus
+  @if $style == inverted-focus {
+    &:focus {
+      .inverted &,
+      .normal .inverted &  {
+        @content;
+      }
+    }
+  }
+}
