@@ -27,11 +27,11 @@ $color-grey-extra-dark:                       rgb(29, 29, 29) !default;
 $color-black:                                 rgb(0, 0, 0) !default;
 
 // Basic Colors
-$color-red:                                   #b03060 !default;
-$color-orange:                                #FE9A76 !default;
-$color-yellow:                                #FFD700 !default;
-$color-olive:                                 #32CD32 !default;
-$color-green:                                 #016936 !default;
+$color-red: #b02928 !default;
+$color-orange: #fe9400 !default;
+$color-yellow: #ffe63b !default;
+$color-olive: #6bcd57 !default;
+$color-green: #126935 !default;
 $color-teal:                                  #008080 !default;
 $color-blue:                                  #0E6EB8 !default;
 $color-violet:                                #EE82EE !default;
@@ -89,12 +89,16 @@ $text-color-strong-inverted:                  $color-white !default;
 // Set the global spacing units. Elements use these values as required to generate tidy and consistent spacing.
 
 // Spacial Unit Size
-$unit                                       : 2.5em !default;
+$unit:                                        2.5em !default;
 
 // Standard Sizing
-$standard-field-height                      : 4.2rem !default;
+$standard-field-height:                       4.2rem !default;
 
+// Container Box Sizing
+$container-max-width:                         1100px !default;
 
+// Navbar Height
+$height-nav-bar:                              85px !default;
 
 
 

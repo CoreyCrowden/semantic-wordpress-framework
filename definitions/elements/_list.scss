@@ -7,20 +7,27 @@ $list-margin-bottom:                1em !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Unstyled List
-.unstyled-list, aside, nav, footer {
-  ul, li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+// List basics
+//
+// Basic list style using margin for spacing.
+ol, ul {
+  margin: $paragraph-margin-top 0 $paragraph-margin-bottom $list-indent;
+  padding: 0;
+  ol, ul {
+    margin: $list-margin-top 0 $list-margin-bottom $list-indent;
   }
 }
 
-// List basics
-ol, ul {
-  margin: $paragraph-margin-top 0 $paragraph-margin-bottom 0;
-  padding-left: $list-indent;
-  ol, ul {
-    margin: $list-margin-top 0 $list-margin-bottom;
+// Unstyled List
+//
+// Targets all areas outside of the main content area.
+// This is based on the assumption all other lists outside of the content area are menus and links.
+.unstyled-list,
+.menu,
+aside,
+footer {
+  ul, ol, li {
+    list-style: none;
+    margin: 0;
   }
 }

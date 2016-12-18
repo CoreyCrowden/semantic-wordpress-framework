@@ -1,0 +1,29 @@
+// Card
+//
+// Special styles create a card like content area. Depending on defined
+// variables styles can include background, border, border radius, shadow
+// etc.
+
+.card {
+  width: 100%;
+
+  // Default Colors
+  background: $card-background;
+  border-radius: $card-border-radius;
+  border: $card-container-border;
+
+  &.inverted {
+    border: $card-container-border-inverted;
+  }
+
+  // Round corners on fluid elements when at top or bottom of card
+  .top {
+    border-top-left-radius: $card-border-radius;
+    border-top-right-radius: $card-border-radius;
+  }
+  .bottom {
+    border-bottom-left-radius: $card-border-radius;
+    border-bottom-right-radius: $card-border-radius;
+  }
+
+}

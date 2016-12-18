@@ -568,35 +568,35 @@ body {
 .card.red,
 .button.red,
 .label.red {
-  background: #b03060;
+  background: #b02928;
 }
 
 .container.orange,
 .card.orange,
 .button.orange,
 .label.orange {
-  background: #FE9A76;
+  background: #fe9400;
 }
 
 .container.yellow,
 .card.yellow,
 .button.yellow,
 .label.yellow {
-  background: #FFD700;
+  background: #ffe63b;
 }
 
 .container.olive,
 .card.olive,
 .button.olive,
 .label.olive {
-  background: #32CD32;
+  background: #6bcd57;
 }
 
 .container.green,
 .card.green,
 .button.green,
 .label.green {
-  background: #016936;
+  background: #126935;
 }
 
 .container.teal,
@@ -1049,28 +1049,6 @@ input[type="radio"] ~ label:after {
   .card .content.relaxed .fluid.after {
     margin-bottom: -5em;
   }
-}
-
-.card {
-  display: block;
-  width: 100%;
-  background: white;
-  border-radius: 4px;
-  border: 1px #f6f6f6 solid;
-}
-
-.card.inverted {
-  border: none;
-}
-
-.card .top {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-}
-
-.card .bottom {
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
 }
 
 .fitted:not(.horizontally):not(.vertically) {
@@ -1570,7 +1548,7 @@ input[type="radio"] ~ label:after {
 }
 
 .menu {
-  margin: 0px;
+  margin: 0;
   list-style: none;
 }
 
@@ -2220,19 +2198,48 @@ time:before,
   margin-left: 0.375em;
 }
 
-.unstyled-list ul, .unstyled-list li, aside ul, aside li, nav ul, nav li, footer ul, footer li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.card {
+  width: 100%;
+  background: white;
+  border-radius: 4px;
+  border: 1px #f6f6f6 solid;
+}
+
+.card.inverted {
+  border: none;
+}
+
+.card .top {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.card .bottom {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 ol, ul {
-  margin: 0.5em 0 0.5em 0;
-  padding-left: 2em;
+  margin: 0.5em 0 0.5em 2em;
+  padding: 0;
 }
 
 ol ol, ol ul, ul ol, ul ul {
-  margin: 1em 0 1em;
+  margin: 1em 0 1em 2em;
+}
+
+.unstyled-list ul, .unstyled-list ol, .unstyled-list li,
+.menu ul,
+.menu ol,
+.menu li,
+aside ul,
+aside ol,
+aside li,
+footer ul,
+footer ol,
+footer li {
+  list-style: none;
+  margin: 0;
 }
 
 article table {

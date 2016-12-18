@@ -1,5 +1,5 @@
 
-//----------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------
 
 // Menu
 //
@@ -12,7 +12,7 @@
 //
 // http://semantic-ui.com/collections/menu.html
 
-//----------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------
 
 // Variables
 
@@ -41,7 +41,7 @@ $menu-item-sub-level-background-inverted-hover  : rgba($color-white, 1) !default
 // Typography
 
 
-//----------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------
 
 // Full height menu
 //
@@ -51,19 +51,15 @@ $menu-item-sub-level-background-inverted-hover  : rgba($color-white, 1) !default
   height: 100%;
 }
 
-// Menu Type Styles
-.menu {
-  .sub-menu {
-  }
-}
 
-
+// Default menu | Vertical
+//
 // The default menu is a vertically stacked list using default body text styles
 
 .menu {
 
   // Defaults
-  margin: 0px;
+  margin: 0;
   list-style: none;
 
   // Top Level Menu Items
@@ -72,6 +68,7 @@ $menu-item-sub-level-background-inverted-hover  : rgba($color-white, 1) !default
       // Flex display is used for vertically centering menu item text
       @include flexbox;
       @include align-items(center);
+
       min-height: $menu-item-height;
       @include padding( $menu-item-top-level-padding-top, $menu-item-top-level-padding-right, $menu-item-top-level-padding-bottom, $menu-item-top-level-padding-left);
       @include margin(0);
