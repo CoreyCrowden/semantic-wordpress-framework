@@ -40,6 +40,11 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
 
 // Typography
 
+$menu-item-color:                                 $text-color !default;
+$menu-item-color-hover:                           $text-color-strong !default;
+$menu-item-color-inverted:                        $text-color-inverted !default;
+$menu-item-color-inverted-hover:                  $text-color-strong-inverted !default;
+
 
 // ------------------------------------------------------------------------------------------------------------------
 
@@ -86,18 +91,22 @@ $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default
   .item {
     a {
       @include style(normal){
+        color: $menu-item-color;
         background: $menu-item-top-level-background;
       }
 
       @include style(inverted){
+        color: $menu-item-color-inverted;
         background: $menu-item-top-level-background-inverted;
       }
 
       @include style(hover){
+        color: $menu-item-color-hover;
         background: $menu-item-top-level-background-hover;
       }
 
       @include style(inverted-hover){
+        color: $menu-item-color-inverted-hover;
         background: $menu-item-top-level-background-inverted-hover;
       }
     }

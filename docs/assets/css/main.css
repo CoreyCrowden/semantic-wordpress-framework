@@ -1578,30 +1578,36 @@ input[type="radio"] ~ label:after {
 }
 
 .menu .item a {
+  color: #1d1d1d;
   background: transparent;
 }
 
 .normal .menu .item a,
 .inverted .normal .menu .item a {
+  color: #1d1d1d;
   background: transparent;
 }
 
 .inverted .menu .item a,
 .normal .inverted .menu .item a {
+  color: #dddddd;
   background: rgba(255, 255, 255, 0);
 }
 
 .menu .item a:hover {
+  color: black;
   background: rgba(0, 0, 0, 0.03);
 }
 
 .normal .menu .item a:hover,
 .inverted .normal .menu .item a:hover {
+  color: black;
   background: rgba(0, 0, 0, 0.03);
 }
 
 .inverted .menu .item a:hover,
 .normal .inverted .menu .item a:hover {
+  color: white;
   background: rgba(255, 255, 255, 0.03);
 }
 

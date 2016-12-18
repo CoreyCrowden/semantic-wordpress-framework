@@ -471,4 +471,96 @@ reference:
   </textarea>
 </article>
 
+<hr class="fluid">
 
+<!--SASS Deployment-->
+<article>
+  <h3>Creating complex menus through SASS</h3>
+  <span class="label"><i>sass</i></span>
+  <p>
+    While having all these menu options is great, having to manually enter classes at a content level is not usually
+    preferably. But luckily through the use of the sass <code>@extend</code> function we can define the menu styles
+    simply and without code repetition.
+  </p>
+  <p>
+    Working in our project scss file we need to target specific menu locations and then specify the menu level to
+    apply the <code>@extend</code>. The example below shows how to build a horizontal menu with a dropdown at the
+    first sub-menu level followed by a slide out at the second sub-menu level and finally formatted text at the third
+    sub-menu level.
+  </p>
+  <!--HTML-->
+  <div class="html">
+    <nav class="padded">
+      <ul class="menu card">
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item menu-item-has-children dropdown">
+          <a>Menu item with children</a>
+          <ul class="sub-menu">
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+            <li class="item menu-item-has-children slide">
+              <a>Sub menu item</a>
+              <ul class="sub-menu">
+                <li class="item menu-item-has-children">
+                  <a>Sub-sub menu item</a>
+                  <ul class="sub-menu">
+                    <li class="item">
+                      <a>Sub-sub-sub menu item</a>
+                    </li>
+                    <li class="item">
+                      <a>Sub-sub-sub menu item</a>
+                    </li>
+                    <li class="item">
+                      <a>Sub-sub-sub menu item</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+                <li class="item">
+                  <a>Sub-sub menu item</a>
+                </li>
+              </ul>
+            </li>
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+            <li class="item">
+              <a>Sub menu item</a>
+            </li>
+          </ul>
+        </li>
+        <li class="item">
+          <a>Menu item</a>
+        </li>
+        <li class="item right">
+          <a>Right aligned menu item</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--Code Snippet-->
+  <textarea class="code">
+// SASS Example
+
+.menu {
+
+  > sub-menu {
+    @extend .dropdown.item;
+
+    > sub-menu {
+      @extend .slide.item;
+
+      > sub-menu {
+        @extend .text.item;
+      }
+
+    }
+  }
+}
+  </textarea>
+</article>
