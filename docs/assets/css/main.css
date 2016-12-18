@@ -1611,6 +1611,65 @@ input[type="radio"] ~ label:after {
   background: rgba(255, 255, 255, 0.03);
 }
 
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .menu,
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu {
+  padding: 0em 0em 0em;
+}
+
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a,
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a {
+  padding: 0.375em 1.75em 0.375em;
+  color: #636363;
+  background: transparent;
+}
+
+.normal .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a,
+.inverted .normal .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a, .normal
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a,
+.inverted .normal
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a {
+  color: #636363;
+  background: transparent;
+}
+
+.inverted .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a,
+.normal .inverted .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a, .inverted
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a,
+.normal .inverted
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a {
+  color: #a1a1a1;
+  background: rgba(255, 255, 255, 0);
+}
+
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a:hover,
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a:hover {
+  color: black;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.normal .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a:hover,
+.inverted .normal .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a:hover, .normal
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a:hover,
+.inverted .normal
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a:hover {
+  color: black;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.inverted .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a:hover,
+.normal .inverted .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a:hover, .inverted
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a:hover,
+.normal .inverted
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > .sub-menu > .item:not(.dropdown):not(.dropdown) > .item > a,
+.menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > .sub-menu > .item:not(.dropdown):not(.dropdown) > .item > a {
+  padding: 0em 3.5em;
+}
+
 .dropdown.item > .menu, .expand.item > .menu, .slide.item > .menu,
 .dropdown.item > .sub-menu, .expand.item > .sub-menu, .slide.item > .sub-menu {
   -moz-flex-direction: column;

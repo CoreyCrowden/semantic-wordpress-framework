@@ -24,8 +24,18 @@ $menu-item-top-level-padding-right:               .35 !default;
 $menu-item-top-level-padding-bottom:              .35 !default;
 $menu-item-top-level-padding-left:                .35 !default;
 
-// Colour
 
+
+$sub-menu-padding-top:                            0 !default;
+$sub-menu-padding-bottom:                         .0 !default;
+
+$sub-menu-item-indent:                            .7 !default;
+$sub-menu-item-padding-top:                       .15 !default;
+$sub-menu-item-padding-bottom:                    .15 !default;
+
+
+
+// Colour
 $menu-item-top-level-background:                  rgba($color-black, 0) !default;
 $menu-item-top-level-background-hover:            rgba($color-black, .03) !default;
 $menu-item-top-level-background-inverted:         rgba($color-white, 0) !default;
@@ -39,11 +49,15 @@ $menu-item-sub-level-background-inverted:         rgba($color-white, 1) !default
 $menu-item-sub-level-background-inverted-hover:   rgba($color-white, 1) !default;
 
 // Typography
-
 $menu-item-color:                                 $text-color !default;
 $menu-item-color-hover:                           $text-color-strong !default;
 $menu-item-color-inverted:                        $text-color-inverted !default;
 $menu-item-color-inverted-hover:                  $text-color-strong-inverted !default;
+
+$menu-item-secondary-color:                       $text-color-weak !default;
+$menu-item-secondary-color-hover:                 $text-color-strong !default;
+$menu-item-secondary-color-inverted:              $text-color-weak-inverted !default;
+$menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !default;
 
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -59,7 +73,6 @@ $menu-item-color-inverted-hover:                  $text-color-strong-inverted !d
   // Top Level Menu Items
   .item {
     position: relative;
-
 
     a {
       // Flex display is used for vertically centering menu item text, this is more graceful than alternative methods.
@@ -113,6 +126,54 @@ $menu-item-color-inverted-hover:                  $text-color-strong-inverted !d
   }
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+
+// Sub-menus by default are specially formatted for appearance and hierarchy
+
+.menu {
+
+  .item:not(.dropdown):not(.expand):not(.slide){
+    > .menu,
+    > .sub-menu {
+
+      @include padding($sub-menu-padding-top, 0, $sub-menu-padding-bottom);
+
+      > .item {
+
+        > a {
+
+          @include padding($sub-menu-item-padding-top, $sub-menu-item-indent, $sub-menu-item-padding-bottom);
+
+          @include style(normal){
+            color: $menu-item-secondary-color;
+            background: $menu-item-top-level-background;
+          }
+
+          @include style(inverted){
+            color: $menu-item-secondary-color-inverted;
+            background: $menu-item-top-level-background-inverted;
+          }
+
+          @include style(hover){
+            color: $menu-item-secondary-color-hover;
+            background: $menu-item-top-level-background-hover;
+          }
+
+          @include style(inverted-hover){
+            color: $menu-item-secondary-color-inverted-hover;
+            background: $menu-item-top-level-background-inverted-hover;
+          }
+        }
+
+        > .sub-menu > .item:not(.dropdown):not(.dropdown) {
+          > .item > a {
+            @include padding(0, $sub-menu-item-indent * 2);
+          }
+        }
+      }
+    }
+  }
+}
 
 // ------------------------------------------------------------------------------------------------------------------
 

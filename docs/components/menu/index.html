@@ -277,7 +277,7 @@ reference:
             <li class="item">
               <a>Sub menu item</a>
             </li>
-            <li class="item menu-item-has-children">
+            <li class="item menu-item-has-children expand">
               <a>Sub menu item</a>
               <ul class="sub-menu">
                 <li class="item">
@@ -488,6 +488,9 @@ reference:
     first sub-menu level followed by a slide out at the second sub-menu level and finally formatted text at the third
     sub-menu level.
   </p>
+  <p>
+    <em>Note:</em> It may also be a good idea to <code>@extend</code> a scaling class like <code>@extend .small</code> to the sub-menu.
+  </p>
   <!--HTML-->
   <div class="html">
     <nav class="padded">
@@ -504,7 +507,7 @@ reference:
             <li class="item menu-item-has-children slide">
               <a>Sub menu item</a>
               <ul class="sub-menu">
-                <li class="item menu-item-has-children">
+                <li class="item menu-item-has-children small">
                   <a>Sub-sub menu item</a>
                   <ul class="sub-menu">
                     <li class="item">
@@ -556,7 +559,7 @@ reference:
       @extend .slide.item;
 
       > sub-menu {
-        @extend .text.item;
+        @extend .small;
       }
 
     }
