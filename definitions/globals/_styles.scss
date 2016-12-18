@@ -1,0 +1,133 @@
+// Styles
+//
+// The framework has various styles that can be applied to elements to give them certain visual styling.
+
+
+
+// Rounded
+
+.rounded {
+
+}
+
+
+// Container & Card Colors
+
+.container,
+.card,
+.button,
+.label {
+
+
+
+  // Basic Colors
+  &.black {
+    background: $color-black;
+  }
+  &.white {
+    background: $color-white;
+  }
+  &.extra.light.grey {
+    background: $color-grey-extra-light;
+  }
+  &.light.grey {
+    background: $color-grey-light;
+  }
+  &.grey {
+    background: $color-grey;
+  }
+  &.dark.grey {
+    background: $color-grey-dark;
+  }
+  &.extra.dark.grey {
+    background: $color-grey-extra-dark;
+  }
+  &.red {
+    background: $color-red;
+  }
+  &.orange {
+    background: $color-orange;
+  }
+  &.yellow {
+    background: $color-yellow;
+  }
+  &.olive {
+    background: $color-olive;
+  }
+  &.green {
+    background: $color-green;
+  }
+  &.teal {
+    background: $color-teal;
+  }
+  &.blue {
+    background: $color-blue;
+  }
+  &.violet {
+    background: $color-violet;
+  }
+  &.purple {
+    background: $color-purple;
+  }
+  &.pink {
+    background: $color-pink;
+  }
+  &.brown {
+    background: $color-brown;
+  }
+
+  // Conditional Colors
+  &.primary {
+    background: $color-primary;
+  }
+  &.secondary {
+    background: $color-secondary;
+  }
+  &.emphasis {
+    background: $color-emphasis;
+  }
+  &.emphasis-secondary {
+    background: $color-secondary;
+  }
+  &.disabled {
+    opacity: 0.5;
+  }
+
+  // Notification Colors
+  &.success {
+    background: $color-success-weak;
+  }
+  &.info {
+    background: $color-info-weak;
+  }
+  &.warning {
+    background: $color-warning-weak;
+  }
+  &.danger {
+    background: $color-danger-weak;
+  }
+
+  &.outlined {
+    border: solid $color-grey-light 1px;
+  }
+
+  &.weak {
+    background: $color-grey-light;
+    color: $text-color-strong-inverted;
+  }
+
+  &.strong {
+    background: rgba($color-primary, .85);
+    color: $text-color-strong-inverted;
+  }
+
+  &.hover:hover {
+    background: rgba($color-emphasis, 1);
+    color: $text-color-strong-inverted;
+  }
+
+
+
+
+
+}

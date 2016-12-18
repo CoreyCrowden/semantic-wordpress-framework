@@ -44,3 +44,28 @@ time,
     background-color: lighten($color-tag-hover-inverted, 10%);
   }
 }
+
+
+// Tags
+.label {
+  position: relative;
+  display: inline-block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .8em;
+  @include padding( .2, .5);
+  @include margin( .075, 0);
+
+  // Add spacing between labels
+  @include margin-right(.15);
+  > .right & {
+    @include margin-right(0);
+    @include margin-left(.15);
+  }
+
+  // Default label
+  background: rgba($color-grey-extra-light, 1);
+  color: $text-color;
+
+}

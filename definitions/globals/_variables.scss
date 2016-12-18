@@ -10,6 +10,7 @@
 
 $enable-ninja-forms:                          true !default;
 
+$enable-round-edges-on-cards:                 true !default;
 
 
 // 2. Colors
@@ -45,9 +46,10 @@ $color-brand-3:                               rgb(227, 120, 105) !default;
 $color-brand-4:                               rgb(78, 195, 116) !default;
 
 // Primary Colors
-$color-primary:                               $color-brand-2 !default;
+$color-primary:                               $color-brand-2 !default; // These should be dark branding colors
 $color-secondary:                             lighten($color-brand-2, 5%) !default;
-$color-emphasis:                              $color-brand-1 !default;
+
+$color-emphasis:                              $color-brand-1 !default; // These should be bright branding colors
 $color-emphasis-secondary:                    $color-brand-3 !default;
 
 // Notification Colors
@@ -72,7 +74,14 @@ $text-color-disabled:                         lighten($color-grey-light, 2%) !de
 $color-background-disabled:                   lighten($color-grey-extra-light, 5%) !default;
 $color-border-disabled:                       lighten($color-grey-light, 5%) !default;
 
+// Text colors
+$text-color-weak:                             $color-grey-dark !default;
+$text-color:                                  $color-grey-extra-dark !default;
+$text-color-strong:                           $color-black !default;
 
+$text-color-weak-inverted:                    $color-grey !default;
+$text-color-inverted:                         $color-grey-light !default;
+$text-color-strong-inverted:                  $color-white !default;
 
 
 // 3. Spacing

@@ -46,13 +46,20 @@ $text-decoration:                             none !default;
 $text-indent:                                 0 !default;
 $text-overflow:                               clip !default;
 $text-transform:                              none !default;
+$color:                                       $text-color-weak !default;
+$color-inverted:                              $text-color-weak-inverted !default;
 
 // Emphasis
-$font-weight-emphasis:                        bolder !default;
-$font-style-emphasis:                         italic !default;
+$emphasis-font-weight:                        bolder !default;
+$emphasis-font-style:                         italic !default;
+$emphasis-color:                              $text-color-strong !default;
+$emphasis-color-inverted:                     $text-color-strong-inverted !default;
 
 // Strong
-$font-weight-strong:                          bolder !default;
+$strong-font-weight:                          bolder !default;
+$strong-font-style:                           none !default;
+$strong-color:                                $text-color-strong !default;
+$strong-color-inverted:                       $text-color-strong-inverted !default;
 
 // Bold
 $font-weight-bold:                            bolder !default;
@@ -63,25 +70,18 @@ $font-style-italic:                           italic !default;
 // Underline
 $text-decoration-underline:                   underline !default;
 
-// Text colors
-$text-color-weak:                             $color-grey !default;
-$text-color:                                  $color-grey-extra-dark !default;
-$text-color-strong:                           $color-black !default;
-
-$text-color-weak-inverted:                    $color-grey !default;
-$text-color-inverted:                         $color-grey-light !default;
-$text-color-strong-inverted:                  $color-white !default;
-
-
 // ------------------------------------------------------------------------------------------------------------------
 
 // Headings
-$font-size-h1:                                3.6em !default;
-$font-size-h2:                                3.0em !default;
-$font-size-h3:                                2.0em !default;
-$font-size-h4:                                1.6em !default;
-$font-size-h5:                                1.4em !default;
-$font-size-h6:                                1.2em !default;
+$h1-font-size:                                3.6em !default;
+$h2-font-size:                                3.0em !default;
+$h3-font-size:                                2.0em !default;
+$h4-font-size:                                1.6em !default;
+$h5-font-size:                                1.4em !default;
+$h6-font-size:                                1.2em !default;
+
+$heading-color:                               $text-color-strong !default;
+$heading-color-inverted:                      $text-color-strong-inverted !default;
 
 // Paragraph spacing
 $paragraph-margin-top:                        .5em !default;
@@ -118,6 +118,7 @@ $code-padding                               : .1 !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
+// Set base font size
 body {
   font-size: $font-size;
 }
@@ -141,22 +142,39 @@ h1, h2, h3, h4, h5, h6 {
 
   // Normal
   @include style(normal){
-    color: $text-color;
+    color: $color;
   }
   // Inverted
   @include style(inverted){
-    color: $text-color-inverted;
+    color: $color-inverted;
   }
 
   // Emphasis
   em {
-    font-weight: $font-weight-emphasis;
-    font-style: $font-style-emphasis;
+    font-weight: $emphasis-font-weight;
+    font-style: $emphasis-font-style;
+    // Normal
+    @include style(normal){
+      color: $emphasis-color;
+    }
+    // Inverted
+    @include style(inverted){
+      color: $emphasis-color-inverted;
+    }
   }
 
   // Strong
   strong {
-    font-weight: $font-weight-strong;
+    font-weight: $strong-font-weight;
+    font-style: $strong-font-style;
+    // Normal
+    @include style(normal){
+      color: $strong-color;
+    }
+    // Inverted
+    @include style(inverted){
+      color: $strong-color-inverted;
+    }
   }
 
   // Bold
@@ -200,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+// Headings
 h1, h2, h3, h4, h5, h6 {
   margin-top: 2em;
   margin-bottom: 0;
@@ -207,25 +226,34 @@ h1, h2, h3, h4, h5, h6 {
   + h1, + h2, + h3, + h4, + h5, + h6 {
     margin-top: 0;
   }
+
+  // Normal
+  @include style(normal){
+    color: $heading-color;
+  }
+  // Inverted
+  @include style(inverted){
+    color: $heading-color-inverted;
+  }
 }
 
 h1 {
-  font-size: $font-size-h1;
+  font-size: $h1-font-size;
 }
 h2 {
-  font-size: $font-size-h2;
+  font-size: $h2-font-size;
 }
 h3 {
-  font-size: $font-size-h3;
+  font-size: $h3-font-size;
 }
 h4 {
-  font-size: $font-size-h4;
+  font-size: $h4-font-size;
 }
 h5 {
-  font-size: $font-size-h5;
+  font-size: $h5-font-size;
 }
 h6 {
-  font-size: $font-size-h6;
+  font-size: $h6-font-size;
 }
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -345,46 +373,7 @@ textarea.code {
   font-family: "Courier New";
 }
 
-
-// Tags
-.label {
-  position: relative;
-  display: inline-block;
-  border-radius: 3px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: .8em;
-  @include padding( .2, .5);
-  @include margin( .075, 0);
-
-  // Add spacing between labels
-  @include margin-right(.15);
-  > .right & {
-    @include margin-right(0);
-    @include margin-left(.15);
-  }
-
-  // Default label
-  background: rgba($color-grey-extra-light, 1);
-  color: $text-color;
-
-  // Make the label more subtle
-  &.weak {
-    background: $color-grey-light;
-    color: $text-color-strong-inverted;
-  }
-
-  // Give the label more emphasis
-  &.strong {
-    background: rgba($color-primary, .85);
-    color: $text-color-strong-inverted;
-  }
-
-  &:hover {
-    background: rgba($color-emphasis, 1);
-    color: $text-color-strong-inverted;
-  }
-}
+// ------------------------------------------------------------------------------------------------------------------
 
 // HTML Preview Area
 
