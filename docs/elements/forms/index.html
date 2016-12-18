@@ -1,0 +1,66 @@
+---
+layout: default
+category: Elements
+title: Ninja Forms
+description: Basic styles for producing a high quality form layout with ninja forms.
+reference-title: Ninja Forms HTML Markup & CSS Reference
+reference: https://ninjaforms.com/docs/advanced-layout-style-techniques/
+---
+
+<!--Initiating the menu-->
+<article>
+  <h3>Basic Form Fields</h3>
+  <span class="label">input[type="text"]</span>
+  <!--HTML-->
+  <div class="html">
+    <div class="nf-field-container {field-type-name}-container  label-above padded">
+      <div class="nf-before-field">
+        <nf-section>Section Text</nf-section>
+      </div>
+      <div class="nf-field">
+        <div id="nf-field-{field_id}-wrap" class="field-wrap {field-type-name}-wrap" data-field-id="{field_id}">
+          <div class="nf-field-label">
+            <label for="nf-field-{field_id}" class="">Single Line Text</label>
+          </div>
+          <div class="nf-field-element">
+            <input id="nf-field-{field_id}" name="nf-field-{field_id}" class="ninja-forms-field nf-element" type="text" value="">
+          </div>
+        </div>
+      </div>
+      <div class="nf-after-field">
+        <nf-section>
+          <div class="nf-error-wrap nf-error">Error Text</div>
+        </nf-section>
+      </div>
+    </div>
+  </div>
+  <!--Code Snippet-->
+  <textarea class="code">
+    <div class="nf-field-container {field-type-name}-container  label-above padded">
+      <div class="nf-before-field">
+        <nf-section>Section Text</nf-section>
+      </div>
+      <div class="nf-field">
+        <div id="nf-field-{field_id}-wrap" class="field-wrap {field-type-name}-wrap" data-field-id="{field_id}">
+          <div class="nf-field-label">
+            <label for="nf-field-{field_id}" class="">Single Line Text</label>
+          </div>
+          <div class="nf-field-element">
+            <input id="nf-field-{field_id}" name="nf-field-{field_id}" class="ninja-forms-field nf-element" type="text" value="">
+          </div>
+        </div>
+      </div>
+      <div class="nf-after-field">
+        <nf-section>
+          <div class="nf-error-wrap nf-error">Error Text</div>
+        </nf-section>
+      </div>
+    </div>
+  </textarea>
+
+
+</article>
+
+
+
+<hr class="fluid">
