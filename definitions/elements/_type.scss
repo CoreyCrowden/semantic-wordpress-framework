@@ -32,7 +32,8 @@ $font-size-extra-large                      : 1.4rem !default;
 
 // Defaults
 //
-// Website default font styles defined below.
+// These are the basic website default styles. Defined below are only most basic elements.
+// Intended to minimise and simply typography management.
 
 // Basics
 $font-family:                                 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
@@ -48,6 +49,7 @@ $text-transform:                              none !default;
 
 // Emphasis
 $font-weight-emphasis:                        bolder !default;
+$font-style-emphasis:                         italic !default;
 
 // Strong
 $font-weight-strong:                          bolder !default;
@@ -61,6 +63,16 @@ $font-style-italic:                           italic !default;
 // Underline
 $text-decoration-underline:                   underline !default;
 
+// Text colors
+$text-color-weak:                             $color-grey !default;
+$text-color:                                  $color-grey-extra-dark !default;
+$text-color-strong:                           $color-black !default;
+
+$text-color-weak-inverted:                    $color-grey !default;
+$text-color-inverted:                         $color-grey-light !default;
+$text-color-strong-inverted:                  $color-white !default;
+
+
 // ------------------------------------------------------------------------------------------------------------------
 
 // Headings
@@ -72,35 +84,30 @@ $font-size-h5:                                1.4em !default;
 $font-size-h6:                                1.2em !default;
 
 // Paragraph spacing
-$paragraph-margin-top:                        .5 !default;
-$paragraph-margin-right:                      0 !default;
-$paragraph-margin-bottom:                     .5 !default;
-$paragraph-margin-left:                       0 !default;
+$paragraph-margin-top:                        .5em !default;
+$paragraph-margin-bottom:                     .5em !default;
 
-// Text colors
-$color-text-weak                            : $color-grey;
-$color-text                                 : $color-grey-extra-dark;
-$color-text-strong                          : $color-black;
 
-$color-text-weak-inverted                   : $color-grey;
-$color-text-inverted                        : $color-grey-light;
-$color-text-strong-inverted                 : $color-white;
+
+
+
+
 
 // Anchor Link
 $font-link-decoration                       : none !default;
 $font-link-decoration-hover                 : none !default;
 
-$color-text-link                            : $color-emphasis;
-$color-text-link-visited                    : darken( $color-emphasis, 0% );
-$color-text-link-hover                      : darken( $color-emphasis, 10% );
+$text-color-link                            : $color-emphasis !default;
+$text-color-link-visited                    : darken( $color-emphasis, 0% ) !default;
+$text-color-link-hover                      : darken( $color-emphasis, 10% ) !default;
 
-$color-text-link-inverted                   : $color-emphasis-secondary;
-$color-text-link-visited-inverted           : darken( $color-emphasis-secondary, 0% );
-$color-text-link-hover-inverted             : darken( $color-emphasis-secondary, 10% );
+$text-color-link-inverted                   : $color-emphasis-secondary !default;
+$text-color-link-visited-inverted           : darken( $color-emphasis-secondary, 0% ) !default;
+$text-color-link-hover-inverted             : darken( $color-emphasis-secondary, 10% ) !default;
 
 // Selection Highlight
-$color-text-selection                       : $color-text-strong-inverted;
-$color-text-selection-background            : $color-primary;
+$text-color-selection                       : $text-color-strong-inverted !default;
+$text-color-selection-background            : $color-primary !default;
 
 // Code & Pre
 $code-background                            : $color-grey-extra-light !default;
@@ -134,16 +141,17 @@ h1, h2, h3, h4, h5, h6 {
 
   // Normal
   @include style(normal){
-    color: $color-text;
+    color: $text-color;
   }
   // Inverted
   @include style(inverted){
-    color: $color-text-inverted;
+    color: $text-color-inverted;
   }
 
   // Emphasis
   em {
     font-weight: $font-weight-emphasis;
+    font-style: $font-style-emphasis;
   }
 
   // Strong
@@ -228,40 +236,40 @@ a {
 
   // Normal
   @include style(normal) {
-    color: $color-text-strong;
+    color: $text-color-strong;
     text-decoration: $font-link-decoration;
   }
   // Normal Hover
   @include style(hover) {
-    color: $color-text-link-hover;
+    color: $text-color-link-hover;
     text-decoration: $font-link-decoration-hover;
   }
   // Inverted
   @include style(inverted) {
-    color: $color-text-strong-inverted;
+    color: $text-color-strong-inverted;
   }
   // Inverted Hover
   @include style(inverted-hover) {
-    color: $color-text-link-hover-inverted;
+    color: $text-color-link-hover-inverted;
   }
 
   //* Link Style inside content area
   // Normal
   article p & {
     @include style(normal) {
-      color: $color-text-link;
+      color: $text-color-link;
     }
     // Normal Hover
     @include style(hover) {
-      color: $color-text-link-hover;
+      color: $text-color-link-hover;
     }
     // Inverted
     @include style(inverted) {
-      color: $color-text-link-inverted;
+      color: $text-color-link-inverted;
     }
     // Inverted Hover
     @include style(inverted-hover) {
-      color: $color-text-link-hover-inverted;
+      color: $text-color-link-hover-inverted;
     }
   }
 }
@@ -273,14 +281,14 @@ a {
 ::-moz-selection,
 input::-moz-selection,
 textarea::-moz-selection {
-  background-color: $color-text-selection-background;
-  color: $color-text-selection;
+  background-color: $text-color-selection-background;
+  color: $text-color-selection;
 }
 ::selection,
 input::selection,
 textarea::selection {
-  background-color: $color-text-selection-background;
-  color: $color-text-selection;
+  background-color: $text-color-selection-background;
+  color: $text-color-selection;
 }
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -358,23 +366,23 @@ textarea.code {
 
   // Default label
   background: rgba($color-grey-extra-light, 1);
-  color: $color-text;
+  color: $text-color;
 
   // Make the label more subtle
   &.weak {
     background: $color-grey-light;
-    color: $color-text-strong-inverted;
+    color: $text-color-strong-inverted;
   }
 
   // Give the label more emphasis
   &.strong {
     background: rgba($color-primary, .85);
-    color: $color-text-strong-inverted;
+    color: $text-color-strong-inverted;
   }
 
   &:hover {
     background: rgba($color-emphasis, 1);
-    color: $color-text-strong-inverted;
+    color: $text-color-strong-inverted;
   }
 }
 

@@ -71,18 +71,18 @@ select {
   border-radius: $border-radius;
   box-shadow: none;
 
-  color: $color-text;
+  color: $text-color;
 
   background: $color-field-background;
   border: $form-input-border;
 
   &:hover {
-    color: $color-text-strong;
+    color: $text-color-strong;
     border-color: $form-input-border-color-hover;
   }
 
   &:focus {
-    color: $color-text-strong;
+    color: $text-color-strong;
     border-color: $form-input-border-color-focus;
   }
 
@@ -95,7 +95,7 @@ select {
   //* Pass / Success Input Styles
   .nf-pass {
     border-color: $color-success;
-    color: $color-text;
+    color: $text-color;
   }
 
   //* Disabled Input Styles
@@ -184,9 +184,9 @@ label {
   font-weight: $font-weight;
   @include margin(0.75,0,0.5);
 
-  //color: $color-text-label;
+  //color: $text-color-label;
   //.inverted & {
-  //  color: $color-text-label-inverted;
+  //  color: $text-color-label-inverted;
   //}
 }
 
@@ -398,7 +398,7 @@ input[type="radio"]:checked ~ label {
  * --------------------------------------------------------------------------------------------- */
 
 //* Default Placeholder
-@include placeholder-color($standard-color: $color-text-weak, $hover-color: $color-text-strong, $focus-color: $color-text-strong);
+@include placeholder-color($standard-color: $text-color-weak, $hover-color: $text-color-strong, $focus-color: $text-color-strong);
 
 
 //* Error Placeholder
@@ -408,7 +408,7 @@ input[type="radio"]:checked ~ label {
 
 //* Disabled Placeholder
 [disabled] {
-  @include placeholder-color($standard-color: $color-text-disabled, $hover-color: $color-text-disabled, $focus-color: $color-text-disabled);
+  @include placeholder-color($standard-color: $text-color-disabled, $hover-color: $text-color-disabled, $focus-color: $text-color-disabled);
 }
 
 /* ---------------------------------------------------------------------------------------------

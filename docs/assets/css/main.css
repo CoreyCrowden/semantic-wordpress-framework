@@ -1650,6 +1650,7 @@ span em,
 section em,
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-weight: bolder;
+  font-style: italic;
 }
 
 body strong,
@@ -2049,7 +2050,7 @@ time:before,
 }
 
 ol, ul {
-  margin: 1.25em 0em 1.25em 0em;
+  margin: 0.5em, 0, 0.5em, 0;
   padding-left: 2.5em;
 }
 

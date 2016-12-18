@@ -28,19 +28,19 @@ time,
   font-weight: $font-weight;
 
   @include style(normal){
-    color: $color-text-strong-inverted;
+    color: $text-color-strong-inverted;
     background-color: $color-tag;
   }
   @include style(hover){
-    color: $color-text-strong-inverted;
+    color: $text-color-strong-inverted;
     background-color: lighten($color-tag-hover, 10%);
   }
   @include style(inverted){
-    color: $color-text-strong;
+    color: $text-color-strong;
     background-color: $color-tag-inverted;
   }
   @include style(inverted-hover){
-    color: $color-text-strong;
+    color: $text-color-strong;
     background-color: lighten($color-tag-hover-inverted, 10%);
   }
 }

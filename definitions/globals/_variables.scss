@@ -68,7 +68,7 @@ $color-danger-weak:                           lighten($color-danger, 10%) !defau
 $color-danger-strong:                         darken($color-danger, 10%) !default;
 
 // Disabled
-$color-text-disabled:                         lighten($color-grey-light, 2%) !default;
+$text-color-disabled:                         lighten($color-grey-light, 2%) !default;
 $color-background-disabled:                   lighten($color-grey-extra-light, 5%) !default;
 $color-border-disabled:                       lighten($color-grey-light, 5%) !default;
 

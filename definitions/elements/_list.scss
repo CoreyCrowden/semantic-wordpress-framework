@@ -16,7 +16,7 @@ $list-margin-bottom               : .5 !default;
 
 // Default List
 ol, ul {
-  @include margin($paragraph-margin-top, $paragraph-margin-right, $paragraph-margin-bottom, $paragraph-margin-left);
+  margin: $paragraph-margin-top, 0, $paragraph-margin-bottom, 0;
   @include padding-left($list-indent);
   ol, ul {
     @include margin($list-margin-top, 0, $list-margin-bottom);
