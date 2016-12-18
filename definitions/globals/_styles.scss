@@ -5,7 +5,7 @@
 
 
 // Card Border
-$card-border-radius:                    .35em !default;
+$card-border-radius:                    .25em !default;
 $card-container-border-inverted:        none;
 
 $card-container-border:                 1px $color-grey-extra-light solid;
@@ -125,6 +125,7 @@ $card-container-border-inverted:        none;
     border: solid $color-grey-light 1px;
   }
 
+  // Strength based classes
   &.weak {
     background: $color-grey-light;
     color: $text-color-strong-inverted;

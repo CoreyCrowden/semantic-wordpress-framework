@@ -520,7 +520,7 @@ body {
 }
 
 .rounded, .card {
-  border-radius: 0.35em;
+  border-radius: 0.25em;
 }
 
 .circular {
@@ -748,9 +748,7 @@ body {
 }
 
 .animate, .animate-slow, .dropdown.item > .menu,
-.dropdown.item > .sub-menu,
-.menu.dropdown .item > .menu,
-.menu.dropdown .item > .sub-menu, .fixed,
+.dropdown.item > .sub-menu, .fixed,
 .absolute, .menu .item a, article table th, article table td, .button a,
 a.button,
 input[type="submit"],
@@ -1559,6 +1557,10 @@ input[type="radio"] ~ label:after {
   list-style: none;
 }
 
+.menu .item {
+  position: relative;
+}
+
 .menu .item a {
   display: -moz-flex;
   display: -ms-flexbox;
@@ -1600,9 +1602,7 @@ input[type="radio"] ~ label:after {
 }
 
 .dropdown.item > .menu,
-.dropdown.item > .sub-menu,
-.menu.dropdown .item > .menu,
-.menu.dropdown .item > .sub-menu {
+.dropdown.item > .sub-menu {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
@@ -1610,37 +1610,32 @@ input[type="radio"] ~ label:after {
   visibility: hidden;
   opacity: 0;
   z-index: 55555;
-  background: #1d1d1d;
-}
-
-.dropdown.item > .menu .item a,
-.dropdown.item > .sub-menu .item a,
-.menu.dropdown .item > .menu .item a,
-.menu.dropdown .item > .sub-menu .item a {
+  width: 100%;
   background: white;
 }
 
 .dropdown.item:hover > .menu,
 .dropdown.item:hover > .sub-menu,
 .dropdown.item .menu:hover,
-.dropdown.item .sub-menu:hover,
-.menu.dropdown .item:hover > .menu,
-.menu.dropdown .item:hover > .sub-menu,
-.menu.dropdown .item .menu:hover,
-.menu.dropdown .item .sub-menu:hover {
+.dropdown.item .sub-menu:hover {
   visibility: visible;
   opacity: 1;
 }
 
-.dropdown.item:hover > .menu .item a,
-.dropdown.item:hover > .sub-menu .item a,
-.dropdown.item .menu:hover .item a,
-.dropdown.item .sub-menu:hover .item a,
-.menu.dropdown .item:hover > .menu .item a,
-.menu.dropdown .item:hover > .sub-menu .item a,
-.menu.dropdown .item .menu:hover .item a,
-.menu.dropdown .item .sub-menu:hover .item a {
-  background: rgba(0, 0, 0, 0.03);
+.vertical .dropdown.item > .menu,
+.vertical .dropdown.item > .sub-menu {
+  left: 100%;
+  top: 0;
+}
+
+.dropdown.item.menu-item-has-children > a:after {
+  content: '\f107';
+  font-family: FontAwesome;
+  padding-left: 0.5em;
+}
+
+.vertical .dropdown.item.menu-item-has-children > a:after {
+  content: '\f105';
 }
 
 .menu.full.height > .item,
@@ -2242,13 +2237,13 @@ time:before,
 }
 
 .card .top {
-  border-top-left-radius: 0.35em;
-  border-top-right-radius: 0.35em;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
 }
 
 .card .bottom {
-  border-bottom-left-radius: 0.35em;
-  border-bottom-right-radius: 0.35em;
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
 }
 
 ol, ul {

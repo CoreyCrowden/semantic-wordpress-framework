@@ -165,17 +165,16 @@ reference:
   <h3>Dropdown Menu</h3>
   <span class="label">.menu</span><span class="label">.item</span><span class="label strong">.dropdown</span>
   <p>
-    A dropdown can be initiated by adding the <code>.dropdown</code> class to either the parent menu element or the
-    child menu items. Adding the class to the parent menu element will force the whole menu to use dropdowns.
+    A dropdown is initiated by adding the <code>.dropdown</code> class to the child menu items as required.
   </p>
   <!--HTML-->
   <div class="html">
     <nav class="padded">
-      <ul class="menu card dropdown">
+      <ul class="menu card">
         <li class="item">
           <a>Menu item</a>
         </li>
-        <li class="item menu-item-has-children">
+        <li class="item menu-item-has-children dropdown">
           <a>Menu item with children</a>
           <ul class="sub-menu">
             <li class="item">
@@ -215,11 +214,11 @@ reference:
   <!--Code Snippet-->
   <textarea class="code">
     <nav class="padded">
-      <ul class="menu card dropdown">
+      <ul class="menu card">
         <li class="item">
           <a>Menu item</a>
         </li>
-        <li class="item menu-item-has-children">
+        <li class="item menu-item-has-children dropdown">
           <a>Menu item with children</a>
           <ul class="sub-menu">
             <li class="item">
@@ -281,7 +280,7 @@ reference:
               <li class="item">
                 <a>Sub menu item</a>
               </li>
-              <li class="item menu-item-has-children">
+              <li class="item menu-item-has-children dropdown">
                 <a>Sub menu item</a>
                 <ul class="sub-menu">
                   <li class="item">
