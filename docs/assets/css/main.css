@@ -2314,7 +2314,6 @@ select {
   /* Typography */
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   line-height: 1.35;
-  font-size: 1.6em;
   /* Visual */
   outline: none;
   -webkit-appearance: none;
@@ -2418,9 +2417,6 @@ select[disabled] {
   cursor: not-allowed;
 }
 
-/* ---------------------------------------------------------------------------------------------
- * Text Input Icons
- * --------------------------------------------------------------------------------------------- */
 .nf-field-element:after, .nf-field-element:before {
   position: absolute;
   line-height: 4.2rem;

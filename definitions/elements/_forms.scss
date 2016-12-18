@@ -32,6 +32,8 @@ $form-input-padding-right                         : 0.4 !default;
 $form-input-padding-bottom                        : $form-input-padding-top !default;
 $form-input-padding-left                          : $form-input-padding-right !default;
 
+// ------------------------------------------------------------------------------------------------------------------
+
 //* All default input styles
 input:not([type]),
 input[type="date"],
@@ -60,7 +62,7 @@ select {
   /* Typography */
   font-family: $font-family;
   line-height: $line-height;
-  font-size: $font-size;
+  //font-size: $font-size;
 
   /* Visual */
   outline: none;
@@ -108,11 +110,9 @@ select {
 
 }
 
+// ------------------------------------------------------------------------------------------------------------------
 
-
-/* ---------------------------------------------------------------------------------------------
- * Text Input Icons
- * --------------------------------------------------------------------------------------------- */
+// Text Input Icons
 
 //* Field Icons
 .nf-field-element {

@@ -1,16 +1,16 @@
 // Standard Button & Defaults
 
-//* Button Font
+// Button Font
 //$button-typography                  : '.font.label' !default;
 $button-text-align                  : center !default;
 
-//* Button Margins & Padding
+// Button Margins & Padding
 $button-margin-vertical             : .3 !default;
 $button-margin-horizontal           : 0 !default;
 $button-height                      : $standard-field-height !default;
 $button-padding-horizontal          : .75 !default;
 
-//* Button Colors
+// Button Colors
 $button-color                       : rgba($color-black, .6) !default;
 $button-color-hover                 : rgba($color-white, 1) !default;
 $button-background                  : rgba($color-black, .1) !default;
@@ -21,7 +21,7 @@ $button-color-inverted-hover        : rgba($color-white, 1) !default;
 $button-background-inverted         : rgba($color-white, .9) !default;
 $button-background-inverted-hover   : $color-emphasis !default;
 
-//* Button Border
+// Button Border
 $button-border-radius               : 2px !default;
 $button-border                      : none !default;
 $button-border-inverted             : none !default;
@@ -30,7 +30,7 @@ $button-border-inverted-hover       : none !default;
 
 // ------------------------------------------------------------------------------------------------------------------ */
 
-//* Emphasis Button Colors
+// Emphasis Button Colors
 $button-emphasis-color                        : rgba($color-black, .8);
 $button-emphasis-color-hover                  : rgba($color-black, 1);
 $button-emphasis-background                   : rgba($color-emphasis, 0);
@@ -41,7 +41,7 @@ $button-emphasis-color-inverted-hover         : rgba($color-white, 1);
 $button-emphasis-background-inverted          : rgba($color-emphasis, 0);
 $button-emphasis-background-inverted-hover    : rgba($color-emphasis, 1);
 
-//* Emphasis Button Border
+// Emphasis Button Border
 $button-emphasis-border-radius                : 2px !default;
 $button-emphasis-border                       : 1px solid rgba($color-black, .7);
 $button-emphasis-border-hover                 : 1px solid rgba($color-emphasis, 1);
@@ -49,7 +49,7 @@ $button-emphasis-border-inverted              : 1px solid rgba($color-white, .7)
 $button-emphasis-border-inverted-hover        : 1px solid rgba($color-emphasis, 1);
 
 
-//* Standard Button Classes
+// Standard Button Classes
 .button a, // This allows defining from a parent element such as a menu list item
 a.button,
 input[type="submit"],

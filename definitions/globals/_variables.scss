@@ -4,78 +4,158 @@
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Base Colors
+// 1. Options
+//
+// Quickly set global options to control overall stylings
 
-// Greyscale Colors
-$color-white                                : rgb(255, 255, 255) !default;
-$color-grey-extra-light                     : rgb(246, 246, 246) !default;
-$color-grey-light                           : rgb(221, 221, 221) !default;
-$color-grey                                 : rgb(161, 161, 161) !default;
-$color-grey-dark                            : rgb(99, 99, 99) !default;
-$color-grey-extra-dark                      : rgb(29, 29, 29) !default;
-$color-black                                : rgb(0, 0, 0) !default;
+$enable-ninja-forms:                          true !default;
+
+
+
+// 2. Colors
+//
+// Basic colors including greyscale, rainbow colors and branding
+
+// Greyscale
+$color-white:                                 rgb(255, 255, 255) !default;
+$color-grey-extra-light:                      rgb(246, 246, 246) !default;
+$color-grey-light:                            rgb(221, 221, 221) !default;
+$color-grey:                                  rgb(161, 161, 161) !default;
+$color-grey-dark:                             rgb(99, 99, 99) !default;
+$color-grey-extra-dark:                       rgb(29, 29, 29) !default;
+$color-black:                                 rgb(0, 0, 0) !default;
 
 // Basic Colors
-$color-red                                  : #b03060 !default;
-$color-orange                               : #FE9A76 !default;
-$color-yellow                               : #FFD700 !default;
-$color-olive                                : #32CD32 !default;
-$color-green                                : #016936 !default;
-$color-teal                                 : #008080 !default;
-$color-blue                                 : #0E6EB8 !default;
-$color-violet                               : #EE82EE !default;
-$color-purple                               : #B413EC !default;
-$color-pink                                 : #FF1493 !default;
-$color-brown                                : #583e00 !default;
+$color-red:                                   #b03060 !default;
+$color-orange:                                #FE9A76 !default;
+$color-yellow:                                #FFD700 !default;
+$color-olive:                                 #32CD32 !default;
+$color-green:                                 #016936 !default;
+$color-teal:                                  #008080 !default;
+$color-blue:                                  #0E6EB8 !default;
+$color-violet:                                #EE82EE !default;
+$color-purple:                                #B413EC !default;
+$color-pink:                                  #FF1493 !default;
+$color-brown:                                 #583e00 !default;
 
 // Brand Colors
-$color-brand-1                              : rgb(188, 63, 67) !default;
-$color-brand-2                              : rgba($color-grey-extra-dark, 1) !default;
-$color-brand-3                              : rgb(227, 120, 105) !default;
-$color-brand-4                              : rgb(78, 195, 116) !default;
+$color-brand-1:                               rgb(188, 63, 67) !default;
+$color-brand-2:                               rgba($color-grey-extra-dark, 1) !default;
+$color-brand-3:                               rgb(227, 120, 105) !default;
+$color-brand-4:                               rgb(78, 195, 116) !default;
 
 // Primary Colors
-$color-primary                              : $color-brand-2 !default;
-$color-secondary                            : lighten($color-brand-2, 5%) !default;
-$color-emphasis                             : $color-brand-1 !default;
-$color-emphasis-secondary                   : $color-brand-3 !default;
+$color-primary:                               $color-brand-2 !default;
+$color-secondary:                             lighten($color-brand-2, 5%) !default;
+$color-emphasis:                              $color-brand-1 !default;
+$color-emphasis-secondary:                    $color-brand-3 !default;
 
 // Notification Colors
-$color-success                              : $color-emphasis;
-$color-success-weak                         : lighten($color-emphasis, 10%);
-$color-success-strong                       : darken($color-emphasis, 10%);
+$color-success:                               $color-emphasis !default;
+$color-success-weak:                          lighten($color-emphasis, 10%) !default;
+$color-success-strong:                        darken($color-emphasis, 10%) !default;
 
-$color-info                                 : #007DE8;
-$color-info-weak                            : lighten($color-info, 10%);
-$color-info-strong                          : darken($color-info, 10%);
+$color-info:                                  #007DE8 !default;
+$color-info-weak:                             lighten($color-info, 10%) !default;
+$color-info-strong:                           darken($color-info, 10%) !default;
 
-$color-warning                              : #FF7300;
-$color-warning-weak                         : lighten($color-warning, 10%);
-$color-warning-strong                       : darken($color-warning, 10%);
+$color-warning:                               #FF7300 !default;
+$color-warning-weak:                          lighten($color-warning, 10%) !default;
+$color-warning-strong:                        darken($color-warning, 10%) !default;
 
-$color-danger                               : #FF0000;
-$color-danger-weak                          : lighten($color-danger, 10%);
-$color-danger-strong                        : darken($color-danger, 10%);
+$color-danger:                                #FF0000 !default;
+$color-danger-weak:                           lighten($color-danger, 10%) !default;
+$color-danger-strong:                         darken($color-danger, 10%) !default;
 
 // Disabled
-$color-text-disabled                        : lighten($color-grey-light, 2%);
-$color-background-disabled                  : lighten($color-grey-extra-light, 5%);
-$color-border-disabled                      : lighten($color-grey-light, 5%);
+$color-text-disabled:                         lighten($color-grey-light, 2%) !default;
+$color-background-disabled:                   lighten($color-grey-extra-light, 5%) !default;
+$color-border-disabled:                       lighten($color-grey-light, 5%) !default;
 
-//* Tag
-$color-tag                        : $color-primary;
-$color-tag-hover                  : $color-emphasis;
-$color-tag-inverted               : $color-grey-extra-light;
-$color-tag-hover-inverted         : $color-emphasis;
 
-// Disabled Opacity
-$opacity-disabled                           : .5;
+
+
+// 3. Spacing
+//
+// Set the global spacing units. Elements use these values as required to generate tidy and consistent spacing.
 
 // Spacial Unit Size
 $unit                                       : 2.5em !default;
 
 // Standard Sizing
 $standard-field-height                      : 4.2rem !default;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 10. Media Breakpoints
+//
+// Default Breakpoints
+// Setting globals breakpoints allows for consistent timing of object scaling.
+// Refer to http://include-media.com/ for information
+
+$mobile-sml:                                  320px !default;
+$mobile-med:                                  375px !default;
+$mobile-lrg:                                  425px !default;
+$tablet-sml:                                  620px !default;
+$tablet-med:                                  720px !default;
+$tablet-lrg:                                  768px !default;
+$desktop-sml:                                 1024px !default;
+$desktop-med:                                 1440px !default;
+$desktop-lrg:                                 1920px !default;
+$desktop-xlrg:                                2560px !default;
+$desktop-xlrg:                                2560px !default;
+
+$breakpoints: (
+    'mobile-sml'              : $mobile-sml,
+    'mobile-med'              : $mobile-med,
+    'mobile-lrg'              : $mobile-lrg,
+    'tablet-sml'              : $tablet-sml,
+    'tablet-med'              : $tablet-med,
+    'tablet-lrg'              : $tablet-lrg,
+    'desktop-sml'             : $desktop-sml,
+    'desktop-med'             : $desktop-med,
+    'desktop-lrg'             : $desktop-lrg,
+    'desktop-xlrg'            : $desktop-xlrg
+);
+
+// Sidebar Box Sizing
+$sidebar-side:                                left !default;
+$sidebar-width:                               600px !default;
+$sidebar-max-width:                           80% !default;
+$sidebar-breakpoint:                          $desktop-lrg !default;
+
+// Device defined breakpoints
+$mobile-breakpoint            : '<mobile-lrg';
+$tablet-breakpoint            : '>=mobile-lrg', '<tablet-lrg';
+$desktop-breakpoint           : '>=tablet-lrg', '<desktop-med';
+$large-desktop-breakpoint     : '>=desktop-med';
+
+
+// 11. Z-index master list
+//
+// This list controls the z-index of components to avoid overlap of elements.
+// Warning: change item values on this list with caution
+
+$zindex-dropdown-backdrop:                    990 !default;
+$zindex-navbar:                               1000 !default;
+$zindex-dropdown:                             1000 !default;
+$zindex-navbar-fixed:                         1030 !default;
+$zindex-navbar-sticky:                        1030 !default;
+$zindex-modal-backdrop:                       1040 !default;
+$zindex-modal:                                1050 !default;
+$zindex-popover:                              1060 !default;
+$zindex-tooltip:                              1070 !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
@@ -88,54 +168,12 @@ $border-radius                              : 2px !default;
 $border                                     : 1px solid rgba($color-black, .2);
 $border-inverted                            : 1px solid rgba($color-white, .2);
 
-// ------------------------------------------------------------------------------------------------------------------
+// Disabled Opacity
+$opacity-disabled                           : .5;
 
-// Media Breakpoints
+// Tag
+$color-tag                        : $color-primary;
+$color-tag-hover                  : $color-emphasis;
+$color-tag-inverted               : $color-grey-extra-light;
+$color-tag-hover-inverted         : $color-emphasis;
 
-// Default Breakpoints
-$mobile-sml                             : 320px !default;
-$mobile-med                             : 375px !default;
-$mobile-lrg                             : 425px !default;
-$tablet-sml                   : 620px !default;
-$tablet-med                   : 720px !default;
-$tablet-lrg                   : 768px !default;
-$desktop-sml                  : 1024px !default;
-$desktop-med                  : 1440px !default;
-$desktop-lrg                  : 1920px !default;
-$desktop-xlrg                 : 2560px !default;
-$desktop-xlrg                 : 2560px !default;
-
-// Setup breakpoints at the end of the variables page to include values from variables
-//
-// Refer to http://include-media.com/ for information
-
-// Sidebar Box Sizing
-$sidebar-side                             : left !default;
-$sidebar-width                            : 600px !default;
-$sidebar-max-width                        : 80% !default;
-
-// Sidebar Display
-$sidebar-breakpoint                       : $desktop-lrg !default;
-
-$breakpoints: (
-  // Browser Breakpoints
-    'mobile-sml'              : $mobile-sml,
-    'mobile-med'              : $mobile-med,
-    'mobile-lrg'              : $mobile-lrg,
-    'tablet-sml'              : $tablet-sml,
-    'tablet-med'              : $tablet-med,
-    'tablet-lrg'              : $tablet-lrg,
-    'desktop-sml'             : $desktop-sml,
-    'desktop-med'             : $desktop-med,
-    'desktop-lrg'             : $desktop-lrg,
-    'desktop-xlrg'            : $desktop-xlrg,
-
-  // Sidebar Breakpoints
-    'sidebar-breakpoint'      : $sidebar-breakpoint,
-    'sidebar-width'           : $sidebar-width
-);
-
-$mobile-breakpoint            : '<mobile-lrg';
-$tablet-breakpoint            : '>=mobile-lrg', '<tablet-lrg';
-$desktop-breakpoint           : '>=tablet-lrg', '<desktop-med';
-$large-desktop-breakpoint     : '>=desktop-med';
