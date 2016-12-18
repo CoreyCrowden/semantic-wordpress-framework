@@ -2044,18 +2044,18 @@ time:before,
 }
 
 .unstyled-list ul, .unstyled-list li, aside ul, aside li, nav ul, nav li, footer ul, footer li {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
 ol, ul {
-  margin: 0.5em, 0, 0.5em, 0;
-  padding-left: 2.5em;
+  margin: 0.5em 0 0.5em 0;
+  padding-left: 2em;
 }
 
 ol ol, ol ul, ul ol, ul ul {
-  margin: 0.625em 0em 1.25em;
+  margin: 1em 0 1em;
 }
 
 article table {

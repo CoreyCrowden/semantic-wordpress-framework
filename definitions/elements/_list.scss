@@ -1,24 +1,26 @@
 // Lists
 
 // List Indent & Spacing
-$list-indent                      : 1 !default;
-$list-margin-top                  : .25 !default;
-$list-margin-bottom               : .5 !default;
+$list-indent:                       2em !default;
+$list-margin-top:                   1em !default;
+$list-margin-bottom:                1em !default;
+
+// ------------------------------------------------------------------------------------------------------------------
 
 // Unstyled List
 .unstyled-list, aside, nav, footer {
   ul, li {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     list-style: none;
   }
 }
 
-// Default List
+// List basics
 ol, ul {
-  margin: $paragraph-margin-top, 0, $paragraph-margin-bottom, 0;
-  @include padding-left($list-indent);
+  margin: $paragraph-margin-top 0 $paragraph-margin-bottom 0;
+  padding-left: $list-indent;
   ol, ul {
-    @include margin($list-margin-top, 0, $list-margin-bottom);
+    margin: $list-margin-top 0 $list-margin-bottom;
   }
 }
