@@ -23,7 +23,6 @@ time,
   @include margin(0.25);
 
   text-transform: uppercase;
-  font-size: font-size - 0.3;
   @include letter-spacing(0.15);
   font-weight: $font-weight;
 
