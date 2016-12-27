@@ -7,6 +7,39 @@ reference-title:
 reference:
 ---
 
+
+<!--Alterations to wp-->
+<article>
+  <h3>Alterations to WordPress</h3>
+  <span class="label">.menu</span><span class="label">.item</span>
+  <p>
+    To maintain semantic coding the following code must be added to the themes functions.php file to allow native
+    nav menus to use the menu classes.
+  </p>
+  <!--Code Snippet-->
+  <textarea class="code">
+/**
+ * Add custom classes to menu
+ *
+ * Add additional classes to the menu to allow control from the flexbox grid system
+ * .item - This class is applied to the menu items to receive flexbox child properties
+ */
+function custom_menu_classes($classes, $item){
+
+  // Add class .item to menu items
+  $classes[] = 'item';
+
+  return $classes;
+}
+add_filter('nav_menu_css_class' , __NAMESPACE__ . '\\custom_menu_classes' , 10 , 2);
+  </textarea>
+  <p>And be sure to declare the <code>.menu</code> class when outputting the menu.</p>
+  <!--Code Snippet-->
+  <textarea class="code">
+wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']);
+  </textarea>
+</article>
+
 <!--Initiating the menu-->
 <article>
   <h3>Initiating a menu</h3>
