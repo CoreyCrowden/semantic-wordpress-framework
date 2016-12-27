@@ -583,15 +583,15 @@ wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']);
   <textarea class="code">
 // SASS Example
 
-.menu {
+#menu-primary-menu {
 
-  > sub-menu {
+  > .item {
     @extend .dropdown.item;
 
-    > sub-menu {
+    > .item {
       @extend .slide.item;
 
-      > sub-menu {
+      > .item {
         @extend .small;
       }
 
