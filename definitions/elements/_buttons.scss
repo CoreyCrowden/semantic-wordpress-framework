@@ -11,22 +11,13 @@ $button-height                      : $standard-field-height !default;
 $button-padding-horizontal          : .75 !default;
 
 // Button Colors
-$button-color                       : rgba($color-black, .6) !default;
-$button-color-hover                 : rgba($color-white, 1) !default;
-$button-background                  : rgba($color-black, .1) !default;
-$button-background-hover            : $color-emphasis !default;
-
-$button-color-inverted              : rgba($color-black, .6) !default;
-$button-color-inverted-hover        : rgba($color-white, 1) !default;
-$button-background-inverted         : rgba($color-white, .9) !default;
-$button-background-inverted-hover   : $color-emphasis !default;
+$button-color                       : rgba($color-black, 1) !default;
+$button-background                  : rgba($color-grey-extra-light, 1) !default;
 
 // Button Border
 $button-border-radius               : 2px !default;
 $button-border                      : none !default;
-$button-border-inverted             : none !default;
 $button-border-hover                : none !default;
-$button-border-inverted-hover       : none !default;
 
 // ------------------------------------------------------------------------------------------------------------------ */
 
@@ -48,6 +39,7 @@ $button-emphasis-border-hover                 : 1px solid rgba($color-emphasis, 
 $button-emphasis-border-inverted              : 1px solid rgba($color-white, .7);
 $button-emphasis-border-inverted-hover        : 1px solid rgba($color-emphasis, 1);
 
+// ------------------------------------------------------------------------------------------------------------------ */
 
 // Standard Button Classes
 .button a, // This allows defining from a parent element such as a menu list item
@@ -65,13 +57,12 @@ input[type="button"] {
   @include padding( 0, $button-padding-horizontal);
   white-space: normal;
 
-  // Center the text
+  // Position the text
   @include flexbox;
   @include align-items(center);
+  @include justify-content($button-text-align);
 
   /* Typography */
- // @extend #{$button-typography};
-  //text-align: $widget-heading-text-align;
 
   /* Visual */
   border-radius: $button-border-radius;
@@ -81,28 +72,14 @@ input[type="button"] {
   box-shadow: none;
 
   // Normal
-  @include style(normal){
+  @include style(normal) {
+    opacity: 0.9;
     color: $button-color;
     background: $button-background;
-    border: $button-border;
   }
   // Normal Hover
-  @include style(hover){
-    background: $button-background-hover;
-    color: $button-color-hover;
-    border: $button-border-hover;
-  }
-  // Inverted
-  @include style(inverted){
-    color: $button-color-inverted;
-    background: $button-background-inverted;
-    border: $button-border-inverted;
-  }
-  // Inverted Hover
-  @include style(inverted-hover){
-    color: $button-color-inverted-hover;
-    background: $button-background-inverted-hover;
-    border: $button-border-inverted-hover;
+  @include style(hover) {
+    opacity: 1;
   }
 
   /* Misc */
@@ -121,45 +98,18 @@ input[type="button"] {
 
 // Action Button
 
-.button.emphasis a,
-a.button.emphasis,
-input.button.emphasis {
+.button.action a,
+a.button.action,
+input.button.action {
   /* Visual */
   border-radius: $button-emphasis-border-radius;
 
   // Normal
-  @include style(normal){
-    color: $button-emphasis-color;
-    background: $button-emphasis-background;
-    border: $button-emphasis-border;
+  @include style(normal) {
+    opacity: 0.9;
   }
   // Normal Hover
-  @include style(hover){
-    background: $button-emphasis-background-hover;
-    color: $button-emphasis-color-hover;
-    border: $button-emphasis-border-hover;
+  @include style(hover) {
+    opacity: 1;
   }
-  // Inverted
-  @include style(inverted){
-    color: $button-emphasis-color-inverted;
-    background: $button-emphasis-background-inverted;
-    border: $button-emphasis-border-inverted;
-  }
-  // Inverted Hover
-  @include style(inverted-hover){
-    color: $button-emphasis-color-inverted-hover;
-    background: $button-emphasis-background-inverted-hover;
-    border: $button-emphasis-border-inverted-hover;
-  }
-}
-
-
-// ------------------------------------------------------------------------------------------------------------------
-
-// Disabled Button
-
-.button.disabled a,
-a.button.disabled,
-input.button.disabled {
-
 }

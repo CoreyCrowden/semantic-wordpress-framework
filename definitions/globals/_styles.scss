@@ -13,19 +13,15 @@ $card-container-border-inverted:        none;
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Corner Radius
+// Text Color styles
 
-.square {
-  border-radius: 0;
+// This manipulates the color of buttons on specific styles below
+%light-text {
+  color: #eaeaea;
 }
 
-.rounded {
-  border-radius: $card-border-radius;
-}
 
-.circular {
-  border-radius: 99999px;
-}
+// ------------------------------------------------------------------------------------------------------------------
 
 // Style Colors
 
@@ -34,9 +30,21 @@ $card-container-border-inverted:        none;
 .button,
 .label {
 
+  // Corner Radius
+  .square {
+    border-radius: 0;
+  }
+  .rounded {
+    border-radius: $card-border-radius;
+  }
+  .circular {
+    border-radius: 99999px;
+  }
+
   // Basic Colors
   &.black {
     background: $color-black;
+    @extend %light-text;
   }
   &.white {
     background: $color-white;
@@ -52,73 +60,96 @@ $card-container-border-inverted:        none;
   }
   &.dark.grey {
     background: $color-grey-dark;
+    @extend %light-text;
   }
   &.extra.dark.grey {
     background: $color-grey-extra-dark;
+    @extend %light-text;
   }
   &.red {
     background: $color-red;
+    @extend %light-text;
   }
   &.orange {
     background: $color-orange;
+    @extend %light-text;
   }
   &.yellow {
     background: $color-yellow;
   }
   &.olive {
     background: $color-olive;
+    @extend %light-text;
   }
   &.green {
     background: $color-green;
+    @extend %light-text;
   }
   &.teal {
     background: $color-teal;
+    @extend %light-text;
   }
   &.blue {
     background: $color-blue;
+    @extend %light-text;
   }
   &.violet {
     background: $color-violet;
+    @extend %light-text;
   }
   &.purple {
     background: $color-purple;
+    @extend %light-text;
   }
   &.pink {
     background: $color-pink;
+    @extend %light-text;
   }
   &.brown {
     background: $color-brown;
+    @extend %light-text;
   }
 
   // Conditional Colors
   &.primary {
     background: $color-primary;
+    @extend %light-text;
   }
   &.secondary {
     background: $color-secondary;
+    @extend %light-text;
   }
   &.emphasis {
     background: $color-emphasis;
+    @extend %light-text;
   }
   &.emphasis-secondary {
     background: $color-secondary;
+    @extend %light-text;
   }
-  &.disabled {
+
+  // Disabled
+  &.disabled, &.disabled:hover {
     opacity: 0.5;
+    cursor: default;
   }
 
   // Notification Colors
   &.success {
     background: $color-success-weak;
+    @extend %light-text;
   }
   &.info {
     background: $color-info-weak;
+    @extend %light-text;
   }
   &.warning {
     background: $color-warning-weak;
+    @extend %light-text;
   }
   &.danger {
     background: $color-danger-weak;
+    @extend %light-text;
   }
 
   &.outlined {
@@ -135,14 +166,5 @@ $card-container-border-inverted:        none;
     background: rgba($color-primary, .85);
     color: $text-color-strong-inverted;
   }
-
-  &.hover:hover {
-    background: rgba($color-emphasis, 1);
-    color: $text-color-strong-inverted;
-  }
-
-
-
-
 
 }

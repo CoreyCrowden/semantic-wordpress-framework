@@ -515,15 +515,94 @@ body {
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
 
-.square {
+.container.black,
+.card.black,
+.button.black,
+.label.black, .container.dark.grey,
+.card.dark.grey,
+.button.dark.grey,
+.label.dark.grey, .container.extra.dark.grey,
+.card.extra.dark.grey,
+.button.extra.dark.grey,
+.label.extra.dark.grey, .container.red,
+.card.red,
+.button.red,
+.label.red, .container.orange,
+.card.orange,
+.button.orange,
+.label.orange, .container.olive,
+.card.olive,
+.button.olive,
+.label.olive, .container.green,
+.card.green,
+.button.green,
+.label.green, .container.teal,
+.card.teal,
+.button.teal,
+.label.teal, .container.blue,
+.card.blue,
+.button.blue,
+.label.blue, .container.violet,
+.card.violet,
+.button.violet,
+.label.violet, .container.purple,
+.card.purple,
+.button.purple,
+.label.purple, .container.pink,
+.card.pink,
+.button.pink,
+.label.pink, .container.brown,
+.card.brown,
+.button.brown,
+.label.brown, .container.primary,
+.card.primary,
+.button.primary,
+.label.primary, .container.secondary,
+.card.secondary,
+.button.secondary,
+.label.secondary, .container.emphasis,
+.card.emphasis,
+.button.emphasis,
+.label.emphasis, .container.emphasis-secondary,
+.card.emphasis-secondary,
+.button.emphasis-secondary,
+.label.emphasis-secondary, .container.success,
+.card.success,
+.button.success,
+.label.success, .container.info,
+.card.info,
+.button.info,
+.label.info, .container.warning,
+.card.warning,
+.button.warning,
+.label.warning, .container.danger,
+.card.danger,
+.button.danger,
+.label.danger {
+  color: #eaeaea;
+}
+
+.container .square,
+.card .square,
+.button .square,
+.label .square {
   border-radius: 0;
 }
 
-.rounded, .card {
+.container .rounded, .container .card,
+.card .rounded,
+.card .card,
+.button .rounded,
+.button .card,
+.label .rounded,
+.label .card {
   border-radius: 0.25em;
 }
 
-.circular {
+.container .circular,
+.card .circular,
+.button .circular,
+.label .circular {
   border-radius: 99999px;
 }
 
@@ -580,7 +659,7 @@ body {
 .card.red,
 .button.red,
 .label.red {
-  background: #b02928;
+  background: #b00c00;
 }
 
 .container.orange,
@@ -622,7 +701,7 @@ body {
 .card.blue,
 .button.blue,
 .label.blue {
-  background: #0E6EB8;
+  background: #118db8;
 }
 
 .container.violet,
@@ -681,11 +760,15 @@ body {
   background: #2a2a2a;
 }
 
-.container.disabled,
+.container.disabled, .container.disabled:hover,
 .card.disabled,
+.card.disabled:hover,
 .button.disabled,
-.label.disabled {
+.button.disabled:hover,
+.label.disabled,
+.label.disabled:hover {
   opacity: 0.5;
+  cursor: default;
 }
 
 .container.success,
@@ -736,14 +819,6 @@ body {
 .button.strong,
 .label.strong {
   background: rgba(29, 29, 29, 0.85);
-  color: white;
-}
-
-.container.hover:hover,
-.card.hover:hover,
-.button.hover:hover,
-.label.hover:hover {
-  background: #bc3f43;
   color: white;
 }
 
@@ -2423,6 +2498,9 @@ input[type="button"] {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center;
+  -ms-flex-pack: center;
+  -moz-justify-content: center;
+  justify-content: center;
   /* Typography */
   /* Visual */
   border-radius: 2px;
@@ -2430,9 +2508,9 @@ input[type="button"] {
   text-shadow: none;
   text-decoration: none;
   box-shadow: none;
-  color: rgba(0, 0, 0, 0.6);
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
+  opacity: 0.9;
+  color: black;
+  background: #f6f6f6;
   /* Misc */
   cursor: pointer;
   -webkit-user-select: none;
@@ -2454,18 +2532,16 @@ input[type="submit"], .normal
 input[type="button"],
 .inverted .normal
 input[type="button"] {
-  color: rgba(0, 0, 0, 0.6);
-  background: rgba(0, 0, 0, 0.1);
-  border: none;
+  opacity: 0.9;
+  color: black;
+  background: #f6f6f6;
 }
 
 .button a:hover,
 a.button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
-  background: #bc3f43;
-  color: white;
-  border: none;
+  opacity: 1;
 }
 
 .normal .button a:hover,
@@ -2479,111 +2555,43 @@ input[type="submit"]:hover, .normal
 input[type="button"]:hover,
 .inverted .normal
 input[type="button"]:hover {
-  background: #bc3f43;
-  color: white;
-  border: none;
+  opacity: 1;
 }
 
-.inverted .button a,
-.normal .inverted .button a, .inverted
-a.button,
-.normal .inverted
-a.button, .inverted
-input[type="submit"],
-.normal .inverted
-input[type="submit"], .inverted
-input[type="button"],
-.normal .inverted
-input[type="button"] {
-  color: rgba(0, 0, 0, 0.6);
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-}
-
-.inverted .button a:hover,
-.normal .inverted .button a:hover, .inverted
-a.button:hover,
-.normal .inverted
-a.button:hover, .inverted
-input[type="submit"]:hover,
-.normal .inverted
-input[type="submit"]:hover, .inverted
-input[type="button"]:hover,
-.normal .inverted
-input[type="button"]:hover {
-  color: white;
-  background: #bc3f43;
-  border: none;
-}
-
-.button.emphasis a,
-a.button.emphasis,
-input.button.emphasis {
+.button.action a,
+a.button.action,
+input.button.action {
   /* Visual */
   border-radius: 2px;
-  color: rgba(0, 0, 0, 0.8);
-  background: rgba(188, 63, 67, 0);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+  opacity: 0.9;
 }
 
-.normal .button.emphasis a,
-.inverted .normal .button.emphasis a, .normal
-a.button.emphasis,
+.normal .button.action a,
+.inverted .normal .button.action a, .normal
+a.button.action,
 .inverted .normal
-a.button.emphasis, .normal
-input.button.emphasis,
+a.button.action, .normal
+input.button.action,
 .inverted .normal
-input.button.emphasis {
-  color: rgba(0, 0, 0, 0.8);
-  background: rgba(188, 63, 67, 0);
-  border: 1px solid rgba(0, 0, 0, 0.7);
+input.button.action {
+  opacity: 0.9;
 }
 
-.button.emphasis a:hover,
-a.button.emphasis:hover,
-input.button.emphasis:hover {
-  background: #bc3f43;
-  color: black;
-  border: 1px solid #bc3f43;
+.button.action a:hover,
+a.button.action:hover,
+input.button.action:hover {
+  opacity: 1;
 }
 
-.normal .button.emphasis a:hover,
-.inverted .normal .button.emphasis a:hover, .normal
-a.button.emphasis:hover,
+.normal .button.action a:hover,
+.inverted .normal .button.action a:hover, .normal
+a.button.action:hover,
 .inverted .normal
-a.button.emphasis:hover, .normal
-input.button.emphasis:hover,
+a.button.action:hover, .normal
+input.button.action:hover,
 .inverted .normal
-input.button.emphasis:hover {
-  background: #bc3f43;
-  color: black;
-  border: 1px solid #bc3f43;
-}
-
-.inverted .button.emphasis a,
-.normal .inverted .button.emphasis a, .inverted
-a.button.emphasis,
-.normal .inverted
-a.button.emphasis, .inverted
-input.button.emphasis,
-.normal .inverted
-input.button.emphasis {
-  color: rgba(255, 255, 255, 0.8);
-  background: rgba(188, 63, 67, 0);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-}
-
-.inverted .button.emphasis a:hover,
-.normal .inverted .button.emphasis a:hover, .inverted
-a.button.emphasis:hover,
-.normal .inverted
-a.button.emphasis:hover, .inverted
-input.button.emphasis:hover,
-.normal .inverted
-input.button.emphasis:hover {
-  color: white;
-  background: #bc3f43;
-  border: 1px solid #bc3f43;
+input.button.action:hover {
+  opacity: 1;
 }
 
 input:not([type]),
