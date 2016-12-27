@@ -588,10 +588,10 @@ wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'menu']);
   > .item {
     @extend .dropdown.item;
 
-    > .item {
+    > .sub-menu > .item {
       @extend .slide.item;
 
-      > .item {
+      > .sub-menu > .item {
         @extend .small;
       }
 
