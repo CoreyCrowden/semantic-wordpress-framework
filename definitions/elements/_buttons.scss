@@ -42,7 +42,7 @@ $button-action-border-inverted-hover        : 1px solid rgba($color-accent, 1);
 // ------------------------------------------------------------------------------------------------------------------ */
 
 // Standard Button Classes
-.button a,
+.button > a,
 a.button,
 input[type="submit"],
 input[type="button"] {
@@ -73,15 +73,16 @@ input[type="button"] {
   box-shadow: none;
 
   // Normal
-  @include style(normal) {
     opacity: 0.9;
     color: $button-color;
     background: $button-background;
-  }
+
   // Normal Hover
-  @include style(hover) {
+  &:hover {
     opacity: 1;
   }
+
+
 
   /* Misc */
   cursor: pointer;
@@ -96,7 +97,33 @@ input[type="button"] {
 
   // Additional Button Classes
 
-  // Justify button
+  // Right Align
+  &.right,
+  .content.right > &,
+  p.right > & ,
+  span.right > & {
+    margin-left: auto;
+  }
+
+  // Left Align
+  &.left,
+  .content.left > &,
+  p.left > & ,
+  span.left > & {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  // Center Align
+  &.centered,
+  .content.centered > &,
+  p.centered > & ,
+  span.centered > & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Justified Alignment
   &.justified {
     width: auto;
   }
