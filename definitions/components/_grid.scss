@@ -354,9 +354,15 @@ $full-width: 100% / 1;
 
   // Re-Order Items
   &.first {
+    @include order(-2);
+  }
+  &.second {
     @include order(-1);
   }
   &.last {
+    @include order(3);
+  }
+  &.second.last {
     @include order(2);
   }
 }
