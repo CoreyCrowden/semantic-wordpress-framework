@@ -269,57 +269,15 @@ category: Globals
 
 <!--Brand Colors-->
 <article>
-  <h3>Brand Colors</h3>
-  <span class="label strong">$color-brand-1</span><span class="label strong">$color-brand-2</span><span class="label strong">$color-brand-3</span><span class="label strong">$color-brand-4</span>
+  <h3>Brand Colors & Site Colors</h3>
+  <span class="label strong">.primary</span><span class="label strong">.secondary</span><span class="label strong">.accent</span><span class="label">.light</span><span class="label">.dark</span>
   <p>
     Sass variables allow for consistent and easy access to brand colors.
     By defining your brand colors and then referencing those colors for website colors you can quickly
     deploy a consistent color scheme site wide that matches the brand.
   </p>
 
-  <div class="example html">
-
-    <div class="grid stretched">
-      <div class="item two thirds padded">
-        <div class="card primary light content inverted">
-          <h5>Magni fugiat habitasse autem quibusdam laboriosam exercitationem incididunt.</h5>
-          <p>
-            Natus litora explicabo illo ratione facilis, malesuada deleniti accumsan ipsam fuga aperiam, laboriosam esse rem duis temporibus scelerisque, blandit eveniet. Culpa soluta.
-          </p>
-          <p>
-            Donec pulvinar, mattis mollitia praesent wisi mauris harum exercitation. Ultricies. Dictum vivamus! Unde facilisis debitis pede mauris nisi sodales porta phasellus litora.
-          </p>
-        </div>
-      </div>
-      <div class="item one third">
-        <div class="container primary content inverted">
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-  <!--Code Snippet-->
-  <textarea class="code">
-$color-brand-1: rgb(26, 58, 94);
-
-$color-primary: $color-brand-1;
-
-#brand-example {
-  background: colorset($color-primary, light);
-  @extend .inverted;
-}
-
-  </textarea>
-
-
-
-
   <!--Example-->
-  <h5>Website Colors</h5>
-  <p></p>
   <div class="example small">
     <div class="grid stretched sixths">
 
@@ -357,12 +315,102 @@ $color-primary: $color-brand-1;
         </div>
       </div>
 
+      <!--Accent-->
+      <div class="item" style="height: 200px">
+        <div class="container light accent padded full height">
+          <span class="label">.light</span><span class="label">.accent</span>
+        </div>
+      </div>
+      <div class="item" style="height: 200px">
+        <div class="container accent padded full height">
+          <span class="label">.accent</span>
+        </div>
+      </div>
+      <div class="item" style="height: 200px">
+        <div class="container padded dark accent full height">
+          <span class="label">.dark</span><span class="label">.accent</span>
+        </div>
+      </div>
+
 
 
     </div>
 
   </div>
 
+  <!--Example-->
+  <h5>Example:</h5>
+  <div class="example html">
+    <div class="grid stretched">
+      <!--Navbar-->
+      <div class="item full width">
+        <div class="container secondary inverted padded">
+          <ul class="menu">
+            <li class="item button accent"><a>Navbar</a></li>
+            <li class="item"><a>Menu Item</a></li>
+            <li class="item dropdown menu-item-has-children"><a>Menu Item</a>
+              <ul class="sub-menu">
+                <li class="item"><a>Menu Item</a></li>
+                <li class="item"><a>Menu Item</a></li>
+                <li class="item"><a>Menu Item</a></li>
+                <li class="item"><a>Menu Item</a></li>
+              </ul>
+            </li>
+            <li class="item button right"><a>Menu Item</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!--Main-->
+      <div class="item two thirds">
+        <div class="container">
+
+          <div class="container padded">
+            <div class="card dark white content">
+              <span class="label">article</span>
+              <p>
+                Natus litora explicabo illo ratione facilis, malesuada deleniti accumsan ipsam fuga aperiam, laboriosam esse rem duis temporibus scelerisque, blandit eveniet. Culpa soluta.
+              </p>
+              <p>
+                Donec pulvinar, mattis mollitia praesent wisi mauris harum exercitation. Ultricies. Dictum vivamus! Unde facilisis debitis pede mauris nisi sodales porta phasellus litora.
+                Ducimus luctus gravida dictumst, eius deserunt. Scelerisque lectus laoreet exercitation tempor suscipit, dignissim mattis voluptatem, omnis omnis, faucibus platea, urna, elementum provident egestas similique? Dolorum phasellus dicta, egestas excepturi pharetra, amet tenetur aperiam.
+              </p>
+            </div>
+          </div>
+
+            <div class="container primary inverted padded fluid centered">
+
+              <h5>Call to action banner</h5>
+              <p>
+                Nunc unde animi egestas dis unde, nullam venenatis hendrerit consequuntur aliquip nisi eiusmod, mollit repellat pharetra est et, pellentesque inventore! Nostra cupiditate dignissim wisi senectus dolorum, omnis sagittis. Lacus natus. Nibh natoque error.
+              </p>
+              <p><a href="" class="button accent dark">Do Action Now</a></p>
+
+            </div>
+
+          <div class="container padded">
+            <div class="card dark white content">
+              <span class="label">article</span>
+              <p>
+                Rem felis volutpat sunt, odio laboris nobis tenetur atque, veritatis. Faucibus labore? In praesentium laudantium atque volutpat quam donec necessitatibus sit? Facere consequatur hendrerit sequi aute nam cumque cupiditate hymenaeos elit magna laoreet.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--Sidebar-->
+      <div class="item one third">
+        <div class="container dark white content">
+          <span class="label">#sidebar</span>
+          <p>
+            Ducimus luctus gravida dictumst, eius deserunt. Scelerisque lectus laoreet exercitation tempor suscipit, dignissim mattis voluptatem, omnis omnis, faucibus platea, urna, elementum provident egestas similique? Dolorum phasellus dicta, egestas excepturi pharetra, amet tenetur aperiam.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </article>
 

@@ -144,7 +144,7 @@ $card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default
   @include padding($container-padding-top, $container-padding-right, $container-padding-bottom, $container-padding-left);
 
   // Offset for default padding
-  .fluid {
+  > .fluid {
     @include fluid($container-padding-top, $container-padding-right, $container-padding-bottom, $container-padding-left);
   }
 
@@ -155,7 +155,7 @@ $card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default
       @include padding($container-relaxed-padding-top, $container-relaxed-padding-right, $container-relaxed-padding-bottom, $container-relaxed-padding-left);
 
       // Offset for relaxed padding
-      .fluid {
+      > .fluid {
         // Only add relaxed padding on large displays
         @include fluid($container-relaxed-padding-top, $container-relaxed-padding-right, $container-relaxed-padding-bottom, $container-relaxed-padding-left);
       }
@@ -169,7 +169,7 @@ $card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default
   @include padding(0, $container-padding-right, 0, $container-padding-left);
 
   // Offset for default padding
-  .fluid {
+  > .fluid {
     @include fluid(0, $container-padding-right, 0, $container-padding-left);
   }
 
@@ -180,7 +180,7 @@ $card-content-relaxed-padding-left     : $card-content-padding-left * 2 !default
       @include padding(0, $container-relaxed-padding-right, 0, $container-relaxed-padding-left);
 
       // Offset for relaxed padding
-      .fluid {
+      > .fluid {
         // Only add relaxed padding on large displays
         @include fluid(0, $container-relaxed-padding-right, 0, $container-relaxed-padding-left);
       }

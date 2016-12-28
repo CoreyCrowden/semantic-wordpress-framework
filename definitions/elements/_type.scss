@@ -97,13 +97,10 @@ $paragraph-margin-bottom                    : .5em !default;
 $font-link-decoration                       : none !default;
 $font-link-decoration-hover                 : none !default;
 
-$text-color-link                            : $color-emphasis !default;
-$text-color-link-visited                    : darken( $color-emphasis, 0% ) !default;
-$text-color-link-hover                      : darken( $color-emphasis, 10% ) !default;
+$text-color-link                            : $color-accent !default;
+$text-color-link-visited                    : darken( $color-accent, 0% ) !default;
+$text-color-link-hover                      : darken( $color-accent, 10% ) !default;
 
-$text-color-link-inverted                   : $color-emphasis-secondary !default;
-$text-color-link-visited-inverted           : darken( $color-emphasis-secondary, 0% ) !default;
-$text-color-link-hover-inverted             : darken( $color-emphasis-secondary, 10% ) !default;
 
 // Selection Highlight
 $text-color-selection                       : $text-color-strong-inverted !default;
@@ -261,43 +258,22 @@ h6 {
 // Links
 
 a {
-
-  // Normal
   @include style(normal) {
     color: $text-color-strong;
     text-decoration: $font-link-decoration;
   }
-  // Normal Hover
   @include style(hover) {
     color: $text-color-link-hover;
     text-decoration: $font-link-decoration-hover;
   }
-  // Inverted
-  @include style(inverted) {
-    color: $text-color-strong-inverted;
-  }
-  // Inverted Hover
-  @include style(inverted-hover) {
-    color: $text-color-link-hover-inverted;
-  }
 
-  //* Link Style inside content area
-  // Normal
+  // Link Style inside content area
   article p & {
     @include style(normal) {
       color: $text-color-link;
     }
-    // Normal Hover
     @include style(hover) {
       color: $text-color-link-hover;
-    }
-    // Inverted
-    @include style(inverted) {
-      color: $text-color-link-inverted;
-    }
-    // Inverted Hover
-    @include style(inverted-hover) {
-      color: $text-color-link-hover-inverted;
     }
   }
 }

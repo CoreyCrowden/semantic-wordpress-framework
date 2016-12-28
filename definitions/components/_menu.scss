@@ -181,7 +181,6 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
 
 .dropdown.item {
 
-  > .menu,
   > .sub-menu {
     // Display sub menus as a column / vertical
     @include flex-direction(column);
@@ -198,9 +197,7 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
   }
 
   // Hover Styles
-  &:hover > .menu,
   &:hover > .sub-menu,
-  .menu:hover,
   .sub-menu:hover {
     visibility: visible;
     opacity: 1;

@@ -219,20 +219,9 @@ $card-container-border-inverted:        none;
       background: colorset($color, dark);
     }
   }
-  &.emphasis {
+  &.accent {
     @extend %light-text;
-    $color: $color-emphasis;
-    background: colorset($color);
-    &.light {
-      background: colorset($color, light);
-    }
-    &.dark {
-      background: colorset($color, dark);
-    }
-  }
-  &.emphasis-secondary {
-    @extend %light-text;
-    $color: $color-emphasis-secondary;
+    $color: $color-accent;
     background: colorset($color);
     &.light {
       background: colorset($color, light);
@@ -305,7 +294,7 @@ $card-container-border-inverted:        none;
   }
 
   &.strong {
-    background: rgba($color-primary, .85);
+    background: rgba(colorset($color-secondary, dark), .85);
     color: $text-color-strong-inverted;
   }
 

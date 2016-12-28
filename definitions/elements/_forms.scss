@@ -10,7 +10,7 @@ $form-input-height                                : $standard-field-height !defa
 $form-input-border-radius                         : 2px !default;
 $form-input-border-color                          : rgba($color-grey-light, 1);
 $form-input-border-color-hover                    : rgba($color-grey, 1);
-$form-input-border-color-focus                    : rgba($color-emphasis, 1);
+$form-input-border-color-focus                    : rgba($color-accent, 1);
 $form-input-border                                : 1px solid rgba($form-input-border-color, 1);
 
 // Form Inputs
@@ -51,7 +51,7 @@ textarea,
 select {
 
   /* Positioning */
-  margin: 0px;
+  margin: 0;
 
   /* Box-model */
   @include padding( $form-input-padding-top, $form-input-padding-right, $form-input-padding-bottom, $form-input-padding-left);
@@ -403,7 +403,7 @@ input[type="radio"]:checked ~ label {
 
 //* Error Placeholder
 .nf-error {
-  @include placeholder-color($standard-color: $color-danger-weak, $hover-color: $color-danger, $focus-color: $color-danger-strong);
+  @include placeholder-color($standard-color: colorset($color-danger, light), $hover-color: colorset($color-danger), $focus-color: colorset($color-danger, dark));
 }
 
 //* Disabled Placeholder

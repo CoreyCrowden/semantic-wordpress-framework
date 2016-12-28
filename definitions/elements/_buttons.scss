@@ -24,25 +24,25 @@ $button-border-hover                          : none !default;
 // Emphasis Button Colors
 $button-action-color                        : rgba($color-black, .8);
 $button-action-color-hover                  : rgba($color-black, 1);
-$button-action-background                   : rgba($color-emphasis, 0);
-$button-action-background-hover             : rgba($color-emphasis, 1);
+$button-action-background                   : rgba($color-accent, 0);
+$button-action-background-hover             : rgba($color-accent, 1);
 
 $button-action-color-inverted               : rgba($color-white, .8);
 $button-action-color-inverted-hover         : rgba($color-white, 1);
-$button-action-background-inverted          : rgba($color-emphasis, 0);
-$button-action-background-inverted-hover    : rgba($color-emphasis, 1);
+$button-action-background-inverted          : rgba($color-accent, 0);
+$button-action-background-inverted-hover    : rgba($color-accent, 1);
 
 // Emphasis Button Border
 $button-action-border-radius                : 2px !default;
 $button-action-border                       : 1px solid rgba($color-black, .7);
-$button-action-border-hover                 : 1px solid rgba($color-emphasis, 1);
+$button-action-border-hover                 : 1px solid rgba($color-accent, 1);
 $button-action-border-inverted              : 1px solid rgba($color-white, .7);
-$button-action-border-inverted-hover        : 1px solid rgba($color-emphasis, 1);
+$button-action-border-inverted-hover        : 1px solid rgba($color-accent, 1);
 
 // ------------------------------------------------------------------------------------------------------------------ */
 
 // Standard Button Classes
-.button a, // This allows defining from a parent element such as a menu list item
+.button a,
 a.button,
 input[type="submit"],
 input[type="button"] {
