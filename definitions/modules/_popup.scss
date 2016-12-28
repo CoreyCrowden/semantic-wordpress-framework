@@ -1,0 +1,8 @@
+// Popup
+//
+// The pop over is a basic set of styles to simply create popup content
+
+.popup {
+  z-index: $z-index-popup;
+  position: absolute;
+}

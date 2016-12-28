@@ -163,15 +163,13 @@ $large-desktop-breakpoint                   : '>=desktop-med';
 // This list controls the z-index of components to avoid overlap of elements.
 // Warning: change item values on this list with caution
 
-$zindex-dropdown-backdrop                   : 990 !default;
-$zindex-navbar                              : 1000 !default;
-$zindex-dropdown                            : 1000 !default;
-$zindex-navbar-fixed                        : 1030 !default;
-$zindex-navbar-sticky                       : 1030 !default;
-$zindex-modal-backdrop                      : 1040 !default;
-$zindex-modal                               : 1050 !default;
-$zindex-popover                             : 1060 !default;
-$zindex-tooltip                             : 1070 !default;
+
+$z-index-main                                : 1000 !default;
+$z-index-navbar                              : 1040 !default;
+$z-index-loader                              : 1050 !default;
+$z-index-sidebar                             : 1060 !default;
+$z-index-popup                               : 1070 !default;
+$z-index-tooltip                             : 1080 !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 

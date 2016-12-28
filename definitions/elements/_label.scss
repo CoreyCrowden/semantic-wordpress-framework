@@ -34,14 +34,6 @@ time,
     color: $text-color-strong-inverted;
     background-color: lighten($color-tag-hover, 10%);
   }
-  @include style(inverted){
-    color: $text-color-strong;
-    background-color: $color-tag-inverted;
-  }
-  @include style(inverted-hover){
-    color: $text-color-strong;
-    background-color: lighten($color-tag-hover-inverted, 10%);
-  }
 }
 
 
