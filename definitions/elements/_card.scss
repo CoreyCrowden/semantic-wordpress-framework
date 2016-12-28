@@ -1,6 +1,6 @@
 // Card
 //
-// Special styles create a card like content area. Depending on defined
+// Special styles create a cards like content area. Depending on defined
 // variables styles can include background, border, border radius, shadow
 // etc.
 
@@ -15,7 +15,7 @@
 
 
 
-  // Round corners on fluid elements when at top or bottom of card
+  // Round corners on fluid elements when at top or bottom of cards
   .top {
     border-top-left-radius: $card-border-radius;
     border-top-right-radius: $card-border-radius;

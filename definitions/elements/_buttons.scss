@@ -1,43 +1,43 @@
 // Standard Button & Defaults
 
 // Button Font
-//$button-typography                  : '.font.label' !default;
-$button-text-align                  : center !default;
+//$button-typography                            : '.font.label' !default;
+$button-text-align                            : center !default;
 
 // Button Margins & Padding
-$button-margin-vertical             : .3 !default;
-$button-margin-horizontal           : 0 !default;
-$button-height                      : $standard-field-height !default;
-$button-padding-horizontal          : .75 !default;
+$button-margin-vertical                       : .3 !default;
+$button-margin-horizontal                     : 0 !default;
+$button-height                                : $standard-field-height !default;
+$button-padding-horizontal                    : .75 !default;
 
 // Button Colors
-$button-color                       : rgba($color-black, 1) !default;
-$button-background                  : rgba($color-grey-extra-light, 1) !default;
+$button-color                                 : rgba($color-black, 1) !default;
+$button-background                            : rgba($color-grey-extra-light, 1) !default;
 
 // Button Border
-$button-border-radius               : 2px !default;
-$button-border                      : none !default;
-$button-border-hover                : none !default;
+$button-border-radius                         : 2px !default;
+$button-border                                : none !default;
+$button-border-hover                          : none !default;
 
 // ------------------------------------------------------------------------------------------------------------------ */
 
 // Emphasis Button Colors
-$button-emphasis-color                        : rgba($color-black, .8);
-$button-emphasis-color-hover                  : rgba($color-black, 1);
-$button-emphasis-background                   : rgba($color-emphasis, 0);
-$button-emphasis-background-hover             : rgba($color-emphasis, 1);
+$button-action-color                        : rgba($color-black, .8);
+$button-action-color-hover                  : rgba($color-black, 1);
+$button-action-background                   : rgba($color-emphasis, 0);
+$button-action-background-hover             : rgba($color-emphasis, 1);
 
-$button-emphasis-color-inverted               : rgba($color-white, .8);
-$button-emphasis-color-inverted-hover         : rgba($color-white, 1);
-$button-emphasis-background-inverted          : rgba($color-emphasis, 0);
-$button-emphasis-background-inverted-hover    : rgba($color-emphasis, 1);
+$button-action-color-inverted               : rgba($color-white, .8);
+$button-action-color-inverted-hover         : rgba($color-white, 1);
+$button-action-background-inverted          : rgba($color-emphasis, 0);
+$button-action-background-inverted-hover    : rgba($color-emphasis, 1);
 
 // Emphasis Button Border
-$button-emphasis-border-radius                : 2px !default;
-$button-emphasis-border                       : 1px solid rgba($color-black, .7);
-$button-emphasis-border-hover                 : 1px solid rgba($color-emphasis, 1);
-$button-emphasis-border-inverted              : 1px solid rgba($color-white, .7);
-$button-emphasis-border-inverted-hover        : 1px solid rgba($color-emphasis, 1);
+$button-action-border-radius                : 2px !default;
+$button-action-border                       : 1px solid rgba($color-black, .7);
+$button-action-border-hover                 : 1px solid rgba($color-emphasis, 1);
+$button-action-border-inverted              : 1px solid rgba($color-white, .7);
+$button-action-border-inverted-hover        : 1px solid rgba($color-emphasis, 1);
 
 // ------------------------------------------------------------------------------------------------------------------ */
 
@@ -102,7 +102,7 @@ input[type="button"] {
 a.button.action,
 input.button.action {
   /* Visual */
-  border-radius: $button-emphasis-border-radius;
+  border-radius: $button-action-border-radius;
 
   // Normal
   @include style(normal) {

@@ -1,0 +1,46 @@
+// Color Function
+//
+// This color function is used for returning values from the color map
+
+@function colorset($color-name, $color-value: normal){
+
+  // Return the color when the value is true
+
+
+  // Extra Light
+  @if $color-value == extralight {
+
+    @return lighten($color-name, 20%);
+
+  }
+
+  // Light
+  @else if $color-value == light {
+
+    @return lighten($color-name, 10%);
+
+  }
+
+  // Normal
+  @else if $color-value == normal {
+
+    @return $color-name;
+
+  }
+
+  // Dark
+  @else if $color-value == dark {
+
+    @return darken($color-name, 10%);
+
+  }
+
+  // Extra Dark
+  @else if $color-value == extradark {
+
+    @return darken($color-name, 20%);
+
+  }
+
+
+}

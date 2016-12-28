@@ -5,15 +5,15 @@
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Font Scaling
-$font-size-extra-small                      : .6rem !default;
-$font-size-small                            : .8rem !default;
-$font-size-normal                           : 1rem !default;
-$font-size-large                            : 1.2rem !default;
-$font-size-extra-large                      : 1.4rem !default;
+// Size Scaling
+$font-size-very-small                      : 1.2rem !default;
+$font-size-small                            : 1.4rem !default;
+$font-size-normal                           : 1.6rem !default;
+$font-size-large                            : 2rem !default;
+$font-size-very-large                      : 2.4rem !default;
 
-.extra.small {
-  font-size: $font-size-extra-small;
+.very.small {
+  font-size: $font-size-very-small;
 }
 .small {
   font-size: $font-size-small;
@@ -24,8 +24,8 @@ $font-size-extra-large                      : 1.4rem !default;
 .large {
   font-size: $font-size-large;
 }
-.extra.large {
-  font-size: $font-size-extra-large;
+.very.large {
+  font-size: $font-size-very-large;
 }
 
 // ------------------------------------------------------------------------------------------------------------------
@@ -36,56 +36,56 @@ $font-size-extra-large                      : 1.4rem !default;
 // Intended to minimise and simply typography management.
 
 // Basics
-$font-family:                                 "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
-$font-size:                                   1.6em !default;
-$font-weight:                                 400 !default;
-$letter-spacing:                              .0em !default;
-$line-height:                                 1.35 !default;
-$text-align:                                  left !default;
-$text-decoration:                             none !default;
-$text-indent:                                 0 !default;
-$text-overflow:                               clip !default;
-$text-transform:                              none !default;
-$color:                                       $text-color-weak !default;
-$color-inverted:                              $text-color-weak-inverted !default;
+$font-family                                : "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
+$font-size                                  : 1.6em !default;
+$font-weight                                : 400 !default;
+$letter-spacing                             : .0em !default;
+$line-height                                : 1.35 !default;
+$text-align                                 : left !default;
+$text-decoration                            : none !default;
+$text-indent                                : 0 !default;
+$text-overflow                              : clip !default;
+$text-transform                             : none !default;
+$text-color                                      : $text-color-weak !default;
+$text-color-inverted                             : $text-color-weak-inverted !default;
 
 // Emphasis
-$emphasis-font-weight:                        bolder !default;
-$emphasis-font-style:                         italic !default;
-$emphasis-color:                              $text-color-strong !default;
-$emphasis-color-inverted:                     $text-color-strong-inverted !default;
+$emphasis-font-weight                       : bolder !default;
+$emphasis-font-style                        : italic !default;
+$emphasis-color                             : $text-color-strong !default;
+$emphasis-color-inverted                    : $text-color-strong-inverted !default;
 
 // Strong
-$strong-font-weight:                          bolder !default;
-$strong-font-style:                           none !default;
-$strong-color:                                $text-color-strong !default;
-$strong-color-inverted:                       $text-color-strong-inverted !default;
+$strong-font-weight                         : bolder !default;
+$strong-font-style                          : none !default;
+$strong-color                               : $text-color-strong !default;
+$strong-color-inverted                      : $text-color-strong-inverted !default;
 
 // Bold
-$font-weight-bold:                            bolder !default;
+$font-weight-bold                           : bolder !default;
 
 // Italic
-$font-style-italic:                           italic !default;
+$font-style-italic                          : italic !default;
 
 // Underline
-$text-decoration-underline:                   underline !default;
+$text-decoration-underline                  : underline !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
 // Headings
-$h1-font-size:                                3.6em !default;
-$h2-font-size:                                3.0em !default;
-$h3-font-size:                                2.0em !default;
-$h4-font-size:                                1.6em !default;
-$h5-font-size:                                1.4em !default;
-$h6-font-size:                                1.2em !default;
+$h1-font-size                               : 3.6em !default;
+$h2-font-size                               : 3.0em !default;
+$h3-font-size                               : 2.0em !default;
+$h4-font-size                               : 1.6em !default;
+$h5-font-size                               : 1.4em !default;
+$h6-font-size                               : 1.2em !default;
 
-$heading-color:                               $text-color-strong !default;
-$heading-color-inverted:                      $text-color-strong-inverted !default;
+$heading-color                              : $text-color-strong !default;
+$heading-color-inverted                     : $text-color-strong-inverted !default;
 
 // Paragraph spacing
-$paragraph-margin-top:                        .5em !default;
-$paragraph-margin-bottom:                     .5em !default;
+$paragraph-margin-top                       : .5em !default;
+$paragraph-margin-bottom                    : .5em !default;
 
 
 
@@ -120,7 +120,7 @@ $code-padding                               : .1 !default;
 
 // Set base font size
 body {
-  font-size: $font-size;
+  font-size: $font-size-normal;
 }
 
 body,
@@ -142,11 +142,11 @@ h1, h2, h3, h4, h5, h6 {
 
   // Normal
   @include style(normal){
-    color: $color;
+    color: $text-color;
   }
   // Inverted
   @include style(inverted){
-    color: $color-inverted;
+    color: $text-color-inverted;
   }
 
   // Emphasis
@@ -387,9 +387,7 @@ textarea.code {
 
     // Borders
     border: solid $color-grey-light 1px;
-    .container {
-      border: solid $color-grey-light 1px;
-    }
+
 
     > .label {
       @include margin-top(.7);

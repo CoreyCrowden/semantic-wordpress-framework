@@ -43,89 +43,203 @@ $card-container-border-inverted:        none;
 
   // Basic Colors
   &.black {
-    background: $color-black;
     @extend %light-text;
+    $color: $color-black;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.white {
-    background: $color-white;
-  }
-  &.extra.light.grey {
-    background: $color-grey-extra-light;
-  }
-  &.light.grey {
-    background: $color-grey-light;
+    $color: $color-white;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.grey {
-    background: $color-grey;
-  }
-  &.dark.grey {
-    background: $color-grey-dark;
-    @extend %light-text;
-  }
-  &.extra.dark.grey {
-    background: $color-grey-extra-dark;
-    @extend %light-text;
+    $color: $color-grey;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+      @extend %light-text;
+    }
   }
   &.red {
-    background: $color-red;
     @extend %light-text;
+    $color: $color-red;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.orange {
-    background: $color-orange;
     @extend %light-text;
+    $color: $color-orange;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.yellow {
-    background: $color-yellow;
+    @extend %light-text;
+    $color: $color-yellow;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.olive {
-    background: $color-olive;
     @extend %light-text;
+    $color: $color-olive;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.green {
-    background: $color-green;
     @extend %light-text;
+    $color: $color-green;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.teal {
-    background: $color-teal;
     @extend %light-text;
+    $color: $color-teal;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.blue {
-    background: $color-blue;
     @extend %light-text;
+    $color: $color-blue;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.violet {
-    background: $color-violet;
     @extend %light-text;
+    $color: $color-violet;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.purple {
-    background: $color-purple;
     @extend %light-text;
+    $color: $color-purple;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.pink {
-    background: $color-pink;
     @extend %light-text;
+    $color: $color-pink;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.brown {
-    background: $color-brown;
     @extend %light-text;
+    $color: $color-brown;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
 
   // Conditional Colors
   &.primary {
-    background: $color-primary;
     @extend %light-text;
+    $color: $color-primary;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.secondary {
-    background: $color-secondary;
     @extend %light-text;
+    $color: $color-secondary;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.emphasis {
-    background: $color-emphasis;
     @extend %light-text;
+    $color: $color-emphasis;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.emphasis-secondary {
-    background: $color-secondary;
     @extend %light-text;
+    $color: $color-emphasis-secondary;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
 
   // Disabled
@@ -136,20 +250,48 @@ $card-container-border-inverted:        none;
 
   // Notification Colors
   &.success {
-    background: $color-success-weak;
     @extend %light-text;
+    $color: $color-success;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.info {
-    background: $color-info-weak;
     @extend %light-text;
+    $color: $color-info;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.warning {
-    background: $color-warning-weak;
     @extend %light-text;
+    $color: $color-warning;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
   &.danger {
-    background: $color-danger-weak;
     @extend %light-text;
+    $color: $color-danger;
+    background: colorset($color);
+    &.light {
+      background: colorset($color, light);
+    }
+    &.dark {
+      background: colorset($color, dark);
+    }
   }
 
   &.outlined {
@@ -168,3 +310,4 @@ $card-container-border-inverted:        none;
   }
 
 }
+

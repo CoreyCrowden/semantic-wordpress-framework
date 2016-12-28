@@ -13,38 +13,38 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   <h3>Initiating the grid system</h3>
   <span class="label">.grid</span><span class="label">.item</span>
   <p>To initiate the grid system you simply need to apply either the <code>grid</code> class or <code>menu</code> class to an element. All immediate child elements will receive the appropriate flex attributes.</p>
-  <p>By default all child elements of a grid will naturally span to the width of the content with a maximum width of the parent container.</p>
-  <p><strong>Note: </strong> It's important to wrap item content with a container as the item element can't contain a margin and instead uses padding for creating margins between grid items.</p>
+  <p>By default all child elements of a grid will naturally span to the width of the content with a maximum width of the parent container outlined.</p>
+  <p><strong>Note: </strong> It's important to wrap item content with a container outlined as the item element can't contain a margin and instead uses padding for creating margins between grid items.</p>
   <!--HTML-->
   <div class="html">
     <span class="label strong">.grid</span>
     <div class="grid padded">
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label strong">.item</span><span class="label weak">.padded</span>
           <p></p>
-          <div class="container content">
-            <span class="label weak">.container</span><span class="label weak">.content</span>
+          <div class="container outlined content">
+            <span class="label weak">.container outlined</span><span class="label weak">.content</span>
             <p>Dolor quibusdam.</p>
           </div>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label strong">.item</span><span class="label weak">.padded</span>
           <p></p>
-          <div class="container content">
-            <span class="label weak">.container</span><span class="label weak">.content</span>
+          <div class="container outlined content">
+            <span class="label weak">.container outlined</span><span class="label weak">.content</span>
             <p>Corrupti fermentum natoque magni commodi.</p>
           </div>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label strong">.item</span><span class="label weak">.padded</span>
           <p></p>
-          <div class="container content">
-            <span class="label weak">.container</span><span class="label weak">.content</span>
+          <div class="container outlined content">
+            <span class="label weak">.container outlined</span><span class="label weak">.content</span>
             <p>Itaque venenatis veniam dolor quibusdam netus nisi? Corrupti fermentum natoque magni commodi. Torquent quisquam, lorem curabitur hymenaeos facere. Porro voluptate quas, neque nesciunt saepe, alias tenetur tempora ac cumque! Earum, laboriosam et venenatis? Vitae.</p>
           </div>
         </div>
@@ -56,19 +56,19 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label strong">.grid</span>
     <div class="grid padded">
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label strong">.item</span>
           <p>Dolor quibusdam.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label strong">.item</span>
           <p>Corrupti fermentum natoque magni commodi. </p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label strong">.item</span>
           <p>Itaque venenatis veniam dolor quibusdam netus nisi? Corrupti fermentum natoque magni commodi. Torquent quisquam, lorem curabitur hymenaeos facere. Porro voluptate quas, neque nesciunt saepe, alias tenetur tempora ac cumque! Earum, laboriosam et venenatis? Vitae.</p>
         </div>
@@ -87,25 +87,25 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span>
     <div class="grid padded">
       <div class="item one sixth">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.one.sixth</span>
           <p>Nesciunt minima, doloribus occaecati illum quo perferendis quisquam proident pede diamlorem accumsan.</p>
         </div>
       </div>
       <div class="item three sixths">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.three.sixths</span>
           <p>Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
         </div>
       </div>
       <div class="item two sixths">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.two.sixths</span>
           <p>Deleniti maecenas excepteur ducimus malesuada torquent proin corporis phasellus cupiditate, diam aliquet voluptatibus aliquam aperiam praesentium ridiculus rem pretium libero nec dictum, morbi cupiditate lacinia, aliqua expedita, laboriosam aspernatur reiciendis nulla iste quos laboris..</p>
         </div>
       </div>
       <div class="item three fifths">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.three.fifths</span>
           <p>Urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
         </div>
@@ -117,25 +117,25 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span>
     <div class="grid padded">
       <div class="item one sixth">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.one.sixth</span>
           <p>Nesciunt minima, doloribus occaecati illum quo perferendis quisquam proident pede diamlorem accumsan.</p>
         </div>
       </div>
       <div class="item three sixths">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.three.sixths</span>
           <p>Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
         </div>
       </div>
       <div class="item two sixths">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.two.sixths</span>
           <p>Deleniti maecenas excepteur ducimus malesuada torquent proin corporis phasellus cupiditate, diam aliquet voluptatibus aliquam aperiam praesentium ridiculus rem pretium libero nec dictum, morbi cupiditate lacinia, aliqua expedita, laboriosam aspernatur reiciendis nulla iste quos laboris..</p>
         </div>
       </div>
       <div class="item three fifths">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span><span class="label strong">.three.fifths</span>
           <p>Urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae. Incidunt nisi malesuada illo mollit eos urna voluptas elit autem numquam cubilia? Soluta consequatur. Eleifend viverra euismod, dictumst, pharetra ab, beatae nibh primis sodales commodo molestiae.</p>
         </div>
@@ -156,37 +156,37 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span><span class="label strong">.quarters</span>
     <div class="grid fourths padded">
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
@@ -198,37 +198,37 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span><span class="label strong">.quarters</span>
     <div class="grid fourths padded">
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded">
+        <div class="container outlined padded">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
@@ -248,31 +248,31 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span><span class="label strong">.right</span>
     <div class="grid right padded">
       <div class="item two thirds bottom">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label weak">.two.thirds</span><span class="label strong">.bottom</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item one fifth">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label weak">.one.fifth</span>
           <p>Aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item one fifth left">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label weak">.one.fifth</span><span class="label strong">.left</span>
           <p>Pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item two fifths middle">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label weak">.two.fifth</span><span class="label strong">.middle</span>
           <p>Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item four fifths centered">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label weak">.four.fifths</span><span class="label strong">.centered</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
@@ -284,37 +284,37 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span><span class="label weak">.quarters</span><span class="label strong">.stretched</span>
     <div class="grid quarters stretched padded">
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item justified">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label strong">.justified</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
@@ -329,43 +329,43 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   <span class="label">.justified</span><span class="label">.stretched</span>
   <p>Applying the classes <code>justified</code> and / or <code>stretched</code> to either the grid element or individual child items will manipulate the box sizing of the child items.</p>
   <p>The <code>justified</code> class controls the width of an element while the <code>stretched</code> class controls the height.</p>
-  <p><strong>Note: </strong>You may need to use the class <code>full height</code> on the inner container of item that are stretched to make them fill the height.</p>
+  <p><strong>Note: </strong>You may need to use the class <code>full height</code> on the inner container outlined of item that are stretched to make them fill the height.</p>
   <!--HTML-->
   <div class="html">
     <span class="label weak">.grid</span><span class="label weak">.quarters</span><span class="label strong">.stretched</span>
     <div class="grid quarters stretched padded">
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item justified">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label strong">.justified</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
@@ -377,37 +377,37 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
     <span class="label weak">.grid</span><span class="label weak">.quarters</span><span class="label strong">.stretched</span>
     <div class="grid quarters stretched padded">
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Nunc maxime? Similique elit unde occaecati repudiandae risus dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>
       </div>
       <div class="item justified">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span><span class="label strong">.justified</span>
           <p>Cillum repellendus cumque? Cupidatat justo hymenaeos dapibus. Rerum, quidem mi aspernatur sociosqu laudantium excepteur. Diamlorem sollicitudin id quis, euismod iusto, officiis? Taciti, voluptate debitis. Ipsam rutrum dui? Nonummy repudiandae minus ultricies consequat maxime! Ligula asperiores aute.</p>
         </div>
       </div>
       <div class="item">
-        <div class="container padded full height">
+        <div class="container outlined padded full height">
           <span class="label weak">.item</span>
           <p>Dapibus labore nam minima! Turpis nascetur doloremque culpa? Mattis nullam iure ipsum officiis pariatur minus at? Maecenas quisque officiis explicabo, elementum sapiente quae euismod omnis condimentum taciti natoque.</p>
         </div>

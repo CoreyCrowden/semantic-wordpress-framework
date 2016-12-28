@@ -518,19 +518,19 @@ body {
 .container.black,
 .card.black,
 .button.black,
-.label.black, .container.dark.grey,
-.card.dark.grey,
-.button.dark.grey,
-.label.dark.grey, .container.extra.dark.grey,
-.card.extra.dark.grey,
-.button.extra.dark.grey,
-.label.extra.dark.grey, .container.red,
+.label.black, .container.grey.dark,
+.card.grey.dark,
+.button.grey.dark,
+.label.grey.dark, .container.red,
 .card.red,
 .button.red,
 .label.red, .container.orange,
 .card.orange,
 .button.orange,
-.label.orange, .container.olive,
+.label.orange, .container.yellow,
+.card.yellow,
+.button.yellow,
+.label.yellow, .container.olive,
 .card.olive,
 .button.olive,
 .label.olive, .container.green,
@@ -613,6 +613,20 @@ body {
   background: black;
 }
 
+.container.black.light,
+.card.black.light,
+.button.black.light,
+.label.black.light {
+  background: #1a1a1a;
+}
+
+.container.black.dark,
+.card.black.dark,
+.button.black.dark,
+.label.black.dark {
+  background: black;
+}
+
 .container.white,
 .card.white,
 .button.white,
@@ -620,18 +634,18 @@ body {
   background: white;
 }
 
-.container.extra.light.grey,
-.card.extra.light.grey,
-.button.extra.light.grey,
-.label.extra.light.grey {
-  background: #f6f6f6;
+.container.white.light,
+.card.white.light,
+.button.white.light,
+.label.white.light {
+  background: white;
 }
 
-.container.light.grey,
-.card.light.grey,
-.button.light.grey,
-.label.light.grey {
-  background: #dddddd;
+.container.white.dark,
+.card.white.dark,
+.button.white.dark,
+.label.white.dark {
+  background: #e6e6e6;
 }
 
 .container.grey,
@@ -641,18 +655,18 @@ body {
   background: #a1a1a1;
 }
 
-.container.dark.grey,
-.card.dark.grey,
-.button.dark.grey,
-.label.dark.grey {
-  background: #636363;
+.container.grey.light,
+.card.grey.light,
+.button.grey.light,
+.label.grey.light {
+  background: #bbbbbb;
 }
 
-.container.extra.dark.grey,
-.card.extra.dark.grey,
-.button.extra.dark.grey,
-.label.extra.dark.grey {
-  background: #1d1d1d;
+.container.grey.dark,
+.card.grey.dark,
+.button.grey.dark,
+.label.grey.dark {
+  background: #888888;
 }
 
 .container.red,
@@ -662,11 +676,39 @@ body {
   background: #b00c00;
 }
 
+.container.red.light,
+.card.red.light,
+.button.red.light,
+.label.red.light {
+  background: #e30f00;
+}
+
+.container.red.dark,
+.card.red.dark,
+.button.red.dark,
+.label.red.dark {
+  background: #7d0900;
+}
+
 .container.orange,
 .card.orange,
 .button.orange,
 .label.orange {
   background: #fe9400;
+}
+
+.container.orange.light,
+.card.orange.light,
+.button.orange.light,
+.label.orange.light {
+  background: #ffa932;
+}
+
+.container.orange.dark,
+.card.orange.dark,
+.button.orange.dark,
+.label.orange.dark {
+  background: #cb7600;
 }
 
 .container.yellow,
@@ -676,11 +718,39 @@ body {
   background: #ffe63b;
 }
 
+.container.yellow.light,
+.card.yellow.light,
+.button.yellow.light,
+.label.yellow.light {
+  background: #ffed6e;
+}
+
+.container.yellow.dark,
+.card.yellow.dark,
+.button.yellow.dark,
+.label.yellow.dark {
+  background: #ffdf08;
+}
+
 .container.olive,
 .card.olive,
 .button.olive,
 .label.olive {
   background: #6bcd57;
+}
+
+.container.olive.light,
+.card.olive.light,
+.button.olive.light,
+.label.olive.light {
+  background: #8ed97e;
+}
+
+.container.olive.dark,
+.card.olive.dark,
+.button.olive.dark,
+.label.olive.dark {
+  background: #4dba37;
 }
 
 .container.green,
@@ -690,11 +760,39 @@ body {
   background: #126935;
 }
 
+.container.green.light,
+.card.green.light,
+.button.green.light,
+.label.green.light {
+  background: #19954b;
+}
+
+.container.green.dark,
+.card.green.dark,
+.button.green.dark,
+.label.green.dark {
+  background: #0b3d1f;
+}
+
 .container.teal,
 .card.teal,
 .button.teal,
 .label.teal {
   background: #008080;
+}
+
+.container.teal.light,
+.card.teal.light,
+.button.teal.light,
+.label.teal.light {
+  background: #00b3b3;
+}
+
+.container.teal.dark,
+.card.teal.dark,
+.button.teal.dark,
+.label.teal.dark {
+  background: #004d4d;
 }
 
 .container.blue,
@@ -704,11 +802,39 @@ body {
   background: #118db8;
 }
 
+.container.blue.light,
+.card.blue.light,
+.button.blue.light,
+.label.blue.light {
+  background: #15b1e7;
+}
+
+.container.blue.dark,
+.card.blue.dark,
+.button.blue.dark,
+.label.blue.dark {
+  background: #0d6989;
+}
+
 .container.violet,
 .card.violet,
 .button.violet,
 .label.violet {
   background: #EE82EE;
+}
+
+.container.violet.light,
+.card.violet.light,
+.button.violet.light,
+.label.violet.light {
+  background: #f4aff4;
+}
+
+.container.violet.dark,
+.card.violet.dark,
+.button.violet.dark,
+.label.violet.dark {
+  background: #e855e8;
 }
 
 .container.purple,
@@ -718,11 +844,39 @@ body {
   background: #B413EC;
 }
 
+.container.purple.light,
+.card.purple.light,
+.button.purple.light,
+.label.purple.light {
+  background: #c342f0;
+}
+
+.container.purple.dark,
+.card.purple.dark,
+.button.purple.dark,
+.label.purple.dark {
+  background: #900fbd;
+}
+
 .container.pink,
 .card.pink,
 .button.pink,
 .label.pink {
   background: #FF1493;
+}
+
+.container.pink.light,
+.card.pink.light,
+.button.pink.light,
+.label.pink.light {
+  background: #ff47aa;
+}
+
+.container.pink.dark,
+.card.pink.dark,
+.button.pink.dark,
+.label.pink.dark {
+  background: #e00079;
 }
 
 .container.brown,
@@ -732,18 +886,60 @@ body {
   background: #583e00;
 }
 
+.container.brown.light,
+.card.brown.light,
+.button.brown.light,
+.label.brown.light {
+  background: #8b6200;
+}
+
+.container.brown.dark,
+.card.brown.dark,
+.button.brown.dark,
+.label.brown.dark {
+  background: #251a00;
+}
+
 .container.primary,
 .card.primary,
 .button.primary,
 .label.primary {
-  background: #1d1d1d;
+  background: #0bc383;
+}
+
+.container.primary.light,
+.card.primary.light,
+.button.primary.light,
+.label.primary.light {
+  background: #10f1a3;
+}
+
+.container.primary.dark,
+.card.primary.dark,
+.button.primary.dark,
+.label.primary.dark {
+  background: #089363;
 }
 
 .container.secondary,
 .card.secondary,
 .button.secondary,
 .label.secondary {
-  background: #2a2a2a;
+  background: #0cdb93;
+}
+
+.container.secondary.light,
+.card.secondary.light,
+.button.secondary.light,
+.label.secondary.light {
+  background: #28f3ac;
+}
+
+.container.secondary.dark,
+.card.secondary.dark,
+.button.secondary.dark,
+.label.secondary.dark {
+  background: #0aab73;
 }
 
 .container.emphasis,
@@ -753,11 +949,39 @@ body {
   background: #bc3f43;
 }
 
+.container.emphasis.light,
+.card.emphasis.light,
+.button.emphasis.light,
+.label.emphasis.light {
+  background: #cb6367;
+}
+
+.container.emphasis.dark,
+.card.emphasis.dark,
+.button.emphasis.dark,
+.label.emphasis.dark {
+  background: #963235;
+}
+
 .container.emphasis-secondary,
 .card.emphasis-secondary,
 .button.emphasis-secondary,
 .label.emphasis-secondary {
-  background: #2a2a2a;
+  background: #e37869;
+}
+
+.container.emphasis-secondary.light,
+.card.emphasis-secondary.light,
+.button.emphasis-secondary.light,
+.label.emphasis-secondary.light {
+  background: #eb9f94;
+}
+
+.container.emphasis-secondary.dark,
+.card.emphasis-secondary.dark,
+.button.emphasis-secondary.dark,
+.label.emphasis-secondary.dark {
+  background: #db513e;
 }
 
 .container.disabled, .container.disabled:hover,
@@ -775,28 +999,84 @@ body {
 .card.success,
 .button.success,
 .label.success {
+  background: #bc3f43;
+}
+
+.container.success.light,
+.card.success.light,
+.button.success.light,
+.label.success.light {
   background: #cb6367;
+}
+
+.container.success.dark,
+.card.success.dark,
+.button.success.dark,
+.label.success.dark {
+  background: #963235;
 }
 
 .container.info,
 .card.info,
 .button.info,
 .label.info {
+  background: #007DE8;
+}
+
+.container.info.light,
+.card.info.light,
+.button.info.light,
+.label.info.light {
   background: #1c96ff;
+}
+
+.container.info.dark,
+.card.info.dark,
+.button.info.dark,
+.label.info.dark {
+  background: #0062b5;
 }
 
 .container.warning,
 .card.warning,
 .button.warning,
 .label.warning {
+  background: #FF7300;
+}
+
+.container.warning.light,
+.card.warning.light,
+.button.warning.light,
+.label.warning.light {
   background: #ff8f33;
+}
+
+.container.warning.dark,
+.card.warning.dark,
+.button.warning.dark,
+.label.warning.dark {
+  background: #cc5c00;
 }
 
 .container.danger,
 .card.danger,
 .button.danger,
 .label.danger {
+  background: #FF0000;
+}
+
+.container.danger.light,
+.card.danger.light,
+.button.danger.light,
+.label.danger.light {
   background: #ff3333;
+}
+
+.container.danger.dark,
+.card.danger.dark,
+.button.danger.dark,
+.label.danger.dark {
+  background: #cc0000;
 }
 
 .container.outlined,
@@ -818,7 +1098,7 @@ body {
 .card.strong,
 .button.strong,
 .label.strong {
-  background: rgba(29, 29, 29, 0.85);
+  background: rgba(11, 195, 131, 0.85);
   color: white;
 }
 
@@ -1803,28 +2083,28 @@ input[type="radio"] ~ label:after {
   height: 100%;
 }
 
-.extra.small {
-  font-size: 0.6rem;
-}
-
-.small {
-  font-size: 0.8rem;
-}
-
-.normal {
-  font-size: 1rem;
-}
-
-.large {
+.very.small {
   font-size: 1.2rem;
 }
 
-.extra.large {
+.small {
   font-size: 1.4rem;
 }
 
+.normal {
+  font-size: 1.6rem;
+}
+
+.large {
+  font-size: 2rem;
+}
+
+.very.large {
+  font-size: 2.4rem;
+}
+
 body {
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 body,
@@ -1841,7 +2121,7 @@ h1, h2, h3, h4, h5, h6 {
   text-indent: 0;
   text-overflow: clip;
   text-transform: none;
-  color: #636363;
+  color: #1d1d1d;
 }
 
 .normal body,
@@ -1863,7 +2143,7 @@ h1, .normal h2,
 .inverted .normal h4, .normal h5,
 .inverted .normal h5, .normal h6,
 .inverted .normal h6 {
-  color: #636363;
+  color: #1d1d1d;
 }
 
 .inverted body,
@@ -1885,7 +2165,7 @@ h1, .inverted h2,
 .normal .inverted h4, .inverted h5,
 .normal .inverted h5, .inverted h6,
 .normal .inverted h6 {
-  color: #a1a1a1;
+  color: #dddddd;
 }
 
 body em,
@@ -2225,14 +2505,14 @@ article p a:hover {
 ::-moz-selection,
 input::-moz-selection,
 textarea::-moz-selection {
-  background-color: #1d1d1d;
+  background-color: #0bc383;
   color: white;
 }
 
 ::selection,
 input::selection,
 textarea::selection {
-  background-color: #1d1d1d;
+  background-color: #0bc383;
   color: white;
 }
 
@@ -2286,10 +2566,6 @@ textarea.code {
   border: solid #dddddd 1px;
 }
 
-#page-content .html .container {
-  border: solid #dddddd 1px;
-}
-
 #page-content .html > .label {
   margin-top: 1.75em;
 }
@@ -2339,13 +2615,13 @@ time:before,
   letter-spacing: 0.15rem;
   font-weight: 400;
   color: white;
-  background-color: #1d1d1d;
+  background-color: #0bc383;
 }
 
 .normal *[rel~="tag"],
 .inverted .normal *[rel~="tag"] {
   color: white;
-  background-color: #1d1d1d;
+  background-color: #0bc383;
 }
 
 *[rel~="tag"]:hover {
