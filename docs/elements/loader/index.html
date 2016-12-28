@@ -9,46 +9,24 @@ category: Elements
 <!--Loader Basics-->
 <article>
   <h3>Loader Basics</h3>
-  <span class="label strong">.loader</span><span class="label">.loading</span>
-  <p></p>
-  <!--Example-->
-  <div class="example html">
+  <span class="label strong">#loader</span><span class="label">.loading</span>
+  <h6>Start the loader by pressing the button.</h6>
+  <p>You can stop the loader at any time by clicking on the overlay.</p>
+  <p><a id="loader-toggle" class="button" href="#">Start Loader</a></p>
 
-    <!--Toggle Loader Script-->
-    <script>
-      $(document).ready(function() {
+  <!--Toggle Loader Script-->
+  <script>
+    $(document).ready(function() {
 
-        $('#loader-toggle').click(function () {
-          $("#loader").toggleClass("loading");
-        });
-
-        $('#loader').click(function () {
-          $("#loader").toggleClass("loading");
-        });
-
-
+      $('#loader-toggle').click(function () {
+        $("#loader").toggleClass("loading");
       });
-    </script>
 
-    <div class="grid stretched padded">
+      $('#loader').click(function () {
+        $("#loader").toggleClass("loading");
+      });
 
-      <div class="item two thirds">
-        <h6>Start the loader by pressing the button.</h6>
-        <p>You can stop the loader at any time by clicking on the overlay.</p>
-      </div>
+    });
+  </script>
 
-      <div class="item one third">
-        <div class="card secondary padded">
-          <a id="loader-toggle" class="button" href="#">Start Loader</a>
-        </div>
-      </div>
-
-    </div>
-
-
-
-
-
-
-  </div>
 </article>

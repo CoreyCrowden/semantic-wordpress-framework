@@ -2752,6 +2752,9 @@ input[type="button"] {
   margin: 0.75em 0em;
   /* Box-model */
   min-height: 4.2rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   max-width: 100%;
   padding: 0em 1.875em;
   white-space: normal;
@@ -2819,6 +2822,13 @@ input[type="button"]:hover,
 .inverted .normal
 input[type="button"]:hover {
   opacity: 1;
+}
+
+.button a.justified,
+a.button.justified,
+input[type="submit"].justified,
+input[type="button"].justified {
+  width: auto;
 }
 
 .button.action a,
@@ -3416,23 +3426,22 @@ p[style="text-align: center;"] img {
 }
 
 #loader.loading {
-  cursor: default;
-  pointer-events: none;
   z-index: 1050;
+  cursor: default;
 }
 
-.loading:before {
+#loader.loading:before {
   position: fixed;
   content: '';
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 100%;
+  background: rgba(255, 255, 255, 0.8);
   z-index: 100;
 }
 
-.loading:after {
+#loader.loading:after {
   position: fixed;
   content: '';
   top: 50%;
@@ -3466,5 +3475,5 @@ p[style="text-align: center;"] img {
 
 .popup {
   z-index: 1070;
-  position: absolute;
+  position: fixed;
 }
