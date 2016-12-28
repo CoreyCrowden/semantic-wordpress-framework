@@ -53,6 +53,7 @@ input[type="button"] {
 
   /* Box-model */
   min-height: $button-height;
+  width: fit-content;
   max-width: 100%;
   @include padding( 0, $button-padding-horizontal);
   white-space: normal;
@@ -91,7 +92,24 @@ input[type="button"] {
   user-select: none;
   will-change: '';
   -webkit-tap-highlight-color: transparent;
+
+
+  // Additional Button Classes
+
+  // Justify button
+  &.justified {
+    width: auto;
+  }
+
+
+
+
+
+
 }
+
+
+
 
 
 // ------------------------------------------------------------------------------------------------------------------
