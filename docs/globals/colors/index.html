@@ -6,16 +6,15 @@ category: Globals
 ---
 
 
-<!--Color Basics-->
+<!--Greyscale Colors-->
 <article>
-  <h3>Color Basics</h3>
+  <h3>Greyscale Colors</h3>
   <span class="label strong">.white</span><span class="label strong">.grey</span><span class="label strong">.black</span><span class="label">.light</span><span class="label">.dark</span>
   <p>Accessing colors at a class level is simple. By simply calling the name of a color it can be applied to <code>.buttons</code> <code>.labels</code> <code>.containers</code> and <code>.cards</code>.</p>
   <p>Colors also come in three shades which can be called with the <code>.light</code> and <code>.dark</code> classes.</p>
 
   <!--Example-->
-  <h5>Greyscale</h5>
-  <div class="example html small">
+  <div class="example small">
     <div class="grid stretched justified">
 
       <!--White-->
@@ -61,9 +60,18 @@ category: Globals
 
     </div>
   </div>
+</article>
+
+<!--General Colors-->
+<article>
+  <h3>General Colors</h3>
+  <span class="label strong">.red</span><span class="label strong">.orange</span><span class="label strong">.yellow</span><span class="label strong">...</span><span class="label">.light</span><span class="label">.dark</span>
+  <p>
+    A variety of general colors are available through sass variables and css classes.
+    These defined colors allow for consistency throughout the website.
+  </p>
 
   <!--Example-->
-  <h5>Colors</h5>
   <div class="example small">
     <div class="grid stretched sixths">
 
@@ -253,6 +261,103 @@ category: Globals
           <span class="label">.dark</span><span class="label">.brown</span>
         </div>
       </div>
+
+    </div>
+
+  </div>
+</article>
+
+<!--Brand Colors-->
+<article>
+  <h3>Brand Colors</h3>
+  <span class="label strong">$color-brand-1</span><span class="label strong">$color-brand-2</span><span class="label strong">$color-brand-3</span><span class="label strong">$color-brand-4</span>
+  <p>
+    Sass variables allow for consistent and easy access to brand colors.
+    By defining your brand colors and then referencing those colors for website colors you can quickly
+    deploy a consistent color scheme site wide that matches the brand.
+  </p>
+
+  <div class="example html">
+
+    <div class="grid stretched">
+      <div class="item two thirds padded">
+        <div class="card primary light content inverted">
+          <h5>Magni fugiat habitasse autem quibusdam laboriosam exercitationem incididunt.</h5>
+          <p>
+            Natus litora explicabo illo ratione facilis, malesuada deleniti accumsan ipsam fuga aperiam, laboriosam esse rem duis temporibus scelerisque, blandit eveniet. Culpa soluta.
+          </p>
+          <p>
+            Donec pulvinar, mattis mollitia praesent wisi mauris harum exercitation. Ultricies. Dictum vivamus! Unde facilisis debitis pede mauris nisi sodales porta phasellus litora.
+          </p>
+        </div>
+      </div>
+      <div class="item one third">
+        <div class="container primary content inverted">
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--Code Snippet-->
+  <textarea class="code">
+$color-brand-1: rgb(26, 58, 94);
+
+$color-primary: $color-brand-1;
+
+#brand-example {
+  background: colorset($color-primary, light);
+  @extend .inverted;
+}
+
+  </textarea>
+
+
+
+
+  <!--Example-->
+  <h5>Website Colors</h5>
+  <p></p>
+  <div class="example small">
+    <div class="grid stretched sixths">
+
+      <!--Primary-->
+      <div class="item" style="height: 200px">
+        <div class="container light primary padded full height">
+          <span class="label">.light</span><span class="label">.primary</span>
+        </div>
+      </div>
+      <div class="item" style="height: 200px">
+        <div class="container primary padded full height">
+          <span class="label">.primary</span>
+        </div>
+      </div>
+      <div class="item" style="height: 200px">
+        <div class="container padded dark primary full height">
+          <span class="label">.dark</span><span class="label">.primary</span>
+        </div>
+      </div>
+
+      <!--Secondary-->
+      <div class="item" style="height: 200px">
+        <div class="container light secondary padded full height">
+          <span class="label">.light</span><span class="label">.secondary</span>
+        </div>
+      </div>
+      <div class="item" style="height: 200px">
+        <div class="container secondary padded full height">
+          <span class="label">.secondary</span>
+        </div>
+      </div>
+      <div class="item" style="height: 200px">
+        <div class="container padded dark secondary full height">
+          <span class="label">.dark</span><span class="label">.secondary</span>
+        </div>
+      </div>
+
+
 
     </div>
 

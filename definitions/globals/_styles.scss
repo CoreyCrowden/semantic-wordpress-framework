@@ -196,7 +196,7 @@ $card-container-border-inverted:        none;
     }
   }
 
-  // Conditional Colors
+  // Site Colors
   &.primary {
     @extend %light-text;
     $color: $color-primary;

@@ -45,14 +45,14 @@ $color-pink                                 : #FF1493 !default;
 $color-brown                                : #583e00 !default;
 
 // Brand Colors
-$color-brand-1                              : rgb(188, 63, 67) !default;
+$color-brand-1                              : rgb(12, 133, 130) !default;
 $color-brand-2                              : rgb(11, 195, 131) !default;
 $color-brand-3                              : rgb(227, 120, 105) !default;
 $color-brand-4                              : rgb(78, 195, 116) !default;
 
 // Primary Colors
-$color-primary                              : $color-brand-2 !default; // These should be dark branding colors
-$color-secondary                            : lighten($color-brand-2, 5%) !default;
+$color-primary                              : $color-brand-1 !default; // These should be dark branding colors
+$color-secondary                            : #685623 !default;
 
 $color-emphasis                             : $color-brand-1 !default; // These should be bright branding colors
 $color-emphasis-secondary                   : $color-brand-3 !default;
