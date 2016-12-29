@@ -72,6 +72,9 @@ $text-decoration-underline                  : underline !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
+// Title
+$title-font-size                            : 3.8em !default;
+
 // Headings
 $h1-font-size                               : 3em !default;
 $h2-font-size                               : 2.6em !default;
@@ -266,7 +269,7 @@ h6 {
 // Use of titles is recommended at a theme level, while regular heading are used a content level.
 
 .title {
-  font-size: $h1-font-size + .8em;
+  font-size: $title-font-size;
 }
 
 // ------------------------------------------------------------------------------------------------------------------
