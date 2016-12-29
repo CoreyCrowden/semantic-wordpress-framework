@@ -92,7 +92,6 @@ category: Elements
   </div>
 </article>
 
-
 <!-- Lead Paragraph-->
 <article>
   <h3>Lead Paragraph</h3>
@@ -109,8 +108,6 @@ category: Elements
     </p>
   </div>
 </article>
-
-
 
 <!--Inline text elements-->
 <article>
@@ -290,18 +287,70 @@ category: Elements
 
 <!--Inverted Type-->
 <article>
-  <h3>Inverted Colors</h3>
-  <span class="label stong">.inverted</span><span class="label">.container</span><span class="label">.secondary</span>
-  <p>The <code>.inverted</code> can be applied to container with a dark background to reverse colors.</p>
+  <h3>Inverting Type Colors</h3>
+  <span class="label strong">.inverted</span><span class="label strong">.normal</span><span class="label">.container</span><span class="label">.secondary</span>
+  <p>
+    The <code>.inverted</code> class can be applied to container with a dark background to reverse the content colors.
+    This inverted color scheme will apply to all child elements until it is reversed by a <code>.normal</code> class.
+  </p>
+  <p>
+    <strong>Note:</strong> due to the nature of CSS and in the attempt to minimise file size <code>.inverted</code> and
+    <code>.normal</code> classes can only be nested 3 times (by default) before they stop working. To change the nesting
+    limitation add the variable <code>$color-class-nesting-depth: 3;</code> to your variables file and change the value
+    to you preferred nesting level. <em>Be warned this can bloat the css file dramatically.</em>
+  </p>
   <!--HTML-->
-  <div class="container inverted secondary padded relaxed fluid">
+  <div class="example html">
 
-    <div class="example">
-      <h4>Laceat consectetur tellus bland</h4>
-      <p>Maxime proin tempore nisl elit magnam velit laudantium <stong>rerum blanditiis?</stong> Placeat consectetur tellus blanditiis duis placerat dignissimos dignissimos, occaecati laboriosam sociis, dolorem sociosqu modi! Veritatis consequuntur primis? Conubia nihil.</p>
-      <p>Sapien adipisicing accusantium exercitation exercitationem eu. <a href="#">Etiam ipsum saepe</a> earum senectus perferendis quasi quas sodales tempora, laborum fugiat posuere fames qui, ultrices facere netus hymenaeos euismod, sociis quia? Convallis tellus. Netus dui? Dictumst, aenean! Gravida? Ut, ullamcorper fuga sem turpis. Ducimus occaecat.</p>
+    <div class="grid halves justified">
+
+      <!--Normal-->
+      <div class="item">
+        <div class="container padded relaxed">
+          <span class="label"><i>Default</i></span>
+          <h4>Laceat consectetur tellus bland</h4>
+          <p>Maxime proin tempore nisl elit magnam velit laudantium <stong>rerum blanditiis?</stong> Placeat consectetur tellus blanditiis duis placerat dignissimos dignissimos, occaecati laboriosam sociis, dolorem sociosqu modi! Veritatis consequuntur primis? Conubia nihil.</p>
+          <p>Sapien adipisicing accusantium exercitation exercitationem eu. <a href="#">Etiam ipsum saepe</a> earum senectus perferendis quasi quas sodales tempora, laborum fugiat posuere fames qui, ultrices facere netus hymenaeos euismod, sociis quia? Convallis tellus. Netus dui? Dictumst, aenean! Gravida? Ut, ullamcorper fuga sem turpis. Ducimus occaecat.</p>
+        </div>
+      </div>
+
+      <!--Inverted-->
+      <div class="item">
+        <div class="container inverted secondary padded relaxed">
+          <span class="label">.inverted</span>
+          <h4>Laceat consectetur tellus bland</h4>
+          <p>Maxime proin tempore nisl elit magnam velit laudantium <stong>rerum blanditiis?</stong> Placeat consectetur tellus blanditiis duis placerat dignissimos dignissimos, occaecati laboriosam sociis, dolorem sociosqu modi! Veritatis consequuntur primis? Conubia nihil.</p>
+          <p>Sapien adipisicing accusantium exercitation exercitationem eu. <a href="#">Etiam ipsum saepe</a> earum senectus perferendis quasi quas sodales tempora, laborum fugiat posuere fames qui, ultrices facere netus hymenaeos euismod, sociis quia? Convallis tellus. Netus dui? Dictumst, aenean! Gravida? Ut, ullamcorper fuga sem turpis. Ducimus occaecat.</p>
+        </div>
+      </div>
+
+      <!--Inverted Nested Normal-->
+      <div class="item">
+        <div class="container inverted secondary light padded relaxed">
+          <span class="label">.normal</span>
+          <p>Maxime proin tempore nisl elit magnam velit laudantium <stong>rerum blanditiis?</stong> Placeat consectetur tellus blanditiis duis placerat dignissimos dignissimos, occaecati laboriosam sociis, dolorem sociosqu modi! Veritatis consequuntur primis? Conubia nihil.</p>
+          <div class="card normal white padded">
+            <span class="label">.normal</span><span class="label">.card</span>
+            <p>Placeat consectetur tellus blanditiis duis placerat dignissimos dignissimos, occaecati laboriosam sociis, dolorem sociosqu modi! Veritatis consequuntur primis? Conubia nihil.</p>
+
+            <div class="card inverted secondary light padded">
+              <span class="label">.normal</span>
+              <p>Maxime proin tempore nisl elit magnam velit laudantium <stong>rerum blanditiis?</stong> Placeat consectetur tellus blanditiis duis placerat dignissimos dignissimos, occaecati laboriosam sociis, dolorem sociosqu modi! Veritatis consequuntur primis? Conubia nihil.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
     </div>
+
   </div>
+
+
+
+
+
+
 </article>
 
 

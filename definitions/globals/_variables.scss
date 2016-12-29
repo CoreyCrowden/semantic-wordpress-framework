@@ -10,7 +10,7 @@
 
 $enable-ninja-forms                         : true !default; // ** Function to be added
 $enable-round-edges-on-cards                : true !default; // ** Function to be added
-$inverted-color-class-depth                 : 3 !default; // ** Function to be added
+$color-class-nesting-depth                  : 3 !default; // ** Function to be added
 
 $default-card-border-radius                 : '.rounded' !default;
 $default-button-border-radius               : '.circular' !default;
