@@ -2130,6 +2130,7 @@ body,
 p,
 span,
 section,
+blockquote,
 .content,
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
@@ -2155,6 +2156,9 @@ span, .normal
 section,
 .inverted .normal
 section, .normal
+blockquote,
+.inverted .normal
+blockquote, .normal
 .content,
 .inverted .normal
 .content, .normal
@@ -2180,6 +2184,9 @@ span, .inverted
 section,
 .normal .inverted
 section, .inverted
+blockquote,
+.normal .inverted
+blockquote, .inverted
 .content,
 .normal .inverted
 .content, .inverted
@@ -2198,6 +2205,7 @@ body em,
 p em,
 span em,
 section em,
+blockquote em,
 .content em,
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-weight: bolder;
@@ -2216,6 +2224,9 @@ span em, .normal
 section em,
 .inverted .normal
 section em, .normal
+blockquote em,
+.inverted .normal
+blockquote em, .normal
 .content em,
 .inverted .normal
 .content em, .normal
@@ -2241,6 +2252,9 @@ span em, .inverted
 section em,
 .normal .inverted
 section em, .inverted
+blockquote em,
+.normal .inverted
+blockquote em, .inverted
 .content em,
 .normal .inverted
 .content em, .inverted
@@ -2259,6 +2273,7 @@ body strong,
 p strong,
 span strong,
 section strong,
+blockquote strong,
 .content strong,
 h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
   font-weight: bolder;
@@ -2277,6 +2292,9 @@ span strong, .normal
 section strong,
 .inverted .normal
 section strong, .normal
+blockquote strong,
+.inverted .normal
+blockquote strong, .normal
 .content strong,
 .inverted .normal
 .content strong, .normal
@@ -2302,6 +2320,9 @@ span strong, .inverted
 section strong,
 .normal .inverted
 section strong, .inverted
+blockquote strong,
+.normal .inverted
+blockquote strong, .inverted
 .content strong,
 .normal .inverted
 .content strong, .inverted
@@ -2320,6 +2341,7 @@ body b,
 p b,
 span b,
 section b,
+blockquote b,
 .content b,
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
   font-weight: bolder;
@@ -2329,6 +2351,7 @@ body i,
 p i,
 span i,
 section i,
+blockquote i,
 .content i,
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   font-style: italic;
@@ -2338,6 +2361,7 @@ body u,
 p u,
 span u,
 section u,
+blockquote u,
 .content u,
 h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
   text-decoration: none;
@@ -2348,6 +2372,7 @@ body mark,
 p mark,
 span mark,
 section mark,
+blockquote mark,
 .content mark,
 h1 mark, h2 mark, h3 mark, h4 mark, h5 mark, h6 mark {
   background-color: #81f4e0;
@@ -2357,6 +2382,7 @@ body del,
 p del,
 span del,
 section del,
+blockquote del,
 .content del,
 h1 del, h2 del, h3 del, h4 del, h5 del, h6 del {
   text-decoration: line-through;
@@ -2366,6 +2392,7 @@ body s,
 p s,
 span s,
 section s,
+blockquote s,
 .content s,
 h1 s, h2 s, h3 s, h4 s, h5 s, h6 s {
   text-decoration: none;
@@ -2376,6 +2403,7 @@ body ins,
 p ins,
 span ins,
 section ins,
+blockquote ins,
 .content ins,
 h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins {
   text-decoration: none;
@@ -2386,6 +2414,7 @@ body small,
 p small,
 span small,
 section small,
+blockquote small,
 .content small,
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: x-small;
@@ -2402,6 +2431,9 @@ span,
 section.left,
 .left >
 section,
+blockquote.left,
+.left >
+blockquote,
 .content.left,
 .left >
 .content,
@@ -2427,6 +2459,9 @@ span,
 section.centered,
 .centered >
 section,
+blockquote.centered,
+.centered >
+blockquote,
 .content.centered,
 .centered >
 .content,
@@ -2452,6 +2487,9 @@ span,
 section.right,
 .right >
 section,
+blockquote.right,
+.right >
+blockquote,
 .content.right,
 .right >
 .content,
@@ -2477,6 +2515,9 @@ span,
 section.justified,
 .justified >
 section,
+blockquote.justified,
+.justified >
+blockquote,
 .content.justified,
 .justified >
 .content,
@@ -2683,6 +2724,14 @@ textarea.code {
   margin-top: 1.25em;
 }
 
+blockquote {
+  margin-left: 0;
+  padding: 1em 1.5em;
+  margin-right: 0;
+  border-left: solid 5px #e6e6e6;
+  font-size: larger;
+}
+
 .no.spacing {
   margin: 0;
 }
@@ -2769,7 +2818,7 @@ ol ol, ol ul, ul ol, ul ul {
   margin: 1em 0 1em 2em;
 }
 
-.unstyled-list ul, .unstyled-list ol, .unstyled-list li,
+.unstyled.list ul, .unstyled.list ol, .unstyled.list li,
 .menu ul,
 .menu ol,
 .menu li,

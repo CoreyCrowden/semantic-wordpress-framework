@@ -124,6 +124,7 @@ body,
 p,
 span,
 section,
+blockquote,
 .content,
 h1, h2, h3, h4, h5, h6 {
 
@@ -451,9 +452,18 @@ textarea.code {
   }
 }
 
+// ------------------------------------------------------------------------------------------------------------------
 
+// Block Quote
 
+blockquote {
+  margin-left: 0;
+  padding: 1em 1.5em;
+  margin-right: 0;
+  border-left: solid 5px colorset($color-white, dark);
+  font-size: larger;
 
+}
 
 
 // ------------------------------------------------------------------------------------------------------------------
