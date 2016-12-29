@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
   // Underline
   u {
     text-decoration: none;
-    border-bottom: 1px solid;
+    border-bottom: .07em solid;
   }
 
   // Mark
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6 {
   // Inserted text
   ins {
     text-decoration: none;
-    border-bottom: 3px double;
+    border-bottom: .21em double;
   }
 
   // Small text (fine print)

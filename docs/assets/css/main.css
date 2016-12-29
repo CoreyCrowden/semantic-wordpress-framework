@@ -2341,7 +2341,7 @@ section u,
 .content u,
 h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
   text-decoration: none;
-  border-bottom: 1px solid;
+  border-bottom: .07em solid;
 }
 
 body mark,
@@ -2378,7 +2378,7 @@ section ins,
 .content ins,
 h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins {
   text-decoration: none;
-  border-bottom: 3px double;
+  border-bottom: .21em double;
 }
 
 body small,
