@@ -73,10 +73,10 @@ $text-decoration-underline                  : underline !default;
 // ------------------------------------------------------------------------------------------------------------------
 
 // Headings
-$h1-font-size                               : 3.6em !default;
-$h2-font-size                               : 3.0em !default;
-$h3-font-size                               : 2.0em !default;
-$h4-font-size                               : 1.6em !default;
+$h1-font-size                               : 3em !default;
+$h2-font-size                               : 2.6em !default;
+$h3-font-size                               : 2.2em !default;
+$h4-font-size                               : 1.8em !default;
 $h5-font-size                               : 1.4em !default;
 $h6-font-size                               : 1.2em !default;
 
@@ -235,6 +235,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// ------------------------------------------------------------------------------------------------------------------
+
+// Headings
+
 h1 {
   font-size: $h1-font-size;
 }
@@ -252,6 +256,17 @@ h5 {
 }
 h6 {
   font-size: $h6-font-size;
+}
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Title
+//
+// Titles act as a parent heading. Ideally used as the primary heading for a page.
+// Use of titles is recommended at a theme level, while regular heading are used a content level.
+
+.title {
+  font-size: $h1-font-size + .8em;
 }
 
 // ------------------------------------------------------------------------------------------------------------------

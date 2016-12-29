@@ -2474,19 +2474,19 @@ h1 + h1, h1 + h2, h1 + h3, h1 + h4, h1 + h5, h1 + h6, h2 + h1, h2 + h2, h2 + h3,
 }
 
 h1 {
-  font-size: 3.6em;
-}
-
-h2 {
   font-size: 3em;
 }
 
+h2 {
+  font-size: 2.6em;
+}
+
 h3 {
-  font-size: 2em;
+  font-size: 2.2em;
 }
 
 h4 {
-  font-size: 1.6em;
+  font-size: 1.8em;
 }
 
 h5 {
@@ -2495,6 +2495,10 @@ h5 {
 
 h6 {
   font-size: 1.2em;
+}
+
+.title {
+  font-size: 3.8em;
 }
 
 a {
