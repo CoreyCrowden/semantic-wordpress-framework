@@ -1996,7 +1996,7 @@ input[type="radio"] ~ label:after {
 .menu .item:not(.dropdown):not(.expand):not(.slide) > .menu > .item > a,
 .menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a {
   padding: 0.375em 1.75em 0.375em;
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   background: transparent;
 }
 
@@ -2005,7 +2005,7 @@ input[type="radio"] ~ label:after {
 .menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a,
 .inverted .normal
 .menu .item:not(.dropdown):not(.expand):not(.slide) > .sub-menu > .item > a {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   background: transparent;
 }
 
@@ -2732,6 +2732,24 @@ blockquote {
   font-size: larger;
 }
 
+.inverted blockquote,
+.normal .inverted blockquote {
+  border-color: #1a1a1a;
+}
+
+.reference {
+  opacity: .7;
+}
+
+.reference:before {
+  content: '\2014 \00A0';
+}
+
+cite {
+  font-style: italic;
+  border-bottom: rgba(0, 0, 0, 0.5) solid 0.07em;
+}
+
 .no.spacing {
   margin: 0;
 }
@@ -3370,25 +3388,25 @@ input[type="radio"]:checked ~ label:after {
  * Placeholder Text
  * --------------------------------------------------------------------------------------------- */
 ::-webkit-input-placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
 }
 
 :-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
 }
 
 ::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   opacity: 1;
   transition: all 0.3s ease-in-out;
 }
 
 :-ms-input-placeholder {
-  color: rgba(0, 0, 0, 0.6);
+  color: rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease-in-out;
 }
 
@@ -3605,7 +3623,7 @@ p[style="text-align: center;"] img {
   figure.aligncenter figcaption,
   p[style="text-align: center;"] figcaption {
     text-align: center;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.5);
   }
 }
 

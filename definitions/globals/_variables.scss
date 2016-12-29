@@ -73,7 +73,7 @@ $color-background-disabled                  : lighten($color-grey-extra-light, 5
 $color-border-disabled                      : lighten($color-grey-light, 5%) !default;
 
 // Text colors
-$text-color-weak                            : rgba($color-black, .6) !default;
+$text-color-weak                            : rgba($color-black, .5) !default;
 $text-color                                 : rgba($color-black, .8) !default;
 $text-color-strong                          : rgba($color-black, 1) !default;
 

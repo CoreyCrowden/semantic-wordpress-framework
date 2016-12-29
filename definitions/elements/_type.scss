@@ -454,7 +454,7 @@ textarea.code {
 
 // ------------------------------------------------------------------------------------------------------------------
 
-// Block Quote
+// Block Quote & Cite
 
 blockquote {
   margin-left: 0;
@@ -463,7 +463,24 @@ blockquote {
   border-left: solid 5px colorset($color-white, dark);
   font-size: larger;
 
+  @include style(inverted){
+    border-color: colorset($color-black, light);
+  }
 }
+
+// This is a class usually applied to the paragraph wrapping a cite tag.
+.reference {
+  opacity: .7;
+  &:before {
+    content: '\2014 \00A0';
+  }
+}
+
+cite {
+  font-style: italic;
+  border-bottom: colorset($text-color-weak) solid .07em;
+}
+
 
 
 // ------------------------------------------------------------------------------------------------------------------
