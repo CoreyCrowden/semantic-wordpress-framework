@@ -2368,7 +2368,8 @@ span s,
 section s,
 .content s,
 h1 s, h2 s, h3 s, h4 s, h5 s, h6 s {
-  text-decoration: line-through;
+  text-decoration: none;
+  border-bottom: 0.07em dotted #FF0000;
 }
 
 body ins,
