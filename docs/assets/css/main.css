@@ -2128,7 +2128,6 @@ body {
 
 body,
 p,
-span,
 section,
 blockquote,
 .content,
@@ -2150,9 +2149,6 @@ h1, h2, h3, h4, h5, h6 {
 p,
 .inverted .normal
 p, .normal
-span,
-.inverted .normal
-span, .normal
 section,
 .inverted .normal
 section, .normal
@@ -2178,9 +2174,6 @@ h1, .normal h2,
 p,
 .normal .inverted
 p, .inverted
-span,
-.normal .inverted
-span, .inverted
 section,
 .normal .inverted
 section, .inverted
@@ -2203,7 +2196,6 @@ h1, .inverted h2,
 
 body em,
 p em,
-span em,
 section em,
 blockquote em,
 .content em,
@@ -2218,9 +2210,6 @@ h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
 p em,
 .inverted .normal
 p em, .normal
-span em,
-.inverted .normal
-span em, .normal
 section em,
 .inverted .normal
 section em, .normal
@@ -2246,9 +2235,6 @@ h1 em, .normal h2 em,
 p em,
 .normal .inverted
 p em, .inverted
-span em,
-.normal .inverted
-span em, .inverted
 section em,
 .normal .inverted
 section em, .inverted
@@ -2271,7 +2257,6 @@ h1 em, .inverted h2 em,
 
 body strong,
 p strong,
-span strong,
 section strong,
 blockquote strong,
 .content strong,
@@ -2286,9 +2271,6 @@ h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
 p strong,
 .inverted .normal
 p strong, .normal
-span strong,
-.inverted .normal
-span strong, .normal
 section strong,
 .inverted .normal
 section strong, .normal
@@ -2314,9 +2296,6 @@ h1 strong, .normal h2 strong,
 p strong,
 .normal .inverted
 p strong, .inverted
-span strong,
-.normal .inverted
-span strong, .inverted
 section strong,
 .normal .inverted
 section strong, .inverted
@@ -2339,7 +2318,6 @@ h1 strong, .inverted h2 strong,
 
 body b,
 p b,
-span b,
 section b,
 blockquote b,
 .content b,
@@ -2349,7 +2327,6 @@ h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
 
 body i,
 p i,
-span i,
 section i,
 blockquote i,
 .content i,
@@ -2359,7 +2336,6 @@ h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
 
 body u,
 p u,
-span u,
 section u,
 blockquote u,
 .content u,
@@ -2370,7 +2346,6 @@ h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
 
 body mark,
 p mark,
-span mark,
 section mark,
 blockquote mark,
 .content mark,
@@ -2380,7 +2355,6 @@ h1 mark, h2 mark, h3 mark, h4 mark, h5 mark, h6 mark {
 
 body del,
 p del,
-span del,
 section del,
 blockquote del,
 .content del,
@@ -2390,7 +2364,6 @@ h1 del, h2 del, h3 del, h4 del, h5 del, h6 del {
 
 body s,
 p s,
-span s,
 section s,
 blockquote s,
 .content s,
@@ -2401,7 +2374,6 @@ h1 s, h2 s, h3 s, h4 s, h5 s, h6 s {
 
 body ins,
 p ins,
-span ins,
 section ins,
 blockquote ins,
 .content ins,
@@ -2412,7 +2384,6 @@ h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins {
 
 body small,
 p small,
-span small,
 section small,
 blockquote small,
 .content small,
@@ -2422,7 +2393,6 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
 
 body q,
 p q,
-span q,
 section q,
 blockquote q,
 .content q,
@@ -2433,7 +2403,6 @@ h1 q, h2 q, h3 q, h4 q, h5 q, h6 q {
 
 body q:before,
 p q:before,
-span q:before,
 section q:before,
 blockquote q:before,
 .content q:before,
@@ -2443,7 +2412,6 @@ h1 q:before, h2 q:before, h3 q:before, h4 q:before, h5 q:before, h6 q:before {
 
 body q:after,
 p q:after,
-span q:after,
 section q:after,
 blockquote q:after,
 .content q:after,
@@ -2456,9 +2424,6 @@ body.left,
 p.left,
 .left >
 p,
-span.left,
-.left >
-span,
 section.left,
 .left >
 section,
@@ -2484,9 +2449,6 @@ body.centered,
 p.centered,
 .centered >
 p,
-span.centered,
-.centered >
-span,
 section.centered,
 .centered >
 section,
@@ -2512,9 +2474,6 @@ body.right,
 p.right,
 .right >
 p,
-span.right,
-.right >
-span,
 section.right,
 .right >
 section,
@@ -2540,9 +2499,6 @@ body.justified,
 p.justified,
 .justified >
 p,
-span.justified,
-.justified >
-span,
 section.justified,
 .justified >
 section,
