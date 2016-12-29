@@ -2420,6 +2420,37 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: x-small;
 }
 
+body q,
+p q,
+span q,
+section q,
+blockquote q,
+.content q,
+h1 q, h2 q, h3 q, h4 q, h5 q, h6 q {
+  font-style: italic;
+  border-bottom: solid 0.07em #e6e6e6;
+}
+
+body q:before,
+p q:before,
+span q:before,
+section q:before,
+blockquote q:before,
+.content q:before,
+h1 q:before, h2 q:before, h3 q:before, h4 q:before, h5 q:before, h6 q:before {
+  content: open-quote;
+}
+
+body q:after,
+p q:after,
+span q:after,
+section q:after,
+blockquote q:after,
+.content q:after,
+h1 q:after, h2 q:after, h3 q:after, h4 q:after, h5 q:after, h6 q:after {
+  content: close-quote;
+}
+
 body.left,
 .left > body,
 p.left,
