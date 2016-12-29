@@ -2340,7 +2340,54 @@ span u,
 section u,
 .content u,
 h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
-  text-decoration: underline;
+  text-decoration: none;
+  border-bottom: 1px solid;
+}
+
+body mark,
+p mark,
+span mark,
+section mark,
+.content mark,
+h1 mark, h2 mark, h3 mark, h4 mark, h5 mark, h6 mark {
+  background-color: #81f4e0;
+}
+
+body del,
+p del,
+span del,
+section del,
+.content del,
+h1 del, h2 del, h3 del, h4 del, h5 del, h6 del {
+  text-decoration: line-through;
+}
+
+body s,
+p s,
+span s,
+section s,
+.content s,
+h1 s, h2 s, h3 s, h4 s, h5 s, h6 s {
+  text-decoration: line-through;
+}
+
+body ins,
+p ins,
+span ins,
+section ins,
+.content ins,
+h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins {
+  text-decoration: none;
+  border-bottom: 3px double;
+}
+
+body small,
+p small,
+span small,
+section small,
+.content small,
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: x-small;
 }
 
 body.left,

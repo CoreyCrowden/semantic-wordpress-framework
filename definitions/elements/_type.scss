@@ -67,9 +67,6 @@ $font-weight-bold                           : bolder !default;
 // Italic
 $font-style-italic                          : italic !default;
 
-// Underline
-$text-decoration-underline                  : underline !default;
-
 // ------------------------------------------------------------------------------------------------------------------
 
 // Title
@@ -190,7 +187,34 @@ h1, h2, h3, h4, h5, h6 {
 
   // Underline
   u {
-    text-decoration: $text-decoration-underline;
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+
+  // Mark
+  mark {
+    background-color: colorset($color-accent, light);
+  }
+
+  // Deleted text
+  del {
+    text-decoration: line-through;
+  }
+
+  // Incorrect text
+  s {
+    text-decoration: line-through;
+  }
+
+  // Inserted text
+  ins {
+    text-decoration: none;
+    border-bottom: 3px double;
+  }
+
+  // Small text (fine print)
+  small {
+    font-size: x-small;
   }
 
   // Left Align Text (Default)
