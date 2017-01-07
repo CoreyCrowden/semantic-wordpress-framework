@@ -18,16 +18,88 @@ ol, ul {
   }
 }
 
+// Unordered List
+ul {
+  list-style: disc;
+
+  ul {
+    list-style: circle;
+
+    ul {
+      list-style: disc;
+
+      ul {
+        list-style: circle;
+      }
+    }
+  }
+}
+
+// Ordered List
+ol {
+  list-style: decimal;
+
+  ol {
+    list-style: lower-alpha;
+
+    ol {
+      list-style: lower-roman;
+
+      ol {
+        list-style: decimal;
+
+        ol {
+          list-style: lower-alpha;
+
+          ol {
+            list-style: lower-roman;
+          }
+        }
+      }
+    }
+  }
+}
+
 // Unstyled List
 //
 // Targets all areas outside of the main content area.
 // This is based on the assumption all other lists outside of the content area are menus and links.
-.unstyled-list,
+.unstyled.list,
 .menu,
 aside,
 footer {
   ul, ol, li {
     list-style: none;
     margin: 0;
+  }
+}
+
+// ------------------------------------------------------------------------------------------------------------------
+
+// Definition list
+dl {
+
+  @extend .grid;
+
+  dt, dd {
+    margin: $paragraph-margin-top 0 $paragraph-margin-bottom;
+  }
+
+  dt {
+    @include flex(1 1 $two-fifths);
+    max-width: $two-fifths;
+    min-width: fit-content;
+
+    @extend strong;
+    margin-bottom: 0;
+  }
+
+  dd {
+      @include flex(1 1 $three-fifths);
+      max-width: $three-fifths;
+
+    + dd {
+      margin: 0 0 $paragraph-margin-bottom $two-fifths;
+    }
   }
 }
