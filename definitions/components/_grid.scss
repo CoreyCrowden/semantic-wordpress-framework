@@ -399,11 +399,12 @@ $full-width: 100% / 1;
 // Breakpoint sit at the grid level
 .grid,
 .menu {
-  .grid.six.columns,
-  .grid.five.columns,
-  .grid.four.columns,
-  .grid.three.columns,
-  .grid.two.columns {
+  &.halves,
+  &.thirds,
+  &.quarters,
+  &.fourths,
+  &.fifths,
+  &.sixths {
 
     // Small breakpoint for mobile devices
     &.small {

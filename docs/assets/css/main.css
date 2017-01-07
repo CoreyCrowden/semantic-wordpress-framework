@@ -1828,25 +1828,13 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 619px) {
-  .grid .grid.six.columns.small .item, dl .grid.six.columns.small .item, .grid dl.six.columns.small .item, dl dl.six.columns.small .item,
-  .grid .grid.five.columns.small .item, dl .grid.five.columns.small .item,
-  .grid dl.five.columns.small .item, dl dl.five.columns.small .item,
-  .grid .grid.four.columns.small .item, dl .grid.four.columns.small .item,
-  .grid dl.four.columns.small .item, dl dl.four.columns.small .item,
-  .grid .grid.three.columns.small .item, dl .grid.three.columns.small .item,
-  .grid dl.three.columns.small .item, dl dl.three.columns.small .item,
-  .grid .grid.two.columns.small .item, dl .grid.two.columns.small .item,
-  .grid dl.two.columns.small .item, dl dl.two.columns.small .item,
-  .menu .grid.six.columns.small .item,
-  .menu dl.six.columns.small .item,
-  .menu .grid.five.columns.small .item,
-  .menu dl.five.columns.small .item,
-  .menu .grid.four.columns.small .item,
-  .menu dl.four.columns.small .item,
-  .menu .grid.three.columns.small .item,
-  .menu dl.three.columns.small .item,
-  .menu .grid.two.columns.small .item,
-  .menu dl.two.columns.small .item {
+  .grid.halves.small .item, dl.halves.small .item, .grid.thirds.small .item, dl.thirds.small .item, .grid.quarters.small .item, dl.quarters.small .item, .grid.fourths.small .item, dl.fourths.small .item, .grid.fifths.small .item, dl.fifths.small .item, .grid.sixths.small .item, dl.sixths.small .item,
+  .menu.halves.small .item,
+  .menu.thirds.small .item,
+  .menu.quarters.small .item,
+  .menu.fourths.small .item,
+  .menu.fifths.small .item,
+  .menu.sixths.small .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1855,25 +1843,13 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 767px) {
-  .grid .grid.six.columns.medium .item, dl .grid.six.columns.medium .item, .grid dl.six.columns.medium .item, dl dl.six.columns.medium .item,
-  .grid .grid.five.columns.medium .item, dl .grid.five.columns.medium .item,
-  .grid dl.five.columns.medium .item, dl dl.five.columns.medium .item,
-  .grid .grid.four.columns.medium .item, dl .grid.four.columns.medium .item,
-  .grid dl.four.columns.medium .item, dl dl.four.columns.medium .item,
-  .grid .grid.three.columns.medium .item, dl .grid.three.columns.medium .item,
-  .grid dl.three.columns.medium .item, dl dl.three.columns.medium .item,
-  .grid .grid.two.columns.medium .item, dl .grid.two.columns.medium .item,
-  .grid dl.two.columns.medium .item, dl dl.two.columns.medium .item,
-  .menu .grid.six.columns.medium .item,
-  .menu dl.six.columns.medium .item,
-  .menu .grid.five.columns.medium .item,
-  .menu dl.five.columns.medium .item,
-  .menu .grid.four.columns.medium .item,
-  .menu dl.four.columns.medium .item,
-  .menu .grid.three.columns.medium .item,
-  .menu dl.three.columns.medium .item,
-  .menu .grid.two.columns.medium .item,
-  .menu dl.two.columns.medium .item {
+  .grid.halves.medium .item, dl.halves.medium .item, .grid.thirds.medium .item, dl.thirds.medium .item, .grid.quarters.medium .item, dl.quarters.medium .item, .grid.fourths.medium .item, dl.fourths.medium .item, .grid.fifths.medium .item, dl.fifths.medium .item, .grid.sixths.medium .item, dl.sixths.medium .item,
+  .menu.halves.medium .item,
+  .menu.thirds.medium .item,
+  .menu.quarters.medium .item,
+  .menu.fourths.medium .item,
+  .menu.fifths.medium .item,
+  .menu.sixths.medium .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1882,25 +1858,13 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 1023px) {
-  .grid .grid.six.columns.large .item, dl .grid.six.columns.large .item, .grid dl.six.columns.large .item, dl dl.six.columns.large .item,
-  .grid .grid.five.columns.large .item, dl .grid.five.columns.large .item,
-  .grid dl.five.columns.large .item, dl dl.five.columns.large .item,
-  .grid .grid.four.columns.large .item, dl .grid.four.columns.large .item,
-  .grid dl.four.columns.large .item, dl dl.four.columns.large .item,
-  .grid .grid.three.columns.large .item, dl .grid.three.columns.large .item,
-  .grid dl.three.columns.large .item, dl dl.three.columns.large .item,
-  .grid .grid.two.columns.large .item, dl .grid.two.columns.large .item,
-  .grid dl.two.columns.large .item, dl dl.two.columns.large .item,
-  .menu .grid.six.columns.large .item,
-  .menu dl.six.columns.large .item,
-  .menu .grid.five.columns.large .item,
-  .menu dl.five.columns.large .item,
-  .menu .grid.four.columns.large .item,
-  .menu dl.four.columns.large .item,
-  .menu .grid.three.columns.large .item,
-  .menu dl.three.columns.large .item,
-  .menu .grid.two.columns.large .item,
-  .menu dl.two.columns.large .item {
+  .grid.halves.large .item, dl.halves.large .item, .grid.thirds.large .item, dl.thirds.large .item, .grid.quarters.large .item, dl.quarters.large .item, .grid.fourths.large .item, dl.fourths.large .item, .grid.fifths.large .item, dl.fifths.large .item, .grid.sixths.large .item, dl.sixths.large .item,
+  .menu.halves.large .item,
+  .menu.thirds.large .item,
+  .menu.quarters.large .item,
+  .menu.fourths.large .item,
+  .menu.fifths.large .item,
+  .menu.sixths.large .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1909,25 +1873,13 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 1439px) {
-  .grid .grid.six.columns.extra.large .item, dl .grid.six.columns.extra.large .item, .grid dl.six.columns.extra.large .item, dl dl.six.columns.extra.large .item,
-  .grid .grid.five.columns.extra.large .item, dl .grid.five.columns.extra.large .item,
-  .grid dl.five.columns.extra.large .item, dl dl.five.columns.extra.large .item,
-  .grid .grid.four.columns.extra.large .item, dl .grid.four.columns.extra.large .item,
-  .grid dl.four.columns.extra.large .item, dl dl.four.columns.extra.large .item,
-  .grid .grid.three.columns.extra.large .item, dl .grid.three.columns.extra.large .item,
-  .grid dl.three.columns.extra.large .item, dl dl.three.columns.extra.large .item,
-  .grid .grid.two.columns.extra.large .item, dl .grid.two.columns.extra.large .item,
-  .grid dl.two.columns.extra.large .item, dl dl.two.columns.extra.large .item,
-  .menu .grid.six.columns.extra.large .item,
-  .menu dl.six.columns.extra.large .item,
-  .menu .grid.five.columns.extra.large .item,
-  .menu dl.five.columns.extra.large .item,
-  .menu .grid.four.columns.extra.large .item,
-  .menu dl.four.columns.extra.large .item,
-  .menu .grid.three.columns.extra.large .item,
-  .menu dl.three.columns.extra.large .item,
-  .menu .grid.two.columns.extra.large .item,
-  .menu dl.two.columns.extra.large .item {
+  .grid.halves.extra.large .item, dl.halves.extra.large .item, .grid.thirds.extra.large .item, dl.thirds.extra.large .item, .grid.quarters.extra.large .item, dl.quarters.extra.large .item, .grid.fourths.extra.large .item, dl.fourths.extra.large .item, .grid.fifths.extra.large .item, dl.fifths.extra.large .item, .grid.sixths.extra.large .item, dl.sixths.extra.large .item,
+  .menu.halves.extra.large .item,
+  .menu.thirds.extra.large .item,
+  .menu.quarters.extra.large .item,
+  .menu.fourths.extra.large .item,
+  .menu.fifths.extra.large .item,
+  .menu.sixths.extra.large .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -3885,6 +3837,28 @@ p[style="text-align: center;"] img {
 
 .gallery.gallery-columns-4 .gallery-item {
   width: 25%;
+}
+
+.image.fit {
+  position: relative;
+  margin: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image.fit > img {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  min-height: 100% !important;
+  min-width: 100% !important;
+  width: auto !important;
+  max-width: none !important;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #loader.loading {
