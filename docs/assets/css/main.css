@@ -131,7 +131,8 @@ abbr[title] {
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 b,
-strong {
+strong,
+dl dt {
   font-weight: inherit;
 }
 
@@ -139,7 +140,8 @@ strong {
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 b,
-strong {
+strong,
+dl dt {
   font-weight: bolder;
 }
 
@@ -1416,7 +1418,7 @@ input[type="radio"] ~ label:after {
 }
 
 .one.sixth,
-.grid.sixths > .item,
+.grid.sixths > .item, dl.sixths > .item,
 .menu.sixths > .item {
   -moz-flex: 1 1 16.66667%;
   -ms-flex: 1 1 16.66667%;
@@ -1425,7 +1427,7 @@ input[type="radio"] ~ label:after {
 }
 
 .one.fifth,
-.grid.fifths > .item,
+.grid.fifths > .item, dl.fifths > .item,
 .menu.fifths > .item {
   -moz-flex: 1 1 20%;
   -ms-flex: 1 1 20%;
@@ -1435,9 +1437,9 @@ input[type="radio"] ~ label:after {
 
 .one.quarter,
 .one.fourth,
-.grid.fourths > .item,
+.grid.fourths > .item, dl.fourths > .item,
 .menu.fourths > .item,
-.grid.quarters > .item,
+.grid.quarters > .item, dl.quarters > .item,
 .menu.quarters > .item {
   -moz-flex: 1 1 25%;
   -ms-flex: 1 1 25%;
@@ -1447,7 +1449,7 @@ input[type="radio"] ~ label:after {
 
 .one.third,
 .two.sixths,
-.grid.thirds > .item,
+.grid.thirds > .item, dl.thirds > .item,
 .menu.thirds > .item {
   -moz-flex: 1 1 33.33333%;
   -ms-flex: 1 1 33.33333%;
@@ -1466,7 +1468,7 @@ input[type="radio"] ~ label:after {
 .two.quarters,
 .two.fourths,
 .three.sixths,
-.grid.halves > .item,
+.grid.halves > .item, dl.halves > .item,
 .menu.halves > .item {
   -moz-flex: 1 1 50%;
   -ms-flex: 1 1 50%;
@@ -1518,7 +1520,7 @@ input[type="radio"] ~ label:after {
   max-width: 100%;
 }
 
-.grid,
+.grid, dl,
 .menu {
   display: -moz-flex;
   display: -ms-flexbox;
@@ -1536,77 +1538,77 @@ input[type="radio"] ~ label:after {
   min-width: 100%;
 }
 
-.grid.vertical,
+.grid.vertical, dl.vertical,
 .menu.vertical {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
 }
 
-.grid.vertical > .item,
+.grid.vertical > .item, dl.vertical > .item,
 .menu.vertical > .item {
   -moz-flex: none;
   -ms-flex: none;
   flex: none;
 }
 
-.grid.horizontal.reversed:not(.vertical),
+.grid.horizontal.reversed:not(.vertical), dl.horizontal.reversed:not(.vertical),
 .menu.horizontal.reversed:not(.vertical) {
   -moz-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
 }
 
-.grid.vertical.reversed,
+.grid.vertical.reversed, dl.vertical.reversed,
 .menu.vertical.reversed {
   -moz-flex-direction: column-reverse;
   -ms-flex-direction: column-reverse;
   flex-direction: column-reverse;
 }
 
-.grid.left:not(.vertical),
+.grid.left:not(.vertical), dl.left:not(.vertical),
 .menu.left:not(.vertical) {
   -ms-flex-pack: start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
 }
 
-.grid.vertical.left,
+.grid.vertical.left, dl.vertical.left,
 .menu.vertical.left {
   -ms-flex-align: start;
   -moz-align-items: flex-start;
   align-items: flex-start;
 }
 
-.grid.centered:not(.vertical),
+.grid.centered:not(.vertical), dl.centered:not(.vertical),
 .menu.centered:not(.vertical) {
   -ms-flex-pack: center;
   -moz-justify-content: center;
   justify-content: center;
 }
 
-.grid.vertical.centered,
+.grid.vertical.centered, dl.vertical.centered,
 .menu.vertical.centered {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center;
 }
 
-.grid.right:not(.vertical),
+.grid.right:not(.vertical), dl.right:not(.vertical),
 .menu.right:not(.vertical) {
   -ms-flex-pack: end;
   -moz-justify-content: flex-end;
   justify-content: flex-end;
 }
 
-.grid.vertical.right,
+.grid.vertical.right, dl.vertical.right,
 .menu.vertical.right {
   -ms-flex-align: end;
   -moz-align-items: flex-end;
   align-items: flex-end;
 }
 
-.grid.justified:not(.vertical) > .item,
+.grid.justified:not(.vertical) > .item, dl.justified:not(.vertical) > .item,
 .menu.justified:not(.vertical) > .item {
   -moz-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1614,7 +1616,7 @@ input[type="radio"] ~ label:after {
   max-width: 100%;
 }
 
-.grid.vertical.justified,
+.grid.vertical.justified, dl.vertical.justified,
 .menu.vertical.justified {
   -ms-flex-align: stretch;
   -moz-align-items: stretch;
@@ -1623,49 +1625,49 @@ input[type="radio"] ~ label:after {
   align-content: stretch;
 }
 
-.grid.top:not(.vertical),
+.grid.top:not(.vertical), dl.top:not(.vertical),
 .menu.top:not(.vertical) {
   -ms-flex-align: start;
   -moz-align-items: flex-start;
   align-items: flex-start;
 }
 
-.grid.vertical.top,
+.grid.vertical.top, dl.vertical.top,
 .menu.vertical.top {
   -ms-flex-pack: start;
   -moz-justify-content: flex-start;
   justify-content: flex-start;
 }
 
-.grid.middle:not(.vertical),
+.grid.middle:not(.vertical), dl.middle:not(.vertical),
 .menu.middle:not(.vertical) {
   -ms-flex-align: center;
   -moz-align-items: center;
   align-items: center;
 }
 
-.grid.vertical.middle,
+.grid.vertical.middle, dl.vertical.middle,
 .menu.vertical.middle {
   -ms-flex-pack: center;
   -moz-justify-content: center;
   justify-content: center;
 }
 
-.grid.bottom:not(.vertical),
+.grid.bottom:not(.vertical), dl.bottom:not(.vertical),
 .menu.bottom:not(.vertical) {
   -ms-flex-align: end;
   -moz-align-items: flex-end;
   align-items: flex-end;
 }
 
-.grid.vertical.bottom,
+.grid.vertical.bottom, dl.vertical.bottom,
 .menu.vertical.bottom {
   -ms-flex-pack: end;
   -moz-justify-content: flex-end;
   justify-content: flex-end;
 }
 
-.grid.stretched:not(.vertical),
+.grid.stretched:not(.vertical), dl.stretched:not(.vertical),
 .menu.stretched:not(.vertical) {
   -ms-flex-align: stretch;
   -moz-align-items: stretch;
@@ -1674,13 +1676,13 @@ input[type="radio"] ~ label:after {
   align-content: stretch;
 }
 
-.grid.stretched:not(.vertical) .item > div,
+.grid.stretched:not(.vertical) .item > div, dl.stretched:not(.vertical) .item > div,
 .menu.stretched:not(.vertical) .item > div {
   min-height: 100%;
   height: 100%;
 }
 
-.grid.vertical.stretched > .item,
+.grid.vertical.stretched > .item, dl.vertical.stretched > .item,
 .menu.vertical.stretched > .item {
   -moz-flex-grow: 1;
   -ms-flex-positive: 1;
@@ -1695,7 +1697,7 @@ input[type="radio"] ~ label:after {
   align-content: stretch;
 }
 
-.grid.vertical.stretched > .item > div,
+.grid.vertical.stretched > .item > div, dl.vertical.stretched > .item > div,
 .menu.vertical.stretched > .item > div {
   height: auto;
 }
@@ -1724,14 +1726,14 @@ input[type="radio"] ~ label:after {
   margin-left: auto;
 }
 
-.grid:not(.vertical) > .item.justified {
+.grid:not(.vertical) > .item.justified, dl:not(.vertical) > .item.justified {
   -moz-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
 }
 
-.grid.vertical > .item.justified {
+.grid.vertical > .item.justified, dl.vertical > .item.justified {
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
       align-self: stretch;
@@ -1742,13 +1744,13 @@ input[type="radio"] ~ label:after {
   margin-bottom: auto;
 }
 
-.grid:not(.vertical) > .item.middle {
+.grid:not(.vertical) > .item.middle, dl:not(.vertical) > .item.middle {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
       align-self: center;
 }
 
-.grid.vertical .item.middle {
+.grid.vertical .item.middle, dl.vertical .item.middle {
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -1757,18 +1759,18 @@ input[type="radio"] ~ label:after {
   margin-top: auto;
 }
 
-.grid:not(.vertical) > .item.stretched {
+.grid:not(.vertical) > .item.stretched, dl:not(.vertical) > .item.stretched {
   -ms-flex-item-align: stretch;
   -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
-.grid:not(.vertical) > .item.stretched > div {
+.grid:not(.vertical) > .item.stretched > div, dl:not(.vertical) > .item.stretched > div {
   min-height: 100%;
   height: 100%;
 }
 
-.grid.vertical > .item.stretched {
+.grid.vertical > .item.stretched, dl.vertical > .item.stretched {
   -moz-flex-grow: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -1782,7 +1784,7 @@ input[type="radio"] ~ label:after {
   align-content: stretch;
 }
 
-.grid.vertical > .item.stretched > div {
+.grid.vertical > .item.stretched > div, dl.vertical > .item.stretched > div {
   height: auto;
 }
 
@@ -1826,16 +1828,25 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 619px) {
-  .grid .grid.six.columns.small .item,
-  .grid .grid.five.columns.small .item,
-  .grid .grid.four.columns.small .item,
-  .grid .grid.three.columns.small .item,
-  .grid .grid.two.columns.small .item,
+  .grid .grid.six.columns.small .item, dl .grid.six.columns.small .item, .grid dl.six.columns.small .item, dl dl.six.columns.small .item,
+  .grid .grid.five.columns.small .item, dl .grid.five.columns.small .item,
+  .grid dl.five.columns.small .item, dl dl.five.columns.small .item,
+  .grid .grid.four.columns.small .item, dl .grid.four.columns.small .item,
+  .grid dl.four.columns.small .item, dl dl.four.columns.small .item,
+  .grid .grid.three.columns.small .item, dl .grid.three.columns.small .item,
+  .grid dl.three.columns.small .item, dl dl.three.columns.small .item,
+  .grid .grid.two.columns.small .item, dl .grid.two.columns.small .item,
+  .grid dl.two.columns.small .item, dl dl.two.columns.small .item,
   .menu .grid.six.columns.small .item,
+  .menu dl.six.columns.small .item,
   .menu .grid.five.columns.small .item,
+  .menu dl.five.columns.small .item,
   .menu .grid.four.columns.small .item,
+  .menu dl.four.columns.small .item,
   .menu .grid.three.columns.small .item,
-  .menu .grid.two.columns.small .item {
+  .menu dl.three.columns.small .item,
+  .menu .grid.two.columns.small .item,
+  .menu dl.two.columns.small .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1844,16 +1855,25 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 767px) {
-  .grid .grid.six.columns.medium .item,
-  .grid .grid.five.columns.medium .item,
-  .grid .grid.four.columns.medium .item,
-  .grid .grid.three.columns.medium .item,
-  .grid .grid.two.columns.medium .item,
+  .grid .grid.six.columns.medium .item, dl .grid.six.columns.medium .item, .grid dl.six.columns.medium .item, dl dl.six.columns.medium .item,
+  .grid .grid.five.columns.medium .item, dl .grid.five.columns.medium .item,
+  .grid dl.five.columns.medium .item, dl dl.five.columns.medium .item,
+  .grid .grid.four.columns.medium .item, dl .grid.four.columns.medium .item,
+  .grid dl.four.columns.medium .item, dl dl.four.columns.medium .item,
+  .grid .grid.three.columns.medium .item, dl .grid.three.columns.medium .item,
+  .grid dl.three.columns.medium .item, dl dl.three.columns.medium .item,
+  .grid .grid.two.columns.medium .item, dl .grid.two.columns.medium .item,
+  .grid dl.two.columns.medium .item, dl dl.two.columns.medium .item,
   .menu .grid.six.columns.medium .item,
+  .menu dl.six.columns.medium .item,
   .menu .grid.five.columns.medium .item,
+  .menu dl.five.columns.medium .item,
   .menu .grid.four.columns.medium .item,
+  .menu dl.four.columns.medium .item,
   .menu .grid.three.columns.medium .item,
-  .menu .grid.two.columns.medium .item {
+  .menu dl.three.columns.medium .item,
+  .menu .grid.two.columns.medium .item,
+  .menu dl.two.columns.medium .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1862,16 +1882,25 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 1023px) {
-  .grid .grid.six.columns.large .item,
-  .grid .grid.five.columns.large .item,
-  .grid .grid.four.columns.large .item,
-  .grid .grid.three.columns.large .item,
-  .grid .grid.two.columns.large .item,
+  .grid .grid.six.columns.large .item, dl .grid.six.columns.large .item, .grid dl.six.columns.large .item, dl dl.six.columns.large .item,
+  .grid .grid.five.columns.large .item, dl .grid.five.columns.large .item,
+  .grid dl.five.columns.large .item, dl dl.five.columns.large .item,
+  .grid .grid.four.columns.large .item, dl .grid.four.columns.large .item,
+  .grid dl.four.columns.large .item, dl dl.four.columns.large .item,
+  .grid .grid.three.columns.large .item, dl .grid.three.columns.large .item,
+  .grid dl.three.columns.large .item, dl dl.three.columns.large .item,
+  .grid .grid.two.columns.large .item, dl .grid.two.columns.large .item,
+  .grid dl.two.columns.large .item, dl dl.two.columns.large .item,
   .menu .grid.six.columns.large .item,
+  .menu dl.six.columns.large .item,
   .menu .grid.five.columns.large .item,
+  .menu dl.five.columns.large .item,
   .menu .grid.four.columns.large .item,
+  .menu dl.four.columns.large .item,
   .menu .grid.three.columns.large .item,
-  .menu .grid.two.columns.large .item {
+  .menu dl.three.columns.large .item,
+  .menu .grid.two.columns.large .item,
+  .menu dl.two.columns.large .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -1880,16 +1909,25 @@ input[type="radio"] ~ label:after {
 }
 
 @media (max-width: 1439px) {
-  .grid .grid.six.columns.extra.large .item,
-  .grid .grid.five.columns.extra.large .item,
-  .grid .grid.four.columns.extra.large .item,
-  .grid .grid.three.columns.extra.large .item,
-  .grid .grid.two.columns.extra.large .item,
+  .grid .grid.six.columns.extra.large .item, dl .grid.six.columns.extra.large .item, .grid dl.six.columns.extra.large .item, dl dl.six.columns.extra.large .item,
+  .grid .grid.five.columns.extra.large .item, dl .grid.five.columns.extra.large .item,
+  .grid dl.five.columns.extra.large .item, dl dl.five.columns.extra.large .item,
+  .grid .grid.four.columns.extra.large .item, dl .grid.four.columns.extra.large .item,
+  .grid dl.four.columns.extra.large .item, dl dl.four.columns.extra.large .item,
+  .grid .grid.three.columns.extra.large .item, dl .grid.three.columns.extra.large .item,
+  .grid dl.three.columns.extra.large .item, dl dl.three.columns.extra.large .item,
+  .grid .grid.two.columns.extra.large .item, dl .grid.two.columns.extra.large .item,
+  .grid dl.two.columns.extra.large .item, dl dl.two.columns.extra.large .item,
   .menu .grid.six.columns.extra.large .item,
+  .menu dl.six.columns.extra.large .item,
   .menu .grid.five.columns.extra.large .item,
+  .menu dl.five.columns.extra.large .item,
   .menu .grid.four.columns.extra.large .item,
+  .menu dl.four.columns.extra.large .item,
   .menu .grid.three.columns.extra.large .item,
-  .menu .grid.two.columns.extra.large .item {
+  .menu dl.three.columns.extra.large .item,
+  .menu .grid.two.columns.extra.large .item,
+  .menu dl.two.columns.extra.large .item {
     -moz-flex: 1 1 100%;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
@@ -2131,6 +2169,7 @@ p,
 section,
 blockquote,
 .content,
+time,
 h1, h2, h3, h4, h5, h6 {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
@@ -2158,6 +2197,9 @@ blockquote, .normal
 .content,
 .inverted .normal
 .content, .normal
+time,
+.inverted .normal
+time, .normal
 h1,
 .inverted .normal
 h1, .normal h2,
@@ -2183,6 +2225,9 @@ blockquote, .inverted
 .content,
 .normal .inverted
 .content, .inverted
+time,
+.normal .inverted
+time, .inverted
 h1,
 .normal .inverted
 h1, .inverted h2,
@@ -2199,6 +2244,7 @@ p em,
 section em,
 blockquote em,
 .content em,
+time em,
 h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
   font-weight: bolder;
   font-style: italic;
@@ -2219,6 +2265,9 @@ blockquote em, .normal
 .content em,
 .inverted .normal
 .content em, .normal
+time em,
+.inverted .normal
+time em, .normal
 h1 em,
 .inverted .normal
 h1 em, .normal h2 em,
@@ -2244,6 +2293,9 @@ blockquote em, .inverted
 .content em,
 .normal .inverted
 .content em, .inverted
+time em,
+.normal .inverted
+time em, .inverted
 h1 em,
 .normal .inverted
 h1 em, .inverted h2 em,
@@ -2255,64 +2307,179 @@ h1 em, .inverted h2 em,
   color: white;
 }
 
-body strong,
+body strong, body dl dt, dl body dt,
 p strong,
+p dl dt, dl
+p dt,
 section strong,
+section dl dt, dl
+section dt,
 blockquote strong,
+blockquote dl dt, dl
+blockquote dt,
 .content strong,
-h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong {
+.content dl dt, dl
+.content dt,
+time strong,
+time dl dt, dl
+time dt,
+h1 strong,
+h1 dl dt, dl
+h1 dt, h2 strong, h2 dl dt, dl h2 dt, h3 strong, h3 dl dt, dl h3 dt, h4 strong, h4 dl dt, dl h4 dt, h5 strong, h5 dl dt, dl h5 dt, h6 strong, h6 dl dt, dl h6 dt {
   font-weight: bolder;
   font-style: none;
   color: black;
 }
 
-.normal body strong,
-.inverted .normal body strong, .normal
+.normal body strong, .normal body dl dt, dl .normal body dt,
+.inverted .normal body strong,
+.inverted .normal body dl dt, dl
+.inverted .normal body dt, .normal
+p strong, .normal
+p dl dt, dl .normal
+p dt,
+.inverted .normal
 p strong,
 .inverted .normal
-p strong, .normal
+p dl dt, dl
+.inverted .normal
+p dt, .normal
+section strong, .normal
+section dl dt, dl .normal
+section dt,
+.inverted .normal
 section strong,
 .inverted .normal
-section strong, .normal
+section dl dt, dl
+.inverted .normal
+section dt, .normal
+blockquote strong, .normal
+blockquote dl dt, dl .normal
+blockquote dt,
+.inverted .normal
 blockquote strong,
 .inverted .normal
-blockquote strong, .normal
+blockquote dl dt, dl
+.inverted .normal
+blockquote dt, .normal
+.content strong, .normal
+.content dl dt, dl .normal
+.content dt,
+.inverted .normal
 .content strong,
 .inverted .normal
-.content strong, .normal
+.content dl dt, dl
+.inverted .normal
+.content dt, .normal
+time strong, .normal
+time dl dt, dl .normal
+time dt,
+.inverted .normal
+time strong,
+.inverted .normal
+time dl dt, dl
+.inverted .normal
+time dt, .normal
+h1 strong, .normal
+h1 dl dt, dl .normal
+h1 dt,
+.inverted .normal
 h1 strong,
 .inverted .normal
-h1 strong, .normal h2 strong,
-.inverted .normal h2 strong, .normal h3 strong,
-.inverted .normal h3 strong, .normal h4 strong,
-.inverted .normal h4 strong, .normal h5 strong,
-.inverted .normal h5 strong, .normal h6 strong,
-.inverted .normal h6 strong {
+h1 dl dt, dl
+.inverted .normal
+h1 dt, .normal h2 strong, .normal h2 dl dt, dl .normal h2 dt,
+.inverted .normal h2 strong,
+.inverted .normal h2 dl dt, dl
+.inverted .normal h2 dt, .normal h3 strong, .normal h3 dl dt, dl .normal h3 dt,
+.inverted .normal h3 strong,
+.inverted .normal h3 dl dt, dl
+.inverted .normal h3 dt, .normal h4 strong, .normal h4 dl dt, dl .normal h4 dt,
+.inverted .normal h4 strong,
+.inverted .normal h4 dl dt, dl
+.inverted .normal h4 dt, .normal h5 strong, .normal h5 dl dt, dl .normal h5 dt,
+.inverted .normal h5 strong,
+.inverted .normal h5 dl dt, dl
+.inverted .normal h5 dt, .normal h6 strong, .normal h6 dl dt, dl .normal h6 dt,
+.inverted .normal h6 strong,
+.inverted .normal h6 dl dt, dl
+.inverted .normal h6 dt {
   color: black;
 }
 
-.inverted body strong,
-.normal .inverted body strong, .inverted
+.inverted body strong, .inverted body dl dt, dl .inverted body dt,
+.normal .inverted body strong,
+.normal .inverted body dl dt, dl
+.normal .inverted body dt, .inverted
+p strong, .inverted
+p dl dt, dl .inverted
+p dt,
+.normal .inverted
 p strong,
 .normal .inverted
-p strong, .inverted
+p dl dt, dl
+.normal .inverted
+p dt, .inverted
+section strong, .inverted
+section dl dt, dl .inverted
+section dt,
+.normal .inverted
 section strong,
 .normal .inverted
-section strong, .inverted
+section dl dt, dl
+.normal .inverted
+section dt, .inverted
+blockquote strong, .inverted
+blockquote dl dt, dl .inverted
+blockquote dt,
+.normal .inverted
 blockquote strong,
 .normal .inverted
-blockquote strong, .inverted
+blockquote dl dt, dl
+.normal .inverted
+blockquote dt, .inverted
+.content strong, .inverted
+.content dl dt, dl .inverted
+.content dt,
+.normal .inverted
 .content strong,
 .normal .inverted
-.content strong, .inverted
+.content dl dt, dl
+.normal .inverted
+.content dt, .inverted
+time strong, .inverted
+time dl dt, dl .inverted
+time dt,
+.normal .inverted
+time strong,
+.normal .inverted
+time dl dt, dl
+.normal .inverted
+time dt, .inverted
+h1 strong, .inverted
+h1 dl dt, dl .inverted
+h1 dt,
+.normal .inverted
 h1 strong,
 .normal .inverted
-h1 strong, .inverted h2 strong,
-.normal .inverted h2 strong, .inverted h3 strong,
-.normal .inverted h3 strong, .inverted h4 strong,
-.normal .inverted h4 strong, .inverted h5 strong,
-.normal .inverted h5 strong, .inverted h6 strong,
-.normal .inverted h6 strong {
+h1 dl dt, dl
+.normal .inverted
+h1 dt, .inverted h2 strong, .inverted h2 dl dt, dl .inverted h2 dt,
+.normal .inverted h2 strong,
+.normal .inverted h2 dl dt, dl
+.normal .inverted h2 dt, .inverted h3 strong, .inverted h3 dl dt, dl .inverted h3 dt,
+.normal .inverted h3 strong,
+.normal .inverted h3 dl dt, dl
+.normal .inverted h3 dt, .inverted h4 strong, .inverted h4 dl dt, dl .inverted h4 dt,
+.normal .inverted h4 strong,
+.normal .inverted h4 dl dt, dl
+.normal .inverted h4 dt, .inverted h5 strong, .inverted h5 dl dt, dl .inverted h5 dt,
+.normal .inverted h5 strong,
+.normal .inverted h5 dl dt, dl
+.normal .inverted h5 dt, .inverted h6 strong, .inverted h6 dl dt, dl .inverted h6 dt,
+.normal .inverted h6 strong,
+.normal .inverted h6 dl dt, dl
+.normal .inverted h6 dt {
   color: white;
 }
 
@@ -2321,6 +2488,7 @@ p b,
 section b,
 blockquote b,
 .content b,
+time b,
 h1 b, h2 b, h3 b, h4 b, h5 b, h6 b {
   font-weight: bolder;
 }
@@ -2330,6 +2498,7 @@ p i,
 section i,
 blockquote i,
 .content i,
+time i,
 h1 i, h2 i, h3 i, h4 i, h5 i, h6 i {
   font-style: italic;
 }
@@ -2339,6 +2508,7 @@ p u,
 section u,
 blockquote u,
 .content u,
+time u,
 h1 u, h2 u, h3 u, h4 u, h5 u, h6 u {
   text-decoration: none;
   border-bottom: .07em solid;
@@ -2349,6 +2519,7 @@ p mark,
 section mark,
 blockquote mark,
 .content mark,
+time mark,
 h1 mark, h2 mark, h3 mark, h4 mark, h5 mark, h6 mark {
   background-color: #81f4e0;
 }
@@ -2358,6 +2529,7 @@ p del,
 section del,
 blockquote del,
 .content del,
+time del,
 h1 del, h2 del, h3 del, h4 del, h5 del, h6 del {
   text-decoration: line-through;
 }
@@ -2367,6 +2539,7 @@ p s,
 section s,
 blockquote s,
 .content s,
+time s,
 h1 s, h2 s, h3 s, h4 s, h5 s, h6 s {
   text-decoration: none;
   border-bottom: 0.07em dotted #FF0000;
@@ -2377,6 +2550,7 @@ p ins,
 section ins,
 blockquote ins,
 .content ins,
+time ins,
 h1 ins, h2 ins, h3 ins, h4 ins, h5 ins, h6 ins {
   text-decoration: none;
   border-bottom: .21em double;
@@ -2387,6 +2561,7 @@ p small,
 section small,
 blockquote small,
 .content small,
+time small,
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   font-size: x-small;
 }
@@ -2396,6 +2571,7 @@ p q,
 section q,
 blockquote q,
 .content q,
+time q,
 h1 q, h2 q, h3 q, h4 q, h5 q, h6 q {
   font-style: italic;
   border-bottom: solid 0.07em #e6e6e6;
@@ -2406,6 +2582,7 @@ p q:before,
 section q:before,
 blockquote q:before,
 .content q:before,
+time q:before,
 h1 q:before, h2 q:before, h3 q:before, h4 q:before, h5 q:before, h6 q:before {
   content: open-quote;
 }
@@ -2415,6 +2592,7 @@ p q:after,
 section q:after,
 blockquote q:after,
 .content q:after,
+time q:after,
 h1 q:after, h2 q:after, h3 q:after, h4 q:after, h5 q:after, h6 q:after {
   content: close-quote;
 }
@@ -2433,6 +2611,9 @@ blockquote,
 .content.left,
 .left >
 .content,
+time.left,
+.left >
+time,
 h1.left,
 .left >
 h1, h2.left,
@@ -2458,6 +2639,9 @@ blockquote,
 .content.centered,
 .centered >
 .content,
+time.centered,
+.centered >
+time,
 h1.centered,
 .centered >
 h1, h2.centered,
@@ -2483,6 +2667,9 @@ blockquote,
 .content.right,
 .right >
 .content,
+time.right,
+.right >
+time,
 h1.right,
 .right >
 h1, h2.right,
@@ -2508,6 +2695,9 @@ blockquote,
 .content.justified,
 .justified >
 .content,
+time.justified,
+.justified >
+time,
 h1.justified,
 .justified >
 h1, h2.justified,
@@ -2575,6 +2765,10 @@ h6 {
 
 .title {
   font-size: 3.8em;
+}
+
+p {
+  margin: 1em 0 1em 0;
 }
 
 .lead {
@@ -2671,7 +2865,7 @@ code {
 
 textarea.code {
   overflow: visible;
-  min-height: 300px;
+  min-height: 200px;
   color: #1d1d1d;
   background: #f6f6f6;
   border: none;
@@ -2693,7 +2887,7 @@ textarea.code {
   margin-left: 1.5em;
 }
 
-#page-content .html:not(.example) .grid .item {
+#page-content .html:not(.example) .grid .item, #page-content .html:not(.example) dl .item {
   padding: .1em;
 }
 
@@ -2815,12 +3009,52 @@ time:before,
 }
 
 ol, ul {
-  margin: 0.5em 0 0.5em 2em;
+  margin: 1em 0 1em 2em;
   padding: 0;
 }
 
 ol ol, ol ul, ul ol, ul ul {
   margin: 1em 0 1em 2em;
+}
+
+ul {
+  list-style: disc;
+}
+
+ul ul {
+  list-style: circle;
+}
+
+ul ul ul {
+  list-style: disc;
+}
+
+ul ul ul ul {
+  list-style: circle;
+}
+
+ol {
+  list-style: decimal;
+}
+
+ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol {
+  list-style: lower-roman;
+}
+
+ol ol ol ol {
+  list-style: decimal;
+}
+
+ol ol ol ol ol {
+  list-style: lower-alpha;
+}
+
+ol ol ol ol ol ol {
+  list-style: lower-roman;
 }
 
 .unstyled.list ul, .unstyled.list ol, .unstyled.list li,
@@ -2835,6 +3069,32 @@ footer ol,
 footer li {
   list-style: none;
   margin: 0;
+}
+
+dl dt, dl dd {
+  margin: 1em 0 1em;
+}
+
+dl dt {
+  -moz-flex: 1 1 40%;
+  -ms-flex: 1 1 40%;
+  flex: 1 1 40%;
+  max-width: 40%;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin-bottom: 0;
+}
+
+dl dd {
+  -moz-flex: 1 1 60%;
+  -ms-flex: 1 1 60%;
+  flex: 1 1 60%;
+  max-width: 60%;
+}
+
+dl dd + dd {
+  margin: 0 0 1em 40%;
 }
 
 article table {
