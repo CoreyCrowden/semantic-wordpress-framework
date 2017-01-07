@@ -99,3 +99,36 @@ p[style="text-align: center;"] {
     width: 25%;
   }
 }
+
+
+// Fitted Image
+//
+// The fitted image class must be applied to a div wrapper of an image.
+// This will center and crop the image within the container.
+.image.fit  {
+
+  position: relative;
+  margin: 0;
+  top: 0;
+  left: 0;
+  height: 100%;
+  overflow: hidden;
+
+  > img {
+
+    position: absolute;
+    margin: 0;
+
+    top: 50%;
+    left: 50%;
+
+    min-height: 100% !important;
+    min-width: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+  }
+}
