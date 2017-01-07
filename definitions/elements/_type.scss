@@ -84,8 +84,8 @@ $heading-color                              : $text-color-strong !default;
 $heading-color-inverted                     : $text-color-strong-inverted !default;
 
 // Paragraph spacing
-$paragraph-margin-top                       : .5em !default;
-$paragraph-margin-bottom                    : .5em !default;
+$paragraph-margin-top                       : 1em !default;
+$paragraph-margin-bottom                    : 1em !default;
 
 
 
@@ -125,6 +125,7 @@ p,
 section,
 blockquote,
 .content,
+time,
 h1, h2, h3, h4, h5, h6 {
 
   // Basics
@@ -311,6 +312,12 @@ h6 {
 
 // ------------------------------------------------------------------------------------------------------------------
 
+// Paragraph
+
+p {
+  margin: $paragraph-margin-top 0 $paragraph-margin-bottom 0;
+}
+
 // Lead Paragraph
 //
 //  A .lead paragraph is designed to give extra emphasis to the opening content of body copy.
@@ -411,7 +418,7 @@ pre {
 
 textarea.code {
   overflow: visible;
-  min-height: 300px;
+  min-height: 200px;
   color: $code-color;
   background: $code-background;
   border: $code-border;
