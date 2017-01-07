@@ -7,8 +7,8 @@ time,
   &:before {
     content: '\f017';
     font-family: $font-family;
-    @include padding-right(0.2);
-    @include font-size(1.9);
+    padding-right: .2em;
+    font-size: 1.9em;
   }
 }
 
@@ -19,8 +19,8 @@ time,
   border-radius: $border-radius;
 
   display: inline-block;
-  @include padding(0.3, 1);
-  @include margin(0.25);
+  padding: .6em 2em;
+  margin: .5em;
 
   text-transform: uppercase;
   @include letter-spacing(0.15);
@@ -36,7 +36,6 @@ time,
   }
 }
 
-
 // Tags
 .label {
   position: relative;
@@ -45,18 +44,17 @@ time,
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: .8em;
-  @include padding( .2, .5);
-  @include margin( .075, 0);
+  padding: .5em 1.2em;
+  margin: .1em .1em;
 
   // Add spacing between labels
-  @include margin-right(.15);
+  margin-right: .15em;
   > .right & {
-    @include margin-right(0);
-    @include margin-left(.15);
+    margin-right: 0;
+    margin-left: .15em;
   }
 
   // Default label
   background: rgba($color-grey-extra-light, 1);
   color: $text-color;
-
 }

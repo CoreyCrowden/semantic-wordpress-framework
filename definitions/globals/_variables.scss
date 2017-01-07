@@ -86,22 +86,13 @@ $text-color-strong-inverted                 : rgba($color-white, 1) !default;
 //
 // Set the global spacing units. Elements use these values as required to generate tidy and consistent spacing.
 
-// Spacial Unit Size
-$unit                                       : 2.5em !default;
-
 // Standard Sizing
-$standard-field-height                      : 4.2rem !default;
+$standard-field-height                      : 2.6em !default;
 
 // Container Box Sizing
 $container-max-width                        : 1100px !default;
 
-// Navbar Height
-$height-nav-bar                             : 85px !default;
-
-
 // 4. Icons
-//
-//
 
 // Icon Family
 $icon-font-family                           : FontAwesome !default;

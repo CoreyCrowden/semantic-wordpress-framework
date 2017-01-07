@@ -6,11 +6,11 @@
 // ------------------------------------------------------------------------------------------------------------------
 
 // Size Scaling
-$font-size-very-small                      : 1.2rem !default;
+$font-size-very-small                       : 1.2rem !default;
 $font-size-small                            : 1.4rem !default;
 $font-size-normal                           : 1.6rem !default;
 $font-size-large                            : 2rem !default;
-$font-size-very-large                      : 2.4rem !default;
+$font-size-very-large                       : 2.4rem !default;
 
 .very.small {
   font-size: $font-size-very-small;
@@ -39,15 +39,15 @@ $font-size-very-large                      : 2.4rem !default;
 $font-family                                : "Source Sans Pro", "Helvetica Neue", Arial, sans-serif !default;
 $font-size                                  : 1.6em !default;
 $font-weight                                : 400 !default;
-$letter-spacing                             : .0em !default;
+$letter-spacing                             : 0 !default;
 $line-height                                : 1.35 !default;
 $text-align                                 : left !default;
 $text-decoration                            : none !default;
 $text-indent                                : 0 !default;
 $text-overflow                              : clip !default;
 $text-transform                             : none !default;
-$text-color                                      : $text-color-weak !default;
-$text-color-inverted                             : $text-color-weak-inverted !default;
+$text-color                                 : $text-color-weak !default;
+$text-color-inverted                        : $text-color-weak-inverted !default;
 
 // Emphasis
 $emphasis-font-weight                       : bolder !default;
@@ -84,8 +84,10 @@ $heading-color                              : $text-color-strong !default;
 $heading-color-inverted                     : $text-color-strong-inverted !default;
 
 // Paragraph spacing
-$paragraph-margin-top                       : 1em !default;
-$paragraph-margin-bottom                    : 1em !default;
+//
+// This val
+$paragraph-margin-top                       : $container-padding !default;
+$paragraph-margin-bottom                    : $container-padding !default;
 
 
 
@@ -385,17 +387,13 @@ hr {
     border-bottom: $border-inverted;
   }
 
-  &.fluid {
-    @extend .fluid;
-  }
-
   &.padded {
     padding: 0;
-    @include margin(1, 0);
+    margin: 1em 0;
 
     &.relaxed {
       padding: 0;
-      @include margin(2, 0);
+      margin: 2em 0;
     }
   }
 }
@@ -409,7 +407,7 @@ code {
   background: $code-background;
   border: $code-border;
   border-radius: $code-border-radius;
-  @include padding($code-padding);
+  padding: $code-padding;
 }
 
 pre {
@@ -423,7 +421,7 @@ textarea.code {
   background: $code-background;
   border: $code-border;
   border-radius: $code-border-radius;
-  @include padding($code-padding);
+  padding: $code-padding;
   font-size: 1em;
   font-family: "Courier New";
 }
@@ -436,13 +434,13 @@ textarea.code {
   .html {
 
     // Borders
-    border: solid $color-grey-light 1px;
+    border: solid $color-grey-light .1em;
 
 
     > .label {
-      @include margin-top(.7);
+      margin-top: .7em;
       &:first-of-type {
-        @include margin-left(.6);
+        margin-left: .6em;
       }
     }
 
@@ -456,16 +454,16 @@ textarea.code {
 
   // Section margins
   article {
-    @include margin(2,0);
+    margin: 2em 0;
 
     > h3:first-child {
       border-bottom: solid $color-grey-light 1px;
-      @include padding-bottom(.15);
-      @include margin-bottom(.2);
+      padding-bottom: .15em;
+      margin-bottom: .2em;
     }
 
     > .example {
-      @include margin-top(.5);
+      margin-top: .5em;
     }
   }
 }

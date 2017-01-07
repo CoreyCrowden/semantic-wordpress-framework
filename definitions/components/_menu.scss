@@ -19,19 +19,19 @@
 // Box Sizing
 $menu-item-height:                                $standard-field-height !default;
 
-$menu-item-top-level-padding-top:                 .35 !default;
-$menu-item-top-level-padding-right:               .35 !default;
-$menu-item-top-level-padding-bottom:              .35 !default;
-$menu-item-top-level-padding-left:                .35 !default;
+$menu-item-top-level-padding-top:                 1em !default;
+$menu-item-top-level-padding-right:               1em !default;
+$menu-item-top-level-padding-bottom:              1em !default;
+$menu-item-top-level-padding-left:                1em !default;
 
 
 
 $sub-menu-padding-top:                            0 !default;
-$sub-menu-padding-bottom:                         .0 !default;
+$sub-menu-padding-bottom:                         0 !default;
 
-$sub-menu-item-indent:                            .7 !default;
-$sub-menu-item-padding-top:                       .15 !default;
-$sub-menu-item-padding-bottom:                    .15 !default;
+$sub-menu-item-indent:                            1.5em !default;
+$sub-menu-item-padding-top:                       .45em !default;
+$sub-menu-item-padding-bottom:                    .45em !default;
 
 
 
@@ -80,7 +80,7 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
       @include align-items(center);
 
       min-height: $menu-item-height;
-      @include padding( $menu-item-top-level-padding-top, $menu-item-top-level-padding-right, $menu-item-top-level-padding-bottom, $menu-item-top-level-padding-left);
+      padding: $menu-item-top-level-padding-top $menu-item-top-level-padding-right $menu-item-top-level-padding-bottom $menu-item-top-level-padding-left;
       margin: 0;
 
     }
@@ -136,13 +136,13 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
     > .menu,
     > .sub-menu {
 
-      @include padding($sub-menu-padding-top, 0, $sub-menu-padding-bottom);
+      padding: $sub-menu-padding-top 0 $sub-menu-padding-bottom;
 
       > .item {
 
         > a {
 
-          @include padding($sub-menu-item-padding-top, $sub-menu-item-indent, $sub-menu-item-padding-bottom);
+          padding: $sub-menu-item-padding-top $sub-menu-item-indent $sub-menu-item-padding-bottom;
 
           @include style(normal){
             color: $menu-item-secondary-color;
@@ -167,7 +167,9 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
 
         > .sub-menu > .item:not(.dropdown):not(.dropdown) {
           > .item > a {
-            @include padding(0, $sub-menu-item-indent * 2);
+
+            padding: 0 $sub-menu-item-indent * 2;
+
           }
         }
       }
@@ -259,7 +261,7 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
     &:after {
       content: '\f107';
       font-family: $icon-font-family;
-      @include padding-left(0.2);
+      padding-left: .6em;
     }
   }
 }
@@ -283,67 +285,3 @@ $menu-item-secondary-color-inverted-hover:        $text-color-strong-inverted !d
 .menu.full.height > .item a {
   height: 100%;
 }
-
-
-
-
-
-
-//.menu {
-//  @include flexbox;
-//
-//  .menu-item {
-//    @include flexbox;
-//    @include align-self(center);
-//
-//    position: relative;
-//
-//
-//    a {
-//      @include padding(0.5);
-//
-//      &:hover {
-//        background: rgba($color-white, 0.1);
-//      }
-//    }
-//
-//    //* Call to action button
-//    &.button {
-//      a {
-//
-//      }
-//    }
-//
-//    .sub-menu {
-//      display: none;
-//      position: absolute;
-//      margin: 0px;
-//      top: 100%; // Corrects position
-//      background: rgba($color-primary, 1);
-//      z-index: 9999999;
-//
-//      .menu-item {
-//        a {
-//          width: 100%;
-//          min-width: 240px;
-//        }
-//      }
-//    }
-//
-//    &:hover .sub-menu {
-//      display: block;
-//    }
-//  }
-//
-//  //* Menu Item With Children
-//  > .menu-item-has-children {
-//
-//    > a {
-//      &:after {
-//        content: '\f107';
-//        font-family: $font-icon-family;
-//        @include padding-left(0.2);
-//      }
-//    }
-//  }
-//}

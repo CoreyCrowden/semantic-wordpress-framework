@@ -1,8 +1,8 @@
 // Table
 
-$color-table-background-head            : rgba($color-black, .05 );
-$color-table-background-odd             : rgba($color-black, 0 );
-$color-table-background-even            : rgba($color-black, .01 );
+$color-table-background-head            : rgba($color-white, .05 );
+$color-table-background-odd             : rgba($color-white, 0 );
+$color-table-background-even            : rgba($color-white, .01 );
 $color-table-background-head-inverted   : rgba($color-white, .2 );
 $color-table-background-odd-inverted    : rgba($color-white, 0 );
 $color-table-background-even-inverted   : rgba($color-white, .1 );
@@ -14,7 +14,7 @@ article {
     width: 100%;
     background: none;
     border: none;
-    border-radius: 0px;
+    border-radius: 0;
     text-align: left;
     border-collapse: collapse;
 
@@ -22,16 +22,16 @@ article {
       @extend .animate;
       cursor: auto;
       text-align: left;
-      @include padding(0.35);
+      padding: 1em 0;
       vertical-align: middle;
+    }
+
+    thead tr:first-child {
+      border: none;
     }
 
     tr {
       border-top: $border;
-
-      &:first-child {
-        border: none;
-      }
 
       //* Odd Rows
       &:nth-child(odd){
@@ -65,7 +65,5 @@ article {
     td {
 
     }
-
-
   }
 }

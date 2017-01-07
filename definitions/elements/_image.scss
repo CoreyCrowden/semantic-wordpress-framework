@@ -10,7 +10,7 @@ img {
   display: block;
   vertical-align: middle;
   background-color: $color-image-placeholder;
-  @include margin(0.15,0,0.5);
+  margin: .15em 0 .5em;
 }
 
 img.disabled {
@@ -35,7 +35,7 @@ img {
   }
   .wp-caption-text {
     font-size: font-size - 0.1;
-    @include margin(0.5);
+    margin: .5em;
   }
 }
 
@@ -44,16 +44,17 @@ img {
 //* Alignment
 .alignleft {
   float: left;
-  @include margin-right(0.5);
+  margin-right: .5em;
 }
 
 .aligncenter {
-  @include margin-auto();
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .alignright {
   float: right;
-  @include margin-left(0.5);
+  margin-left: .5em;
 }
 
 
@@ -105,7 +106,7 @@ p[style="text-align: center;"] {
 //
 // The fitted image class must be applied to a div wrapper of an image.
 // This will center and crop the image within the container.
-.image.fit  {
+.image.fitted  {
 
   position: relative;
   margin: 0;

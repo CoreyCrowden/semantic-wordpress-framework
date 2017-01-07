@@ -5,17 +5,17 @@
 $button-text-align                            : center !default;
 
 // Button Margins & Padding
-$button-margin-vertical                       : .3 !default;
-$button-margin-horizontal                     : 0 !default;
+$button-margin-vertical                       : .6em !default;
+$button-margin-horizontal                     : 0em !default;
 $button-height                                : $standard-field-height !default;
-$button-padding-horizontal                    : .75 !default;
+$button-padding-horizontal                    : 1.5em !default;
 
 // Button Colors
 $button-color                                 : rgba($color-black, 1) !default;
 $button-background                            : rgba($color-grey-extra-light, 1) !default;
 
 // Button Border
-$button-border-radius                         : 2px !default;
+$button-border-radius                         : .2em !default;
 $button-border                                : none !default;
 $button-border-hover                          : none !default;
 
@@ -49,13 +49,13 @@ input[type="button"] {
 
   /* Positioning */
   vertical-align: baseline;
-  @include margin($button-margin-vertical, $button-margin-horizontal);
+  margin: $button-margin-vertical $button-margin-horizontal;
 
   /* Box-model */
   min-height: $button-height;
   width: fit-content;
   max-width: 100%;
-  @include padding( 0, $button-padding-horizontal);
+  padding: 0 $button-padding-horizontal;
   white-space: normal;
 
   // Position the text
@@ -81,8 +81,6 @@ input[type="button"] {
   &:hover {
     opacity: 1;
   }
-
-
 
   /* Misc */
   cursor: pointer;
@@ -139,7 +137,7 @@ input[type="button"] {
 
 
 
-// ------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------ */
 
 // Action Button
 

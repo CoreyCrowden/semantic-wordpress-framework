@@ -17,35 +17,38 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
   <p><strong>Note: </strong> It's important to wrap item content with a container outlined as the item element can't contain a margin and instead uses padding for creating margins between grid items.</p>
   <!--HTML-->
   <div class="html">
-    <span class="label strong">.grid</span>
-    <div class="grid padded">
-      <div class="item">
-        <div class="container outlined padded">
-          <span class="label strong">.item</span><span class="label weak">.padded</span>
-          <p></p>
-          <div class="container outlined content">
-            <span class="label weak">.container outlined</span><span class="label weak">.content</span>
-            <p>Dolor quibusdam.</p>
+    <div class="padded">
+      <span class="label strong">.grid</span>
+      <p></p>
+      <div class="grid">
+        <div class="item">
+          <div class="container outlined padded">
+            <span class="label strong">.item</span><span class="label weak">.padded</span>
+            <p></p>
+            <div class="container outlined padded">
+              <span class="label weak">.container outlined</span>
+              <p>Dolor quibusdam.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container outlined padded">
-          <span class="label strong">.item</span><span class="label weak">.padded</span>
-          <p></p>
-          <div class="container outlined content">
-            <span class="label weak">.container outlined</span><span class="label weak">.content</span>
-            <p>Corrupti fermentum natoque magni commodi.</p>
+        <div class="item">
+          <div class="container outlined padded">
+            <span class="label strong">.item</span><span class="label weak">.padded</span>
+            <p></p>
+            <div class="container outlined padded">
+              <span class="label weak">.container outlined</span>
+              <p>Corrupti fermentum natoque magni commodi.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="container outlined padded">
-          <span class="label strong">.item</span><span class="label weak">.padded</span>
-          <p></p>
-          <div class="container outlined content">
-            <span class="label weak">.container outlined</span><span class="label weak">.content</span>
-            <p>Itaque venenatis veniam dolor quibusdam netus nisi? Corrupti fermentum natoque magni commodi. Torquent quisquam, lorem curabitur hymenaeos facere. Porro voluptate quas, neque nesciunt saepe, alias tenetur tempora ac cumque! Earum, laboriosam et venenatis? Vitae.</p>
+        <div class="item">
+          <div class="container outlined padded">
+            <span class="label strong">.item</span><span class="label weak">.padded</span>
+            <p></p>
+            <div class="container outlined padded">
+              <span class="label weak">.container outlined</span>
+              <p>Itaque venenatis veniam dolor quibusdam netus nisi? Corrupti fermentum natoque magni commodi. Torquent quisquam, lorem curabitur hymenaeos facere. Porro voluptate quas, neque nesciunt saepe, alias tenetur tempora ac cumque! Earum, laboriosam et venenatis? Vitae.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -416,7 +419,7 @@ reference: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 </textarea>
 </article>
 
-<hr class="fluid">
+<hr class="fluid horizontally">
 
 <article>
   <h5>Overflow Grid & Touch Controls</h5>
