@@ -407,9 +407,9 @@ $full-width: 100% / 1;
   &.sixths {
 
     // Small breakpoint for mobile devices
-    &.small {
+    &.mobile {
       .item {
-        @include media('<tablet-sml'){
+        @include media($mobile-breakpoint...){
           @include flex(1 1 100%);
           max-width: 100%;
         }
@@ -417,9 +417,9 @@ $full-width: 100% / 1;
     }
 
     // Medium breakpoint for tablets
-    &.medium {
+    &.tablet {
       .item {
-        @include media('<tablet-lrg') {
+        @include media($tablet-breakpoint...) {
           @include flex(1 1 100%);
           max-width: 100%;
         }
@@ -427,9 +427,9 @@ $full-width: 100% / 1;
     }
 
     // Large breakpoint for desktops
-    &.large {
+    &.desktop {
       .item {
-        @include media('<desktop-sml') {
+        @include media($desktop-breakpoint...) {
           @include flex(1 1 100%);
           max-width: 100%;
         }
@@ -437,9 +437,9 @@ $full-width: 100% / 1;
     }
 
     // Extra large breakpoint for large desktops
-    &.extra.large {
+    &.desktop.large {
       .item {
-        @include media('<desktop-med') {
+        @include media($large-desktop-breakpoint...) {
           @include flex(1 1 100%);
           max-width: 100%;
         }
@@ -452,32 +452,32 @@ $full-width: 100% / 1;
 .item {
 
   // Small breakpoint for mobile devices
-  &.small {
-      @include media('<tablet-sml'){
+  &.mobile {
+    @include media($mobile-breakpoint...){
       @include flex(1 1 100%);
       max-width: 100%;
     }
   }
 
   // Medium breakpoint for tablets
-  &.medium {
-    @include media('<tablet-lrg') {
+  &.tablet {
+    @include media($tablet-breakpoint...) {
       @include flex(1 1 100%);
       max-width: 100%;
     }
   }
 
   // Large breakpoint for desktops
-  &.large {
-    @include media('<desktop-sml') {
+  &.desktop {
+    @include media($desktop-breakpoint...) {
       @include flex(1 1 100%);
       max-width: 100%;
     }
   }
 
   // Extra large breakpoint for large desktops
-  &.extra.large {
-    @include media('<desktop-med') {
+  &.desktop.large {
+    @include media($large-desktop-breakpoint...) {
       @include flex(1 1 100%);
       max-width: 100%;
     }

@@ -21,10 +21,10 @@ $font-size-very-large                      : 2.4rem !default;
 .normal {
   font-size: $font-size-normal;
 }
-.large {
+.large:not(.desktop) {
   font-size: $font-size-large;
 }
-.very.large {
+.very.large:not(.desktop) {
   font-size: $font-size-very-large;
 }
 
