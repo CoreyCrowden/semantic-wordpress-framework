@@ -1227,6 +1227,18 @@ input[type="radio"] ~ label:after {
   margin: -1.2em;
 }
 
+.padded > .fluid.horizontally,
+.content > .fluid.horizontally {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.padded > .fluid.vertically,
+.content > .fluid.vertically {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 @media (max-width: 720px) {
   .padded.relaxed,
   .content.relaxed {
@@ -1247,6 +1259,18 @@ input[type="radio"] ~ label:after {
   .content.relaxed > .fluid {
     margin: -3.6em;
   }
+}
+
+.padded.relaxed > .fluid.horizontally,
+.content.relaxed > .fluid.horizontally {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.padded.relaxed > .fluid.vertically,
+.content.relaxed > .fluid.vertically {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .padded.horizontally {

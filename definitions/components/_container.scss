@@ -95,6 +95,15 @@ $container-relaxed-padding             : $container-padding * 3 !default;
   // Offset for default padding
   > .fluid {
     margin: -$container-padding;
+
+    &.horizontally {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &.vertically {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   // .relaxed is an extension of padded applying a larger padded area.
@@ -118,6 +127,17 @@ $container-relaxed-padding             : $container-padding * 3 !default;
       > .fluid {
         // Only add relaxed padding on large displays
         margin: -$container-relaxed-padding;
+      }
+    }
+
+    > .fluid {
+      &.horizontally {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      &.vertically {
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
