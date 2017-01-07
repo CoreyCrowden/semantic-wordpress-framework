@@ -159,26 +159,10 @@ $container-relaxed-padding             : $container-padding * 3 !default;
 // The offset margins can be found with the corresponding container type.
 // e.g. the offset for content padding is with the .content class styles.
 
-.padded,
-.content,
-.container {
-  .fluid {
-    min-width: 100%;
-    width: auto;
-    max-width: none;
-
-    &.horizontally,
-    &.horizontally.relaxed {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
-    &.vertically,
-    &.vertically.relaxed {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-  }
+.fluid {
+  min-width: 100%;
+  width: auto;
+  max-width: none;
 }
 
 // ------------------------------------------------------------------------------------------------------------------
