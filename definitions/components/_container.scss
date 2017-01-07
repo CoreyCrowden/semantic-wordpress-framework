@@ -160,7 +160,8 @@ $container-relaxed-padding             : $container-padding * 3 !default;
 // e.g. the offset for content padding is with the .content class styles.
 
 .padded,
-.content {
+.content,
+.container {
   .fluid {
     min-width: 100%;
     width: auto;

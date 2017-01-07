@@ -1270,7 +1270,8 @@ input[type="radio"] ~ label:after {
 }
 
 .padded .fluid,
-.content .fluid {
+.content .fluid,
+.container .fluid {
   min-width: 100%;
   width: auto;
   max-width: none;
@@ -1278,14 +1279,18 @@ input[type="radio"] ~ label:after {
 
 .padded .fluid.horizontally, .padded .fluid.horizontally.relaxed,
 .content .fluid.horizontally,
-.content .fluid.horizontally.relaxed {
+.content .fluid.horizontally.relaxed,
+.container .fluid.horizontally,
+.container .fluid.horizontally.relaxed {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .padded .fluid.vertically, .padded .fluid.vertically.relaxed,
 .content .fluid.vertically,
-.content .fluid.vertically.relaxed {
+.content .fluid.vertically.relaxed,
+.container .fluid.vertically,
+.container .fluid.vertically.relaxed {
   margin-top: 0;
   margin-bottom: 0;
 }
