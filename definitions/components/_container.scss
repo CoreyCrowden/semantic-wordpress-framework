@@ -21,6 +21,7 @@ $container-relaxed-padding             : $container-padding * 3 !default;
   width: 100%;
   max-width: $container-max-width;
   padding: 0;
+  overflow: auto;
 
   // Left align container in parent container
   &.left {
