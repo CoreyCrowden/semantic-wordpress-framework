@@ -9,35 +9,121 @@ description: The container is designed to simplify element wrapping with the use
 <!--Container Basics-->
 <article>
   <h3>Container Basics</h3>
-  <span class="label strong">.container</span><span class="label">.padded</span><span class="label">.lightly</span><span class="label">.heavy</span><span class="label">.very</span><span class="label">.heavy</span>
+  <span class="label strong">.container</span>
+  <p>
+    Containers have a very limited impact on the page.
+    The primary use of containers is positioning content on the page.
+    A container naturally fills the available width of the parent container.
+  </p>
   <!--HTML-->
   <div class="html example">
-    <div class="grid quarters padded lightly">
 
-      <div class="item lightly padded">
+      <div class="container primary padded heavily">
+        <span class="label strong">.container</span><span class="label">.primary</span>
+        <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+      </div>
+
+      <div class="container secondary padded heavily inverted">
+        <span class="label strong">.container</span><span class="label">.secondary</span><span class="label">.inverted</span>
+        <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+      </div>
+
+  </div>
+</article>
+
+<!--Padding Basics-->
+<article>
+  <h3>Padding Basics</h3>
+  <span class="label strong">.padded</span><span class="label">.lightly</span><span class="label">.very .lightly</span><span class="label">.heavily</span><span class="label">.very .heavily</span>
+  <p>Padding can be applied to box element on the page.</p>
+  <!--HTML-->
+  <div class="html example">
+    <div class="grid mobile tablet fifths very padded lightly">
+
+      <div class="item very lightly padded">
+        <div class="container outlined padded very lightly">
+          <span class="label strong">.very .lightly</span><span class="label">.padded</span>
+          <span class="label"><i>0.25 * Padding</i></span>
+          <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+        </div>
+      </div>
+
+      <div class="item very lightly padded">
         <div class="container outlined padded lightly">
+          <span class="label strong">.lightly</span><span class="label">.padded</span>
+          <span class="label"><i>0.5 * Padding</i></span>
+          <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+        </div>
+      </div>
+
+      <div class="item very lightly padded">
+        <div class="container outlined padded">
+          <span class="label strong">.padded</span>
+          <span class="label"><i>1 * Padding</i></span>
+          <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+        </div>
+      </div>
+
+      <div class="item very lightly padded">
+        <div class="container outlined padded heavily">
+          <span class="label strong">.heavily</span><span class="label">.padded</span>
+          <span class="label"><i>2 * Padding</i></span>
+          <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+        </div>
+      </div>
+
+      <div class="item very lightly padded">
+        <div class="container outlined padded very heavily">
+          <span class="label strong">.very .heavily</span><span class="label">.padded</span>
+          <span class="label"><i>3 * Padding</i></span>
+          <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</article>
+
+<!--Collapsing Padding-->
+<article>
+  <h3>Collapsing Padding</h3>
+  <span class="label strong">.collapsing</span><span class="label">.padded</span><span class="label">.lightly</span><span class="label">.very .lightly</span><span class="label">.heavily</span><span class="label">.very .heavily</span>
+  <p>Collapsing padding is designed reduce size more dramatically on smaller devices.</p>
+  <!--HTML-->
+  <div class="html example">
+    <div class="grid mobile tablet fifths very padded lightly">
+
+      <div class="item very lightly padded">
+        <div class="container outlined padded very lightly collapsing">
+          <span class="label strong">.very .lightly</span><span class="label">.padded</span>
+          <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
+        </div>
+      </div>
+
+      <div class="item very lightly padded">
+        <div class="container outlined padded lightly collapsing">
           <span class="label strong">.lightly</span><span class="label">.padded</span>
           <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
         </div>
       </div>
 
-      <div class="item lightly padded">
-        <div class="container outlined padded">
+      <div class="item very lightly padded">
+        <div class="container outlined padded collapsing">
           <span class="label strong">.padded</span>
           <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
         </div>
       </div>
 
-      <div class="item lightly padded">
-        <div class="container outlined padded heavy">
-          <span class="label strong">.heavy</span><span class="label">.padded</span>
+      <div class="item very lightly padded">
+        <div class="container outlined padded heavily collapsing">
+          <span class="label strong">.heavily</span><span class="label">.padded</span>
           <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
         </div>
       </div>
 
-      <div class="item lightly padded">
-        <div class="container outlined padded very heavy">
-          <span class="label strong">.very</span><span class="label strong">.heavy</span><span class="label">.padded</span>
+      <div class="item very lightly padded">
+        <div class="container outlined padded very heavily collapsing">
+          <span class="label strong">.very .heavily</span><span class="label">.padded</span>
           <p>Eaque molestiae eiusmod nemo consequatur nunc metus eu elit nihil, commodi eget, irure nam labore nec expedita minima. Fuga sociosqu, erat possimus, officia mauris. Mus perspiciatis. Recusandae non. Magni, imperdiet? Augue voluptatum? Sunt nostrud? Nesciunt iusto eveniet animi.</p>
         </div>
       </div>

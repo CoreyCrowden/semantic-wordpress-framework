@@ -12,9 +12,10 @@ $container-padding                      : 1.2em !default;
 $container-padding-collapsing-mobile    : .6 !default;
 $container-padding-collapsing-tablet    : .8 !default;
 
-$container-padding-light                : $container-padding * .5 !default;
-$container-padding-heavy                : $container-padding * 2 !default;
-$container-padding-very-heavy           : $container-padding * 3 !default;
+$container-padding-very-lightly         : $container-padding * .25 !default;
+$container-padding-lightly              : $container-padding * .5 !default;
+$container-padding-heavily              : $container-padding * 2 !default;
+$container-padding-very-heavily         : $container-padding * 3 !default;
 
 
 
@@ -108,23 +109,30 @@ $container-relaxed-padding             : $container-padding * 3 !default;
   }
 
   &.lightly {
-    padding: $container-padding-light;
+    padding: $container-padding-lightly;
     > .fluid {
-      margin: -$container-padding-light;
+      margin: -$container-padding-lightly;
     }
   }
 
-  &.heavy {
-    padding: $container-padding-heavy;
+  &.very.lightly {
+    padding: $container-padding-very-lightly;
     > .fluid {
-      margin: -$container-padding-heavy;
+      margin: -$container-padding-very-lightly;
     }
   }
 
-  &.very.heavy {
-    padding: $container-padding-very-heavy;
+  &.heavily {
+    padding: $container-padding-heavily;
     > .fluid {
-      margin: -$container-padding-very-heavy;
+      margin: -$container-padding-heavily;
+    }
+  }
+
+  &.very.heavily {
+    padding: $container-padding-very-heavily;
+    > .fluid {
+      margin: -$container-padding-very-heavily;
     }
   }
 
@@ -149,23 +157,23 @@ $container-relaxed-padding             : $container-padding * 3 !default;
       }
 
       &.lightly {
-        padding: $container-padding-light * $container-padding-collapsing-tablet;
+        padding: $container-padding-lightly* $container-padding-collapsing-tablet;
         > .fluid {
-          margin: -$container-padding-light * $container-padding-collapsing-tablet;
+          margin: -$container-padding-lightly* $container-padding-collapsing-tablet;
         }
       }
 
-      &.heavy {
-        padding: $container-padding-heavy * $container-padding-collapsing-tablet;
+      &.heavily {
+        padding: $container-padding-heavily * $container-padding-collapsing-tablet;
         > .fluid {
-          margin: -$container-padding-heavy * $container-padding-collapsing-tablet;
+          margin: -$container-padding-heavily * $container-padding-collapsing-tablet;
         }
       }
 
-      &.very.heavy {
-        padding: $container-padding-very-heavy * $container-padding-collapsing-tablet;
+      &.very.heavily {
+        padding: $container-padding-very-heavily * $container-padding-collapsing-tablet;
         > .fluid {
-          margin: -$container-padding-very-heavy * $container-padding-collapsing-tablet;
+          margin: -$container-padding-very-heavily * $container-padding-collapsing-tablet;
         }
       }
     }
@@ -178,23 +186,23 @@ $container-relaxed-padding             : $container-padding * 3 !default;
       }
 
       &.lightly {
-        padding: $container-padding-light * $container-padding-collapsing-mobile;
+        padding: $container-padding-lightly* $container-padding-collapsing-mobile;
         > .fluid {
-          margin: -$container-padding-light * $container-padding-collapsing-mobile;
+          margin: -$container-padding-lightly* $container-padding-collapsing-mobile;
         }
       }
 
-      &.heavy {
-        padding: $container-padding-heavy * $container-padding-collapsing-mobile;
+      &.heavily {
+        padding: $container-padding-heavily * $container-padding-collapsing-mobile;
         > .fluid {
-          margin: -$container-padding-heavy * $container-padding-collapsing-mobile;
+          margin: -$container-padding-heavily * $container-padding-collapsing-mobile;
         }
       }
 
-      &.very.heavy {
-        padding: $container-padding-very-heavy * $container-padding-collapsing-mobile;
+      &.very.heavily {
+        padding: $container-padding-very-heavily * $container-padding-collapsing-mobile;
         > .fluid {
-          margin: -$container-padding-very-heavy * $container-padding-collapsing-mobile;
+          margin: -$container-padding-very-heavily * $container-padding-collapsing-mobile;
         }
       }
     }
