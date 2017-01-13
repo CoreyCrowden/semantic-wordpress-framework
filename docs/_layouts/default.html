@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ site.github.url }}/assets/css/main.css">
@@ -15,29 +16,33 @@
 
     <!--Site Container-->
     <div id="site-container" class="container fluid full height">
-      <div class="grid full height stretched">
+
+      <!--Loader-->
+      <div id="loader"></div>
+
+      <div class="grid full height stretched mobile">
 
         <!--Sidebar-->
         {% include menu.html %}
 
-        <!--Loader-->
-        <div id="loader"></div>
-
         <!--Main-->
-        <div id="main" class="container five sixths">
+        <div id="main" class="item five sixths">
 
-          <!--Page Header-->
-          <div class="container padded very heavy collapsing">
-            <h4><a href="{{ site.github.url }}/{{ page.category }}">{{ page.category }}</a>/</h4>
-            <h1 class="title">{{ page.title }}</h1>
-            <p>{{ page.description }}</p>
-            <p><a href="{{ page.reference }}">{{ page.reference-title }}</a></p>
+          <div>
+            <!--Page Header-->
+            <div class="container padded very heavily">
+              <h4><a href="{{ site.github.url }}/{{ page.category }}">{{ page.category }}</a>/</h4>
+              <h1 class="title">{{ page.title }}</h1>
+              <p>{{ page.description }}</p>
+              <p><a href="{{ page.reference }}">{{ page.reference-title }}</a></p>
+            </div>
+            <hr>
+            <!--Page Content-->
+            <div id="page-content" class="container padded very heavily white">
+              {{ content }}
+            </div>
           </div>
-          <hr>
-          <!--Page Content-->
-          <div id="page-content" class="container padded very heavy collapsing white">
-            {{ content }}
-          </div>
+
         </div>
       </div>
     </div>

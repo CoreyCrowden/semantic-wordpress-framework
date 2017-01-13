@@ -8,19 +8,17 @@
 // Container Padding
 $container-padding                      : 1.2em !default;
 
-// These are multipliers of the default value
-$container-padding-collapsing-mobile    : .6 !default;
-$container-padding-collapsing-tablet    : .8 !default;
-
 $container-padding-very-lightly         : $container-padding * .25 !default;
 $container-padding-lightly              : $container-padding * .5 !default;
 $container-padding-heavily              : $container-padding * 2 !default;
 $container-padding-very-heavily         : $container-padding * 3 !default;
 
+// These are multipliers of the default value
+$container-padding-mobile               : .6 !default;
+$container-padding-tablet               : .8 !default;
+$container-padding-desktop              : 1 !default;
+$container-padding-large-desktop        : 1.2 !default;
 
-
-$container-relaxed-padding-mobile      : $container-padding * 2 !default;
-$container-relaxed-padding             : $container-padding * 3 !default;
 
 // ------------------------------------------------------------------------------------------------------------------
 
@@ -98,41 +96,86 @@ $container-relaxed-padding             : $container-padding * 3 !default;
 // These are classes used to create spacing around elements.
 // .content only provides horizontal padding by default
 
+@mixin fluid-padding ($padding, $multiplier) {
+  padding: $padding * $multiplier;
+  > .fluid {
+    margin: -$padding * $multiplier;
+  }
+}
+
 // Gives the element padding to create formatting.
 .padded,
 .content {
 
-  // Default padding
-  padding: $container-padding;
-  > .fluid {
-    margin: -$container-padding;
-  }
+  @include media($mobile-breakpoint...) {
+    $container-padding-multiplier: $container-padding-mobile;
 
-  &.lightly {
-    padding: $container-padding-lightly;
-    > .fluid {
-      margin: -$container-padding-lightly;
+    @include fluid-padding($container-padding, $container-padding-multiplier);
+    &.lightly {
+      @include fluid-padding($container-padding-lightly, $container-padding-multiplier);
+    }
+    &.very.lightly {
+      @include fluid-padding($container-padding-very-lightly, $container-padding-multiplier);
+    }
+    &.heavily {
+      @include fluid-padding($container-padding-heavily, $container-padding-multiplier);
+    }
+    &.very.heavily {
+      @include fluid-padding($container-padding-very-heavily, $container-padding-multiplier);
     }
   }
 
-  &.very.lightly {
-    padding: $container-padding-very-lightly;
-    > .fluid {
-      margin: -$container-padding-very-lightly;
+  @include media($tablet-breakpoint...) {
+    $container-padding-multiplier: $container-padding-tablet;
+
+    @include fluid-padding($container-padding, $container-padding-multiplier);
+    &.lightly {
+      @include fluid-padding($container-padding-lightly, $container-padding-multiplier);
+    }
+    &.very.lightly {
+      @include fluid-padding($container-padding-very-lightly, $container-padding-multiplier);
+    }
+    &.heavily {
+      @include fluid-padding($container-padding-heavily, $container-padding-multiplier);
+    }
+    &.very.heavily {
+      @include fluid-padding($container-padding-very-heavily, $container-padding-multiplier);
     }
   }
 
-  &.heavily {
-    padding: $container-padding-heavily;
-    > .fluid {
-      margin: -$container-padding-heavily;
+  @include media($desktop-breakpoint...) {
+    $container-padding-multiplier: $container-padding-desktop;
+
+    @include fluid-padding($container-padding, $container-padding-multiplier);
+    &.lightly {
+      @include fluid-padding($container-padding-lightly, $container-padding-multiplier);
+    }
+    &.very.lightly {
+      @include fluid-padding($container-padding-very-lightly, $container-padding-multiplier);
+    }
+    &.heavily {
+      @include fluid-padding($container-padding-heavily, $container-padding-multiplier);
+    }
+    &.very.heavily {
+      @include fluid-padding($container-padding-very-heavily, $container-padding-multiplier);
     }
   }
 
-  &.very.heavily {
-    padding: $container-padding-very-heavily;
-    > .fluid {
-      margin: -$container-padding-very-heavily;
+  @include media($large-desktop-breakpoint...) {
+    $container-padding-multiplier: $container-padding-large-desktop;
+
+    @include fluid-padding($container-padding, $container-padding-multiplier);
+    &.lightly {
+      @include fluid-padding($container-padding-lightly, $container-padding-multiplier);
+    }
+    &.very.lightly {
+      @include fluid-padding($container-padding-very-lightly, $container-padding-multiplier);
+    }
+    &.heavily {
+      @include fluid-padding($container-padding-heavily, $container-padding-multiplier);
+    }
+    &.very.heavily {
+      @include fluid-padding($container-padding-very-heavily, $container-padding-multiplier);
     }
   }
 
@@ -147,68 +190,6 @@ $container-relaxed-padding             : $container-padding * 3 !default;
       margin-right: 0;
     }
   }
-
-  &.collapsing {
-    @include media('<=tablet-lrg') {
-      // Default padding
-      padding: $container-padding * $container-padding-collapsing-tablet;
-      > .fluid {
-        margin: -$container-padding * $container-padding-collapsing-tablet;
-      }
-
-      &.lightly {
-        padding: $container-padding-lightly* $container-padding-collapsing-tablet;
-        > .fluid {
-          margin: -$container-padding-lightly* $container-padding-collapsing-tablet;
-        }
-      }
-
-      &.heavily {
-        padding: $container-padding-heavily * $container-padding-collapsing-tablet;
-        > .fluid {
-          margin: -$container-padding-heavily * $container-padding-collapsing-tablet;
-        }
-      }
-
-      &.very.heavily {
-        padding: $container-padding-very-heavily * $container-padding-collapsing-tablet;
-        > .fluid {
-          margin: -$container-padding-very-heavily * $container-padding-collapsing-tablet;
-        }
-      }
-    }
-
-    @include media('<=mobile-lrg') {
-      // Default padding
-      padding: $container-padding * $container-padding-collapsing-mobile;
-      > .fluid {
-        margin: -$container-padding * $container-padding-collapsing-mobile;
-      }
-
-      &.lightly {
-        padding: $container-padding-lightly* $container-padding-collapsing-mobile;
-        > .fluid {
-          margin: -$container-padding-lightly* $container-padding-collapsing-mobile;
-        }
-      }
-
-      &.heavily {
-        padding: $container-padding-heavily * $container-padding-collapsing-mobile;
-        > .fluid {
-          margin: -$container-padding-heavily * $container-padding-collapsing-mobile;
-        }
-      }
-
-      &.very.heavily {
-        padding: $container-padding-very-heavily * $container-padding-collapsing-mobile;
-        > .fluid {
-          margin: -$container-padding-very-heavily * $container-padding-collapsing-mobile;
-        }
-      }
-    }
-  }
-
-
 }
 
 // Padding manipulation classes

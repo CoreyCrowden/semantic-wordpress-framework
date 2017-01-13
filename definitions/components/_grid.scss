@@ -399,50 +399,42 @@ $full-width: 100% / 1;
 // Breakpoint sit at the grid level
 .grid,
 .menu {
-  &.halves,
-  &.thirds,
-  &.quarters,
-  &.fourths,
-  &.fifths,
-  &.sixths {
-
-    // Small breakpoint for mobile devices
-    &.mobile {
-      .item {
-        @include media($mobile-breakpoint...){
-          @include flex(1 1 100%);
-          max-width: 100%;
-        }
+  // Small breakpoint for mobile devices
+  &.mobile {
+    .item {
+      @include media($mobile-breakpoint...){
+        @include flex(1 1 100%);
+        max-width: 100%;
       }
     }
+  }
 
-    // Medium breakpoint for tablets
-    &.tablet {
-      .item {
-        @include media($tablet-breakpoint...) {
-          @include flex(1 1 100%);
-          max-width: 100%;
-        }
+  // Medium breakpoint for tablets
+  &.tablet {
+    .item {
+      @include media($tablet-breakpoint...) {
+        @include flex(1 1 100%);
+        max-width: 100%;
       }
     }
+  }
 
-    // Large breakpoint for desktops
-    &.desktop {
-      .item {
-        @include media($desktop-breakpoint...) {
-          @include flex(1 1 100%);
-          max-width: 100%;
-        }
+  // Large breakpoint for desktops
+  &.desktop {
+    .item {
+      @include media($desktop-breakpoint...) {
+        @include flex(1 1 100%);
+        max-width: 100%;
       }
     }
+  }
 
-    // Extra large breakpoint for large desktops
-    &.desktop.large {
-      .item {
-        @include media($large-desktop-breakpoint...) {
-          @include flex(1 1 100%);
-          max-width: 100%;
-        }
+  // Extra large breakpoint for large desktops
+  &.desktop.large {
+    .item {
+      @include media($large-desktop-breakpoint...) {
+        @include flex(1 1 100%);
+        max-width: 100%;
       }
     }
   }
