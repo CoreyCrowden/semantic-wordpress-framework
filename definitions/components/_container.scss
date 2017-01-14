@@ -243,7 +243,10 @@ $container-padding-large-desktop        : 1.2 !default;
 // around the text.
 
 .content,
-.content.relaxed {
+.content.very.lightly,
+.content.lightly,
+.content.heavily,
+.content.very.heavily {
   // Standard Content
   width: auto;
   min-width: 0; // ! Important, This forces container width in flex grid
