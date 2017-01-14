@@ -6,6 +6,7 @@
 
 .card {
   width: 100%;
+  overflow: hidden;
 
   // Default Colors
   border: $card-container-border;

@@ -2957,6 +2957,7 @@ time:before,
 
 .card {
   width: 100%;
+  overflow: hidden;
   border: 1px #f6f6f6 solid;
 }
 
