@@ -107,14 +107,12 @@ p[style="text-align: center;"] {
 // The fitted image class must be applied to a div wrapper of an image.
 // This will center and crop the image within the container.
 .image.fitted  {
-
   position: relative;
   margin: 0;
   top: 0;
   left: 0;
   height: 100%;
   overflow: hidden;
-
   > img {
 
     position: absolute;
@@ -132,4 +130,9 @@ p[style="text-align: center;"] {
     -ms-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
   }
+}
+
+.background.image {
+  background-position: center center;
+  background-repeat: no-repeat;
 }

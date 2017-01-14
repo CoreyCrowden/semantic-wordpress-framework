@@ -3871,6 +3871,11 @@ p[style="text-align: center;"] img {
   transform: translate(-50%, -50%);
 }
 
+.background.image {
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 #loader.loading {
   z-index: 1050;
   cursor: default;
