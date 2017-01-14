@@ -3873,6 +3873,7 @@ p[style="text-align: center;"] img {
 }
 
 .background.image {
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
