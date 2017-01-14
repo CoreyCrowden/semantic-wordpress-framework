@@ -1707,8 +1707,8 @@ input[type="radio"] ~ label:after {
   align-content: stretch;
 }
 
-.grid.stretched:not(.vertical) .item > div, dl.stretched:not(.vertical) .item > div,
-.menu.stretched:not(.vertical) .item > div {
+.grid.stretched:not(.vertical) .item > .card, dl.stretched:not(.vertical) .item > .card,
+.menu.stretched:not(.vertical) .item > .card {
   min-height: 100%;
   height: 100%;
 }
@@ -1796,7 +1796,7 @@ input[type="radio"] ~ label:after {
       align-self: stretch;
 }
 
-.grid:not(.vertical) > .item.stretched > div, dl:not(.vertical) > .item.stretched > div {
+.grid:not(.vertical) > .item.stretched > .card, dl:not(.vertical) > .item.stretched > .card {
   min-height: 100%;
   height: 100%;
 }
@@ -1815,7 +1815,7 @@ input[type="radio"] ~ label:after {
   align-content: stretch;
 }
 
-.grid.vertical > .item.stretched > div, dl.vertical > .item.stretched > div {
+.grid.vertical > .item.stretched > .card, dl.vertical > .item.stretched > .card {
   height: auto;
 }
 
